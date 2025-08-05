@@ -1,0 +1,1015 @@
+1
+00:00:02,590 --> 00:00:04,370
+E aí galera tudo bem.
+
+2
+00:00:04,480 --> 00:00:12,040
+Estamos aí para mais uma aula depois de ter aprendido a trabalhar com Pochmann entender o que é o banco
+
+3
+00:00:12,040 --> 00:00:15,200
+de dados com um banco de dados relacional.
+
+4
+00:00:15,280 --> 00:00:21,140
+Nós vamos aprender a pegar a nossa aplicação e conectar com ele.
+
+5
+00:00:21,170 --> 00:00:26,170
+Nós temos aqui a nossa aplicação que nós temos trabalhado até o momento.
+
+6
+00:00:26,350 --> 00:00:29,960
+é uma aplicação para trabalhar com produto.
+
+7
+00:00:30,250 --> 00:00:39,730
+Então eu tenho aqui o meu produto a minha classe de produto e nós vamos conectar com o pulso.
+
+8
+00:00:40,810 --> 00:00:41,380
+Então vamos lá.
+
+9
+00:00:41,890 --> 00:00:44,020
+A primeira coisa que temos que fazer aqui.
+
+10
+00:00:44,140 --> 00:00:52,780
+Bom se fosse um novo projeto a gente já adicionar ia logo de início as dependências mas como é um projeto
+
+11
+00:00:52,780 --> 00:00:56,900
+já criado eu vou fazer o seguinte eu vou abrir o meu puxei.
+
+12
+00:01:01,670 --> 00:01:07,880
+Vou abrir aqui para que a gente possa conhecer aqui ver e escolher uma base de dados para a gente poder
+
+13
+00:01:07,880 --> 00:01:18,340
+trabalhar em cima enquanto ele abre aqui aqui no Application Properties aqui Application Properties
+
+14
+00:01:19,860 --> 00:01:28,970
+aqui na Application Property fica todas as configurações todas as configurações para conectar com o
+
+15
+00:01:28,970 --> 00:01:31,800
+banco e outras configurações do Spring.
+
+16
+00:01:32,450 --> 00:01:37,820
+Então aqui dentro nós vamos fazer algumas configurações então vou vir aqui eu vou botar algumas configurações
+
+17
+00:01:37,820 --> 00:01:38,270
+aqui.
+
+18
+00:01:38,330 --> 00:01:46,550
+Por exemplo uma configuração muito legal que você tem que saber em que o Server porte Server porte e
+
+19
+00:01:46,550 --> 00:01:50,810
+uma configuração que diz com a porta que a gente quer que o servidor rode.
+
+20
+00:01:51,290 --> 00:01:58,670
+Por padrão ele está rodando em %80 mas se eu quisesse poderia mudar se lá para 80 83 por exemplo eu
+
+21
+00:01:58,670 --> 00:02:02,360
+posso mudar a porta que ele está rodando.
+
+22
+00:02:02,840 --> 00:02:09,920
+Então vou começar a comentar aqui para comentar o modo sínodos Reichstag ou jogo da velha você escolhe
+
+23
+00:02:09,920 --> 00:02:13,220
+o nome que quiser dar e o que eu vou dizer o que é isso.
+
+24
+00:02:13,520 --> 00:02:21,080
+Porta do servidor essa é uma das comparações mais importantes porque por padrão ele levantando 80 80
+
+25
+00:02:21,080 --> 00:02:26,720
+mas pode ser que você não queira subir sua aplicação nessa porta você queira subir em outra porta e
+
+26
+00:02:26,720 --> 00:02:31,700
+aqui você diz qual é a porta que você quer que levante então quando a gente está na sua aplicação ele
+
+27
+00:02:31,700 --> 00:02:37,600
+vai tentar levantar nesta porta um outro ponto que nós vamos precisar.
+
+28
+00:02:37,640 --> 00:02:40,840
+Esse que não precisa decorar só precisa saber que tem.
+
+29
+00:02:40,850 --> 00:02:47,330
+E aí quando precisar só vira copiar de algum lugar que tenha é um caminho para conectar com o nosso
+
+30
+00:02:47,330 --> 00:02:48,970
+banco de dados.
+
+31
+00:02:49,070 --> 00:03:00,460
+Então primeira bem que vamos criar um banco de dados para vir aqui conectar no meu pé de mim.
+
+32
+00:03:00,470 --> 00:03:03,740
+Eu tenho várias estâncias ou pegue essa daqui.
+
+33
+00:03:04,100 --> 00:03:04,940
+Hoje 13.
+
+34
+00:03:06,120 --> 00:03:11,700
+Botar uma senha aqui e ele conectar beleza.
+
+35
+00:03:11,800 --> 00:03:14,700
+E dentro desse banco que eu tenho várias coisas.
+
+36
+00:03:15,520 --> 00:03:22,150
+Eu tenho até um bom teste padaria gestão tem várias coisas que eu vou ver aqui e vou criar um novo banco
+
+37
+00:03:22,150 --> 00:03:28,430
+aqui chamado mercadinho mercadinho.
+
+38
+00:03:28,450 --> 00:03:31,090
+Esse vai ser o nome do nosso banco de dados.
+
+39
+00:03:32,870 --> 00:03:36,800
+Mercadinho vou criar esse banco.
+
+40
+00:03:36,800 --> 00:03:42,320
+Ele está aqui não tem nada dentro dele o deixa ele minimizado por enquanto tem um mercadinho ele está
+
+41
+00:03:42,320 --> 00:03:53,390
+dentro da minha conexão local Rouge que está rodando na porta 5 4 3 4 então o pão o mercadinho que está
+
+42
+00:03:53,390 --> 00:03:56,420
+rodando em local roxo na porta 5/4 3/4.
+
+43
+00:03:56,480 --> 00:04:02,120
+Beleza o que a gente precisa saber é que agora nós vamos criar uma configuração para conectar com esse
+
+44
+00:04:02,120 --> 00:04:02,980
+banco.
+
+45
+00:04:03,110 --> 00:04:11,980
+Então eu vou escrever que o caminho do banco de dados é como é que esse caminho a gente passa assim.
+
+46
+00:04:12,380 --> 00:04:18,400
+E Springfield ponto Data Source ponto.
+
+47
+00:04:18,410 --> 00:04:26,060
+O RL é que a gente vai passar o caminho de conexão com o banco de dados pra gente conectar com banco
+
+48
+00:04:26,060 --> 00:04:27,570
+de dados por escrito.
+
+49
+00:04:27,590 --> 00:04:30,500
+Nós precisamos usar um driver para isso.
+
+50
+00:04:30,530 --> 00:04:36,810
+Nós vamos usar um driver chamado JD BC e esse driver.
+
+51
+00:04:37,100 --> 00:04:40,160
+Ele sabe se conectar com vários tipos de banco de dados.
+
+52
+00:04:40,160 --> 00:04:43,940
+Nesse momento ele vai se conectar culposo e é tão bom que nós estamos trabalhando.
+
+53
+00:04:43,950 --> 00:04:49,220
+Então eu vou botar o JD dizer que é o nome do driver dois pontos.
+
+54
+00:04:49,250 --> 00:04:52,250
+Qual é o tipo de tecnologia que nós vamos conectar.
+
+55
+00:04:52,250 --> 00:04:59,190
+Nós vamos nos conectar com o Porsche SQL beleza.
+
+56
+00:04:59,330 --> 00:05:04,850
+Aí eu boto dois pontos Barra a barra e digo onde está esse banco de dados bom.
+
+57
+00:05:04,880 --> 00:05:13,490
+Aqui se eu tivesse um servidor poderia botar o IP do servidor hoje 8 ponto 1 5 2 e colocar o IP do servidor.
+
+58
+00:05:14,090 --> 00:05:20,900
+Só que como eu estou rodando na minha máquina Local Bus eu vou botar que o local hoje que a minha máquina
+
+59
+00:05:21,380 --> 00:05:24,500
+dois pontos e a porta que está rodando.
+
+60
+00:05:24,500 --> 00:05:32,270
+Bom o post que está rodando na minha máquina na porta 5 4 3 4 na maioria das vezes é a porta 5 4 3 2
+
+61
+00:05:32,270 --> 00:05:33,760
+que é a porta padrão do povo.
+
+62
+00:05:33,800 --> 00:05:35,840
+Eu não estou usando a porta padrão.
+
+63
+00:05:35,840 --> 00:05:44,760
+Estou usando uma porta específica 5 4 3 4 Barra e bota o nome da base de dados que eu quero me conectar.
+
+64
+00:05:44,770 --> 00:05:48,760
+Bom eu acabei de criar mercado Dinho.
+
+65
+00:05:49,640 --> 00:06:00,740
+Parece que eu acabei de criar uma cancela aqui no mercadinho aqui beleza com a base de dados de um mercadinho
+
+66
+00:06:00,740 --> 00:06:01,160
+aqui.
+
+67
+00:06:01,160 --> 00:06:09,200
+Então essa vai ser a minha string de conexão com o banco de dados e através dessa o RL que o Spring
+
+68
+00:06:09,200 --> 00:06:16,970
+aqui no Java vai tentar se conectar com o nosso banco de dados vamos voltar mais algumas configurações
+
+69
+00:06:16,970 --> 00:06:18,420
+aqui.
+
+70
+00:06:18,450 --> 00:06:26,270
+Bom o nosso banco de dados ele se conecta com um usuário específico com uma senha específica.
+
+71
+00:06:26,270 --> 00:06:32,010
+Nessa minha instância eu disse que usuário específico vai ficar nessa configuração aqui.
+
+72
+00:06:32,730 --> 00:06:34,730
+Spring ponto Data Source.
+
+73
+00:06:39,130 --> 00:06:42,410
+Exprime ponto Data Source ponto de uso.
+
+74
+00:06:42,440 --> 00:06:46,470
+Nem essa configuração serve para tudo.
+
+75
+00:06:46,750 --> 00:06:54,650
+Mas na minha instância o usuário que vai conectar com o banco ensina que o Pontífice é um usuário padrão.
+
+76
+00:06:54,760 --> 00:06:58,410
+Eu não queria um outro usuário então um usuário padrão do post.
+
+77
+00:06:58,990 --> 00:07:00,270
+E o que eu vou usar.
+
+78
+00:07:00,460 --> 00:07:05,500
+Se você criar algum outro usuário específico e você usa o seu usuário específico mas como não criou
+
+79
+00:07:05,500 --> 00:07:16,230
+não vou usar o usuário padrão do documento que vai ficar fácil o nome do usuário de conexão com o banco.
+
+80
+00:07:20,480 --> 00:07:27,470
+Beleza se eu o usuário também tem casquinha de Spring ponto data.
+
+81
+00:07:30,730 --> 00:07:41,440
+Source ponto par e passo a rede exprime ponto Datasul segundo passo e vou escrever conhecem e me conectam
+
+82
+00:07:41,440 --> 00:07:42,430
+nesse banco.
+
+83
+00:07:42,430 --> 00:07:43,650
+Com isso o usuário.
+
+84
+00:07:43,780 --> 00:07:49,990
+Com isso usuário eu estou usando a senha 1 2 3 4 5 6 que é uma senha básica que eu escolhi e que quando
+
+85
+00:07:49,990 --> 00:07:55,930
+você estiver em ambiente de teste com uma senha simples a produção Vocês não vão usar a senha óbvia
+
+86
+00:07:55,930 --> 00:08:00,240
+dessa beleza que eu vou documental.
+
+87
+00:08:00,640 --> 00:08:06,700
+A senha de conexão com o banco de dados.
+
+88
+00:08:09,210 --> 00:08:16,090
+Então porta do servidor Caminha onde está o meu banco o usuário e a senha.
+
+89
+00:08:16,210 --> 00:08:21,160
+E aí nós precisamos passar mais duas outras configurações que são importante.
+
+90
+00:08:21,340 --> 00:08:36,580
+Uma sala que é Spring ponto Data Source ponto Driver ponto Class ponto nem me está e aí nós vamos ficar
+
+91
+00:08:36,580 --> 00:08:43,000
+aqui porque ponto pos SQL pontua o driver.
+
+92
+00:08:43,000 --> 00:08:47,590
+Esse que é o nome do driver que nós vamos usar para conexão com o banco está.
+
+93
+00:08:50,820 --> 00:08:51,300
+Nome.
+
+94
+00:08:53,540 --> 00:09:00,170
+O professor precisa decorar estudo não só tem que entender para que serve aí quando precisar você vai
+
+95
+00:09:00,170 --> 00:09:03,190
+num exemplo numa cozinha dessa sua.
+
+96
+00:09:03,290 --> 00:09:08,710
+Você pega o uso do nome do driver.
+
+97
+00:09:09,140 --> 00:09:15,910
+E por fim nós vamos fazer mais uma configuração aqui que é uma configuração para o Ray permite experiência
+
+98
+00:09:16,640 --> 00:09:23,940
+com o JP a ponto neste ponto Dell ponto alto.
+
+99
+00:09:23,950 --> 00:09:27,350
+E nós vamos colocar o dente.
+
+100
+00:09:28,370 --> 00:09:29,530
+Por quê.
+
+101
+00:09:29,900 --> 00:09:35,660
+Essa configuração aqui é uma configuração específica para o raio que a gente sabe como ele tem que trabalhar
+
+102
+00:09:35,990 --> 00:09:37,670
+com as nossas estantes.
+
+103
+00:09:37,670 --> 00:09:43,810
+Essa configuração que ela indica é quando a gente passa ela como o dente a gente indica que o rabanete
+
+104
+00:09:43,880 --> 00:09:47,420
+tem que gerar atualizações automaticamente.
+
+105
+00:09:47,420 --> 00:09:54,020
+De acordo com a mudança dos nossos esquemas por exemplo vocês vão perceber que toda tabela mostra todo
+
+106
+00:09:54,020 --> 00:10:00,980
+o nosso modelo e ele vai ser uma tabela do banco de dados.
+
+107
+00:10:01,040 --> 00:10:08,420
+Então nós precisamos falar para o rabo a gente fica se atualizando automaticamente porque se eu for
+
+108
+00:10:08,420 --> 00:10:14,990
+lá e alterar uma propriedade dentro do meu modelo o rádio tem que ser inteligente suficiente para poder
+
+109
+00:10:14,990 --> 00:10:17,480
+fazer essa atualização.
+
+110
+00:10:17,670 --> 00:10:19,650
+Um botão Configurar.
+
+111
+00:10:19,730 --> 00:10:20,450
+São.
+
+112
+00:10:23,860 --> 00:10:33,100
+Para indicar por Bernat que o frei que por trás do espelho indique que vai fazer essa conexão com o
+
+113
+00:10:33,100 --> 00:10:45,910
+banco fazia toda a magia de cores para a gente gerar configuração para indicar o rabanete para gerar
+
+114
+00:10:46,150 --> 00:11:01,270
+a atualizar sessões automáticas constantemente no esquema de som e uma configuração permite gerar automaticamente
+
+115
+00:11:01,270 --> 00:11:03,820
+configurações lá no nosso esquema.
+
+116
+00:11:03,820 --> 00:11:09,350
+Beleza então com isso aqui está configurado escolher uma nova porta para rodar.
+
+117
+00:11:09,400 --> 00:11:11,110
+Mandei ele conectar nesse banco.
+
+118
+00:11:11,650 --> 00:11:13,990
+Esse usuário essa senha.
+
+119
+00:11:13,990 --> 00:11:15,400
+Isso daqui vai ser padrão.
+
+120
+00:11:15,400 --> 00:11:23,040
+O Drive que nós vamos usar é o tipo de conexão conexão para ele ficar fazendo atualizações.
+
+121
+00:11:23,070 --> 00:11:27,600
+A beleza fez isso que eu tenho que fazer agora.
+
+122
+00:11:27,600 --> 00:11:34,510
+Bom eu tenho que vim aqui no meu produto eu já fiz aqui mas eu vou explicar o que é que eu fiz aqui
+
+123
+00:11:35,170 --> 00:11:42,220
+no meu produto eu adicionem algumas coisas aqui mas eu vou explicar o que eu fiz.
+
+124
+00:11:42,220 --> 00:11:49,420
+Vamos lá eu quero que o produto vire uma tabela no meu banco de dados eu quero que ele vire uma tabela
+
+125
+00:11:49,420 --> 00:12:00,690
+no banco de dados eu poderia botar aqui arroba tem e dizer para ele criar uma tabela no meu banco chamado
+
+126
+00:12:00,700 --> 00:12:02,990
+produto.
+
+127
+00:12:03,010 --> 00:12:11,110
+Poderia fazer isso pro doutor então eu posso dizer que isso aqui vai gerar uma tabela produto lá no
+
+128
+00:12:11,110 --> 00:12:11,950
+meu banco.
+
+129
+00:12:12,010 --> 00:12:13,650
+Só que eu não quero isso.
+
+130
+00:12:13,750 --> 00:12:22,120
+Eu quero que o nome da minha entidade o nome do meu modelo automaticamente já vire uma tabela no meu
+
+131
+00:12:22,120 --> 00:12:31,030
+banco de dados e que para isso acontecer basta a gente não fazer nada simplesmente colocar a arroba
+
+132
+00:12:31,030 --> 00:12:32,110
+em antiético.
+
+133
+00:12:32,200 --> 00:12:38,950
+Quando a gente coloca a palavrinha arroba enche a notação arroba entre nós estamos dizendo para o Spring
+
+134
+00:12:39,430 --> 00:12:46,360
+que ele vai ter que tomar conta dessa tal bebedeira desse modelo e esse modelo vai ser uma entidade
+
+135
+00:12:46,360 --> 00:12:47,740
+do nosso banco de dados.
+
+136
+00:12:47,740 --> 00:12:50,850
+Ou seja isso daqui vai se transformar numa tabela.
+
+137
+00:12:50,980 --> 00:13:00,600
+Lá no nosso banco de dados então só de colocar a Rubens e o os brinde através do Viber REALMENTE ELE
+
+138
+00:13:00,610 --> 00:13:08,110
+ENTENDE suficiente que ele tem que pegar a classe de produto gerou uma tabela no banco de dados beleza
+
+139
+00:13:08,890 --> 00:13:17,580
+só quem é que eu botei dois ou três dois ou três atributos Primeiro arroba e botei em cima do Private
+
+140
+00:13:17,770 --> 00:13:27,550
+a India caiu em cima do atributo e diz o que significa arroba e se arroba edir vai dizer ou vai transformar
+
+141
+00:13:29,620 --> 00:13:39,680
+esse aí numa chave primária lá no banco de dados vai se tornar uma primary King então líder.
+
+142
+00:13:39,850 --> 00:13:48,220
+Quando eu boto a arroba em cima de um de 1 a Indio em cima de uma de um atributo ele se transforma em
+
+143
+00:13:48,970 --> 00:13:51,430
+chave primária lá no banco de dados.
+
+144
+00:13:51,430 --> 00:13:54,230
+Então ele vai se transformar em primary key.
+
+145
+00:13:54,880 --> 00:14:01,980
+E o que é isso daqui Generator de Belo que está que hoje se trata de gênero de Type alto.
+
+146
+00:14:02,080 --> 00:14:08,680
+Isso é que é qual a estratégia de atualização da base.
+
+147
+00:14:08,680 --> 00:14:10,510
+A gente quer utilizar.
+
+148
+00:14:10,510 --> 00:14:18,250
+Ou seja quando a gente cria uma tabela geralmente a gente cria um ID e a gente diz que ele é alto incrivelmente
+
+149
+00:14:18,490 --> 00:14:28,510
+ele é sequencial ele eles seriam da gente diz qual é o tipo dele para que ele possa ser criado automaticamente
+
+150
+00:14:28,510 --> 00:14:35,090
+possa ser incremental é algo interessante e uma boa prática de banco de dados.
+
+151
+00:14:35,290 --> 00:14:42,710
+Quando a gente coloca estrategia recebendo Generation alto a gente exatamente está fazendo isso.
+
+152
+00:14:42,790 --> 00:14:48,280
+A gente está dizendo pro banco se se virar que o Ray permite de forma aleatória vai escolher qual é
+
+153
+00:14:48,280 --> 00:14:55,120
+a melhor estratégia para poder fazer isso de forma da melhor forma.
+
+154
+00:14:55,570 --> 00:15:03,250
+Então ele vai gerar um sequencial vai para cada registro dentro da tabela ele vai gerar um novo a id
+
+155
+00:15:03,280 --> 00:15:04,290
+incremental.
+
+156
+00:15:04,300 --> 00:15:12,450
+Então se vencerem o primeiro e depois 2 depois 3 depois 4 e assim sucessivamente.
+
+157
+00:15:12,610 --> 00:15:14,350
+Existe outros tipos existe.
+
+158
+00:15:14,590 --> 00:15:21,020
+Tenho o alto tenho Identity tenho sequências tenho tempo tem vários.
+
+159
+00:15:21,130 --> 00:15:21,820
+O alto vai.
+
+160
+00:15:22,050 --> 00:15:25,510
+Atendeu muito bem então basicamente é isso.
+
+161
+00:15:25,520 --> 00:15:26,390
+Olha o que eu fiz.
+
+162
+00:15:29,030 --> 00:15:38,570
+No meu modelo produto eu coloquei a arroba em dia e coloquei inerente value para ele gerar esse dia
+
+163
+00:15:38,570 --> 00:15:39,980
+automaticamente.
+
+164
+00:15:40,010 --> 00:15:48,040
+Só isso é adicionem aqui a Clara anotação e índice para isso que virou uma tabela do meu banco quando
+
+165
+00:15:48,080 --> 00:15:53,480
+bota a nota somente significa que vai para uma entidade do meu banco de dados.
+
+166
+00:15:53,480 --> 00:16:07,210
+Além disso eu vim aqui e criei aqui a nossa a nossa configuração aqui pra conectar com o banco.
+
+167
+00:16:07,220 --> 00:16:16,340
+Beleza vou salvar vou vir aqui e vou mandar levantar se eu não fiz nenhuma besteira esse daqui já deve
+
+168
+00:16:16,340 --> 00:16:16,940
+funcionar.
+
+169
+00:16:19,420 --> 00:16:21,260
+A mento não vai funcionar.
+
+170
+00:16:21,310 --> 00:16:27,990
+Vou cancelar ou cancelar é outra coisa para que isso daqui funcione.
+
+171
+00:16:28,000 --> 00:16:33,730
+Nós precisamos adicionar as dependências no projeto para que funcione.
+
+172
+00:16:33,730 --> 00:16:37,580
+Bom eu adicionem aqui mas vou mostrar a Oi e adicionar.
+
+173
+00:16:37,870 --> 00:16:45,180
+Nós vamos instalar a dependência de JP a JD BC e do post.
+
+174
+00:16:45,220 --> 00:16:47,530
+Nós vamos ter que instalar três dependências.
+
+175
+00:16:47,530 --> 00:16:49,570
+Como que nós fazemos isso.
+
+176
+00:16:49,570 --> 00:16:51,550
+Simples como vir aqui.
+
+177
+00:16:53,980 --> 00:17:03,010
+Nós vamos vir aqui e nós vamos fazer o seguinte aqui em Bom XML nós vamos vir aqui.
+
+178
+00:17:04,700 --> 00:17:10,920
+De Starter e ele pergunta quais as dependências que você quer instalar.
+
+179
+00:17:11,000 --> 00:17:15,700
+A gente tem Springs web e Spring Abbud deve Tools.
+
+180
+00:17:15,890 --> 00:17:20,890
+Eu quero que vocês instalem essa aqui agora é Spring data JP.
+
+181
+00:17:21,230 --> 00:17:23,410
+O que é Spring Data aponta JP.
+
+182
+00:17:23,870 --> 00:17:35,720
+Spring datas do JP Bear é uma dependência para que o Spring consiga trabalhar com a internet que é um
+
+183
+00:17:35,720 --> 00:17:40,530
+framework muito legal que vai dar um monte de poderes mágicos para a gente.
+
+184
+00:17:40,550 --> 00:17:48,680
+Com isso nós vamos poder conectar com banco de dados fazer várias coisas do tipo vamos estar lá também
+
+185
+00:17:48,680 --> 00:17:57,260
+Offspring data JD J BBC que é um framework para gente também trabalhar com DJ DB sim o Spring fazendo
+
+186
+00:17:57,260 --> 00:18:00,260
+com conexões com o banco de dados.
+
+187
+00:18:00,650 --> 00:18:17,450
+E por fim nós vamos instalar o este Driver Spring data JP a Sprint data JD BC e Post este Driver a possibilidade.
+
+188
+00:18:17,570 --> 00:18:25,160
+Quando a gente está lá essas versões aqui nós estamos dizendo que nós vamos trabalhar com o Spring e
+
+189
+00:18:25,160 --> 00:18:32,050
+posterior juntos e isso vai dar um poder muito legal pra gente pra gente conectar com o banco de dados
+
+190
+00:18:32,780 --> 00:18:33,340
+beleza.
+
+191
+00:18:33,380 --> 00:18:36,360
+Então nós vamos fazer exatamente isso daqui.
+
+192
+00:18:36,380 --> 00:18:38,020
+SHOW DE BOLA.
+
+193
+00:18:38,270 --> 00:18:45,840
+Dado que isso tá aqui tudo certinho está ali as três dependências restantes.
+
+194
+00:18:46,010 --> 00:18:50,270
+Nós podemos trabalhar com o banco de dados por escrito.
+
+195
+00:18:50,390 --> 00:18:53,070
+Tá beleza.
+
+196
+00:18:53,120 --> 00:19:01,210
+Essas três dependências quando você está lá ela vem aqui para o nosso povo XML meu tá dando um erro
+
+197
+00:19:01,220 --> 00:19:02,460
+que de alguma coisa.
+
+198
+00:19:04,260 --> 00:19:04,760
+Beleza
+
+199
+00:19:07,580 --> 00:19:17,420
+ela vai vir aqui com XML e aí aqui nós vamos fazer o seguinte nós vamos ter as três dependentes base
+
+200
+00:19:17,780 --> 00:19:22,700
+do nosso projeto e com isso a gente vai conseguir evoluir e fazer o nosso projeto conectar com o banco
+
+201
+00:19:22,700 --> 00:19:24,020
+de dados.
+
+202
+00:19:24,020 --> 00:19:30,140
+Deixa eu fazer uma coisa aqui antes de estar aqui o ponto que ele está dando um problema.
+
+203
+00:19:30,140 --> 00:19:35,120
+Eu fiz uma alteração aqui e queria que vocês fizessem comigo.
+
+204
+00:19:35,120 --> 00:19:43,900
+Eu tinha o nosso repositório de produto Produto repositório da tequila como onde eu renome ele pra onde
+
+205
+00:19:43,910 --> 00:19:44,480
+por quê.
+
+206
+00:19:44,480 --> 00:19:48,530
+Porque a gente estava conectando com listas até agora.
+
+207
+00:19:48,740 --> 00:19:59,450
+Então eu peguei renome pra onde e onde existiam as listas tinham obter produto por aí de adicionar deletar
+
+208
+00:19:59,720 --> 00:20:01,700
+atualizar.
+
+209
+00:20:01,820 --> 00:20:05,790
+Então aqui eu tinha os meus métodos.
+
+210
+00:20:05,810 --> 00:20:09,250
+Tudo pensando em lista nada conectava com o banco de dados.
+
+211
+00:20:09,380 --> 00:20:16,040
+E aí eu criei uma nova classe aqui para a gente ganhar tempo e eu vou explicar o que essa classe faz.
+
+212
+00:20:16,040 --> 00:20:18,560
+Na verdade ela não é uma classe é uma interface.
+
+213
+00:20:18,560 --> 00:20:25,130
+Eu criei com o mesmo nome porque é que nós vamos usar nós não vamos conectar mais uma lista e sim um
+
+214
+00:20:25,130 --> 00:20:27,700
+repositório.
+
+215
+00:20:27,740 --> 00:20:29,060
+Então o que eu fiz aqui.
+
+216
+00:20:29,090 --> 00:20:35,090
+Eu criei uma classe chamada produto repositório que nada mais é do que uma interface.
+
+217
+00:20:35,270 --> 00:20:42,680
+Anotei ela com arroba repositório para dizer que é um repositório e essa interface ela é interface produto
+
+218
+00:20:42,680 --> 00:20:53,150
+repositório e aí eu disse que ela vai estender ou seja vai herdar de uma outra interface genérica do
+
+219
+00:20:53,150 --> 00:20:57,740
+Java chamada JP a repositório.
+
+220
+00:20:57,780 --> 00:21:04,520
+Essa interface que só existe por conta daquela dependência que nós acabamos de baixar a expressão de
+
+221
+00:21:04,520 --> 00:21:06,440
+JP Ah tá.
+
+222
+00:21:06,680 --> 00:21:12,050
+E eu quero que o produto repositório que eu transformei uma interface.
+
+223
+00:21:12,050 --> 00:21:19,490
+Eu quero que ele e a rede que essa interface ela é genérica ou seja ela recebe dois parâmetros de museus
+
+224
+00:21:19,980 --> 00:21:24,410
+no seu museu construtor aqui no que ela vai ser.
+
+225
+00:21:25,220 --> 00:21:29,690
+E aí que tem o seguinte ela sabe trabalhar com qualquer coisa.
+
+226
+00:21:29,690 --> 00:21:36,680
+O primeiro parâmetro é o modelo e o que ela vai usar como exemplo como objeto e eu quero que ela use
+
+227
+00:21:36,680 --> 00:21:39,770
+o produto para seu produto.
+
+228
+00:21:39,770 --> 00:21:45,790
+O segundo parâmetro é qual é o tipo do edir desse objeto.
+
+229
+00:21:45,800 --> 00:21:51,480
+Então por exemplo o produto o ID dele e o que é um inteiro.
+
+230
+00:21:51,710 --> 00:21:54,670
+Se há um item aqui eu passo um interregno.
+
+231
+00:21:54,740 --> 00:21:55,410
+Por quê.
+
+232
+00:21:55,500 --> 00:21:57,430
+Ele precisa saber disso.
+
+233
+00:21:57,470 --> 00:22:03,560
+Essa interface precisa saber disso para que ela consiga gerar os métodos dinamicamente para a gente.
+
+234
+00:22:04,090 --> 00:22:11,500
+Perceba que aqui é um produto repositório hoje que é o que nós queríamos que eu renome PRA ONDE DE VELHO.
+
+235
+00:22:11,500 --> 00:22:18,730
+Nós que tivemos que fazer todas as todos os métodos aqui fazer tudo funcionar dentro do repositório.
+
+236
+00:22:20,560 --> 00:22:27,040
+Tivemos que fazer a implementação nesse caso aqui nós não vamos fazer implementação porque já vai estar
+
+237
+00:22:27,040 --> 00:22:31,070
+tudo pronto aqui a gente só vai usar olha que legal.
+
+238
+00:22:31,070 --> 00:22:35,420
+Então ficou assim o nosso produto e repositório.
+
+239
+00:22:35,470 --> 00:22:39,430
+Então é uma interface produto repositório que eu criei.
+
+240
+00:22:39,450 --> 00:22:47,260
+Por ter arroba repositor em cima e disse que ela está me estendendo ela está fazendo um estande da interface
+
+241
+00:22:47,260 --> 00:22:49,780
+JP a repositório que é genérica.
+
+242
+00:22:49,780 --> 00:22:52,240
+E aí eu passei aqui como primeiro parâmetro.
+
+243
+00:22:52,240 --> 00:23:00,490
+O objeto que ela vai cuidar do caso do produto e qual é o tipo do ID dela que é um Inter é um inteiro.
+
+244
+00:23:00,490 --> 00:23:04,980
+E aí como isso a nossa interface está pronta.
+
+245
+00:23:05,170 --> 00:23:09,290
+Eu vou dar play aqui eu acho que vai dar erro por conta do bom.
+
+246
+00:23:09,520 --> 00:23:11,140
+Mas a gente já vai dar uma olhada.
+
+247
+00:23:15,830 --> 00:23:17,240
+Desde Schumpeter.
+
+248
+00:23:43,920 --> 00:23:46,120
+E já vai dar uma ajustada nisso daqui.
+
+249
+00:23:46,200 --> 00:23:49,880
+Bom configuram aqui o projeto.
+
+250
+00:23:50,010 --> 00:24:00,000
+Ele já está pronto para executar já está pronto para iniciar o projeto está aqui e já está tudo configurado
+
+251
+00:24:00,000 --> 00:24:07,690
+para a gente conectar com o bom e nós vamos fazer e conectar com o banco para que nós possamos ver tudo
+
+252
+00:24:07,690 --> 00:24:16,200
+o que nós estamos fazendo via Requisição ser afetado no banco de dados ou seja todo nossa consulta e
+
+253
+00:24:16,200 --> 00:24:21,840
+ir ao banco todo o nosso cadastro roubam por toda a nossa atualização e o banco em vez de numa lista
+
+254
+00:24:21,840 --> 00:24:26,550
+igual nós estávamos fazendo anteriormente beleza.

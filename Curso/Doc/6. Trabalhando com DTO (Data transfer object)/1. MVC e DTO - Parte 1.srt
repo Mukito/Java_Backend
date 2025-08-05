@@ -1,0 +1,1711 @@
+1
+00:00:01,290 --> 00:00:08,960
+Estamos de volta galera probleminha que no ponto era simplesmente no verso Gold.
+
+2
+00:00:08,970 --> 00:00:17,460
+Eu vim aqui envio como de paletó e clique o relógio indo para ele fechar a janela e abrir de novo o
+
+3
+00:00:17,460 --> 00:00:21,440
+meio recarregando o projeto e simplesmente voltou a funcionar.
+
+4
+00:00:21,450 --> 00:00:25,690
+Não mudei nada até porque já estava tudo certinho.
+
+5
+00:00:25,710 --> 00:00:35,270
+Deve ter sido um plug in no pescoço que não conseguiu enxergar ali os dados do Mail beleza.
+
+6
+00:00:36,090 --> 00:00:37,440
+Nosso projeto está aqui.
+
+7
+00:00:37,470 --> 00:00:38,440
+Então vamos lá.
+
+8
+00:00:38,610 --> 00:00:40,470
+Criamos Application Properties.
+
+9
+00:00:42,450 --> 00:00:50,180
+Fizemos alteração no produto e criamos um repositor para saber trabalhar com JP.
+
+10
+00:00:51,390 --> 00:00:55,980
+Fomos no balcão criamos um bom chamado mercadinho ainda está desconectado.
+
+11
+00:00:55,980 --> 00:01:00,570
+Ainda não tem nem vou levantar minha aplicação.
+
+12
+00:01:00,690 --> 00:01:02,070
+Só vou levantar.
+
+13
+00:01:04,520 --> 00:01:08,720
+Se tudo deu certo ele vai levantar sua aplicação na porta e
+
+14
+00:01:11,810 --> 00:01:17,100
+na porta %83 da beleza está levantando a aplicação.
+
+15
+00:01:17,270 --> 00:01:18,670
+Show de bola.
+
+16
+00:01:19,740 --> 00:01:25,100
+Então quero estar errado na porta 80 83 ou seja ele pegou a nossa configuração a porta que nós colocamos
+
+17
+00:01:25,100 --> 00:01:28,910
+lá na configuração está agora certinho.
+
+18
+00:01:29,000 --> 00:01:30,910
+E o que nós vamos fazer agora.
+
+19
+00:01:30,980 --> 00:01:36,790
+Nós vamos agora testar para ver se essa pessoa está funcionando ou não voltar aqui.
+
+20
+00:01:36,890 --> 00:01:38,060
+Nosso Insomniac.
+
+21
+00:01:38,270 --> 00:01:46,490
+Nós estávamos usando é aí que está o projeto que 500 produtos a nossa linha de produtos que nós criamos.
+
+22
+00:01:46,490 --> 00:01:49,210
+Vou vir aqui vou mandar consultar todos os produtos.
+
+23
+00:01:49,220 --> 00:01:56,750
+Nós tínhamos dois produtos naquela listagem antiga em memória vamos ver agora quando eu fizer isso aqui
+
+24
+00:01:56,750 --> 00:02:00,470
+ele tem aquilo lá no banco de dados porque foi lá com o modelo e agora.
+
+25
+00:02:02,700 --> 00:02:06,640
+Fui lá e me retornou vazio o professor.
+
+26
+00:02:06,690 --> 00:02:09,120
+Mas como é que ele retornou vazio.
+
+27
+00:02:09,140 --> 00:02:14,220
+Isso nós só criamos o banco de dados nem criamos a tabela produto será.
+
+28
+00:02:14,220 --> 00:02:21,030
+Olha só vou entrar aqui em mercadinho entrou no esquema.
+
+29
+00:02:22,920 --> 00:02:30,150
+Tempo olha que ele criou uma tabela produtos e essa tabela produtos ele criou no momento em que ele
+
+30
+00:02:30,150 --> 00:02:32,600
+levantou a nossa aplicação.
+
+31
+00:02:33,120 --> 00:02:36,000
+Já criou com todos os copos que tinha no produto.
+
+32
+00:02:36,130 --> 00:02:43,360
+Ideia que virou um PK um prova de que nome observação quantidade de valor.
+
+33
+00:02:43,440 --> 00:02:50,910
+Mas como o que ele fez isso ele fez isso por conta disso aqui nós colocamos a arroba em teste então
+
+34
+00:02:50,910 --> 00:02:56,870
+no momento que nós estávamos a aplicação ele verificou se tinha alguma entidade dentro do banco com
+
+35
+00:02:56,880 --> 00:03:03,630
+o nome produto e se não tinha ele cria essa entidade pra gente então ele criou o Idec como prova de
+
+36
+00:03:03,630 --> 00:03:09,030
+que a enorme quantidade de valor de observação criou certinho no balcão no banco de dados pra gente
+
+37
+00:03:09,900 --> 00:03:14,830
+ele já faz isso é automático quem faz isso é o River Net beleza.
+
+38
+00:03:14,940 --> 00:03:16,130
+Então pra quê.
+
+39
+00:03:16,170 --> 00:03:18,510
+Vamos ver se está funciona mais coisas.
+
+40
+00:03:18,630 --> 00:03:28,680
+Por exemplo eu vou vir aqui e vou fazer o seguinte eu vou eu vou vir aqui vou mandar ele adicionar o
+
+41
+00:03:28,780 --> 00:03:30,500
+tempero que já um produto pronto.
+
+42
+00:03:30,510 --> 00:03:32,570
+Sonho de chocolate.
+
+43
+00:03:33,450 --> 00:03:35,960
+Sente falar cadastrou.
+
+44
+00:03:37,170 --> 00:03:45,960
+Eu estou mandando para HTTP 2 pontos Barra Barra local os 80 83 já troquei a porta da Barra produtos
+
+45
+00:03:46,800 --> 00:03:55,650
+lá disse ele que cadastrou no nosso banco de dados uma nova consulta que está vindo o local roxo 80
+
+46
+00:03:55,650 --> 00:03:56,640
+83
+
+47
+00:03:59,100 --> 00:04:00,130
+retornou.
+
+48
+00:04:00,150 --> 00:04:06,620
+Será que realmente existe aqui no meu bom vou dar play para ele fazer essa consulta aqui de novo.
+
+49
+00:04:07,560 --> 00:04:13,080
+Somente chocolate cadastrou la no banco de dados ela está funcionando a nossa e conectada com o nosso
+
+50
+00:04:13,080 --> 00:04:16,690
+banco de dados ela está funcionando.
+
+51
+00:04:16,890 --> 00:04:28,050
+Vou mandar cadastrar um outro produto aqui o sonho de melhor botar pão de queijo pão de queijo pão de
+
+52
+00:04:28,050 --> 00:04:33,130
+queijo e o 2 gerou mais de 2 horas.
+
+53
+00:04:33,210 --> 00:04:38,010
+Por isso que a gente colocou outro ingrediente aqui.
+
+54
+00:04:38,250 --> 00:04:43,350
+Ele pegou e sabe criar auto incremental cada registro.
+
+55
+00:04:43,440 --> 00:04:55,260
+1 2 3 4 e assim sucessivamente criou se viés aqui e lá me retornam e não vou me ver no banco.
+
+56
+00:04:56,100 --> 00:05:06,680
+Agora tenho dois produtos sou chocolate e pão de queijo a mesma então adicionar ficou bem simples passei
+
+57
+00:05:06,740 --> 00:05:09,570
+nome quantidade valor e observação só isso.
+
+58
+00:05:09,570 --> 00:05:15,390
+O ideal é criar dinamicamente como se consultar por aí está funcionando quero pegar o produto que tem
+
+59
+00:05:15,390 --> 00:05:28,700
+e dê um idéia um que entender um é o sonho de consumo de chocolate uma de um 80 83 latrocínios chocolate
+
+60
+00:05:28,830 --> 00:05:37,410
+de chocolate ou mudar o ID para 2 pão de queijo está funcionando a consulta também está funcionando
+
+61
+00:05:37,410 --> 00:05:38,640
+um botão um item que não existe.
+
+62
+00:05:38,640 --> 00:05:50,270
+3 Não retornou nada deu nulo e deveria ter dado um erro e a gente tratou com a lista se não encontrar
+
+63
+00:05:50,310 --> 00:05:52,950
+de lançar uma exceção e tudo mais.
+
+64
+00:05:52,950 --> 00:05:57,510
+Como a gente não está mais usando aquele repositório não está mais acontecendo isso a gente vai melhorar
+
+65
+00:05:57,810 --> 00:05:58,740
+para que aconteça
+
+66
+00:06:01,500 --> 00:06:02,910
+aqui.
+
+67
+00:06:03,150 --> 00:06:05,310
+Vamos ver o atualizar.
+
+68
+00:06:05,460 --> 00:06:13,190
+Vamos pegar um produto ou pegar o pão de queijo pão de queijo e o produto pão de queijo ou não atualizar.
+
+69
+00:06:13,260 --> 00:06:21,660
+Vou colar ele aqui o pão de queijo por lei vou botar aqui o pão de queijo de minas.
+
+70
+00:06:21,660 --> 00:06:28,210
+Vou mudar um nome vou mudar a quantidade e vou mudar o valor.
+
+71
+00:06:28,650 --> 00:06:31,430
+O ideal a gente não passa no bode.
+
+72
+00:06:31,530 --> 00:06:35,730
+O ideal do produto a gente passa aqui na.
+
+73
+00:06:35,850 --> 00:06:39,020
+O ideia do pão de queijo ou dois ou vir aqui.
+
+74
+00:06:39,950 --> 00:06:41,880
+Ela atualizou o pão de queijo.
+
+75
+00:06:43,290 --> 00:06:48,480
+Quando vier era quem consultar e esse pão de queijo aqui tem que estar a pão de queijo de minas quantidade
+
+76
+00:06:48,480 --> 00:06:50,590
+sem valor três reais.
+
+77
+00:06:50,740 --> 00:06:54,690
+Manda consultá la certinho.
+
+78
+00:06:54,690 --> 00:07:00,510
+Então o nosso push para atualizar também está correto também está funcionando.
+
+79
+00:07:00,510 --> 00:07:06,080
+Beleza agora vamos fazer o nosso deletar.
+
+80
+00:07:06,240 --> 00:07:08,550
+Vamos ver se ele deleta quero deletar.
+
+81
+00:07:08,550 --> 00:07:14,220
+Quem tem o ID 1 e D1 e quem é D1 é o sonho de chocolate.
+
+82
+00:07:21,690 --> 00:07:25,560
+Então vou vir aqui não deletar de algum site Chocolate
+
+83
+00:07:28,590 --> 00:07:33,180
+retornou 200 o que significa que ele conseguiu executar.
+
+84
+00:07:33,330 --> 00:07:35,190
+Vou voltar aqui ao consultar todos.
+
+85
+00:07:38,520 --> 00:07:39,520
+OPA.
+
+86
+00:07:39,790 --> 00:07:44,350
+A ata entrou outra coisa que no meio entrou um outro.
+
+87
+00:07:44,350 --> 00:07:50,780
+Outro endereço que na hora que eu cliquei acabou entrando de novo agora a URL está certinha.
+
+88
+00:07:50,980 --> 00:07:53,250
+Agora sim ok.
+
+89
+00:07:53,590 --> 00:08:01,450
+Consultor consultor chover aqui deletar tudo consultar todos.
+
+90
+00:08:03,690 --> 00:08:12,210
+O Papa está retornando com o consultar todos agora está retornando um nulo.
+
+91
+00:08:12,390 --> 00:08:22,560
+Pode ser alguma coisa que nós quebramos aqui a nossa era a não consultar todos os produtos têm uma ideia
+
+92
+00:08:22,560 --> 00:08:27,540
+um que não é custar todos e só barra bem barra produtos.
+
+93
+00:08:27,540 --> 00:08:29,360
+Ah agora sim.
+
+94
+00:08:29,370 --> 00:08:30,660
+Que Deus não existe.
+
+95
+00:08:31,140 --> 00:08:32,260
+Deu um era para estar aqui.
+
+96
+00:08:32,760 --> 00:08:40,590
+Custa por aí de voto nulo porque não existe mais aqui consultar todos só existe agora o pão de queijo.
+
+97
+00:08:40,590 --> 00:08:47,070
+Beleza então todos os verbos que nós tínhamos criado está funcionando.
+
+98
+00:08:47,670 --> 00:08:56,910
+Obter todos Get por aí dia pois para adicionar delitos para deletar e por último atualizar e aqui tudo
+
+99
+00:08:56,910 --> 00:08:58,640
+funcionando tudo ok.
+
+100
+00:08:58,660 --> 00:09:04,650
+Bom agora que está tudo funcionando tudo ok nós vamos fazer o seguinte nós vamos dar uma melhorada no
+
+101
+00:09:04,650 --> 00:09:06,000
+nosso código.
+
+102
+00:09:06,240 --> 00:09:11,880
+Nós vamos fazer o seguinte nosso país já está bem legal já está bem profissional não é só que nós vamos
+
+103
+00:09:11,880 --> 00:09:19,680
+melhorar ela a partir de agora nós vamos trabalhar com uma coisa chamada dt é hora e o que seria isso
+
+104
+00:09:19,800 --> 00:09:25,050
+seria basicamente a gente ter um objeto de transferência de dados por exemplo.
+
+105
+00:09:25,050 --> 00:09:32,400
+Aqui nós temos um objeto móvel que é o produto nós usamos ele para tudo.
+
+106
+00:09:32,520 --> 00:09:42,450
+Ele é um objeto do banco mas ele é um objeto que é do banco mas ele é um objeto que está dentro do nosso
+
+107
+00:09:42,450 --> 00:09:44,000
+controle.
+
+108
+00:09:44,160 --> 00:09:51,150
+O que a gente devolve ele para o usuário que a gente trafega a ele dentro da nossa camada de serviço.
+
+109
+00:09:51,150 --> 00:09:56,460
+A gente faz tudo com ele e se esse objeto estiver sobre uma propriedade privada que não pudesse ser
+
+110
+00:09:57,420 --> 00:10:01,480
+enviada para fora para o usuário a gente não conseguiria.
+
+111
+00:10:01,500 --> 00:10:02,520
+Por quê.
+
+112
+00:10:02,520 --> 00:10:05,320
+Porque esse cara está público todo mundo está usando.
+
+113
+00:10:05,370 --> 00:10:10,650
+O ideal é que a gente não fique usando a nossa entidade de banco de dados o tempo todo.
+
+114
+00:10:10,650 --> 00:10:18,120
+A gente tem que ter um objeto de transferência de dados ou seja algo que represente aquele objeto para
+
+115
+00:10:18,120 --> 00:10:19,370
+o usuário.
+
+116
+00:10:19,740 --> 00:10:21,170
+Então nós vamos fazer isso.
+
+117
+00:10:21,180 --> 00:10:25,890
+A primeira coisa que nós vamos fazer é dar uma melhorada agora na nossa arquitetura.
+
+118
+00:10:25,890 --> 00:10:34,110
+Bom a nossa arquitetura vai ser o seguinte eu criei aqui uma pasta chamada viu que não tem nada essa
+
+119
+00:10:34,110 --> 00:10:35,020
+pasta viu.
+
+120
+00:10:35,040 --> 00:10:37,920
+Vai ser uma nova camada que nós vamos trabalhar.
+
+121
+00:10:37,950 --> 00:10:39,930
+Tá beleza.
+
+122
+00:10:39,930 --> 00:10:41,470
+Nós vamos trabalhar dentro dela.
+
+123
+00:10:41,520 --> 00:10:50,730
+Essa é a nossa camada viu beleza além da camada viu aqui dentro da minha página na mesma hierarquia
+
+124
+00:10:50,730 --> 00:10:52,800
+das demais pastas.
+
+125
+00:10:52,800 --> 00:10:58,550
+Eu vou criar uma nova pasta chamada Shared ou compartilhado.
+
+126
+00:10:58,620 --> 00:11:08,730
+Se quiser chamar de compartilhado pode chamar essa pasta que vai ser responsável por ter modelos que
+
+127
+00:11:08,730 --> 00:11:13,320
+vão ficar trafegando entre o meu controle e o meu serviço.
+
+128
+00:11:13,950 --> 00:11:21,210
+Ou seja o meu serviço não vai conhecer o modelo não ele não vai devolver o modem ou por controle.
+
+129
+00:11:21,360 --> 00:11:30,940
+O modem vai ser sempre entre o Service e o repositor e entre o controle e o Service.
+
+130
+00:11:30,960 --> 00:11:35,850
+A gente vai ter que ter um cara aí no meio do caminho o modem não vai ficar mais sendo trafegando de
+
+131
+00:11:35,850 --> 00:11:37,470
+um lado para o outro.
+
+132
+00:11:37,470 --> 00:11:43,350
+Então nós vamos criar um cara chamado DTH que vai ser o nosso produto DTH.
+
+133
+00:11:43,680 --> 00:11:52,680
+Esse produto DTH ele vai ser algo bem parecido com o nosso produto normal só que com os dados que eu
+
+134
+00:11:52,680 --> 00:11:56,180
+quero que fique trafegando de um lado para o outro.
+
+135
+00:11:56,220 --> 00:12:05,250
+Então eu vou criar um novo arquivo que eu vou chamar de produtor de teoria ponto Java.
+
+136
+00:12:06,090 --> 00:12:09,730
+é uma classe e esse produto.
+
+137
+00:12:10,240 --> 00:12:18,090
+Ele é o seguinte ele é basicamente uma cópia desse modelo eu posso vir aqui o controle por copiar tudo
+
+138
+00:12:18,090 --> 00:12:21,840
+o que tem dentro do produto que copiem.
+
+139
+00:12:24,320 --> 00:12:25,460
+Copiei.
+
+140
+00:12:25,550 --> 00:12:27,230
+Vou matar aplicação.
+
+141
+00:12:27,360 --> 00:12:31,010
+Vou matar ela e eu vou colar aqui dentro.
+
+142
+00:12:32,420 --> 00:12:34,050
+Colei.
+
+143
+00:12:34,340 --> 00:12:38,480
+Só que essas opções é que eu vou tirar opções do banco.
+
+144
+00:12:38,480 --> 00:12:41,900
+Porque se eu sou do modelo para um produto tudo normal.
+
+145
+00:12:42,440 --> 00:12:44,970
+Um objeto de transferência.
+
+146
+00:12:45,080 --> 00:12:50,810
+Então por que você está criando um outro objeto não uso mesmo porque eu não quero ficar trafegando esse
+
+147
+00:12:50,810 --> 00:12:58,070
+objeto aqui o meu tt eu poderia esconder alguma propriedade vamos fingir que sei lá eu não pudesse devolver
+
+148
+00:12:58,070 --> 00:13:00,010
+o valor para o cliente.
+
+149
+00:13:00,080 --> 00:13:07,520
+Eu teria um produto sem valor e aí toda vez que fosse trafegar os dados eu ia trafegar tudo menos o
+
+150
+00:13:07,520 --> 00:13:14,120
+valor ou ele não existia mas no nosso caso que vai ser a mesma coisa a mesma quantidade de atributos
+
+151
+00:13:14,120 --> 00:13:16,970
+e métodos que vai ter no produto pode ter um produto.
+
+152
+00:13:17,010 --> 00:13:24,110
+A gente só está separando num objeto separado para manter a compatibilidade e fazer um acoplamento.
+
+153
+00:13:24,110 --> 00:13:28,790
+A gente não quer ficar acoplado tudo ficar vinculado ao nosso produto comum.
+
+154
+00:13:28,820 --> 00:13:36,380
+O nosso modelo eu quero que tem um objeto de transferência no meio do de dados até para manter uma segurança
+
+155
+00:13:36,770 --> 00:13:42,390
+de um acoplamento vai ficar melhor o nosso código vai ficar um pouco mais profissional.
+
+156
+00:13:42,420 --> 00:13:48,400
+Beleza Está aqui o meu produto da teoria ou deu um contra um senão que tinha que dentro colei aqui aqui
+
+157
+00:13:48,410 --> 00:13:53,640
+eu tirei desse produto aqui ou não contra você e vim aqui colher aqui.
+
+158
+00:13:53,660 --> 00:14:02,360
+A única diferença que eu tirei as anotações que tinha pra entidade beleza agora que eu tenho um produto
+
+159
+00:14:02,360 --> 00:14:15,490
+de teor esse produto ele vai ser utilizado nas conversões nas conversões entre Controller e serve sim
+
+160
+00:14:16,160 --> 00:14:18,650
+e serve se é controle.
+
+161
+00:14:19,070 --> 00:14:21,660
+Então nós vamos usar esse carinho.
+
+162
+00:14:21,660 --> 00:14:27,430
+Que beleza deixa ele que por enquanto e agora nós vamos fazer algumas alterações.
+
+163
+00:14:27,440 --> 00:14:31,090
+A primeira delas é o seguinte tá vendo nessa pastinha controle.
+
+164
+00:14:31,160 --> 00:14:35,990
+Ela não vai ficar mais aqui na raiz ela vai ficar dentro da pasta viu.
+
+165
+00:14:36,200 --> 00:14:43,900
+Por que ela vai ser chamada de visão se a camada de comunicação do usuário a camada de visão.
+
+166
+00:14:43,970 --> 00:14:52,860
+Então o controle era que também vai estar dentro da nossa camada de visão ou mover para a Movie ok.
+
+167
+00:14:52,970 --> 00:14:55,520
+Ela moveu todo mundo para cá.
+
+168
+00:14:57,500 --> 00:14:57,950
+Desde.
+
+169
+00:15:11,150 --> 00:15:14,380
+Salvar beleza salvei está aqui.
+
+170
+00:15:14,510 --> 00:15:18,110
+Então o nosso controle está dentro da camada de visão.
+
+171
+00:15:18,140 --> 00:15:24,260
+Beleza outra coisa que vai ficar dentro da camada de visão é o seguinte nós vamos ter aqui dentro uma
+
+172
+00:15:24,260 --> 00:15:34,790
+parte chamada renda ou redondos que são configura dores e que dentro da camada de divisão nós vamos
+
+173
+00:15:34,790 --> 00:15:48,390
+ter uma outra pasta chamada Model que vão de seus modelos de comunicação entre o fronte e o controle.
+
+174
+00:15:50,210 --> 00:15:51,040
+Como assim.
+
+175
+00:15:51,080 --> 00:15:57,720
+Imagina o seguinte quando o usuário acessa um sistema muitas das vezes ele precisa passar o usuário
+
+176
+00:15:57,720 --> 00:15:59,430
+e senha dele para se comunicar.
+
+177
+00:15:59,570 --> 00:16:04,910
+Nesse exato momento talvez no login eu só preciso do usuário e senha.
+
+178
+00:16:04,920 --> 00:16:10,220
+Aí ele vai me passa usuário e senha mas quando eu devolvo para ele às vezes eu sou devolvo o nome dele
+
+179
+00:16:10,670 --> 00:16:11,720
+é um token.
+
+180
+00:16:11,720 --> 00:16:16,970
+Então não devolve o mesmo nome eu não devolvo o usuário devolvo a senha não devolvo nada disso.
+
+181
+00:16:16,970 --> 00:16:23,450
+Ou seja eu recebo de uma forma que eu recebo usuário e senha e devolvo outro tipo de dado.
+
+182
+00:16:23,600 --> 00:16:27,020
+Talvez o nome dele é um token.
+
+183
+00:16:27,080 --> 00:16:33,080
+Então na verdade poderia ser até o mesmo modelo só que eu teria que esconder propriedades que eu estou
+
+184
+00:16:33,080 --> 00:16:36,530
+recebendo e esconder propriedades que eu estou enviando.
+
+185
+00:16:37,730 --> 00:16:43,970
+Na verdade eu estou recebendo duas propriedades e-mail e senha e eu poderia estar escondendo algumas
+
+186
+00:16:43,970 --> 00:16:48,360
+propriedades para enviar talvez somente um nome ou alguma coisa do tipo.
+
+187
+00:16:48,680 --> 00:16:52,750
+Essas coisas também podem ser transformados em modelos específicos.
+
+188
+00:16:52,820 --> 00:17:01,070
+Por exemplo no caso do produto vai ser a mesma coisa mas poderia ter atributos distintos por exemplo
+
+189
+00:17:01,580 --> 00:17:02,870
+aqui dentro de produto.
+
+190
+00:17:02,880 --> 00:17:08,330
+Desse modo eu vou criar um cara que vai ser o seguinte Aqui eu vou criar um cara chamado.
+
+191
+00:17:11,610 --> 00:17:21,150
+Produto reconhece pontos chave que esse produto reconhece e ou vai ser o tipo de dado que eu espero
+
+192
+00:17:21,150 --> 00:17:28,470
+receber quando alguém fizer uma requisição para o back end tanto no gate quanto no post quanto no push
+
+193
+00:17:28,470 --> 00:17:35,640
+quanto no da elite quando alguém envia alguns dados para o produto e espero receber do tipo produto
+
+194
+00:17:35,640 --> 00:17:36,410
+reconhece.
+
+195
+00:17:36,750 --> 00:17:40,280
+Ou seja uma requisição de produto.
+
+196
+00:17:40,290 --> 00:17:40,740
+Por quê.
+
+197
+00:17:40,740 --> 00:17:48,240
+Pode ser que na hora de enviar que eu poderia chamar de produto Response os dados ou atributos internos
+
+198
+00:17:48,240 --> 00:17:50,300
+sejam diferentes.
+
+199
+00:17:50,850 --> 00:17:56,130
+Pode ser que eu não queira enviar todos os dados específicos do produto e enviar talvez uma coisa ou
+
+200
+00:17:56,130 --> 00:17:57,860
+outra beleza.
+
+201
+00:17:58,050 --> 00:18:00,740
+O nosso caso vai não vai mudar muito não.
+
+202
+00:18:00,750 --> 00:18:03,000
+No nosso caso eu vou vir aqui no.
+
+203
+00:18:03,540 --> 00:18:06,660
+Como os dados são bem parecidos.
+
+204
+00:18:06,690 --> 00:18:07,410
+Eu vou copiar.
+
+205
+00:18:11,250 --> 00:18:15,840
+E vou colar aqui porque não foi tudo o que está aqui.
+
+206
+00:18:15,840 --> 00:18:22,110
+é importante eu receber tanto e d quanto o nome por exemplo requisição.
+
+207
+00:18:22,110 --> 00:18:27,370
+Quando a gente vai cadastrar a gente passa o ideia do produto não.
+
+208
+00:18:27,390 --> 00:18:28,620
+Então não reconhece.
+
+209
+00:18:29,190 --> 00:18:31,690
+O ideia não é importante.
+
+210
+00:18:32,040 --> 00:18:36,210
+Eu quero ver só quando eu vou cadastrar.
+
+211
+00:18:36,210 --> 00:18:41,710
+é importante não que eu estou enviando aqui que eu vou dizer que vai ser um produto reconhece.
+
+212
+00:18:41,710 --> 00:18:45,660
+São os dados do produto mas uma requisição não é importante.
+
+213
+00:18:45,770 --> 00:18:48,920
+Aqui é importante não o ID vai na URL e
+
+214
+00:18:51,840 --> 00:18:56,630
+aqui é importante no corpo nem tem corpo e não RL.
+
+215
+00:18:56,880 --> 00:19:01,590
+Aqui é importante não é dever não RL e aqui não tem ideia não tem nada.
+
+216
+00:19:01,590 --> 00:19:13,010
+Então o nosso o nosso produto reconhece não vai precisar de um e de outro arrancar aqui.
+
+217
+00:19:13,590 --> 00:19:19,340
+Não vai precisar de um endereço beleza e o que eu espero receber.
+
+218
+00:19:19,350 --> 00:19:24,570
+Vou duplicar esse cara que na verdade não agrada divulgar um novo.
+
+219
+00:19:27,730 --> 00:19:37,800
+Era um novo aqui e o que eu vou chamar de produto responsa Java.
+
+220
+00:19:38,080 --> 00:19:39,920
+é o que esse produto responsa.
+
+221
+00:19:40,000 --> 00:19:44,910
+Esse produto Response vai ser o que eu vou devolver quando.
+
+222
+00:19:44,950 --> 00:19:49,270
+Então vou dar uma olhada que eu vou copiar até do toque eu acho que vai ser bem parecido.
+
+223
+00:19:49,270 --> 00:19:53,640
+Olha só quando eu consulto eu recebo.
+
+224
+00:19:53,650 --> 00:19:56,860
+Observação O valor quantidade o nome dê certo.
+
+225
+00:19:57,310 --> 00:20:03,790
+Recebo essas quatro propriedades aqui essas 4 6 5 propriedades beleza então esse aqui vai ser o meu
+
+226
+00:20:03,790 --> 00:20:07,870
+produto Response que é a resposta.
+
+227
+00:20:07,870 --> 00:20:14,950
+Então o meu produto a resposta eu vou colocar essas propriedades aqui e de nome quantidade e valor de
+
+228
+00:20:14,950 --> 00:20:15,970
+obsessão.
+
+229
+00:20:15,970 --> 00:20:25,090
+Ah mas se eu não quisesse uma resposta devolveu a observação e você tirá la daqui eu vou deixar comentado
+
+230
+00:20:25,090 --> 00:20:25,480
+aqui.
+
+231
+00:20:26,110 --> 00:20:27,620
+Você tira.
+
+232
+00:20:27,650 --> 00:20:32,230
+Ah se eu quisesse só devolver só ideia nova quantidade de valor observação não quisesse devolver por
+
+233
+00:20:32,230 --> 00:20:37,090
+algum motivo eu poderia não tê lo aqui.
+
+234
+00:20:37,360 --> 00:20:38,680
+Salvei.
+
+235
+00:20:38,680 --> 00:20:46,210
+Então agora eu tenho produto reconhece que é o que eu espero receber produto Response é o que eu vou
+
+236
+00:20:46,210 --> 00:20:46,960
+devolver.
+
+237
+00:20:49,870 --> 00:20:58,420
+Produto do PT é o que eu vou usar para ficar transferindo dados entre controle e alicerce que tem o
+
+238
+00:20:58,420 --> 00:21:06,050
+meu meu modem ou com o meu produto que é minha entidade que vai persistir no banco de dados.
+
+239
+00:21:06,160 --> 00:21:10,080
+é o que eu vou comunicar entre o serviço e o repositor.
+
+240
+00:21:10,390 --> 00:21:16,960
+Essa entidade que a gente só vai comunicar entre o serviço e o repositório agora é entre o serviço e
+
+241
+00:21:16,960 --> 00:21:20,170
+qualquer outra camada de dados como controle.
+
+242
+00:21:20,170 --> 00:21:29,100
+Nós vamos usar o produto de teor e para receber dados do cliente nós vamos usar o produto reconhece.
+
+243
+00:21:29,110 --> 00:21:37,420
+E para enviar mais vamos usar um produto Response classe semelhante porém com identidades e objetivos
+
+244
+00:21:37,420 --> 00:21:38,120
+diferentes.
+
+245
+00:21:38,120 --> 00:21:41,070
+Cada uma tem a sua particularidade.
+
+246
+00:21:41,120 --> 00:21:44,020
+Então beleza tudo está salvo.
+
+247
+00:21:44,680 --> 00:21:53,890
+Vamos fazer o seguinte vamos pegar agora e vamos transformar o nó o nosso serviço vai parar de funcionar
+
+248
+00:21:53,890 --> 00:21:56,750
+tudo agora mas vai ser interessante.
+
+249
+00:21:56,830 --> 00:22:09,820
+Vamos transformar o nosso serviço para saber trabalhar com com o DT então todos os meus serviços aqui.
+
+250
+00:22:09,850 --> 00:22:19,920
+Eles nunca vão devolver um produto como um produto móvel eles vão sempre devolver um produto de beleza.
+
+251
+00:22:20,950 --> 00:22:25,870
+Aí já vai dar erro porque esse cara aqui ele sabe devolver um produto não produz oque a gente já vai
+
+252
+00:22:25,870 --> 00:22:26,410
+resolver.
+
+253
+00:22:28,810 --> 00:22:31,750
+Esse cara aqui também é a mesma coisa de ter o.
+
+254
+00:22:35,880 --> 00:22:44,180
+Esse cara aqui adiciona ele recebe um produto de teor e ele devolve um produto de.
+
+255
+00:22:44,270 --> 00:22:52,160
+Então eu estou mexendo no set só aonde tinha produto normal ele virou um produto de teor.
+
+256
+00:22:56,040 --> 00:22:58,920
+E aqui cadê o carioca.
+
+257
+00:23:00,180 --> 00:23:02,640
+Vou dizer que o produto beleza Show.
+
+258
+00:23:04,500 --> 00:23:12,890
+Aqui ele recebe um produto de teor e ele devolve um produto até o atualizar.
+
+259
+00:23:13,100 --> 00:23:17,740
+Beleza até que está ok salvei está tudo tudo quebrou.
+
+260
+00:23:17,960 --> 00:23:20,180
+Mas não vamos fazer isso funcionar.
+
+261
+00:23:20,210 --> 00:23:21,500
+Show de bola.
+
+262
+00:23:21,590 --> 00:23:22,220
+E aí.
+
+263
+00:23:22,250 --> 00:23:29,310
+Aqui nós temos um porém vamos pensar no cadastrar o cadastrado.
+
+264
+00:23:29,310 --> 00:23:37,140
+Ele recebe um produto de teor poderia até fazer um produto de teor ele recebe um produto.
+
+265
+00:23:37,370 --> 00:23:45,530
+E nós temos que fazer esse produto se transformar num produto móvel para poder salvar que está dando
+
+266
+00:23:45,530 --> 00:23:47,670
+o nosso serviço.
+
+267
+00:23:47,690 --> 00:23:51,950
+é preciso transformar num produto móvel como a gente tem que fazer isso.
+
+268
+00:23:51,950 --> 00:24:00,380
+Bom eu poderia criar um milk produto moda aqui e usar os atributos dele para poder fazer um passeio
+
+269
+00:24:00,380 --> 00:24:01,120
+um por um.
+
+270
+00:24:01,160 --> 00:24:05,750
+Passo a passo fazer isso de maneira manual.
+
+271
+00:24:05,750 --> 00:24:12,760
+Só que isso daria muito trabalho teria que fazer algo tipo assim por exemplo terei que fazer.
+
+272
+00:24:13,310 --> 00:24:15,200
+Vou fazer aqui em cima para ficar fácil.
+
+273
+00:24:15,710 --> 00:24:24,050
+Terei que fazer sei lá criar um produto moda ou aquele produto moda ou melhor chamado de produto.
+
+274
+00:24:24,050 --> 00:24:34,640
+O produto recebe o único produto que é um produto modelo e aí é que eu faria produto ponto etc.
+
+275
+00:24:34,670 --> 00:24:45,260
+A ideia aí recebe produto de design ponto Get a ID para ir convertendo o que tiver dentro desse cara
+
+276
+00:24:45,500 --> 00:24:49,490
+jogar para dentro desse faria isso com os demais produto.
+
+277
+00:24:49,670 --> 00:24:52,400
+Ponto 7 nome
+
+278
+00:24:54,740 --> 00:24:55,640
+recebe.
+
+279
+00:24:58,810 --> 00:25:16,410
+Recebe o produto para o produto ponto de ter o produto de ter o ponto Get polpa diet nome olha só.
+
+280
+00:25:16,570 --> 00:25:20,140
+Então eu teria que fazer isso para todas as propriedades.
+
+281
+00:25:20,140 --> 00:25:23,140
+Olha só tenho que fazer isso para tudo.
+
+282
+00:25:23,860 --> 00:25:28,630
+No caso aqui do produto só tem quatro propriedades nem quatro atributos.
+
+283
+00:25:28,720 --> 00:25:36,100
+Mas se eu tivesse um modelo que tivesse lá 100 propriedades sem atributos cara que imagina tudo quanto
+
+284
+00:25:36,100 --> 00:25:42,400
+é lugar que eu precisasse converter um produto de teor num produto moda ou para poder salvar um banco
+
+285
+00:25:42,400 --> 00:25:44,360
+tem que fazer isso na mão.
+
+286
+00:25:44,740 --> 00:25:46,540
+Ficaria inviável.
+
+287
+00:25:46,540 --> 00:25:52,470
+Não daria para a gente poder utilizar ficaria praticamente impossível ao invés de ser uma boa prática
+
+288
+00:25:52,480 --> 00:25:59,210
+se um negócio legal começa a ser algo muito ruim de controlar e da manutenção.
+
+289
+00:25:59,230 --> 00:26:06,970
+Então pensando nisso daqui existe uma classe muito legal que está dentro de um pacote específico que
+
+290
+00:26:06,970 --> 00:26:14,390
+vai fazer esse papel aqui para a gente de fazer essa conversão dar o nome dela é moda e o pior para
+
+291
+00:26:15,100 --> 00:26:23,560
+eu adicioná la no ponto e vou deixar para que vocês possam copiar vocês possam utilizar essa classe
+
+292
+00:26:23,570 --> 00:26:28,870
+assim que a moda eu meter o pacote moda e o MP.
+
+293
+00:26:28,900 --> 00:26:35,700
+Ele fica dentro do grupo e de órgão e ponto Mode e o MP tá esse.
+
+294
+00:26:36,360 --> 00:26:45,100
+Esse esse e se essa dependência aqui que eu estou usando estou usando tanto na versão 2.3 quanto 8 é
+
+295
+00:26:45,100 --> 00:26:53,500
+uma versão que vai me dar poderes pra ter um objeto que saiba fazer conversão pra gente ele vai conseguir
+
+296
+00:26:53,500 --> 00:27:03,510
+converter várias coisas pra gente beleza e nós vamos usar ele aqui dentro do projeto então vamos lá.
+
+297
+00:27:03,550 --> 00:27:11,740
+Após adicionar isso aqui no tom XML salvar para ele baixar ela no projeto ele vai disponibilizar pra
+
+298
+00:27:11,740 --> 00:27:12,350
+gente.
+
+299
+00:27:12,400 --> 00:27:15,190
+Vou fazer aqui sempre obter todos.
+
+300
+00:27:15,250 --> 00:27:22,210
+Ele vai disponibilizar pra gente um cara novo tá então na mão faz o seguinte ou obter todos.
+
+301
+00:27:22,210 --> 00:27:28,890
+Ele devolve uma lista de produto modelo e um produto só que eu tenho que devolver um produto de teor
+
+302
+00:27:28,900 --> 00:27:35,380
+e uma conversão inversa de um modelo para um DT então olha o que eu vou fazer eu vou fazer isso daqui.
+
+303
+00:27:36,340 --> 00:27:45,160
+O banco de dados vai me devolver uma lista de produto que eu vou chamar de produtos.
+
+304
+00:27:47,050 --> 00:27:52,300
+O banco de dados vai me devolver uma lista de produtos que é o meu produto móvel.
+
+305
+00:27:55,540 --> 00:28:06,040
+Retorna uma lista de produto móvel que é o novo modelo de produto que é conectado com banco beleza e
+
+306
+00:28:06,040 --> 00:28:11,800
+eu tem que dar um jeito de converter isso daqui em uma lista de produtos.
+
+307
+00:28:11,890 --> 00:28:17,150
+O que eu tenho que trafegar ou não posso fica trafegando o produto comum odeio trafegar produto.
+
+308
+00:28:17,290 --> 00:28:21,550
+Então o que eu vou fazer eu vou usar essa classe a que a gente criou.
+
+309
+00:28:21,550 --> 00:28:26,680
+Olha só eu vou usar ela e o poder do estranho ao mesmo tempo.
+
+310
+00:28:26,680 --> 00:28:33,580
+Então eu vou fazer o seguinte não foi assim retornei e vou varrer essa minha lista de produtos produtos
+
+311
+00:28:33,580 --> 00:28:40,940
+pontos Train destruindo varrendo a lista de produtos.
+
+312
+00:28:41,320 --> 00:28:47,910
+Ponto Map Map eu consigo manipular o elemento.
+
+313
+00:28:48,070 --> 00:28:52,640
+Ou seja para cada item que está aqui dentro consigo transformar ele em outra coisa.
+
+314
+00:28:52,720 --> 00:28:59,290
+Então eu vou fazer o seguinte Para cada produto que eu encontrar aqui dentro faço uma expressão lambda
+
+315
+00:28:59,710 --> 00:29:06,320
+e vou fazer o seguinte Para cada produto que eu estou encontrando aqui dentro eu quero retornar 1 mil.
+
+316
+00:29:06,550 --> 00:29:19,870
+O Model Map o MP eu quero retornar um novo nenhum modo eu meter o modo aumento ele tem uma função chamado
+
+317
+00:29:20,230 --> 00:29:32,710
+meter a verdade e map map e essa função sozinha Map ela recebe dois parâmetros primeiro e o que ela
+
+318
+00:29:32,710 --> 00:29:36,140
+vai converter no caso cada produto.
+
+319
+00:29:36,190 --> 00:29:41,500
+Então ela recebe o que ela vai converter e segundo para que tipo de dado que ela vai converter e que
+
+320
+00:29:41,650 --> 00:29:44,740
+precisa do nome da classe que ela vai converter.
+
+321
+00:29:44,740 --> 00:29:51,210
+Eu quero que ela converta esse produto para produto de o ponto classe.
+
+322
+00:29:51,280 --> 00:29:53,660
+é isso que eu quero que ele faça.
+
+323
+00:29:53,670 --> 00:30:01,960
+Beleza então ela só retorna para mim de dentro de uma lista de produtos para cada produto que você encontrar
+
+324
+00:30:02,440 --> 00:30:07,110
+converte esse produto em um produto de top.
+
+325
+00:30:07,780 --> 00:30:12,840
+E aí quando você converter todos eu quero fazer um colete.
+
+326
+00:30:12,970 --> 00:30:15,050
+Deixa eu ver aquilo que eu estou fazendo aqui.
+
+327
+00:30:15,220 --> 00:30:16,060
+O do.
+
+328
+00:30:19,110 --> 00:30:21,120
+Uma meta.
+
+329
+00:30:22,020 --> 00:30:23,400
+Eu vou fazer um colectivo.
+
+330
+00:30:26,370 --> 00:30:32,840
+Vou fazer um colete e aqui eu vou fazer o seguinte eu vou fazer assim.
+
+331
+00:30:33,000 --> 00:30:41,930
+Aqui dentro eu vou botar o LED colector colectores.
+
+332
+00:30:42,450 --> 00:30:47,970
+Eu quero pegar o que tiver aqui dentro formando uma lista e me retornar.
+
+333
+00:30:48,080 --> 00:30:49,550
+Beleza que está dando um erro que.
+
+334
+00:31:12,810 --> 00:31:15,360
+Para cada produto extremo.
+
+335
+00:31:18,440 --> 00:31:25,120
+Marty para cada produto eu estou criou no New Model meter.
+
+336
+00:31:26,270 --> 00:31:31,900
+E aí para cada MEP eu estou convertendo esse produto num produto classe C.
+
+337
+00:31:31,970 --> 00:31:35,930
+Estou certo porque eles também estão me criticando é chover.
+
+338
+00:31:38,200 --> 00:31:38,380
+A.
+
+339
+00:31:47,550 --> 00:31:58,460
+Depois de fazer algo que show comentar aqui só fazer uma coisa que torne produtos ponto extremo.
+
+340
+00:32:03,710 --> 00:32:05,360
+Produto ponto extremo.
+
+341
+00:32:05,530 --> 00:32:12,570
+é aí que eu vou botar ponto MP e para cada produto.
+
+342
+00:32:14,980 --> 00:32:18,820
+Beleza eu quero pegar e ao meu modo.
+
+343
+00:32:22,150 --> 00:32:23,320
+Moda eu me aperto.
+
+344
+00:32:25,350 --> 00:32:35,820
+Isso ponto MEP aonde eu quero pegar o produto e transformá lo num produto.
+
+345
+00:32:40,200 --> 00:32:49,810
+Produto de teor ponto Class quero pegar ele e transformar nesse tipo de beleza de bola.
+
+346
+00:32:49,830 --> 00:33:00,890
+Aí eu pego do que vier aqui eu vou fazer um eu vou fazer um colector aonde eu vou botar um colega colectivo
+
+347
+00:33:01,980 --> 00:33:10,050
+em que eu vou botar um colector pegar o que tiver lá de dentro e formar uma lista.
+
+348
+00:33:10,050 --> 00:33:14,430
+Agora está certo por algum motivo escrever alguma coisa errada aqui que eu não estou vendo.
+
+349
+00:33:14,430 --> 00:33:17,280
+Então tá aqui.
+
+350
+00:33:18,540 --> 00:33:28,620
+Olha o que eu estou fazendo o back end o repositório me retorna uma lista de produtos e para cada produto
+
+351
+00:33:29,010 --> 00:33:34,890
+do tipo produto mesmo produto molde o que encontrar aqui dentro eu quero transformá la num produto de
+
+352
+00:33:34,890 --> 00:33:35,540
+teor.
+
+353
+00:33:35,640 --> 00:33:36,780
+Então o que eu fiz.
+
+354
+00:33:36,840 --> 00:33:42,300
+Fiz um mapa para cada produto que eu encontrei aqui dentro eu criei um único modelo mapear essa classe
+
+355
+00:33:42,300 --> 00:33:49,530
+que ela só está disponível por conta dessa dependência que nós colocamos e essa classe que ela sabe
+
+356
+00:33:49,530 --> 00:33:56,610
+fazer automaticamente a conversão do meu objeto produto num objeto produto data e hora.
+
+357
+00:33:57,360 --> 00:34:03,120
+Ela tem um método Map que eu passo o meu objeto e passo para qual o tipo que eu quero ela varre esse
+
+358
+00:34:03,120 --> 00:34:08,930
+objeto inteiro e todas as propriedades que tiverem o mesmo nome.
+
+359
+00:34:09,020 --> 00:34:11,470
+Aí todas as propriedades que tiveram o mesmo nome.
+
+360
+00:34:11,490 --> 00:34:15,900
+Ele vai conseguir mapear e aí no final eu vou ter uma lista.
+
+361
+00:34:16,290 --> 00:34:23,680
+Eu vou ter uma lista de produto de teor e aí eu transforma isso eu vou ter uns 30 anos de produto com
+
+362
+00:34:23,790 --> 00:34:25,310
+o vento numa lista.
+
+363
+00:34:25,320 --> 00:34:31,960
+Então no final das contas esse método aqui colector aqui vai me devolver um lixo e o produto data e
+
+364
+00:34:31,960 --> 00:34:32,770
+hora.
+
+365
+00:34:32,970 --> 00:34:41,550
+E aí eu retorne então dessa forma que eu já consigo converter o que está vendo como produto do meu banco
+
+366
+00:34:41,550 --> 00:34:44,230
+e transformar numa lista de data e hora.
+
+367
+00:34:44,460 --> 00:34:49,230
+é dessa forma que eu já tenho o meu método obter todos vamos fazer de novo.
+
+368
+00:34:49,230 --> 00:34:55,200
+Só que agora com o obter por aí de como ficaria o meu hobby ter por aí de bom eu optei por aí que eu
+
+369
+00:34:55,200 --> 00:35:00,540
+vou tirar esse returno aqui e eu vou dizer o seguinte o meu hobby temporada ele sempre me retorna um
+
+370
+00:35:00,540 --> 00:35:01,080
+ótimo.
+
+371
+00:35:04,430 --> 00:35:16,100
+Ele me retorna um Hobbit não o de produto que eu vou chamar de produto e aí o que eu posso fazer aqui.
+
+372
+00:35:17,120 --> 00:35:27,470
+Poderia fazer um tratamento igual a gente fez anteriormente na lista podia fazer um IFE se produto ponto
+
+373
+00:35:27,950 --> 00:35:29,570
+is empty.
+
+374
+00:35:29,600 --> 00:35:36,410
+Ou seja se estiver vazio significa que eu não encontrei ninguém no repositório com esse ideia e aí é
+
+375
+00:35:36,410 --> 00:35:38,180
+que eu poderia lançar uma exceção.
+
+376
+00:35:40,130 --> 00:35:51,950
+From Nil e só se fala o nome da nossa seleção mesmo que só se note Fault Deception acho que foi esse
+
+377
+00:35:51,950 --> 00:36:04,460
+o nome da nossa seção aí eu poderia aqui botar sei lá produto com a India fazer assim ainda espaço mas
+
+378
+00:36:05,600 --> 00:36:17,300
+fazer a de concatenar mais não encontrado ontem vivo contra o pano contra o Uber aqui para diminuir
+
+379
+00:36:17,990 --> 00:36:20,890
+e até lançar uma exceção.
+
+380
+00:36:21,170 --> 00:36:27,020
+Vou no meu banco e vejo tem algum produto com esse aí de ser encontrado e vou me devolver um objeto
+
+381
+00:36:27,020 --> 00:36:34,690
+os produtos não me retornam Option vazio e que o teste produto excelente ou seja se OPT não está vazio.
+
+382
+00:36:34,700 --> 00:36:37,430
+Se sim ou não se uma exceção significa não encontrei ninguém.
+
+383
+00:36:37,430 --> 00:36:43,490
+Se não é óbvio que eu encontrei então como fazer eu preciso devolver um produto um Hobbit não de um
+
+384
+00:36:43,490 --> 00:36:51,230
+produto detém o tônico que eu vou fazer eu vou criar um produto de teor que eu vou chamar de dT e vou
+
+385
+00:36:51,230 --> 00:36:56,840
+fazer o seguinte eu vou criar um milk Mode ou meter.
+
+386
+00:36:59,830 --> 00:37:01,960
+Ponto MEP.
+
+387
+00:37:02,410 --> 00:37:08,820
+E vou fazer o seguinte vou pegar o produto e vou transformar num produto só que eu não posso simplesmente
+
+388
+00:37:08,830 --> 00:37:12,710
+IMPORTAR PRODUTO aqui porque esse produto ele é um hobbit novo.
+
+389
+00:37:12,790 --> 00:37:18,160
+Então tem que pegar o produto que está dentro desse não é pra eu tirar alguma coisa tendo óptimo eu
+
+390
+00:37:18,190 --> 00:37:20,170
+uso a propriedade GET.
+
+391
+00:37:20,200 --> 00:37:27,220
+Então eu estou fazendo assim o produto que é um hobbit não de dentro desse óbvio de produto estou pegando
+
+392
+00:37:27,220 --> 00:37:38,590
+o produto e eu quero converter isso em que um produto de teor e eu digo qual é o tipo de classe automaticamente
+
+393
+00:37:38,590 --> 00:37:42,560
+agora o produto que vem aqui já se transformou em um DT.
+
+394
+00:37:42,850 --> 00:37:46,180
+E eu tenho que devolver um óptimo de produto data e hora.
+
+395
+00:37:46,210 --> 00:37:46,750
+Opa.
+
+396
+00:37:46,870 --> 00:37:47,920
+Como é que a gente faz.
+
+397
+00:37:47,950 --> 00:37:57,020
+A gente pode fazer assim retorne e cria um ótimo na mão on Option opcional ponto.
+
+398
+00:37:57,060 --> 00:38:01,840
+OP E disse que esse produto de que isso é óptimo.
+
+399
+00:38:01,840 --> 00:38:07,060
+Eu quero retornar um ótimo de um documento.
+
+400
+00:38:07,060 --> 00:38:08,620
+Vamos ver o que a gente está fazendo aqui.
+
+401
+00:38:10,090 --> 00:38:12,650
+Vou escrever de que a gente fez para ficar fácil.
+
+402
+00:38:12,670 --> 00:38:22,660
+Olha só obtendo produto pelo dia obtém ano.
+
+403
+00:38:22,690 --> 00:38:25,360
+OP chamou de produto pelo Ed.
+
+404
+00:38:29,290 --> 00:38:47,260
+Se não encontrar lança setas excepto se não encontrar a lança Sérgio convertendo o meu opte não de produto
+
+405
+00:38:47,860 --> 00:38:51,940
+em um produto de teor.
+
+406
+00:38:56,320 --> 00:39:10,380
+Convertendo meu produto num produto até aqui retornando o criando e retornando um opte ou não de de
+
+407
+00:39:10,540 --> 00:39:15,730
+teor de produto de teor.
+
+408
+00:39:18,830 --> 00:39:20,540
+Então vamos lá.
+
+409
+00:39:20,540 --> 00:39:23,580
+Fui no banco de dados e mandei localizar o produto pelo Haiti.
+
+410
+00:39:23,630 --> 00:39:29,750
+Se ele encontrou ele me devolve se ele não encontrá lo e vai me devolver um ótimo vizinho testo se está
+
+411
+00:39:29,750 --> 00:39:30,530
+vazio.
+
+412
+00:39:30,530 --> 00:39:33,810
+é óbvio que eu não encontrei o produto porque o produto não existe.
+
+413
+00:39:33,870 --> 00:39:42,770
+Lançou uma exceção acabou o método aqui se não caiu dentro do meu iPhone significa o quê significa que
+
+414
+00:39:42,770 --> 00:39:45,090
+eu encontrei esse produto.
+
+415
+00:39:45,320 --> 00:39:51,770
+E aí eu vou transformar esse produto moda o que está dentro de um óptimo é um produto de Teló como eu
+
+416
+00:39:51,770 --> 00:39:52,250
+faço.
+
+417
+00:39:53,300 --> 00:40:00,960
+Chama o modo e o app chama o método Map que sabe converter aqui em produtos que é um óptimo produto
+
+418
+00:40:00,960 --> 00:40:04,170
+tem que tirar esse produto de dentro do Option para tirar.
+
+419
+00:40:04,220 --> 00:40:09,330
+Chama o método GET que retorna só o produto que está dentro do Option.
+
+420
+00:40:09,410 --> 00:40:14,780
+Então eu quero pegar o produto que está aqui dentro e convertê lo um produto classe de um produto de
+
+421
+00:40:14,960 --> 00:40:15,800
+o ponto Clésio.
+
+422
+00:40:15,820 --> 00:40:22,160
+Então o tipo dele é automaticamente esse cara que vai fazer essa magia pra gente depois que ele converte
+
+423
+00:40:22,160 --> 00:40:25,130
+ou tem que devolver o que é um óptimo de produto.
+
+424
+00:40:25,250 --> 00:40:27,480
+Então eu criei um óptimo aqui na mão.
+
+425
+00:40:27,650 --> 00:40:35,330
+Eu disse retorna pra mim um óptimo ponto off option de que off e passe qual é o tipo que é um meteoro
+
+426
+00:40:35,900 --> 00:40:45,820
+e aí ele vai saber retornar aqui para mim é um produto de beleza vai retornar um opt out de produto
+
+427
+00:40:45,830 --> 00:40:55,360
+até então nosso método obter por aí também está pronto e com isso a gente já tem um método pronto aqui
+
+428
+00:40:55,370 --> 00:40:56,810
+para poder seguir.

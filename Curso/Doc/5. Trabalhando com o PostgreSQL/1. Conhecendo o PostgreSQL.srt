@@ -1,0 +1,2023 @@
+1
+00:00:02,010 --> 00:00:11,250
+Beleza galera agora que a gente começou entendeu como cria uma PR-ES como é que tudo isso funciona.
+
+2
+00:00:11,250 --> 00:00:18,540
+Tudo isso que está bonito tá tudo funcionando a bebida bem criada e bem estruturada já tem tratamento
+
+3
+00:00:18,540 --> 00:00:21,510
+de erro tá com tudo funcionando.
+
+4
+00:00:21,600 --> 00:00:30,270
+O que nós podemos fazer agora para ficar melhor é ter uma API conectada com banco de dados de verdade.
+
+5
+00:00:30,420 --> 00:00:36,600
+Isso a gente poderia utilizar vários tipos de banco de dados poderíamos usar bancos não relacionais
+
+6
+00:00:36,600 --> 00:00:38,760
+e bancos relacionais.
+
+7
+00:00:38,760 --> 00:00:44,910
+Então vamos começar a entender um pouquinho como é que isso funciona pra gente poder ter um exemplo
+
+8
+00:00:44,920 --> 00:00:52,200
+aqui vou fechar aqui fechar vamos voltar aqui para o nosso.
+
+9
+00:00:52,200 --> 00:00:58,950
+Vou fechar aqui vou fechar por fechar fechar esse código voltar aqui para os nossos exemplos.
+
+10
+00:01:00,860 --> 00:01:11,630
+Vamos pensar o seguinte existe praticamente duas categorias aqui nós temos os bancos relacionais.
+
+11
+00:01:14,660 --> 00:01:17,090
+E nós temos os bancos não.
+
+12
+00:01:20,830 --> 00:01:23,330
+Os bancos relacionais vão botar uma outra por aqui.
+
+13
+00:01:23,380 --> 00:01:29,820
+Vou botar as luzinhas vão aumentar o tamanho da fonte negrito criando bancos relacionais.
+
+14
+00:01:30,850 --> 00:01:32,620
+E vamos ter os bancos.
+
+15
+00:01:35,250 --> 00:01:40,410
+Não relacionais que são os famosos loci como.
+
+16
+00:01:43,710 --> 00:01:52,080
+Esse banco que geralmente é chamado de um banco SQL é esse cara que geralmente é chamado de um banco
+
+17
+00:01:53,730 --> 00:02:02,260
+no SQL beleza o que são bancos relacionais que são bancos não relacionais.
+
+18
+00:02:02,430 --> 00:02:10,110
+Existe praticamente dois tipos de bancos Os relacionais de não relacionais Os relacionais são os bancos
+
+19
+00:02:10,110 --> 00:02:12,320
+que têm relação entre si.
+
+20
+00:02:13,380 --> 00:02:17,670
+Todo Seu conteúdo é salvo dentro do banco.
+
+21
+00:02:17,670 --> 00:02:23,570
+Conforme a estrutura do objeto que você passa.
+
+22
+00:02:23,640 --> 00:02:26,990
+Como assim você passou um objeto usuário.
+
+23
+00:02:27,030 --> 00:02:33,330
+Geralmente ele vai salvar esse usuário dentro do banco em tabelas.
+
+24
+00:02:33,540 --> 00:02:37,050
+Vai ter uma tabela para cada entidade dentro de seu banco.
+
+25
+00:02:37,050 --> 00:02:42,880
+Geralmente funciona dessa forma você pode ter uma entidade dividida em mais de uma tabela e depende
+
+26
+00:02:42,880 --> 00:02:49,740
+de muitas coisas mas basicamente num objeto relacional a gente tem um objeto e por tabela e aí como
+
+27
+00:02:49,740 --> 00:02:56,610
+é que funciona um banco relacional ele guarda as informações em tabelas e essas tabelas são compostas
+
+28
+00:02:56,610 --> 00:03:03,920
+por linhas e colunas aonde cada coluna ela é uma informação dessa tabela.
+
+29
+00:03:03,990 --> 00:03:12,690
+Ela é um tipo de informação e cada linha é um registro dentro dessa tabela algo bem parecido com uma
+
+30
+00:03:12,690 --> 00:03:13,980
+planilha Excel.
+
+31
+00:03:13,980 --> 00:03:20,820
+Por exemplo se eu vier aqui e vier aqui vou abrir uma planilha de Excel aqui.
+
+32
+00:03:25,430 --> 00:03:26,390
+Criou uma planilha.
+
+33
+00:03:27,790 --> 00:03:31,450
+Se fosse no banco de dados seria algo mais ou menos assim.
+
+34
+00:03:31,480 --> 00:03:38,160
+Cada coluna representaria um valor e cada linha seria um registro um banco relacional.
+
+35
+00:03:38,170 --> 00:03:45,940
+Então por exemplo para gravar o usuário a primeira coluna seria o Haiti a segunda produto o produto
+
+36
+00:03:46,000 --> 00:03:48,450
+que a gente criou seria Haiti.
+
+37
+00:03:48,520 --> 00:03:50,620
+Depois seria o nome do produto.
+
+38
+00:03:50,650 --> 00:03:53,590
+Depois seria a quantidade desse produto.
+
+39
+00:03:53,590 --> 00:03:56,110
+Depois seria o valor desse produto.
+
+40
+00:03:56,110 --> 00:04:00,080
+Depois seria a observação desse produto.
+
+41
+00:04:00,160 --> 00:04:08,990
+Ou seja cada coluna armazena ARIA UM VALOR REAL referente à tabela de.
+
+42
+00:04:09,100 --> 00:04:20,710
+Aí eu vou botar aqui ou renomear para produto a tabela de produto então na tabela de produto a primeira
+
+43
+00:04:20,710 --> 00:04:29,080
+coluna é ideia segunda nome terceira quantidade a quarta valor quinta observação e aí cada linha seria
+
+44
+00:04:29,080 --> 00:04:36,690
+um registro por exemplo o produto que D1 poderia ser o sonho de doce de leite.
+
+45
+00:04:38,610 --> 00:04:40,400
+Melhorar um pouquinho.
+
+46
+00:04:40,440 --> 00:04:46,200
+Ele tem dez quantidade custa dois reais e observação.
+
+47
+00:04:46,200 --> 00:04:48,930
+Sonho frito.
+
+48
+00:04:48,990 --> 00:04:56,010
+Nós criamos nossa segunda linha poderia até o outro produto o sonho de chocolate.
+
+49
+00:04:58,260 --> 00:05:01,680
+Quantidade 20 valor 2 reais.
+
+50
+00:05:02,760 --> 00:05:03,540
+Diz uma coisa.
+
+51
+00:05:03,540 --> 00:05:06,400
+Sonho frito e assim sucessivamente.
+
+52
+00:05:06,400 --> 00:05:17,710
+Poderia ter um terceiro produto pão de provou mole onde provolone eu tenho 100 de quantidade custa um
+
+53
+00:05:17,730 --> 00:05:18,270
+R$.
+
+54
+00:05:20,520 --> 00:05:29,100
+Sem observação e assim sucessivamente aonde cada linha seria um registro dentro dessa tabela e eu sei
+
+55
+00:05:29,100 --> 00:05:33,780
+quais são as informações desse registo de acordo com as colunas estão aqui eu sei que aqui sou mãe de
+
+56
+00:05:34,200 --> 00:05:41,550
+acção o nome aqui são a quantidade e que são os valores e que são as observações mesa então um banco
+
+57
+00:05:41,550 --> 00:05:51,640
+relacional geralmente salva se para as informações entre tabelas e cada tabela é composta por cinco.
+
+58
+00:05:52,730 --> 00:05:54,440
+Um banco não relacional.
+
+59
+00:05:56,010 --> 00:05:59,190
+Ele trabalha de forma diferente.
+
+60
+00:05:59,220 --> 00:06:04,450
+Geralmente ele trabalha porque Velo ou chave valor.
+
+61
+00:06:04,740 --> 00:06:11,590
+Ele pega o teu objeto e armazena dentro de uma coleção o seu objeto inteiro como se fosse um deles.
+
+62
+00:06:12,390 --> 00:06:15,300
+E aí ele dá uma chave para esse valor.
+
+63
+00:06:15,300 --> 00:06:22,680
+Geralmente essa chave é o Haiti então de acordo com o Haiti ele te pego e te devolve o objeto inteiro.
+
+64
+00:06:22,860 --> 00:06:28,970
+Então a maior parte dos Mon não relacionais eles não trabalham com eles não trabalham com tabelas geralmente
+
+65
+00:06:28,980 --> 00:06:30,660
+trabalham com chave valor.
+
+66
+00:06:30,720 --> 00:06:35,760
+E aí nós temos vários tipos de bancos relacionais não relacionais por exemplo bancos relacionais.
+
+67
+00:06:35,760 --> 00:06:42,000
+Nós temos muitos nós temos o post sobre o post greens.
+
+68
+00:06:43,920 --> 00:06:46,530
+O post SQL.
+
+69
+00:06:46,530 --> 00:06:53,580
+Nós temos o volume ataque um pouquinho de minoria que.
+
+70
+00:06:57,690 --> 00:07:02,330
+Nós temos o MAI SQL.
+
+71
+00:07:02,730 --> 00:07:09,470
+Nós temos o SQL SQL Server.
+
+72
+00:07:09,540 --> 00:07:17,980
+Nós temos Oracle e temos muitos outros que são bons exemplos de bancos não bancos relacionais.
+
+73
+00:07:18,600 --> 00:07:26,250
+São alguns exemplos off post que mais querem SQL Server Oracle então possivelmente vocês já ouviram
+
+74
+00:07:26,250 --> 00:07:30,320
+falar de algum desses bancos ou conhece algum desses bancos aqui.
+
+75
+00:07:30,360 --> 00:07:32,290
+Bancos não relacionais.
+
+76
+00:07:32,400 --> 00:07:37,430
+Bom nós temos alguns vamos diminuir aqui vão conhecer alguns aqui o.
+
+77
+00:07:39,090 --> 00:07:43,180
+Nós temos um muito comum é o mundo dele.
+
+78
+00:07:43,380 --> 00:07:45,720
+Nós temos Cassandra.
+
+79
+00:07:49,580 --> 00:07:51,420
+Nós temos elástico.
+
+80
+00:07:54,560 --> 00:07:55,360
+Surge.
+
+81
+00:07:57,100 --> 00:08:00,600
+E nós temos muitos outros bancos de dados não relacionais.
+
+82
+00:08:00,940 --> 00:08:09,730
+Temos vários uma infinidade de bancos de dados não relacionais nós temos Maria dB.
+
+83
+00:08:09,970 --> 00:08:11,320
+Mas temos muitos.
+
+84
+00:08:11,410 --> 00:08:14,390
+Daria para montar vários aqui.
+
+85
+00:08:14,410 --> 00:08:20,680
+Então aqui nós temos bancos relacionais e bancos não relacionais.
+
+86
+00:08:20,690 --> 00:08:23,680
+Os bancos não relacionais eles geralmente têm.
+
+87
+00:08:27,210 --> 00:08:33,070
+Uma coisa interessante que eles geralmente são muito rápidos são bons para consulta rápida.
+
+88
+00:08:33,150 --> 00:08:39,540
+Por exemplo você está desenvolvendo um e-commerce uma plataforma onde você precisa fazer consultas rápidas
+
+89
+00:08:39,540 --> 00:08:44,150
+por exemplo com a Amazon Brasil onde você compra abrir o.
+
+90
+00:08:47,800 --> 00:08:48,310
+A Amazon.
+
+91
+00:08:49,830 --> 00:08:52,190
+Ao entrar no site da.
+
+92
+00:08:53,360 --> 00:08:56,990
+Esse site gigantesco tem vendido tudo aqui dentro.
+
+93
+00:08:56,990 --> 00:09:05,750
+Então aqui um campo de pesquisa eu quero que quando eu pesquisar aqui o usuário possa receber o que
+
+94
+00:09:05,750 --> 00:09:08,520
+ele digitou com o retorno que sei que é muito rápido.
+
+95
+00:09:08,690 --> 00:09:14,660
+Então para isso um banco não relacional é muito útil porque ele é muito rápido as consultas em texto
+
+96
+00:09:14,960 --> 00:09:16,190
+são muito rápidas.
+
+97
+00:09:16,280 --> 00:09:18,410
+Então vou votar aqui sei lá celular.
+
+98
+00:09:22,320 --> 00:09:28,210
+Visitei o mal cliquei para ele buscar e já trouxe o troço tudo relacionado ao celular.
+
+99
+00:09:28,230 --> 00:09:28,680
+Olha só.
+
+100
+00:09:29,980 --> 00:09:36,850
+Ele fez uma consulta não mandou um reconhece la para Perry tudo como um ser referente a celular e foi
+
+101
+00:09:36,850 --> 00:09:39,310
+trazê lo aqui muito rápido.
+
+102
+00:09:39,330 --> 00:09:41,930
+Se eu aqui mudar aqui pra Game.
+
+103
+00:09:41,980 --> 00:09:43,330
+Olha só não entendo.
+
+104
+00:09:43,330 --> 00:09:46,330
+Olha como é que é rápido e traz tudo voltado ao game.
+
+105
+00:09:49,990 --> 00:09:55,120
+Então esse tipo de consulta aqui é muito muito útil muito importante.
+
+106
+00:09:55,660 --> 00:10:00,490
+A gente usa um banco não relacional porque é muito rápido possivelmente num banco relacional a gente
+
+107
+00:10:00,490 --> 00:10:05,540
+não vai ter esse tipo de velocidade para consulta.
+
+108
+00:10:05,570 --> 00:10:14,260
+Porém o banco relacional ele é muito útil quando a gente tem estrutura de objetos complexas que precisam
+
+109
+00:10:14,260 --> 00:10:16,170
+se relacionar de alguma forma.
+
+110
+00:10:16,270 --> 00:10:24,910
+Talvez imagine um sistema de pizzaria aonde você como o usuário que ia fazer o pedido o pedido ele vai
+
+111
+00:10:24,910 --> 00:10:29,110
+estar relacionado a um cliente que vai estar relacionado com a pizza que vai estar relacionado com a
+
+112
+00:10:29,110 --> 00:10:32,650
+entrega vai estar relacionado com uma série de outros objetos.
+
+113
+00:10:32,710 --> 00:10:39,190
+Essa relação em um banco de dados relacional é muito mais simples e muito mais prática do que um banco
+
+114
+00:10:39,190 --> 00:10:40,390
+não relacional.
+
+115
+00:10:40,430 --> 00:10:46,930
+A professora então eu não consigo fazer um sistema de pizzaria ou um sistema de identidades que se relacione
+
+116
+00:10:46,930 --> 00:10:49,050
+um banco não relacional não.
+
+117
+00:10:49,150 --> 00:10:50,630
+Até dá para fazer.
+
+118
+00:10:50,680 --> 00:10:55,090
+Só que com um banco relacional você vai ter menos trabalho.
+
+119
+00:10:55,180 --> 00:10:59,400
+Então você vai ter bem menos trabalho no banco relacional.
+
+120
+00:10:59,440 --> 00:11:01,300
+A maior parte das empresas.
+
+121
+00:11:03,160 --> 00:11:05,310
+Me como é que eu vou dizer.
+
+122
+00:11:05,380 --> 00:11:12,700
+Elas utilizam um banco relacionais mas também utilizam bancos não relacionais para determinadas coisas.
+
+123
+00:11:12,730 --> 00:11:18,250
+Então você pode ter um micro serviço apontando para o banco relacional e um outro para banco não relacional
+
+124
+00:11:18,260 --> 00:11:24,280
+depende muito da sua arquitetura depende muito do projeto que você está participando.
+
+125
+00:11:24,280 --> 00:11:31,510
+Então pode acontecer de você precisar de um banco não relacional não de um banco ou não de um banco
+
+126
+00:11:31,510 --> 00:11:33,920
+relacional e não de um banco não relacional.
+
+127
+00:11:33,970 --> 00:11:40,560
+Bom a minha dica para vocês para quem quer começar a aprender um pouco dos dois.
+
+128
+00:11:40,600 --> 00:11:43,400
+é isso daqui começar por aqui.
+
+129
+00:11:43,450 --> 00:11:44,980
+Bancos relacionais.
+
+130
+00:11:44,990 --> 00:11:47,800
+Comece pelo post pois que é um banco gratuito
+
+131
+00:11:50,800 --> 00:11:52,120
+de código aberto.
+
+132
+00:11:52,150 --> 00:11:55,750
+Ele é um banco que a gente consegue usar ele tranquilamente.
+
+133
+00:11:55,750 --> 00:12:00,750
+Ele é fácil de utilizar muito seguro muito rápido e ele é muito bom.
+
+134
+00:12:01,000 --> 00:12:07,700
+O poncho é um banco de dados excelente uma tecnologia excelente e para banco de dados não relacional
+
+135
+00:12:07,700 --> 00:12:13,480
+o mongo DB o mundo é um dos bancos relacionais não relacionais mais utilizados no mercado ele também
+
+136
+00:12:13,480 --> 00:12:15,290
+é muito fácil de utilizar é muito bom.
+
+137
+00:12:15,370 --> 00:12:21,070
+Então eu recomendo esses dois aqui por que também eu recomendo porque tem muito material na web para
+
+138
+00:12:21,070 --> 00:12:29,020
+esses dois que são os bancos é que a maior parte das empresas utilizam a professor mas eu conheço uma
+
+139
+00:12:29,020 --> 00:12:35,710
+empresa que usa uma SQL eu conheço uma que vai se cansar beleza tranquilo mas esses daqui são os mais
+
+140
+00:12:35,710 --> 00:12:37,550
+utilizados aqui.
+
+141
+00:12:37,900 --> 00:12:44,500
+Pelo menos eu vejo a maior parte das empresas usar posto que por ser gratuito é o Mongo por ser um dos
+
+142
+00:12:44,500 --> 00:12:47,070
+mais usados no mercado.
+
+143
+00:12:47,170 --> 00:12:52,270
+Não não é que você aprendeu talvez o ponto que você não possa aprender mais que ele pode aprender não
+
+144
+00:12:52,270 --> 00:12:57,850
+é porque você aprendeu mais quero que você não pode usar uma web que você pode usar qualquer um dá como
+
+145
+00:12:57,850 --> 00:13:03,610
+exemplo aqui pra gente fazer conectado com o banco de dados eu vou escolher um desses bancos eu não
+
+146
+00:13:03,610 --> 00:13:06,040
+vou fazer com banco não relacional.
+
+147
+00:13:06,460 --> 00:13:11,140
+Isso daqui é muito simples depois que você aprendeu com banco relacional você faz que o banco não relacionou
+
+148
+00:13:11,500 --> 00:13:14,490
+tranquilamente até mais fácil ainda.
+
+149
+00:13:14,500 --> 00:13:20,050
+Então vou fazer um banco relacional o primeiro vou fazer o Cupons porque o busco é muito simples qualquer
+
+150
+00:13:20,050 --> 00:13:25,680
+um pode até baixar e instalar e utilizar de forma bem simples.
+
+151
+00:13:26,320 --> 00:13:32,410
+Então vamos lá para você usar o poncho para você usar o ponto que vai ser primeiro tem que baixar ele.
+
+152
+00:13:32,560 --> 00:13:36,490
+Então nós vamos ver aqui no Google e nós vamos botar aqui o post.
+
+153
+00:13:38,220 --> 00:13:44,430
+SQL ou pode manter sua postura de download que ele já vai te jogar aqui.
+
+154
+00:13:44,820 --> 00:13:46,960
+O site do Post Post.
+
+155
+00:13:49,530 --> 00:13:50,670
+Vou clicar aqui em download.
+
+156
+00:13:53,550 --> 00:13:56,930
+E aqui ele vai começar a trazer a tela do pulso o poncho.
+
+157
+00:13:56,930 --> 00:14:01,240
+Ele tem esse símbolo do elefante Zinho como como símbolo.
+
+158
+00:14:01,280 --> 00:14:08,510
+Ele tem esse símbolo dizia que como símbolo o elefante já é aqui eu tenho versões do poncho para linux
+
+159
+00:14:08,510 --> 00:14:12,830
+pra Mac pra Windows para solar espécie BSD.
+
+160
+00:14:12,920 --> 00:14:15,290
+Dá pra várias várias plataformas.
+
+161
+00:14:15,290 --> 00:14:23,330
+Bom como eu estou usando Windows eu vou clicar aqui no Windows e aqui ele mostra várias versões aqui
+
+162
+00:14:23,330 --> 00:14:24,290
+que tem do post.
+
+163
+00:14:24,730 --> 00:14:29,510
+Mas para você baixar você vai clicar aqui o download do instalador.
+
+164
+00:14:29,570 --> 00:14:33,480
+Quando você clicar aqui ele vai te jogar para essa tela aqui.
+
+165
+00:14:33,560 --> 00:14:37,660
+A tela onde você pode baixar as versões do post.
+
+166
+00:14:38,360 --> 00:14:45,500
+é aí que está a versão do post que só vai funcionar para Mac e Windows ainda não está funcionando ainda
+
+167
+00:14:45,500 --> 00:14:47,370
+no Linux.
+
+168
+00:14:47,450 --> 00:14:54,200
+Não tem instalador para o Linux não significa que você não pode tê la no Linux até pode mas não com
+
+169
+00:14:54,200 --> 00:14:58,700
+um instalador com um instalador você tem que ter que Mac e Windows.
+
+170
+00:14:58,700 --> 00:15:04,180
+Então nós vamos baixar aqui a última versão você pode vir aqui baixar três.
+
+171
+00:15:04,280 --> 00:15:11,870
+Então você escolhe aqui a plataforma versão eu sugiro baixar mas a mais recente está sempre baixa mais
+
+172
+00:15:11,870 --> 00:15:16,050
+recente para utilizar fez o download.
+
+173
+00:15:17,330 --> 00:15:23,170
+E aí você vai instalar a instalação do ponto que é bem simples bem fácil.
+
+174
+00:15:23,210 --> 00:15:28,990
+Eu tenho várias instâncias do poncho instalado aqui eu não vou estar lá mas é bem simples bem prático.
+
+175
+00:15:29,090 --> 00:15:31,220
+Quando você está louco o bolso.
+
+176
+00:15:34,770 --> 00:15:40,800
+Quando você clica para baixar ele vai fazer o download aqui possivelmente na minha máquina não vai mostrar
+
+177
+00:15:40,800 --> 00:15:43,860
+as mesmas coisas que vai apresentar para a máquina de vocês.
+
+178
+00:15:43,860 --> 00:15:44,430
+Por quê.
+
+179
+00:15:44,430 --> 00:15:48,460
+Porque eu já tenho várias estâncias instalado aqui no bolso.
+
+180
+00:15:48,780 --> 00:15:55,290
+Quando você baixa instalado nele ele vai instalar a instância do puxa que é um serviço que vai ficar
+
+181
+00:15:55,290 --> 00:15:58,030
+rodando na sua máquina em cima de uma porta.
+
+182
+00:15:58,110 --> 00:16:07,230
+Por padrão a porta principal é a 5 4 3 2 e a porta padrão além da distância ele vai estar lá um cara
+
+183
+00:16:07,230 --> 00:16:12,300
+chamado Peggy a de mim está o Peggy e de mim.
+
+184
+00:16:12,300 --> 00:16:20,430
+Ele possivelmente que vá baixar na versão 4 e um SGBD o que é um SGBD SGBD um sistema gerenciador de
+
+185
+00:16:20,430 --> 00:16:27,110
+banco de dados é o cara que vai te permitir conectar em uma instância ou várias instâncias.
+
+186
+00:16:27,150 --> 00:16:32,730
+Você pode instalar várias instâncias na sua máquina cada instância numa porta por exemplo eu posso ter
+
+187
+00:16:32,730 --> 00:16:37,860
+uma instância na porta 5 a atriz 2 tem uma 5a 3/4 e assim sucessivamente.
+
+188
+00:16:37,870 --> 00:16:41,030
+é através desse SGBD o Peggy e de mim.
+
+189
+00:16:41,070 --> 00:16:51,120
+Eu consigo me conectar com várias instâncias várias instâncias e aí essas instâncias eu posso ter vários
+
+190
+00:16:51,120 --> 00:16:52,340
+bancos de dados.
+
+191
+00:16:52,410 --> 00:16:58,890
+Quando você está lá ele é a primeira vez ele vai estar lá por padrão na porta 5 4 3 2 e aí ele vai te
+
+192
+00:16:58,890 --> 00:17:06,930
+perguntar o seguinte Olha só eu preciso que você informa uma senha para o usuário padrão o usuário padrão
+
+193
+00:17:06,930 --> 00:17:16,320
+do post se chama tipo mente e o próprio bolso do usuário padrão e quando você está lá ele pede para
+
+194
+00:17:16,320 --> 00:17:19,110
+você escolher uma senha para esse usuário.
+
+195
+00:17:19,110 --> 00:17:24,810
+Eu sugiro que em ambiente de teste você escolha uma senha muito simples que você não vai esquecer geralmente
+
+196
+00:17:24,810 --> 00:17:30,060
+em ambiente de teste eu boto de 1 a 6 1 2 3 4 5 6 pra quê.
+
+197
+00:17:30,140 --> 00:17:36,710
+No momento que eu for utilizar a instância eu não sofreria de ter esquecido a senha.
+
+198
+00:17:39,210 --> 00:17:48,000
+O meu está acabando de baixar aqui eu vou Eu vou tentar instalar aqui e possivelmente ele eu como eu
+
+199
+00:17:48,000 --> 00:17:50,200
+já tenho né.
+
+200
+00:17:50,550 --> 00:17:57,930
+Como eu já tenho instalado aqui possivelmente a gente não vai conseguir ver todos os passos golo de
+
+201
+00:17:57,930 --> 00:18:01,360
+vocês quem já estiver instalado beleza usa a versão que tem instalado.
+
+202
+00:18:01,380 --> 00:18:08,560
+Quem não tiver instalado está lá que tá bom ver se o meu vai ter a parte que eu gostaria.
+
+203
+00:18:08,560 --> 00:18:11,940
+Não há uma linha parecida com essa Next.
+
+204
+00:18:12,090 --> 00:18:15,250
+Ele vai instalar a Estância do poço.
+
+205
+00:18:15,360 --> 00:18:16,860
+O peixe é de mim quatro.
+
+206
+00:18:17,900 --> 00:18:21,390
+Essas duas últimas opções é que não é necessária.
+
+207
+00:18:21,500 --> 00:18:28,490
+Os Tec Builder como Elaine o como Santillana lá se você quiser pode até instalar que é para você usar
+
+208
+00:18:28,820 --> 00:18:33,580
+o touchscreen um prompt de comando por 100 MB.
+
+209
+00:18:33,590 --> 00:18:38,840
+Como nós não vamos usar não fica a seu critério não mas eu quero estar a criar pois eu quero aprender
+
+210
+00:18:38,840 --> 00:18:39,580
+beleza.
+
+211
+00:18:39,590 --> 00:18:43,820
+Você Marco está aqui Builder não é necessário beleza.
+
+212
+00:18:43,820 --> 00:18:49,160
+Ele diz que eu já tenho uma versão instalada se eu quero fazer o upgrade eu não quero.
+
+213
+00:18:49,190 --> 00:18:55,590
+Eu vou cancelar mais um de vocês ele mostraria aqui qual é a pasta que você quer gostaria.
+
+214
+00:18:55,610 --> 00:19:01,340
+E só você está Max Max Max mantenha a porta 5 4 3 2 por padrão.
+
+215
+00:19:01,410 --> 00:19:03,880
+Foi a primeira vez que você está instalado.
+
+216
+00:19:04,250 --> 00:19:11,680
+Caso não for a primeira vez escolha uma outra porta se um 4-3-3 em 4x4 alguma coisa desse tipo.
+
+217
+00:19:11,690 --> 00:19:16,730
+Escolha uma senha para o seu usuário busque padrão instale após instalar.
+
+218
+00:19:18,270 --> 00:19:23,270
+Você vir aqui no seu menu iniciar você vai ter o pedir de mim aqui instalado.
+
+219
+00:19:23,520 --> 00:19:25,590
+Você vai ter instalado.
+
+220
+00:19:26,160 --> 00:19:32,220
+Clicando nele ele vai abrir o seu navegador no seu navegador.
+
+221
+00:19:32,220 --> 00:19:36,390
+Ele vai abrir um serviço na sua máquina e vai abrir o seu navegador.
+
+222
+00:19:36,390 --> 00:19:40,530
+Eu gosto dessa outra versão que não abra o navegador.
+
+223
+00:19:40,540 --> 00:19:43,060
+PG ai de mim.
+
+224
+00:19:43,410 --> 00:19:50,520
+Download vou clicar aqui eu vou mostrar para vocês aí fica a critério de cada um.
+
+225
+00:19:51,060 --> 00:19:54,870
+No site do peixe e de mim vou vir aqui no Windows.
+
+226
+00:19:54,870 --> 00:19:56,850
+Eu gosto dessa versão aqui.
+
+227
+00:19:58,780 --> 00:20:00,880
+Das cinco ponto três para cima.
+
+228
+00:20:02,410 --> 00:20:05,570
+Por que essas versões aqui.
+
+229
+00:20:05,620 --> 00:20:07,540
+Em vez dele abriu no seu navegador.
+
+230
+00:20:07,540 --> 00:20:14,530
+Ele abriu um aplicativo eu tenho aqui instalado separado dele ele abriu uma janela no seu navegador
+
+231
+00:20:14,920 --> 00:20:21,070
+ele abre uma cara em uma janela separada só para o que que eu vou mostrar caso me dê.
+
+232
+00:20:24,530 --> 00:20:29,420
+Então quem quiser é só fazer o download instalar que ele vai vir para cá.
+
+233
+00:20:29,430 --> 00:20:30,320
+O Menu Iniciar.
+
+234
+00:20:32,640 --> 00:20:35,010
+Ele abre uma janela em vez de ficar no seu navegador.
+
+235
+00:20:35,850 --> 00:20:39,710
+Essa versão aqui é um pouco mais otimizada ela é um pouco mais leve.
+
+236
+00:20:39,760 --> 00:20:44,710
+Tá com medo ele vai demorar um pouquinho mais porque tem trocentas instâncias aqui.
+
+237
+00:20:44,730 --> 00:20:51,310
+Então ele vai demorar um pouquinho mais mesmo para poder carregar conectar aqui trazer referências das
+
+238
+00:20:51,310 --> 00:20:51,990
+distâncias.
+
+239
+00:20:53,190 --> 00:20:59,930
+Mas aí você la na minha máquina está rodando a versão 5 ponto 3 para quem quiser.
+
+240
+00:20:59,970 --> 00:21:04,830
+Mas você pode baixar a última versão não vai mudar em nada porque aqui a tela dependia de mim.
+
+241
+00:21:04,830 --> 00:21:10,230
+Ele te pergunta qual é a senha padrão quando você está lá ele pela primeira vez.
+
+242
+00:21:10,710 --> 00:21:16,190
+A senha que você bota para o usuário pois é assim que ele bota como padrão para o pedido de mim está
+
+243
+00:21:16,720 --> 00:21:20,060
+a 1 2 3 4 5 6 1 OC.
+
+244
+00:21:20,190 --> 00:21:22,770
+Beleza é que eu estou na tela do Peggy e de mim.
+
+245
+00:21:23,040 --> 00:21:28,890
+Bom aqui do meu lado esquerdo eu tenho os meus servidores.
+
+246
+00:21:29,160 --> 00:21:34,740
+Ele é um SGBD ele é um sistema gerenciador de banco de dados ele consegue gerenciar vários bancos de
+
+247
+00:21:34,740 --> 00:21:35,470
+dados.
+
+248
+00:21:35,610 --> 00:21:38,450
+Então aqui do lado esquerdo eu tenho a minha distância.
+
+249
+00:21:38,580 --> 00:21:45,690
+Eu tenho várias estâncias aqui várias várias várias e aí aqui eu tenho vários e aqui é uma de teste
+
+250
+00:21:45,690 --> 00:21:48,990
+que eu uso o post na versão 13.
+
+251
+00:21:49,020 --> 00:21:51,840
+Se eu clicar aqui vierem propriedades.
+
+252
+00:21:51,870 --> 00:21:52,380
+Olha só.
+
+253
+00:21:53,940 --> 00:21:58,710
+O Chile está instalado local Augusto na minha máquina está na versão 5 4.
+
+254
+00:21:59,860 --> 00:22:00,980
+3.4.
+
+255
+00:22:01,160 --> 00:22:04,990
+Tá com luz vermelha o bolso.
+
+256
+00:22:07,240 --> 00:22:19,810
+Aliás se eu vier aqui nesse cara e mandar ele abrir o olho já abriu dentro desse post disse a estância.
+
+257
+00:22:19,960 --> 00:22:28,270
+Eu tenho quatro bases de dados Base estudo de teste que eu faço à padaria consultoria digital Cadastro
+
+258
+00:22:28,270 --> 00:22:29,630
+de Pessoas.
+
+259
+00:22:30,030 --> 00:22:41,110
+E aí cada base pode ter várias informações a base de dados ela pode ter eventos catálogos linguagens
+
+260
+00:22:41,110 --> 00:22:42,210
+várias coisas.
+
+261
+00:22:42,320 --> 00:22:50,410
+E aí dentro de esquemas eu tenho um esquema público que é o esquema padrão e dentro do esquema padrão
+
+262
+00:22:50,560 --> 00:22:54,790
+eu tenho aqui as tabelas as tabelas.
+
+263
+00:22:55,330 --> 00:23:01,690
+Nesse meu banco que padaria olha só eu tenho uma tabela de clientes que ela é dividida por linhas e
+
+264
+00:23:01,690 --> 00:23:07,980
+colunas as colunas que tenho e de nome e-mail data de nascimento.
+
+265
+00:23:08,020 --> 00:23:14,980
+Vamos ver o que dependendo da tabela de cliente é só clicar no botão direito civil e clicar em alguns.
+
+266
+00:23:15,070 --> 00:23:17,950
+Olha só ele vai me mostrar aqui.
+
+267
+00:23:18,310 --> 00:23:25,060
+Tudo o que tem dentro dessa tabela de cliente tem uma cliente só chamada Alice que tem um e-mail Alice
+
+268
+00:23:25,060 --> 00:23:28,130
+arroba Gmail que tem essa data de nascimento.
+
+269
+00:23:28,390 --> 00:23:30,310
+Só tem uma única pessoa.
+
+270
+00:23:30,310 --> 00:23:37,900
+Olha como é que ele é separado o banco de dados por colunas e linhas de cada linha representa a pessoa
+
+271
+00:23:37,900 --> 00:23:41,620
+por exemplo criou uma outra pessoa que o Matheus.
+
+272
+00:23:43,580 --> 00:23:48,110
+Mateus Leme e Matheus.
+
+273
+00:23:48,380 --> 00:23:52,280
+O e-mail de Matheus arrobas de meio ponto com.
+
+274
+00:23:54,110 --> 00:24:00,410
+Matheus nasceu em 1991 um mês 10.
+
+275
+00:24:00,470 --> 00:24:02,570
+Um dia sim.
+
+276
+00:24:03,260 --> 00:24:07,790
+Aqui eu vim aqui salvar as alterações.
+
+277
+00:24:07,880 --> 00:24:10,120
+Agora tem duas pessoas dando.
+
+278
+00:24:10,310 --> 00:24:17,330
+O ideal de sono automaticamente pra gente ficar tendo duas pessoas ou seja as informações são separadas
+
+279
+00:24:17,330 --> 00:24:18,900
+entre linhas e colunas.
+
+280
+00:24:18,950 --> 00:24:25,010
+Tá é muito legal o longo post que a gente não vai entrar em tanto detalhe assim por quê.
+
+281
+00:24:25,010 --> 00:24:33,770
+Porque o que acontece a nós é o nosso foco não vai ser dominar o banco de dados do mostrando como ele
+
+282
+00:24:33,770 --> 00:24:37,910
+funciona e vocês podem estudar um pouco mais por fora para poder aprender.
+
+283
+00:24:37,970 --> 00:24:39,960
+O banco de dados bons.
+
+284
+00:24:40,220 --> 00:24:48,020
+Mas vamos supor que a gente queira criar um banco de dados pra gente eu vou vir aqui o cliente Database
+
+285
+00:24:49,040 --> 00:24:54,680
+banco criou um banco de dados aqui eu vou chamar esse banco de dados aqui de teste.
+
+286
+00:24:57,400 --> 00:24:58,150
+Teste.
+
+287
+00:24:59,590 --> 00:25:00,550
+Teste padaria.
+
+288
+00:25:03,830 --> 00:25:11,090
+Padaria posso botar um comentário posso ser quem é o Hound e a gente manter o padrão as definições então
+
+289
+00:25:11,330 --> 00:25:14,090
+só o nome mandei salvar.
+
+290
+00:25:15,390 --> 00:25:20,570
+Ele criou aqui o teste padaria se houver dentro de esquema.
+
+291
+00:25:20,730 --> 00:25:22,610
+Eu não tenho nenhuma tabela.
+
+292
+00:25:22,650 --> 00:25:25,370
+Vamos criar uma tabela tipo.
+
+293
+00:25:27,430 --> 00:25:31,540
+E aqui eu poderia fazer o seguinte eu poderia vir aqui e botar assim.
+
+294
+00:25:33,810 --> 00:25:35,890
+Qual o nome da tabela.
+
+295
+00:25:36,300 --> 00:25:36,900
+Produto.
+
+296
+00:25:38,040 --> 00:25:45,250
+A tabela de produto é o que atendendo a sua tabela de produtos quais são as colunas e aqui em qual os
+
+297
+00:25:45,760 --> 00:25:49,190
+fãs vão dizer quais as colunas que vai ter dentro dessa tabela.
+
+298
+00:25:49,190 --> 00:25:54,340
+Então eu posso vir aqui a beber com a primeira coluna.
+
+299
+00:25:54,340 --> 00:26:02,650
+A primeira vai ser a indicação para guardar a chave primária dessa tabela e qual é o tipo de dado dessa
+
+300
+00:26:02,650 --> 00:26:03,710
+coluna.
+
+301
+00:26:03,820 --> 00:26:11,800
+No post nós temos um tipo de dado chamado Serial Serial guarda um número inteiro só que serial significa
+
+302
+00:26:11,800 --> 00:26:18,310
+que ele vai ser incremental ou seja é um banco de dados que vai tomar conta dele e o banco de dados
+
+303
+00:26:18,310 --> 00:26:24,430
+que vai dizer como é que ele vai funcionar e o banco de dados que vai controlar essa sequência.
+
+304
+00:26:26,130 --> 00:26:32,000
+E aí nós vamos marcar a opção de praia Muriqui para ser a chave primária.
+
+305
+00:26:32,060 --> 00:26:36,820
+Todo banco relacional ali tem uma chave primária uma coluna que é a única que eu posso confiar para
+
+306
+00:26:36,820 --> 00:26:39,850
+poder fazer o relacionamento com as outras tabelas.
+
+307
+00:26:39,850 --> 00:26:43,650
+Então uma chave primária pode ser a chave estrangeira.
+
+308
+00:26:43,670 --> 00:26:47,030
+Em outra tabela é uma coluna que a gente pode confiar.
+
+309
+00:26:47,050 --> 00:26:54,820
+Beleza crie o Haiti vou criar aqui uma para o nome desse produto o nome.
+
+310
+00:26:55,010 --> 00:26:56,500
+é que eu vou botar.
+
+311
+00:26:56,500 --> 00:27:06,770
+Sei lá eu posso botar essa coluna aqui o carácter variante caracter variante significa String Texto.
+
+312
+00:27:06,790 --> 00:27:14,770
+é aí que eu posso ver quantos caracteres essa coluna vai guardar por padrão é 2 5 5 por padrão mas não
+
+313
+00:27:14,770 --> 00:27:20,950
+é só eu queria que tivesse só 50 caracteres ou seja o nome do produto não pode passar de 50 caracteres
+
+314
+00:27:21,430 --> 00:27:22,710
+e o colocaria aqui.
+
+315
+00:27:22,810 --> 00:27:24,400
+Não vou deixar sem nada por padrão.
+
+316
+00:27:26,710 --> 00:27:31,060
+E aqui é o seguinte essa coluna aqui pode ser nula.
+
+317
+00:27:32,770 --> 00:27:36,190
+Se sim nulo significa o seguinte.
+
+318
+00:27:39,440 --> 00:27:43,870
+O nome Who pelo nome eu sei que não faz sentido porque para a América foi se incremental.
+
+319
+00:27:43,940 --> 00:27:50,210
+Beleza é o cereal isso aqui tanto faz se você marcar ou de marcar nos de que tanto vai fazer não vai
+
+320
+00:27:50,210 --> 00:27:52,350
+fazer diferença nenhuma para a gente tá.
+
+321
+00:27:52,520 --> 00:27:54,180
+Mas aqui no nome vai.
+
+322
+00:27:54,230 --> 00:27:54,650
+Olha só.
+
+323
+00:27:55,800 --> 00:28:03,600
+Quando está aqui o mote no ou significa pode não pode ser nula ou quer dizer não pode ser nula e está
+
+324
+00:28:03,600 --> 00:28:12,090
+negando aqui significa o seguinte se eu deixar de marcado eu posso cadastrar um produto sem nome no
+
+325
+00:28:12,090 --> 00:28:13,530
+banco deixar vazio.
+
+326
+00:28:14,310 --> 00:28:21,390
+Se eu marcar significa porque eu sou obrigado a botar um nome para um produto no banco cara.
+
+327
+00:28:21,480 --> 00:28:24,560
+Se eu estou criando um produto é óbvio que eu tenho que ter um nome né.
+
+328
+00:28:24,570 --> 00:28:25,620
+Então a gente vai marcar.
+
+329
+00:28:27,110 --> 00:28:35,520
+Vamos criar aqui uma outra uma outra coluna chamada quantia de quantidade.
+
+330
+00:28:35,540 --> 00:28:37,010
+Eu vou dizer que vai ser um.
+
+331
+00:28:41,090 --> 00:28:49,790
+Integrando o inteiro também eu quero que seja vote nulo ou seja seja obrigado a uma quantidade mesmo
+
+332
+00:28:49,790 --> 00:28:52,100
+que se zero mas tem que ter uma quantidade.
+
+333
+00:28:53,230 --> 00:28:53,580
+Mesmo.
+
+334
+00:28:55,360 --> 00:29:03,130
+Como adicionar mais uma tia o valor o valor poderia ser o que será que tem em dobro.
+
+335
+00:29:03,520 --> 00:29:10,540
+No Japão a gente tem o dobro o que também tem o dobro para o sítio tem Double tem décimo.
+
+336
+00:29:16,030 --> 00:29:23,930
+Tem vários tipos de tipos de dados a que horas você for olhando tem muita coisa no bolso e tem muito
+
+337
+00:29:23,930 --> 00:29:26,080
+o tipo de dado muito tipo de dado.
+
+338
+00:29:28,140 --> 00:29:28,830
+Muita coisa.
+
+339
+00:29:30,000 --> 00:29:38,350
+Jazz onde há muita coisa Ramone para trabalhar com dinheiro numérico para ficar fácil.
+
+340
+00:29:38,350 --> 00:29:42,540
+Eu vou botar bomba aqui pra gente poder brincar.
+
+341
+00:29:42,880 --> 00:29:45,600
+Valor também não pode ser nulo.
+
+342
+00:29:45,600 --> 00:29:48,660
+E por fim vou adicionar mais uma que vai ser a observação.
+
+343
+00:29:51,430 --> 00:29:59,950
+Observação eu quero observação geralmente é um texto que é muito grande é um texto que assim o usuário
+
+344
+00:29:59,950 --> 00:30:01,780
+pode escrever uma bíblia ali dentro.
+
+345
+00:30:02,350 --> 00:30:05,080
+Pode ser quantas linhas eu quiser ou não posso limitar.
+
+346
+00:30:05,080 --> 00:30:07,720
+Então eu vou dizer que é do tipo.
+
+347
+00:30:08,590 --> 00:30:13,710
+Texas quando eu digo que é do tipo TeX é um texto livre.
+
+348
+00:30:13,810 --> 00:30:16,140
+Eu não preciso botar precisão nem nada.
+
+349
+00:30:16,270 --> 00:30:19,070
+é observação geralmente também não é obrigatório.
+
+350
+00:30:19,090 --> 00:30:24,670
+Então não preciso marcar essa opção significa que eu posso cadastrar um produto sem informar observação
+
+351
+00:30:25,270 --> 00:30:26,780
+ou mandar salvar.
+
+352
+00:30:26,800 --> 00:30:27,400
+Olha que legal.
+
+353
+00:30:29,080 --> 00:30:29,650
+Deixa eu fechar.
+
+354
+00:30:31,360 --> 00:30:32,070
+Esse cara aqui.
+
+355
+00:30:36,270 --> 00:30:43,200
+Achar que beleza é só produto se eu vier que agora é dar um algo.
+
+356
+00:30:44,190 --> 00:30:44,380
+A.
+
+357
+00:30:45,450 --> 00:30:49,410
+Ele me mostra que dentro dessa tabela não tem nada.
+
+358
+00:30:49,410 --> 00:30:51,690
+Olha que legal não tem nada.
+
+359
+00:30:51,690 --> 00:30:54,170
+Mas eu poderia achar produtos aqui.
+
+360
+00:30:54,270 --> 00:31:00,660
+Poderia cadastrar produtos aqui dentro se eu quisesse cadastrar um produto aqui dentro poderia vir aqui
+
+361
+00:31:00,660 --> 00:31:03,350
+cadastrar mas não precisa se cadastrar por código.
+
+362
+00:31:03,470 --> 00:31:11,190
+Bom uma forma de descobrir qual é o código para cada produto e para o mal de cima do produto e script
+
+363
+00:31:11,550 --> 00:31:19,560
+o insert quando você faz isso ele te mostra um script do que você precisa mandar para poder gravá la
+
+364
+00:31:19,560 --> 00:31:19,980
+dentro.
+
+365
+00:31:21,500 --> 00:31:24,120
+E aqui ele cria um script para você.
+
+366
+00:31:24,200 --> 00:31:26,870
+Só que ele cria um distrito de paz no Haiti.
+
+367
+00:31:26,870 --> 00:31:32,630
+Eu vou tirar o Haiti porque o Haiti eu quero que o povo tome conta e vou tirar uma interrogação aqui
+
+368
+00:31:32,950 --> 00:31:42,410
+de baixo e o script para criar um produto no bom pois sei que o INSERT INTO publique produto nesses
+
+369
+00:31:42,420 --> 00:31:43,160
+campos aqui.
+
+370
+00:31:44,110 --> 00:31:52,390
+Esses valores ficam por aqui é bem simples de entender bem certinho ou seja insira dentro do que da
+
+371
+00:31:52,390 --> 00:31:58,640
+tabela produtos nos campos nome quantidade valor e observação os valores que eu estou colocando aqui.
+
+372
+00:31:58,840 --> 00:32:02,350
+Os valores que eu colocar aqui tem que bater exatamente pelo valor que eu coloquei aqui.
+
+373
+00:32:02,860 --> 00:32:04,690
+Aqui tem quatro aqui tem quatro.
+
+374
+00:32:04,690 --> 00:32:08,020
+A ordem que eu passar aqui é a ordem que ele vai adicionar.
+
+375
+00:32:08,050 --> 00:32:12,300
+Então a primeira coisa que eu vou passar é um nome e aí.
+
+376
+00:32:12,400 --> 00:32:16,450
+Aqui no banco de dados a gente passa como é string.
+
+377
+00:32:16,690 --> 00:32:22,350
+Então vamos lá entre aspas simples então vou colocar aqui o sonho de.
+
+378
+00:32:23,920 --> 00:32:26,640
+Doce de leite.
+
+379
+00:32:27,360 --> 00:32:29,110
+Qual é a quantidade.
+
+380
+00:32:29,110 --> 00:32:31,100
+50.
+
+381
+00:32:31,150 --> 00:32:32,610
+Qual é o valor.
+
+382
+00:32:32,620 --> 00:32:35,420
+O valor custa 2 reais.
+
+383
+00:32:35,440 --> 00:32:36,770
+Qual a observação.
+
+384
+00:32:36,790 --> 00:32:38,500
+Não quero passar observação nenhuma.
+
+385
+00:32:41,720 --> 00:32:46,040
+Se eu rodar esse comando aqui na teoria ele vai adicionar um produto lá no banco
+
+386
+00:32:48,860 --> 00:32:52,200
+uma linha afetada e retornou com sucesso.
+
+387
+00:32:52,370 --> 00:32:55,040
+Se eu vier agora tinha de mandar atualizar.
+
+388
+00:32:55,040 --> 00:33:02,790
+Olha lá eu tenho um produto que cada Estado era lá que legal produto adicionado dentro do banco de dados.
+
+389
+00:33:02,920 --> 00:33:09,200
+Desde então a gente pode adicionar na mão pode adicionar o comando porque pode adicionar o comando.
+
+390
+00:33:09,200 --> 00:33:13,310
+Por que a nossa aplicação à nossa API tem que conseguir fazer isso aqui.
+
+391
+00:33:14,590 --> 00:33:15,780
+Não Insert.
+
+392
+00:33:15,940 --> 00:33:17,400
+Ela tem que conseguir fazer isso aqui.
+
+393
+00:33:17,590 --> 00:33:18,360
+SELECT.
+
+394
+00:33:18,400 --> 00:33:23,230
+Quando a gente manda atualizar ele está rodando o comando que por baixo dos panos olha o que está rodando
+
+395
+00:33:23,230 --> 00:33:31,600
+por baixo dos panos e sei que o Select ou busque asterisco tudo de onde from.
+
+396
+00:33:31,690 --> 00:33:36,900
+Da tabela do esquema público da tabela produto.
+
+397
+00:33:37,360 --> 00:33:42,130
+Quando você faz e roda esse comando aqui ele faz um select.
+
+398
+00:33:42,130 --> 00:33:42,700
+Olha que legal.
+
+399
+00:33:43,960 --> 00:33:51,460
+Asterisco significa tudo selecione ou buscam pegue tudo de dentro da tabela produto para que legal.
+
+400
+00:33:52,470 --> 00:34:00,300
+Ele traz a única diferença que ele traz ordenado pelo Haiti em ordem crescente o do menor para o maior.
+
+401
+00:34:01,330 --> 00:34:01,770
+Beleza.
+
+402
+00:34:02,580 --> 00:34:02,870
+Então.
+
+403
+00:34:03,830 --> 00:34:06,010
+Esse é um Insert Select.
+
+404
+00:34:06,080 --> 00:34:10,050
+Eu posso ter um beliche se eu quiser deletar posso ter no PDT.
+
+405
+00:34:10,280 --> 00:34:11,770
+Existem vários comandos.
+
+406
+00:34:11,810 --> 00:34:13,760
+Isso é que a gente está fazendo.
+
+407
+00:34:13,790 --> 00:34:14,510
+Se chama.
+
+408
+00:34:15,400 --> 00:34:16,240
+Comandos.
+
+409
+00:34:19,130 --> 00:34:23,650
+SQL e comandos da linguagem SQL.
+
+410
+00:34:23,980 --> 00:34:28,420
+Então para quem quiser estudar e estudar os comandos da linguagem SQL.
+
+411
+00:34:28,420 --> 00:34:30,800
+Desde então esse é o insert.
+
+412
+00:34:33,040 --> 00:34:37,270
+Esse daqui é o Select.
+
+413
+00:34:37,360 --> 00:34:45,130
+O Insert insere dados no banco Select obtém os dados do banco e se eu quiser se atualizar se eu quiser
+
+414
+00:34:45,130 --> 00:34:55,690
+se atualizar eu poderia fazer assim o Ocidente roda o comando do PD te passo qual o nome da tabela atualiza
+
+415
+00:34:55,690 --> 00:34:57,940
+a tabela produtos.
+
+416
+00:34:58,390 --> 00:35:00,580
+E aí eu vou dizer o que eu quero atualizar lá dentro.
+
+417
+00:35:00,580 --> 00:35:02,920
+Por exemplo Eu Quero atualizar observação.
+
+418
+00:35:03,690 --> 00:35:05,540
+7.
+
+419
+00:35:05,610 --> 00:35:13,260
+Observação observação observar então vai receber sua.
+
+420
+00:35:16,910 --> 00:35:19,650
+Sonho frito.
+
+421
+00:35:19,940 --> 00:35:24,100
+Eu quero que ele atualize a coluna observação para Wilfredo.
+
+422
+00:35:24,170 --> 00:35:31,200
+Só Axelrod mandato daqui ele vai executar isso que todos os produtos que eu tenho aqui hoje eu só tenho
+
+423
+00:35:31,220 --> 00:35:36,290
+uma e se eu tivesse 100 produtos ele ia botar essa observação para todo mundo não quero.
+
+424
+00:35:36,290 --> 00:35:42,650
+Eu quero que ele coloque só para esse produto que eu vou querer um outro produto que é o sonho dele.
+
+425
+00:35:43,070 --> 00:35:45,560
+Chocou o late.
+
+426
+00:35:47,590 --> 00:35:50,980
+Toda selecionei o que eu quero que ele execute.
+
+427
+00:35:52,320 --> 00:35:52,940
+E a roda.
+
+428
+00:35:53,880 --> 00:35:56,740
+Inseriu uma linha sobre a que formando a selection.
+
+429
+00:35:57,680 --> 00:35:58,820
+Agora deu dois.
+
+430
+00:35:58,940 --> 00:36:04,780
+Se eu quiser que um sonho frito só vá para o de chocolate ou para o doce de leite.
+
+431
+00:36:04,790 --> 00:36:07,790
+Eu tenho que dizer para qual o que quero.
+
+432
+00:36:07,850 --> 00:36:10,100
+E aí a gente usa a cláusula.
+
+433
+00:36:12,090 --> 00:36:14,060
+O erro o erro.
+
+434
+00:36:14,100 --> 00:36:15,510
+Onde.
+
+435
+00:36:15,810 --> 00:36:17,270
+Então eu quero fazer o quê.
+
+436
+00:36:17,310 --> 00:36:27,360
+Atualizar a tabela produto colocando se todo no campo observação o valor sonho frito onde o edir for
+
+437
+00:36:27,360 --> 00:36:29,980
+igual que um.
+
+438
+00:36:30,360 --> 00:36:37,950
+Se eu rodar esse comando ele só vai botar isso daqui nos no produto que tiver e dê um céu mudar pro
+
+439
+00:36:37,950 --> 00:36:39,630
+ar 2.
+
+440
+00:36:39,660 --> 00:36:47,790
+Ele só vai rodar um cara que tem e 2 quer ver rodar o n 2 então tem que entrar só não só de chocolate.
+
+441
+00:36:49,970 --> 00:36:52,100
+é um update executado.
+
+442
+00:36:52,100 --> 00:36:53,120
+Se eu rodar o Select.
+
+443
+00:36:55,650 --> 00:36:56,430
+Sonho frito.
+
+444
+00:36:57,570 --> 00:37:05,570
+Então VAMOS ANOTAR aqui um comentário na linguagem SQL e para cima o próximo aqui no post você pode
+
+445
+00:37:05,570 --> 00:37:10,590
+dar o contra o ponto e vírgula que ele sabe botar traço entre os símbolos em um ano no verso.
+
+446
+00:37:10,610 --> 00:37:13,340
+Ou então o botão aqui adicionando.
+
+447
+00:37:16,320 --> 00:37:18,360
+Produto na tabela.
+
+448
+00:37:23,490 --> 00:37:34,540
+Consultando consultando todos os produtos vamos consultar agora os produtos por aí diz Select.
+
+449
+00:37:34,560 --> 00:37:37,410
+Por dia vai ser igualzinho ao de cima.
+
+450
+00:37:37,410 --> 00:37:44,220
+Só que tem que passar o noite é só copiar a sacola que UE aí de igual a 2.
+
+451
+00:37:45,890 --> 00:37:49,370
+Se eu quiser pegar todos os produtos que tenho aí igual a dois.
+
+452
+00:37:52,440 --> 00:37:59,850
+Quero todos os produtos de igual a um de chocolate para ter que pagar outro sonho de doce de leite.
+
+453
+00:38:03,160 --> 00:38:03,640
+O sul.
+
+454
+00:38:05,960 --> 00:38:07,100
+Consultando.
+
+455
+00:38:08,450 --> 00:38:10,840
+Produto viveu no Haiti.
+
+456
+00:38:14,040 --> 00:38:14,880
+Inserindo.
+
+457
+00:38:16,430 --> 00:38:17,540
+Consultando.
+
+458
+00:38:19,870 --> 00:38:20,960
+E aqui atualizando.
+
+459
+00:38:27,830 --> 00:38:36,470
+Atualizando o produto então nós já vimos o adicionar o consultar todos o consultar por aí e atualizar
+
+460
+00:38:36,950 --> 00:38:38,680
+pra terminar o crude.
+
+461
+00:38:38,690 --> 00:38:44,890
+Só falta o quê de ler o produto.
+
+462
+00:38:44,960 --> 00:38:54,320
+Como é que o delete produto o deletar produto é igual Select é igual ao soneto no rodapé igualzinho
+
+463
+00:38:55,280 --> 00:38:56,300
+show.
+
+464
+00:38:56,330 --> 00:38:59,960
+Só que em vez de Select asterisco você vai fazer sei que.
+
+465
+00:39:02,560 --> 00:39:02,960
+Elite.
+
+466
+00:39:05,150 --> 00:39:08,320
+Deleta de dentro da tabela produtos.
+
+467
+00:39:08,420 --> 00:39:10,840
+Quando o Ideb foi igual a 1.
+
+468
+00:39:11,270 --> 00:39:12,470
+Olha que legal.
+
+469
+00:39:12,680 --> 00:39:19,610
+Se eu rodar esse daqui sem o erro ele vai deletar todo mundo porque não tem condição.
+
+470
+00:39:20,710 --> 00:39:28,720
+Tem que ter muito cuidado a gente nunca rode roda delete e nem piedade demite nenhum piedade sem Huerta.
+
+471
+00:39:28,720 --> 00:39:31,590
+Galera não pode não vai ao banco todinho.
+
+472
+00:39:31,600 --> 00:39:39,370
+Já era pra perder informação eu quero delete from produto ou seja quero DELETAR TUDO DA TABELA produto
+
+473
+00:39:39,370 --> 00:39:45,040
+mas eu quero deletar quando quando o Ideb foi igual 1 ver vou obter todo mundo aqui.
+
+474
+00:39:45,340 --> 00:39:47,320
+SELECT em dois produtos.
+
+475
+00:39:48,460 --> 00:39:54,150
+Se eu quiser deletar produto que tem deu eu rodo assim eu quero deletar o produto tem D2 a moto que
+
+476
+00:39:54,260 --> 00:39:56,940
+é 2 1 deletar o líder que tem 2o.
+
+477
+00:39:59,520 --> 00:40:02,760
+Claro uma linha deletada se eu vier aqui.
+
+478
+00:40:04,210 --> 00:40:06,620
+E consultar todos de novo lá.
+
+479
+00:40:06,760 --> 00:40:09,010
+Só tenho agora um produto.
+
+480
+00:40:09,010 --> 00:40:13,750
+Ou seja eu consegui deletar o sucesso.
+
+481
+00:40:13,790 --> 00:40:24,670
+Então exemplo de um comando para consulta para inserção um exemplo de um comando para uma série a gente
+
+482
+00:40:24,670 --> 00:40:25,790
+chama isso daqui.
+
+483
+00:40:25,810 --> 00:40:26,260
+Olha só.
+
+484
+00:40:32,530 --> 00:40:43,390
+Exemplos de comandos SQL para o crude.
+
+485
+00:40:43,390 --> 00:40:43,930
+Olha que legal.
+
+486
+00:40:47,380 --> 00:40:48,730
+Desde então.
+
+487
+00:40:50,520 --> 00:40:55,440
+Por um crush o selo crude o que é o cliente.
+
+488
+00:40:55,440 --> 00:41:01,960
+O cliente aqui no SQL é o insert aonde eu estou inserindo.
+
+489
+00:41:02,050 --> 00:41:10,510
+Eu estou cadastrando alguma coisa do criando alguma coisa no banco tá criando aqui beleza.
+
+490
+00:41:10,650 --> 00:41:19,020
+O R E o de rede de leitura que eu estou eu estou lendo o que é que eu estou lendo o que todos lendo
+
+491
+00:41:19,020 --> 00:41:20,310
+por aí dia.
+
+492
+00:41:20,340 --> 00:41:29,490
+Então o erro é que eu consegui fazer que o Select o aqui e o DUP deite aonde a gente atualizou.
+
+493
+00:41:29,610 --> 00:41:35,010
+Vimos aqui como atualizar e aqui eu posso atualizar qualquer coisa atualizem a observação mas se quiser
+
+494
+00:41:35,010 --> 00:41:38,730
+se atualizar o programa toma digo aqui atualizar o valor também.
+
+495
+00:41:39,030 --> 00:41:46,980
+Quer dizer que o valor de 22 reais agora o valor vai ser sei lá vc 13 50 se eu quiser vender um sonho
+
+496
+00:41:46,980 --> 00:41:51,360
+gigante eu quero também atualizar a quantidade.
+
+497
+00:41:51,720 --> 00:41:56,280
+é só botar vivo e botando aqui os pontos que você quiser uma quantidade boa e sem.
+
+498
+00:41:58,450 --> 00:42:06,610
+O update do do crude e por fim o Elite para poder deletar o do crude.
+
+499
+00:42:06,630 --> 00:42:17,470
+Então aqui a gente tem alguns exemplos aqui de comandos SQL para você conseguir executar crude no banco
+
+500
+00:42:17,470 --> 00:42:18,040
+de dados.
+
+501
+00:42:19,830 --> 00:42:22,710
+Eu recomendo fortemente que vocês estudem.
+
+502
+00:42:24,570 --> 00:42:29,790
+Por fora estudem um pouco mais a linguagem SQL estudar um pouco o osso.
+
+503
+00:42:29,820 --> 00:42:31,380
+Existe vários exemplos aí.
+
+504
+00:42:32,170 --> 00:42:34,830
+O que vocês podem aprender um pouco mais sobre.
+
+505
+00:42:36,250 --> 00:42:37,370
+A linguagem SQL.
+
+506
+00:42:38,640 --> 00:42:39,120
+Beleza.

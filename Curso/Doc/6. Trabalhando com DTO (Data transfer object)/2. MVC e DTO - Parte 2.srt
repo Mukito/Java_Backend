@@ -1,0 +1,1151 @@
+1
+00:00:03,160 --> 00:00:09,420
+Criamos aqui o nosso o nosso obter por aí.
+
+2
+00:00:09,530 --> 00:00:17,260
+Queremos obter todos vamos usando um modelo melhor para fazer a transformação de um de uma lista de
+
+3
+00:00:17,260 --> 00:00:25,390
+produtos no caso obter todos se transformou numa lista de produto numa lista de produtos de teor e o
+
+4
+00:00:25,520 --> 00:00:33,370
+comitê por aí dique que recupera um produto do tipo produto bolha ou algum outro tipo de produto e nós
+
+5
+00:00:33,370 --> 00:00:40,180
+convertê los ele para um produto de teor para poder retornar que é o que o método espera retornar o
+
+6
+00:00:40,180 --> 00:00:48,280
+que nós fizemos na aula anterior que nós vamos fazer agora nós vamos fazer o adicionar o adicionar.
+
+7
+00:00:49,300 --> 00:00:56,000
+Ele vai ser bem parecido com com um com o obter por aí.
+
+8
+00:00:56,080 --> 00:00:57,370
+Então como é que vai funcionar.
+
+9
+00:00:57,370 --> 00:00:59,570
+A primeira coisa eu posso dizer.
+
+10
+00:00:59,570 --> 00:01:04,620
+A primeira coisa que eu vou fazer é remover o Idea para conseguir fazer o cadastro.
+
+11
+00:01:04,660 --> 00:01:14,520
+Então eu posso remover até do produto de ter ao mesmo produto DT o banco vou remover o ID dele.
+
+12
+00:01:14,530 --> 00:01:21,040
+Beleza após remover o produto eu vou criar um molde ou mexer aqui pra gente poder fazer a conversão.
+
+13
+00:01:21,640 --> 00:01:28,270
+Então olhe o que vou fazer eu vou fazer o seguinte eu vou criar um cara aqui que eu vou chamar de produto
+
+14
+00:01:28,570 --> 00:01:37,720
+adicionar eu tenho que pegar o produto de e transformar ele num não tem que transformá lo num produto
+
+15
+00:01:37,720 --> 00:01:39,250
+moda ou mandar para o banco.
+
+16
+00:01:39,250 --> 00:01:40,480
+Então vou botar aqui.
+
+17
+00:01:42,370 --> 00:01:52,930
+Criar um objeto objeto de mapeamento criou o nosso modelo meter depois o que eu preciso fazer.
+
+18
+00:01:52,960 --> 00:02:07,310
+Eu preciso converter converter o nosso produto Better Off em um produto móvel que é em um produto ou
+
+19
+00:02:07,450 --> 00:02:13,160
+o Botafogo converta em um produto de um produto para poder salvar o banco.
+
+20
+00:02:13,480 --> 00:02:32,920
+Beleza eu preciso converter depois salvar o produto no banco e por fim eu tornar o produto ou produto
+
+21
+00:02:33,220 --> 00:02:36,670
+de teor atualizado.
+
+22
+00:02:36,670 --> 00:02:38,640
+Beleza é o que eu preciso fazer.
+
+23
+00:02:38,650 --> 00:02:47,930
+Então vamos lá então remover o Haiti simplesmente pegar o dedo e o palacete aí passando numa beleza.
+
+24
+00:02:48,070 --> 00:02:54,830
+Agora eu preciso criar um objeto de mapeamento como é que eu crio um objeto de mapeamento posso fazer
+
+25
+00:02:54,830 --> 00:03:06,430
+assim o modelo mapear o que vou chamar ele de mapear recebe um humilde Model MAP.
+
+26
+00:03:08,630 --> 00:03:16,100
+Meter e aí eu tenho que o meu objeto de mapeamento criei o objeto agora que preciso fazer converteu
+
+27
+00:03:16,100 --> 00:03:21,130
+o produto deter o que está vindo aqui em um produto para salvar no banco.
+
+28
+00:03:21,160 --> 00:03:31,490
+Então vou criar aqui um produto que vai chamar de produto um produto que vai receber que vai receber
+
+29
+00:03:31,490 --> 00:03:36,230
+o que vai receber um PER ponto MAP.
+
+30
+00:03:36,440 --> 00:03:43,190
+A gente sempre conversa com o MEP aonde que eu vou passar o meu produto de teor e eu quero que ele converta
+
+31
+00:03:43,190 --> 00:03:46,570
+para um destination type.
+
+32
+00:03:46,580 --> 00:03:55,100
+é sempre a classe do produto que eu quero produto ponto Class então conhecida que ele vai pegar o meu
+
+33
+00:03:55,100 --> 00:04:03,110
+produto de TV e vai convertendo um cara do tipo produto beleza depois do produto que eu faço.
+
+34
+00:04:03,120 --> 00:04:04,790
+O só vai ficar no banco.
+
+35
+00:04:04,790 --> 00:04:07,460
+Então o que que eu posso dizer que eu posso fazer assim.
+
+36
+00:04:07,970 --> 00:04:20,660
+Eu posso dizer que produto vai receber ele mesmo o produto vai receber o produto repositor e ponto produto
+
+37
+00:04:20,660 --> 00:04:29,130
+repositor e ponto sem fim para salvar passando o produto que a gente está fazendo aqui.
+
+38
+00:04:29,180 --> 00:04:33,090
+A gente está pegando o produto está mandando salva no banco.
+
+39
+00:04:33,140 --> 00:04:39,080
+Só que esse produto que ainda não tem a manda e salva no banco ele vai salvar e eu sempre me devolvo
+
+40
+00:04:39,080 --> 00:04:40,730
+que um produto.
+
+41
+00:04:40,730 --> 00:04:45,350
+Então o ideal é que ele botou lá no banco vai vir para dentro desse produto aqui.
+
+42
+00:04:45,410 --> 00:04:50,910
+Então eu já estou com um produto com indico tudo certinho certo que eu vou fazer.
+
+43
+00:04:50,930 --> 00:04:56,020
+Eu tenho que devolver um produto data e hora em vez de converter esse cara aqui de novo num produto
+
+44
+00:04:56,020 --> 00:05:02,300
+de teor eu posso simplesmente fazer o seguinte como tudo o que está aqui é a mesma coisa que está aqui
+
+45
+00:05:02,300 --> 00:05:08,840
+exceto o Haiti que eu posso pegar aqui e fazer gracinha pegar o meu produto.
+
+46
+00:05:12,060 --> 00:05:19,960
+Detetou pontos 7 Haiti e disse que o Haiti dele é o Haiti do meu produto que vem do banco.
+
+47
+00:05:19,980 --> 00:05:28,660
+Olha lá é assim ontem a idia atualizada no meu olho e é o que eu preciso fazer é retornar o meu detetor
+
+48
+00:05:28,950 --> 00:05:40,210
+como retorna o meu produto de teor simples eu posso fazer assim o retorno é produto só isso.
+
+49
+00:05:40,230 --> 00:05:46,680
+Olha como é que ficou fácil o nosso código de entender o método adicionar recebe um produto de ter como
+
+50
+00:05:46,680 --> 00:05:53,490
+parâmetro a primeira coisa remova a id dele para garantir que eu vou algo que vai acontecer uma inserção
+
+51
+00:05:53,940 --> 00:06:01,860
+não uma atualização cria um modelo de mapeamento um modelo meter e converter o meu produto de teor em
+
+52
+00:06:01,860 --> 00:06:09,720
+um produto quando ele converter depois eu pego esse produto e mão do banco de dados salvar ele vai salvar
+
+53
+00:06:09,720 --> 00:06:13,180
+vai pegar o ID que gerou e vai botar aqui dentro.
+
+54
+00:06:13,200 --> 00:06:19,820
+Pego o Haiti desse cara que foi criado e jogou dentro do Haiti do produto do terror e retornou ele.
+
+55
+00:06:20,670 --> 00:06:24,330
+Eu adicionem e retornei um produto atualizado.
+
+56
+00:06:24,330 --> 00:06:31,640
+Olha como é que ficou fácil de entender como se fosse simples beleza adicionar também está pronto.
+
+57
+00:06:31,650 --> 00:06:35,760
+Vamos fazer um deletar o deletar.
+
+58
+00:06:35,760 --> 00:06:36,660
+Bom deletar.
+
+59
+00:06:36,660 --> 00:06:39,660
+A gente vai mudar um pouquinho o deletar antes de deletar.
+
+60
+00:06:39,660 --> 00:06:50,520
+Eu preciso fazer o seguinte verificar se o produto existe tem de verificar se esse produto existe de
+
+61
+00:06:50,520 --> 00:06:51,580
+alguma forma.
+
+62
+00:06:51,590 --> 00:06:57,990
+Então o que eu posso fazer um óptimo produto eu quero tentar encontrar um opt out de produto eu vou
+
+63
+00:06:57,990 --> 00:07:05,270
+tentar encontrar um produto aqui que eu vou chamar de produto.
+
+64
+00:07:05,310 --> 00:07:10,230
+Vou tentar pegar esse cara dizendo bom então vou chamar o produto repositor e ponto.
+
+65
+00:07:10,290 --> 00:07:15,960
+Fim de Bay dia passando a exigir que eu estou usando para deletar.
+
+66
+00:07:15,990 --> 00:07:17,340
+Então eu vou tentar encontrar.
+
+67
+00:07:18,420 --> 00:07:26,680
+Se eu conseguir em seu se não vier nada então vou fazer um infeliz vim aqui o produto.
+
+68
+00:07:26,910 --> 00:07:27,430
+Ponto.
+
+69
+00:07:27,480 --> 00:07:32,210
+Se for vazio se for em TI significa que ele não encontrou nada.
+
+70
+00:07:32,460 --> 00:07:37,350
+Se esse OPT não for significa ele foi lá no banco de dados com o Haiti que eu passei e não encontrou
+
+71
+00:07:37,350 --> 00:07:47,860
+ninguém se fluente eu vou lançar um front meu Resource note Deception que é aquela que nós criamos.
+
+72
+00:07:48,030 --> 00:08:06,920
+E aí eu vou passar uma mensagem que não foi possível deletar o produto com o dia com a India mas aí
+
+73
+00:08:06,930 --> 00:08:09,000
+de beleza.
+
+74
+00:08:11,490 --> 00:08:12,140
+Show.
+
+75
+00:08:12,300 --> 00:08:13,820
+E aí é que se disse.
+
+76
+00:08:13,860 --> 00:08:24,950
+Se eu quiser ainda posso fazer mais eu posso fazer assim mais igual ainda um espaço produto não existe.
+
+77
+00:08:25,560 --> 00:08:28,480
+Vai ficar legal.
+
+78
+00:08:28,860 --> 00:08:31,550
+Produto não existe beleza.
+
+79
+00:08:32,890 --> 00:08:36,730
+Quanto ao vivo o que eu estou fazendo eu estou lançando uma exceção.
+
+80
+00:08:36,750 --> 00:08:40,900
+Não foi possível deletar o produto com ID mas o Adidas produto.
+
+81
+00:08:41,010 --> 00:08:45,960
+E aí eu mando no final da mensagem o produto não existe porque ele não existe meios para deletar.
+
+82
+00:08:45,960 --> 00:08:50,130
+Se vier como antes se não entra olhando se f.
+
+83
+00:08:50,160 --> 00:08:51,180
+é óbvio que não existe.
+
+84
+00:08:51,180 --> 00:08:55,640
+Então se ele existe eu vou simplesmente no repositório e vou mandar deletar por dia.
+
+85
+00:08:55,800 --> 00:08:56,840
+Só isso.
+
+86
+00:08:56,840 --> 00:08:59,040
+Então o método deletar está pronto.
+
+87
+00:09:02,100 --> 00:09:08,280
+Se não existir lança uma em certa.
+
+88
+00:09:09,210 --> 00:09:09,880
+Mas céptico.
+
+89
+00:09:12,830 --> 00:09:19,440
+Deleta o produto pelo site simplesmente assim.
+
+90
+00:09:19,880 --> 00:09:23,470
+Show método deletar está pronto.
+
+91
+00:09:23,510 --> 00:09:26,180
+Aí só fica faltando o atualizar.
+
+92
+00:09:26,270 --> 00:09:28,660
+Beleza como é que seria se atualizar.
+
+93
+00:09:28,840 --> 00:09:32,740
+Vou apagar tudo e vou fazer de novo com vocês.
+
+94
+00:09:32,750 --> 00:09:36,200
+Vamos anotar o que a gente precisa fazer.
+
+95
+00:09:36,200 --> 00:09:46,250
+A primeira coisa que a gente precisa fazer é passar o ar para o Mandaqui para produtos de teor só pra
+
+96
+00:09:46,250 --> 00:09:53,750
+gente poder saber que é um produto da Copa passar o dia para outro produto de teor.
+
+97
+00:09:57,730 --> 00:10:02,180
+Beleza depois que eu preciso fazer.
+
+98
+00:10:02,290 --> 00:10:06,730
+Preciso criar um objeto de mapeamento.
+
+99
+00:10:12,650 --> 00:10:14,930
+No projeto de mapeamento depois.
+
+100
+00:10:17,920 --> 00:10:28,600
+Preciso converter ou converter porra de teor em um produto.
+
+101
+00:10:28,700 --> 00:10:29,920
+Você precisa fazer depois.
+
+102
+00:10:31,870 --> 00:10:35,830
+Converter o produto em um produto
+
+103
+00:10:38,560 --> 00:10:41,380
+salvar o melhor.
+
+104
+00:10:44,410 --> 00:10:54,360
+A atualizar atualizar o produto no banco de dados.
+
+105
+00:10:58,390 --> 00:11:05,290
+Beleza olha aqui aqui é preciso fazer isso e o que é mais que eu preciso fazer.
+
+106
+00:11:05,320 --> 00:11:09,930
+Depois disso eu preciso retornar o produto deve ter autorizado retornar opa.
+
+107
+00:11:14,390 --> 00:11:25,310
+Tornar o produto um produto todo de teor atualizado então são os passos que eu preciso fazer para atualizar
+
+108
+00:11:25,310 --> 00:11:27,050
+um produto no meu serviço.
+
+109
+00:11:27,050 --> 00:11:32,930
+Bom a primeira coisa que eu preciso fazer passar a ideia para um produto que se eu faço produto de ter
+
+110
+00:11:32,930 --> 00:11:41,470
+ao ponto 7 ai de receber no dia esse produto é receber não sei de moleza criar um modo eu MEP.
+
+111
+00:11:41,900 --> 00:11:55,400
+Não vamos lá Model o Model B recebe um perfil que é do tipo Nail model modelo e até.
+
+112
+00:11:59,060 --> 00:12:08,490
+E aí nós vamos fazer o seguinte criou que show agora nós vamos criar um objeto de mapeamento.
+
+113
+00:12:08,490 --> 00:12:10,540
+Agora nós vamos converter.
+
+114
+00:12:10,730 --> 00:12:19,460
+Como é que a gente converteria que faria tipo assim o produto que eu vou chamar de produto recebe um
+
+115
+00:12:19,850 --> 00:12:28,520
+map ponto Map eu vou converter ao de produto de teor em um
+
+116
+00:12:32,690 --> 00:12:39,950
+produto o em um produto ponto Cleese.
+
+117
+00:12:40,130 --> 00:12:46,720
+Eu quero converter um produto de teor para esse tipo de beleza converti.
+
+118
+00:12:46,730 --> 00:12:52,300
+Agora eu tenho que salvar um banco de dados como é que eu salvo no banco de dados produto repositor
+
+119
+00:12:52,310 --> 00:13:01,320
+e ponto sei que possui ele serve tanto para cadastrar que eu chamei de adicionar.
+
+120
+00:13:01,330 --> 00:13:09,860
+Ora se ele serve tanto para adicionar quanto para atualizar como ele sabe quando o que tem cadastrar
+
+121
+00:13:09,860 --> 00:13:16,520
+e quando ele sabe que tem que atualizar o seguinte Se tiver a id ele sabe que tem que atualizar se não
+
+122
+00:13:16,520 --> 00:13:18,410
+tiver ID ele cadastra.
+
+123
+00:13:18,440 --> 00:13:26,090
+Essa é a regra não tem a id ele cadastra tem a id ele atualiza por isso que eu passei o dia para que
+
+124
+00:13:26,090 --> 00:13:33,530
+ele saiba que ele tem que atualizar e não cadastrar um produto repositor e ponto salvar ser ele e eu
+
+125
+00:13:33,530 --> 00:13:35,420
+vou passar quem produto.
+
+126
+00:13:38,720 --> 00:13:42,530
+Beleza show fiz isso.
+
+127
+00:13:44,210 --> 00:13:53,030
+Ele vai salvar e depois eu retorna um objeto atualizado de turnê quem o produto e se der algum erro
+
+128
+00:13:53,030 --> 00:13:55,160
+no meio do caminho aí vai lançar uma exceção.
+
+129
+00:13:55,160 --> 00:14:00,770
+A gente ainda não está tratando mas ele lançaria uma exceção aqui qualquer.
+
+130
+00:14:00,770 --> 00:14:10,100
+Então beleza um método atualizar está pronto e o nosso serviço de produtos já está tudo certinho sabendo
+
+131
+00:14:10,100 --> 00:14:16,250
+trabalhar recebendo sempre um DT o nome aqui em cima.
+
+132
+00:14:16,330 --> 00:14:23,210
+Vamos pegar aqui o adicional recebendo um detetor e sempre devolvendo um detector recebe um detector
+
+133
+00:14:23,660 --> 00:14:32,750
+e devolve em todos eles o que tem que recebe e recebe uma ideia nova onde vão pegar um outro que pode
+
+134
+00:14:32,750 --> 00:14:37,520
+ser que algum não receba mas devolvendo até o que torna um option de um até o.
+
+135
+00:14:44,800 --> 00:14:57,490
+Beleza então esse aqui está pronto e aí agora nós vamos partir para outra parte agora nós vamos fazer
+
+136
+00:14:57,490 --> 00:14:59,300
+agora algo mais.
+
+137
+00:14:59,470 --> 00:15:03,820
+Algumas mudanças aqui vamos lá vamos pensar.
+
+138
+00:15:05,110 --> 00:15:07,050
+Eu preciso agora mexer no meu controle.
+
+139
+00:15:07,380 --> 00:15:15,860
+Por quê o meu controle agora ele estava devolvendo sempre um produto e sempre passava um produto moda
+
+140
+00:15:15,890 --> 00:15:19,830
+ou não vai poder mais cedo e vai ter que saber trabalhar também com o produto.
+
+141
+00:15:20,470 --> 00:15:26,500
+E além do produto de teor ele vai ter que sempre quando ele receber receber um produto reconhece e devolver
+
+142
+00:15:26,500 --> 00:15:32,190
+um produto responsa recebe um produto reconhece devolve um produto de responsa.
+
+143
+00:15:32,410 --> 00:15:33,470
+Então vamos lá.
+
+144
+00:15:33,510 --> 00:15:37,900
+Aqui não controla essa lista aqui.
+
+145
+00:15:38,050 --> 00:15:42,610
+Ela vai devolver sempre um produto o que respondesse.
+
+146
+00:15:45,460 --> 00:15:50,710
+Vai devolver um produto responsa essa lista produtos in response.
+
+147
+00:15:50,710 --> 00:15:51,450
+Show de bola.
+
+148
+00:15:51,460 --> 00:15:57,040
+Só que esse método obter todos devolvo uma lista de produtos data e hora se ele devolve uma lista de
+
+149
+00:15:57,040 --> 00:16:03,760
+produtos de teor significa que aquilo ao obter todos eu vou ter que converter essa lista de produtos
+
+150
+00:16:03,760 --> 00:16:07,390
+da TV que estamos vendo é uma lista de produtos de responsa.
+
+151
+00:16:07,420 --> 00:16:08,690
+Simples assim.
+
+152
+00:16:08,740 --> 00:16:19,460
+Então olhe que não vou fazer que eu vou vir aqui eu vou criar um estilo de produto de teor que é o que
+
+153
+00:16:19,460 --> 00:16:24,130
+ele vai receber que eu vou chamar de produtos produtos.
+
+154
+00:16:26,520 --> 00:16:33,990
+Estou recebendo uma lista de produtos de teor beleza não contra o Uber que fica melhorzinho.
+
+155
+00:16:34,020 --> 00:16:39,060
+E aí o que nós vamos fazer tem que converter essa linha de produto em uma lista de produtos pontos para
+
+156
+00:16:39,060 --> 00:16:40,740
+podermos devolver ao usuário.
+
+157
+00:16:40,770 --> 00:16:42,640
+Bom isso é simples.
+
+158
+00:16:42,690 --> 00:16:48,210
+Olha só eu posso fazer da seguinte forma eu vou fazer de uma maneira aqui que depois a gente vai melhorar
+
+159
+00:16:48,540 --> 00:16:56,340
+um pouquinho olha que como fazer eu vou fazer assim o modelo eu vou criar um modo meter aqui está eu
+
+160
+00:16:56,340 --> 00:17:00,810
+vou fazer um Model Model MAP.
+
+161
+00:17:04,180 --> 00:17:12,820
+Mas eu meta que eu vou chamar de Deméter recebe um navio modelo Matter beleza.
+
+162
+00:17:13,220 --> 00:17:22,690
+é aí que eu vou fazer o seguinte eu vou pegar e vou criar um cara que eu vou chamar nesta listinha de
+
+163
+00:17:23,530 --> 00:17:29,010
+produto Produto responsa.
+
+164
+00:17:29,140 --> 00:17:32,210
+Essa lista de produtos responde Eu vou chamar de resposta.
+
+165
+00:17:32,210 --> 00:17:37,630
+E o que eu vou dar de resposta do usuário que vai vir de quem eu vou pegar minha lista de produtos de
+
+166
+00:17:37,630 --> 00:17:38,660
+teor.
+
+167
+00:17:38,770 --> 00:17:39,970
+Eu vou fazer um estrago nela.
+
+168
+00:17:42,440 --> 00:17:52,040
+Isto querem fazer um estranho e aí eu quero fazer o seguinte vou fazer um map e para cada produto que
+
+169
+00:17:52,180 --> 00:18:00,980
+eu encontrar aqui dentro eu vou fazer o seguinte eu quero pegar chamar uma pessoa fazer um B.
+
+170
+00:18:01,100 --> 00:18:14,620
+Eu quero transformar esse produto em um produto Response ponto produto Response Class.
+
+171
+00:18:14,690 --> 00:18:20,750
+Por quê eu estou pegando de dentro da minha lista de produtos que é uma lista de produtos e cada produto
+
+172
+00:18:20,750 --> 00:18:25,760
+que eu estou encontrando Direito posso chamar de produto de teor para vocês não se confundirem para
+
+173
+00:18:25,760 --> 00:18:26,630
+cada produto.
+
+174
+00:18:27,170 --> 00:18:31,550
+Produto detox encontra aqui dentro o produto detox encontra aqui.
+
+175
+00:18:31,640 --> 00:18:36,780
+Eu quero converter em uma lista de produto responde por.
+
+176
+00:18:36,920 --> 00:18:39,350
+E daqui eu vou fazer um colecta.
+
+177
+00:18:40,310 --> 00:18:42,320
+Vou chamar o colectores
+
+178
+00:18:45,160 --> 00:18:46,130
+com Mac.
+
+179
+00:18:47,350 --> 00:18:51,040
+Black colectores.
+
+180
+00:18:51,270 --> 00:18:52,930
+Ponto lixo.
+
+181
+00:18:53,140 --> 00:19:00,430
+Eu quero pegar depois que ele converter todos os produtos de TI em produto Response eu vou transformá
+
+182
+00:19:00,430 --> 00:19:01,600
+la numa lista.
+
+183
+00:19:01,600 --> 00:19:07,810
+Então a resposta no final vai se transformar numa lista de produtos Response justamente o que eu preciso
+
+184
+00:19:07,810 --> 00:19:08,500
+devolver.
+
+185
+00:19:08,500 --> 00:19:14,620
+Ou seja eu peguei tudo o que veio do meu serviço converti naquilo que eu preciso devolver.
+
+186
+00:19:14,620 --> 00:19:19,330
+E agora eu simplesmente faço Like You Return que em resposta.
+
+187
+00:19:22,280 --> 00:19:27,150
+Que bonito então obter tudo está aqui.
+
+188
+00:19:27,590 --> 00:19:28,450
+Legal.
+
+189
+00:19:28,520 --> 00:19:33,200
+Agora eu tenho que fazer isso com quem com o obter por aí de bom.
+
+190
+00:19:33,200 --> 00:19:34,600
+O PT há por aí diz.
+
+191
+00:19:35,480 --> 00:19:42,840
+A gente pode fazer até o seguinte a gente pode fazer de um jeito bem bem legal.
+
+192
+00:19:43,070 --> 00:19:49,190
+Eu vou fazer o seguinte eu já vou começar a melhorar esse código aqui eu vou pegar e vou fazer o seguinte
+
+193
+00:19:49,430 --> 00:19:58,150
+esse cara aqui em vez de ele me devolver só uma lista aí a gente vai usar um cara chamado Response entretido
+
+194
+00:19:59,090 --> 00:20:06,410
+o Response Scientist é uma classe do Java que sabe trabalhar com respostas.
+
+195
+00:20:06,410 --> 00:20:14,960
+Ele fica dentro do pacote de pontos Spring e ponto HTTP feixe consciente e esse gente consciente ele
+
+196
+00:20:14,960 --> 00:20:21,010
+sabe trabalhar com respostas diferente com Estados como de diferente.
+
+197
+00:20:21,030 --> 00:20:28,490
+Isso é muito legal então aqui em vez de devolver uma resposta eu vou devolver um risco consciente de
+
+198
+00:20:28,490 --> 00:20:30,860
+uma lista de produto Response.
+
+199
+00:20:30,980 --> 00:20:35,960
+Como isso vai funcionar aqui no return eu vou fazer sim eu vou retornar um.
+
+200
+00:20:35,990 --> 00:20:37,760
+Eu respondi Sim.
+
+201
+00:20:41,600 --> 00:20:43,180
+Enquete A.
+
+202
+00:20:46,370 --> 00:20:48,070
+E eu vou devolver o quê.
+
+203
+00:20:48,080 --> 00:20:54,770
+A resposta o consciente ele recebe ele tem ele pode receber duas coisas como parâmetro.
+
+204
+00:20:55,520 --> 00:20:58,790
+A primeira delas é o objeto que ele vai devolver.
+
+205
+00:20:58,800 --> 00:21:05,690
+Resposta é o segundo parâmetro e o Estado esconde dessa requisição.
+
+206
+00:21:05,690 --> 00:21:09,110
+Então se chegou até aqui significa que foi tudo ok.
+
+207
+00:21:09,680 --> 00:21:12,780
+Foi o estado dos 200 OK.
+
+208
+00:21:12,950 --> 00:21:20,280
+E aí se eu quiser dizer que eu quero que ele me devolva 200 eu boto assim HTTP e status.
+
+209
+00:21:20,420 --> 00:21:28,300
+Opa está HTTP status e status HTTP status.
+
+210
+00:21:28,310 --> 00:21:28,970
+Ponto.
+
+211
+00:21:29,270 --> 00:21:30,490
+Isso daqui a um ano.
+
+212
+00:21:30,650 --> 00:21:31,700
+E olha só.
+
+213
+00:21:31,700 --> 00:21:32,760
+Eu tenho vários aqui.
+
+214
+00:21:32,760 --> 00:21:40,110
+O BAD reconhece Bad Get Three ovários é um deles olha lá é o quê.
+
+215
+00:21:40,700 --> 00:21:49,370
+Quando eu faço aqui significa que eu estou retornando uma resposta com essa lista de Response e com
+
+216
+00:21:49,370 --> 00:21:51,000
+esse status ok.
+
+217
+00:21:51,020 --> 00:21:52,180
+Olha que legal.
+
+218
+00:21:52,430 --> 00:22:06,110
+Então eu consigo eu consigo fazer com que o meu objeto meu objeto aqui seja devolvido conforme o desejo.
+
+219
+00:22:06,110 --> 00:22:09,420
+Então eu estou devolvendo uma lista de risco consciente.
+
+220
+00:22:09,440 --> 00:22:14,750
+Na verdade estou devolvendo uma lista de produto Response dentro de um risco consciente.
+
+221
+00:22:14,960 --> 00:22:20,090
+Beleza vou fazer agora a mesma coisa para obter por aí de como se funcionaria.
+
+222
+00:22:20,090 --> 00:22:23,070
+Optei por pedir isso poderia fazer diferente.
+
+223
+00:22:23,930 --> 00:22:25,460
+Eu posso arrancar esse cara daqui.
+
+224
+00:22:25,460 --> 00:22:37,100
+Esse cara que vai me devolver um Hobbit não de que um Hobbit não de produtos de teatro é o que esse
+
+225
+00:22:37,100 --> 00:22:42,020
+cara me devolve que posso chamar assim que a gente tem até a votação do meteoro.
+
+226
+00:22:42,350 --> 00:22:49,940
+Esse cara me devolve uma óptima ocupa uma oficina de produtos de beleza e é que eu poderia até fazer
+
+227
+00:22:49,940 --> 00:22:51,880
+uma validação aqui.
+
+228
+00:22:52,510 --> 00:23:00,050
+Se não encontrou poderia fazer alguma coisa chover que eu não lembro se no serviço a gente fez alguma
+
+229
+00:23:00,320 --> 00:23:04,600
+alguma validação deixa eu ver que é rapidinho o serviço.
+
+230
+00:23:05,930 --> 00:23:14,780
+Deixa eu ver no serviço o serviço obter por aí de nós fizemos assim nós fizemos a validação então não
+
+231
+00:23:14,780 --> 00:23:20,090
+precisa fazer do lado de fora se fizermos aqui dentro não preciso fazer no controle ou beleza então
+
+232
+00:23:20,090 --> 00:23:27,350
+vamos vir aqui não vamos fazer validação nenhuma aqui então é simplesmente converter converter o que
+
+233
+00:23:27,980 --> 00:23:38,720
+esse de ter em um convertesse de teor em um em um Response e em teste então um produto do tipo em que
+
+234
+00:23:38,720 --> 00:23:43,700
+este produto Response desculpa o produto Response.
+
+235
+00:23:43,700 --> 00:23:50,000
+Então eu vou devolver um óptimo de produto responsa e aí eu vou aproveitar e vou usar o recheio consciente
+
+236
+00:23:50,210 --> 00:23:53,060
+que também fiz consciente.
+
+237
+00:23:53,510 --> 00:23:59,690
+Boto eles dentro do consciente fiz consciente é algo genérico ele pode devolver qualquer coisa.
+
+238
+00:23:59,690 --> 00:24:07,310
+Então eu quero devolver dentro de rede consciente um produto responsa que olha o que vou fazer aqui
+
+239
+00:24:07,310 --> 00:24:09,290
+eu vou fazer simplesmente o seguinte
+
+240
+00:24:12,500 --> 00:24:19,430
+poderia botar um traficante que poderia botar um traficante para ficar legal que pode lançar uma exceção
+
+241
+00:24:20,360 --> 00:24:22,580
+e fazer isso daqui X.
+
+242
+00:24:22,760 --> 00:24:25,590
+Vou lançar aqui.
+
+243
+00:24:26,120 --> 00:24:33,690
+Ele vai tentar se conseguir se conseguir se ele conseguir encontrar alguma coisa.
+
+244
+00:24:33,800 --> 00:24:42,380
+Eu poderia simplesmente lançar mas não vou botar dentro enquete não vou deixar de estourar a exceção.
+
+245
+00:24:42,380 --> 00:24:49,980
+A gente está tratando com um erro então vou deixar lançar exceção mesmo vou fazer o seguinte vou converter
+
+246
+00:24:50,000 --> 00:24:52,910
+que eu tenho que converter isso daqui para devolver.
+
+247
+00:24:53,240 --> 00:24:58,970
+Então o que eu vou fazer eu vou fazer aqui retorno nenhum Response
+
+248
+00:25:01,380 --> 00:25:09,610
+encher e aqui dentro eu vou devolver o que o meu produto responsa como que eu vou devolver isso.
+
+249
+00:25:09,710 --> 00:25:13,000
+Eu poderia criar ele aqui fora ou eu posso criar ele aqui dentro.
+
+250
+00:25:13,010 --> 00:25:19,240
+Olha só eu vou fazer o seguinte vou fazer que fora primeiro para vocês verem.
+
+251
+00:25:19,250 --> 00:25:30,080
+Olha só eu vou criar um produto Produto responsa eu vou chamar de produto para o duto que vai receber
+
+252
+00:25:30,080 --> 00:25:35,270
+o seguinte vai receber um modo que uniu moda eu meter Meu Móvel
+
+253
+00:25:37,820 --> 00:25:44,990
+meter ponto Mac e eu vou converter o que eu vou converter esse meu.
+
+254
+00:25:45,060 --> 00:25:53,870
+Produto de teor em um produto responsa então eu vou no meu teor até o ponto Get tem que tirar o produto
+
+255
+00:25:53,870 --> 00:25:54,590
+lá de dentro.
+
+256
+00:25:56,820 --> 00:25:59,580
+Tentei ao ponto Gretchen tirar o produto lá de dentro.
+
+257
+00:26:00,240 --> 00:26:07,620
+E aí eu quero transformá la em um produto responsa contactless.
+
+258
+00:26:08,580 --> 00:26:14,240
+Com isso daqui eu já tenho um produto que é o meu produto responde para poder devolver.
+
+259
+00:26:14,370 --> 00:26:15,240
+E aí aqui eu.
+
+260
+00:26:17,630 --> 00:26:24,020
+Aqui eu vou fazer o seguinte esse cara ele tem que devolver um óptimo produto a gente mostra que ele
+
+261
+00:26:24,020 --> 00:26:33,700
+tem um produto responsa então vou devolver um óptimo ponto ofi de quem de um produto que vai ser o meu
+
+262
+00:26:33,710 --> 00:26:40,440
+produto responsa as vírgulas e vou passar aqui com o status quo de que eu quero devolver isso daqui.
+
+263
+00:26:40,670 --> 00:26:42,930
+Eu quero devolver HTTP status.
+
+264
+00:26:43,010 --> 00:26:48,110
+Ponto o quê desde então.
+
+265
+00:26:48,110 --> 00:26:56,780
+Isso é o que nós vamos fazer obter por aí de volta no meu serviço me trazer o produto que ele encontrar
+
+266
+00:26:58,640 --> 00:27:05,150
+e deter oque eu poderia ter fazer o seguinte se eu não quisesse lançar exceção eu poderia abrir pra
+
+267
+00:27:05,150 --> 00:27:07,900
+enquete uma outra enquete aqui para vocês entenderam.
+
+268
+00:27:07,910 --> 00:27:10,970
+Olha só sobrou um trackpad.
+
+269
+00:27:11,060 --> 00:27:19,550
+Vou pegar isso aqui contra o X vou botar dentro do trem se lançar der qualquer exceção aqui eu poderia
+
+270
+00:27:19,790 --> 00:27:21,470
+fazer simplesmente isso daqui.
+
+271
+00:27:23,900 --> 00:27:29,150
+Aqui da lança um retorne meu Response.
+
+272
+00:27:31,670 --> 00:27:34,590
+E gente é aqui o resto consciente.
+
+273
+00:27:34,590 --> 00:27:38,690
+Ele tem um Overlord que ele só devolve ao estado psicológico.
+
+274
+00:27:38,710 --> 00:27:44,970
+Eu poderia devolver http: status ponto no content.
+
+275
+00:27:45,090 --> 00:27:49,870
+Ou seja não tem conteúdo não consegui encontrar nada.
+
+276
+00:27:50,130 --> 00:27:57,270
+Se você não quiser lançar exceção a professor mas eu queria lançar exceção aí você não usa outra enquete
+
+277
+00:27:57,690 --> 00:28:03,840
+Você deixa um a enquete que comentado e usa um código assim porque se der qualquer erro aqui ele vai
+
+278
+00:28:03,840 --> 00:28:06,690
+lançar a exceção e a gente está tratando exceção.
+
+279
+00:28:06,720 --> 00:28:10,920
+Vou deixar o trailer é comentado aqui só como exemplo para vocês verem.
+
+280
+00:28:10,920 --> 00:28:18,090
+Contra a enquete Eu não lanço exceção e eu devolvo no convite ou seja devolvo um embora e vazios sem
+
+281
+00:28:18,090 --> 00:28:19,300
+erro sem nada.
+
+282
+00:28:19,300 --> 00:28:22,410
+Ah não eu não quero tratar o quero lançar mensagens para o usuário.
+
+283
+00:28:22,410 --> 00:28:23,210
+Beleza.
+
+284
+00:28:23,310 --> 00:28:28,040
+Você comenta aí você lança Diogo beleza.
+
+285
+00:28:28,140 --> 00:28:32,190
+Então nós temos de obter todos e o obter por aí.
+
+286
+00:28:32,310 --> 00:28:36,480
+Já funcionando de uma forma que a gente consiga
+
+287
+00:28:38,970 --> 00:28:44,890
+enviar já os dados e a gente ainda vai testar esse cara para ver se está tudo funcionando.
+
+288
+00:28:44,910 --> 00:28:49,680
+Estamos com estamos faturando nosso código deixando ele um pouco mais profissional.

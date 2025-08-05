@@ -1,0 +1,691 @@
+1
+00:00:05,790 --> 00:00:08,650
+E aí galera estamos aí para mais uma aula.
+
+2
+00:00:08,680 --> 00:00:18,690
+Tá na última aula nós começamos a trabalhar no nosso controle para que ele consiga devolver um produto
+
+3
+00:00:18,690 --> 00:00:19,600
+response.
+
+4
+00:00:19,680 --> 00:00:25,560
+A gente começou a também trabalhar para expor ciente de que é uma classe que consegue te devolver devolver
+
+5
+00:00:25,560 --> 00:00:30,980
+para o usuário não somente a resposta mas o Estado esconde daquela resposta.
+
+6
+00:00:31,020 --> 00:00:40,080
+Nós temos vários tipos de status colégio onde o hóquei ou duzentos Guedes Bad reconhece 400 é uma má
+
+7
+00:00:40,080 --> 00:00:52,020
+requisição por parte do cliente 401 no Tourizense não motorizado 403 Forbidden proibido 404 Not Found
+
+8
+00:00:52,440 --> 00:00:54,820
+500 Internal Cervera error.
+
+9
+00:00:54,870 --> 00:01:00,750
+Então nós temos vários estados com o de que a gente pode devolver nas nossas requisições por enquanto
+
+10
+00:01:00,750 --> 00:01:05,930
+nós estamos devolvendo aqui os estados com o Jockey obter todos obter por aí.
+
+11
+00:01:06,270 --> 00:01:07,990
+Vamos agora fazer o adicionar.
+
+12
+00:01:08,040 --> 00:01:10,740
+Como é que seria nosso método adicionar.
+
+13
+00:01:12,900 --> 00:01:21,360
+De acordo com o nosso com o nosso novo modelo com o nosso novo modelo eu não vou devolver um produto
+
+14
+00:01:21,360 --> 00:01:23,620
+ou poder devolver um produto Response.
+
+15
+00:01:23,710 --> 00:01:29,340
+E eu não recebo um produto eu recebo um produto de qualquer estilo.
+
+16
+00:01:29,670 --> 00:01:33,930
+Eu recebo um produto reconhece e devolveu um produto responsa.
+
+17
+00:01:33,930 --> 00:01:41,050
+Esse produto que eu vou botar assim na frente para saber que reconhece e vou fazer o seguinte.
+
+18
+00:01:41,060 --> 00:01:46,410
+Primeira coisa que eu vou fazer aqui dentro é converter esse produto reconhece um produto de teor para
+
+19
+00:01:46,500 --> 00:01:51,030
+poder enviar a ele para o meu para gravar.
+
+20
+00:01:51,030 --> 00:01:58,230
+Então o que eu vou fazer vou fazer o seguinte eu vou criar um molde ou meter que eu vou chamar de MAP
+
+21
+00:01:59,040 --> 00:02:06,020
+no New Model meter daqui o bonitinho.
+
+22
+00:02:06,130 --> 00:02:11,760
+Aí eu vou fazer o seguinte eu vou criar um produto de teor produto de teor que eu vou chamar de deter
+
+23
+00:02:11,760 --> 00:02:19,510
+o que vai receber o seguinte ele vai receber o Model Map ponto Map ou MAP.
+
+24
+00:02:19,680 --> 00:02:26,130
+Ele vai receber o produto e reconhece o que está vindo da requisição e vou converter ele usou no MP
+
+25
+00:02:26,550 --> 00:02:32,820
+para um produto de classe.
+
+26
+00:02:33,330 --> 00:02:37,050
+Beleza então agora eu tenho um detetor para poder mandar adicionar.
+
+27
+00:02:37,050 --> 00:02:46,710
+Então aqui eu passo eu vou descrever o produto até é que vai ser produto de ou arrancar esse retorno
+
+28
+00:02:46,710 --> 00:02:47,530
+daqui.
+
+29
+00:02:47,530 --> 00:02:51,230
+Então cadastra o produto até esse produto de teor.
+
+30
+00:02:51,450 --> 00:02:57,390
+Quando eu mandar cadastrar ele vai me devolver o ID desse produto então eu vou salvar dentro do próprio
+
+31
+00:02:57,390 --> 00:03:04,980
+carinho o produto data e hora recebe o mesmo produto de troca são salvo lá dentro do banco dentro do
+
+32
+00:03:04,980 --> 00:03:08,640
+serviço só atualizando os dados.
+
+33
+00:03:10,290 --> 00:03:16,010
+E aí depois de fazer isso o que eu tenho que fazer devolver um produto responsável.
+
+34
+00:03:16,020 --> 00:03:18,020
+Eu recebi o produto reconhece.
+
+35
+00:03:18,060 --> 00:03:22,400
+Vou trabalhar com um produto data e hora e vou devolver no final o produto responde.
+
+36
+00:03:22,440 --> 00:03:27,450
+Então além da devolução o produto responde Eu ainda vou fazer mais e eu vou dizer que eu quero devolver
+
+37
+00:03:27,450 --> 00:03:32,160
+um Response e investir de um produto Response.
+
+38
+00:03:34,850 --> 00:03:37,400
+OPA por quê.
+
+39
+00:03:37,400 --> 00:03:41,010
+Porque eu quero poder devolver os estados escolas tudo bonitinho.
+
+40
+00:03:41,450 --> 00:03:42,890
+Então o que eu vou fazer aqui.
+
+41
+00:03:42,960 --> 00:03:45,270
+Eu vou vir aqui e vou retornar assim.
+
+42
+00:03:45,570 --> 00:03:52,410
+Eu vou fazer um retorno meu Response em.
+
+43
+00:03:52,840 --> 00:04:02,660
+E eu vou devolver o que eu vou devolver o produto responsa então vou chamar o MEP aqui ponto MEP e vou
+
+44
+00:04:02,660 --> 00:04:15,980
+converter o meu produto de teor em um polpudo do produto de teor em um produto Response contactless.
+
+45
+00:04:20,360 --> 00:04:26,100
+Vírgula e vou devolver constato só http: estados ponto ok.
+
+46
+00:04:26,210 --> 00:04:34,490
+Na verdade quando a gente cria a gente não usa o estados que a gente usa o status chamado criei desde
+
+47
+00:04:35,630 --> 00:04:38,460
+que é o famoso 201.
+
+48
+00:04:38,480 --> 00:04:45,500
+Então se tudo der certo na criação ele vai me devolver um produto Response que ele vai converter esse
+
+49
+00:04:45,500 --> 00:04:51,810
+produto de ter um produto de responsa e com o status 201 o salvei.
+
+50
+00:04:52,010 --> 00:04:56,900
+Beleza o adicionar parece que está pronto.
+
+51
+00:04:56,900 --> 00:05:00,320
+Vamos agora fazer o deletar o deletar.
+
+52
+00:05:00,410 --> 00:05:02,870
+Não tem muito mistério o deletar.
+
+53
+00:05:02,930 --> 00:05:11,870
+Em vez de ele retornar a voz ele não vai retornar mais Boyd ele vai retornar um Response Response Export
+
+54
+00:05:12,290 --> 00:05:26,600
+Response Response etc e etc de qualquer coisa qualquer coisa aqui seria se interrogação se interrogação
+
+55
+00:05:26,600 --> 00:05:32,090
+tem um caracter curinga dizendo que eu vou devolver um Response antes de qualquer coisa que eu posso
+
+56
+00:05:32,090 --> 00:05:36,260
+devolver qualquer coisa que eu como fazer eu vou mandar deletar.
+
+57
+00:05:36,260 --> 00:05:45,980
+Se não der nenhum erro eu vou devolver um consciente http no conta.
+
+58
+00:05:45,980 --> 00:05:55,280
+Ou seja não tem conteúdo nenhum para eu poder enviar ou seja só funcionou e está ok agora não deu um
+
+59
+00:05:55,280 --> 00:06:05,230
+erro ele vai lançar o erro então vou retornar um dia Turner Nilton Response ente eu vou devolver um
+
+60
+00:06:05,540 --> 00:06:17,180
+HTTP status ponto no Content no Content 204 não conta de um Estado esconde um muito utilizado quando
+
+61
+00:06:18,410 --> 00:06:23,690
+deu tudo certo mas você não tem nada para devolver no Response não tem nada para devolver no corpo da
+
+62
+00:06:23,690 --> 00:06:28,010
+requisição ou seja não tem conteúdo no Content não tem conteúdo.
+
+63
+00:06:28,010 --> 00:06:34,760
+A gente teve algum 204 então o nosso método de deletar está pronto.
+
+64
+00:06:34,760 --> 00:06:39,760
+E agora por fim o atualizar bom o atualizar também vai ser bem parecido.
+
+65
+00:06:39,770 --> 00:06:45,050
+Ele não vai devolver um produto ele vai devolver o produto Response não produz resposta só que ele vai
+
+66
+00:06:45,050 --> 00:06:47,030
+devolver dentro de um mês consciente.
+
+67
+00:06:56,930 --> 00:07:05,740
+A devolver dentro de um produto de um Response e o atualizar ele recebe um produto ele conhece o produto
+
+68
+00:07:06,080 --> 00:07:07,070
+e quais.
+
+69
+00:07:10,760 --> 00:07:12,320
+Desde que bonitinho.
+
+70
+00:07:14,880 --> 00:07:24,050
+O show de bola para o Peixe vou devolver o responsável de um produto Response receba um produto repete.
+
+71
+00:07:24,240 --> 00:07:26,650
+E aí é que eu vou fazer o seguinte olha só.
+
+72
+00:07:26,820 --> 00:07:35,430
+A primeira coisa que eu vou fazer é que eu vou fazer o seguinte eu vou criar um modo Mega Model meter.
+
+73
+00:07:35,930 --> 00:07:40,950
+Eu vou chamar de meter gol eu sempre chamo a mais esse nome eu posso mudar.
+
+74
+00:07:40,950 --> 00:07:43,760
+Você pode dar o nome que você quiser.
+
+75
+00:07:43,770 --> 00:07:49,650
+Estou chamando de moda o MEP porque chama de Deméter porque ele é uma piada dona de um cara que vai
+
+76
+00:07:49,650 --> 00:07:55,340
+fazer um mapeamento aí de um objeto e transformar em um outro objeto.
+
+77
+00:07:55,650 --> 00:08:02,790
+Então eu quero transformar o meu produto reconhece num produto de teor.
+
+78
+00:08:02,790 --> 00:08:09,360
+Então eu vou querer um produto de troca algo chamado de produto de ter o que eu vou fazer isso daqui.
+
+79
+00:08:09,360 --> 00:08:18,590
+O produto de teor vai receber o que ele vai receber pelo ponto MEP e ponto MEP.
+
+80
+00:08:18,750 --> 00:08:21,620
+E aí ele recebe aquilo que ele recebe.
+
+81
+00:08:21,660 --> 00:08:28,890
+O produto que é um produto da requisição convertendo para que um produto
+
+82
+00:08:30,750 --> 00:08:38,880
+Produto de teor ou produto de o ponto mais alto.
+
+83
+00:08:41,550 --> 00:08:46,990
+E aí ele vai pegar vai converter esse produto para um produto teor e vai salvar aqui.
+
+84
+00:08:47,060 --> 00:08:54,570
+Show de bola esse produto eu posso passar aqui deter o que ele vai tentar salvar.
+
+85
+00:08:54,620 --> 00:08:57,010
+Esse cara vai me devolver um produto de teor.
+
+86
+00:08:57,130 --> 00:09:05,340
+Vou mandar salvar dentro do mesmo cara produto de teor recebe o que vier do meu serviço atualizar produto.
+
+87
+00:09:06,050 --> 00:09:12,780
+E aí aqui no final eu quero devolver o que não responde ciente de um produto irresponsável.
+
+88
+00:09:12,860 --> 00:09:17,350
+Eu tenho que devolver um peixe consciente e converter esse produto teor em um produto.
+
+89
+00:09:17,350 --> 00:09:23,870
+Resposta Então o que eu posso fazer que uma maneira de fazer isso aquilo uma única linha e ficar elegante.
+
+90
+00:09:23,870 --> 00:09:30,710
+A gente poderia fazer talvez assim que eu vejo o jogo mas isso aqui jogo talvez a gente fazer dessa
+
+91
+00:09:30,710 --> 00:09:31,760
+forma por aí.
+
+92
+00:09:33,840 --> 00:09:38,280
+Quer dizer assim olha só retorno.
+
+93
+00:09:39,120 --> 00:09:47,030
+Eu recebo bons ente aqui dentro eu vou pular uma linha por uma linha.
+
+94
+00:09:47,100 --> 00:09:50,490
+O primeiro parâmetro é o que é o objeto que eu quero devolver.
+
+95
+00:09:50,490 --> 00:09:55,790
+Então quero mapear quem eu quero mapear.
+
+96
+00:09:56,160 --> 00:10:05,730
+Eu quero mapear quem o produto deteriora e convertendo num quê num produto Responsa um produto de resposta.
+
+97
+00:10:05,730 --> 00:10:15,160
+Não é produto ou produto Response classe.
+
+98
+00:10:16,740 --> 00:10:23,750
+é o segundo parâmetro é o que é o status HTTP é status ponto ok.
+
+99
+00:10:23,820 --> 00:10:28,350
+Significa que essa requisição foi toda certinha e aqui eu venho.
+
+100
+00:10:30,930 --> 00:10:36,240
+Ponto e vírgula é a que tem uma vírgula que está faltando para separar beleza.
+
+101
+00:10:36,240 --> 00:10:44,520
+Olha que legal o meu atualizar recebe um produto reconhece eu converta esse produto reconhece num produto
+
+102
+00:10:44,520 --> 00:10:51,480
+de teor e a mão do meu serviço atualizar quando ele atualiza ele já me devolve o ideal certinho.
+
+103
+00:10:51,600 --> 00:10:55,020
+E aí eu tenho que devolver um produto responsa desse produto.
+
+104
+00:10:55,110 --> 00:11:01,470
+Eu crio um novo consciente aonde eu vou eu converter esse produto detox foi utilizado para atualizar
+
+105
+00:11:01,920 --> 00:11:09,210
+um produto responsivo e isso daqui já vai converter já vai me devolver o objeto pronto e eu quero devolver
+
+106
+00:11:09,210 --> 00:11:13,590
+com estados duzentos estados ok.
+
+107
+00:11:13,680 --> 00:11:15,020
+Eu acho que é isso.
+
+108
+00:11:15,060 --> 00:11:20,150
+Eu acho que a gente mexeu em todas as classes que a gente precisava.
+
+109
+00:11:20,160 --> 00:11:21,950
+Eu acho que a gente mexeu em todas.
+
+110
+00:11:22,020 --> 00:11:23,390
+Vamos testar.
+
+111
+00:11:23,670 --> 00:11:25,140
+Vou clicar aqui.
+
+112
+00:11:25,470 --> 00:11:31,800
+A gente já está umas três umas três aulas só modificando e não testamos.
+
+113
+00:11:31,800 --> 00:11:36,660
+Ainda vamos ver se essa brincadeira funciona ainda levantar.
+
+114
+00:11:42,030 --> 00:11:47,370
+A beleza na porta 80 oitenta e três por vir aqui por mandar consultar todos
+
+115
+00:11:50,070 --> 00:11:50,900
+retornou.
+
+116
+00:11:50,910 --> 00:11:54,080
+E olha só aperceba que cadê a observação.
+
+117
+00:11:54,130 --> 00:11:58,350
+Observação não veio por que a observação não veio porque nós.
+
+118
+00:12:01,630 --> 00:12:08,700
+Dizemos nós comentamos a observação como se não fosse obrigatório ou se não fosse para vir dentro do
+
+119
+00:12:09,010 --> 00:12:10,470
+Response.
+
+120
+00:12:10,710 --> 00:12:13,630
+é por isso que ele não veio.
+
+121
+00:12:13,860 --> 00:12:22,320
+A observação que definiu isso a consultar por aí dia Se eu botar o é deu um ano ele retorna.
+
+122
+00:12:22,450 --> 00:12:29,630
+Um erro 404 produto ainda não encontrado no ato falho beleza perfeito.
+
+123
+00:12:29,770 --> 00:12:36,450
+Se eu botar o líder nem lembro mais aqui deixo consultar aqui ver qual a idéia desse cara aqui.
+
+124
+00:12:36,520 --> 00:12:45,940
+Pão de queijo e depois vamos consultar o Idec 2 e 2 e depois existe beleza consultar todos e consultar
+
+125
+00:12:45,940 --> 00:12:47,890
+por aí dita funcionando.
+
+126
+00:12:47,890 --> 00:12:59,450
+Vamos cadastrar eu vou cadastrar agora aqui os sonhos dia no tela boa tela só na tela.
+
+127
+00:12:59,560 --> 00:13:01,330
+Beleza.
+
+128
+00:13:01,330 --> 00:13:09,550
+Vou mandar cadastrar isso aqui vai chegar lá como um Response como um produto repete.
+
+129
+00:13:10,420 --> 00:13:18,610
+Cadastrou o sonho de Nutella e me devolveu um extra que seria um produto reconhece que tem uma observação
+
+130
+00:13:18,790 --> 00:13:22,800
+e que é um produto de responsa que me devolveu sem uma observação.
+
+131
+00:13:23,410 --> 00:13:30,460
+Beleza vou consultar todos aqui vão ver o que está funcionando bonitinho.
+
+132
+00:13:30,790 --> 00:13:36,220
+Beleza então o cadastrar também o adicionar também está funcionando.
+
+133
+00:13:36,220 --> 00:13:41,230
+Vamos ver ou atualizar eu vou atualizar o pão de queijo.
+
+134
+00:13:41,230 --> 00:13:47,390
+Vamos ver se o pão de queijo dá para atualizar o pão de queijo de minas sem imunidade de três dias vamos
+
+135
+00:13:47,410 --> 00:13:51,760
+atualizar ele que já está até aqui o pão de queijo de minas.
+
+136
+00:13:52,000 --> 00:13:57,640
+Vou botar aqui pão de queijo minas pão de queijo de Minas Gerais.
+
+137
+00:13:59,480 --> 00:14:07,360
+Assim voltei a escrever BONITINHO aqui e aqui a quantidade vai ser 200.
+
+138
+00:14:07,550 --> 00:14:10,280
+E esse monte de queijo vai custar 3 50.
+
+139
+00:14:11,520 --> 00:14:23,510
+Observação melhor da cidade vou mandar atualizar atualizou tudo certinho só não trouxe observação por
+
+140
+00:14:23,520 --> 00:14:27,910
+que o nosso produto Response não tem.
+
+141
+00:14:27,930 --> 00:14:31,130
+Não tem uma observação a gente chorou.
+
+142
+00:14:31,440 --> 00:14:32,060
+Beleza.
+
+143
+00:14:32,070 --> 00:14:36,460
+Ah mas eu quero colocar para ter observação beleza e você vem aqui.
+
+144
+00:14:36,550 --> 00:14:38,760
+Eu fiz assim separado para vocês entenderam.
+
+145
+00:14:38,950 --> 00:14:40,230
+Adicione observação.
+
+146
+00:14:41,910 --> 00:14:50,780
+Onde eu tinha deixado comentado de só salvei o back end vai levantar de novo aqui quando vier aqui e
+
+147
+00:14:50,850 --> 00:14:55,680
+fizer uma consulta agora vai vir a observação desses dois carinhas aqui.
+
+148
+00:14:56,910 --> 00:15:05,010
+Ela sem observação e observação melhor da cidade ou seja quem está por aí de consultar todos adicionar
+
+149
+00:15:05,010 --> 00:15:07,680
+e atualizar está funcionando.
+
+150
+00:15:07,770 --> 00:15:09,690
+Vamos testar o deletar.
+
+151
+00:15:09,690 --> 00:15:15,300
+Eu tenho o ID 3 e 2 3 e o sonho de Nutella é 2 ao pão de queijo.
+
+152
+00:15:15,300 --> 00:15:20,900
+VAMOS TENTAR DELETAR o ID 1 que não existe retorna um erro.
+
+153
+00:15:20,970 --> 00:15:27,330
+Olha lá note fala de 404 está desconto certinho porque a gente está trabalhando com a gente consciente.
+
+154
+00:15:27,360 --> 00:15:34,430
+Não foi possível deletar o produto com a ideia um produto não existe perfeito a nossa mensagem agora
+
+155
+00:15:34,800 --> 00:15:42,830
+deletar o ID 2 de 2 e quem é B2 é o pão de queijo no mundo ele tal em D3.
+
+156
+00:15:42,930 --> 00:15:43,350
+O ponto.
+
+157
+00:15:49,690 --> 00:15:57,410
+Era aí que eu botei coisa que sem querer deletar o de que é o sonho de Nutella.
+
+158
+00:15:57,610 --> 00:16:00,910
+Passei D3 ela deletou.
+
+159
+00:16:00,910 --> 00:16:03,930
+E olhe que ele me devolveu 204.
+
+160
+00:16:03,940 --> 00:16:12,910
+Não contente não tem conteúdo no retorno do responsável não competitivo está de escudo certinho.
+
+161
+00:16:12,910 --> 00:16:15,940
+Se eu vier aqui agora não senti.
+
+162
+00:16:16,060 --> 00:16:24,430
+Agora só tem um pão de queijo de Minas Gerais ou seja todos os nossos pontos Ponte todas as nossas requisições
+
+163
+00:16:24,430 --> 00:16:27,530
+estão funcionando em cima desse novo padrão.
+
+164
+00:16:27,640 --> 00:16:37,630
+E agora nós temos um back end mais robusto mais inteligente mais profissional menos acoplado que devolve
+
+165
+00:16:37,630 --> 00:16:45,070
+os estados de correto e seguindo várias boas práticas de programação de orientação a objetos e programação
+
+166
+00:16:45,070 --> 00:16:48,590
+de apps com Java tá.
+
+167
+00:16:48,640 --> 00:16:57,400
+Então aqui nós conseguimos fazer muita coisa muita coisa criamos aqui um modelo de produto que é o que
+
+168
+00:16:57,400 --> 00:17:09,840
+trabalha com banco de dados serviço compartilhado que é o de ter dentro de mil nós criamos os controles.
+
+169
+00:17:09,850 --> 00:17:19,150
+Nós temos o controller no caso controle de produto nós temos os modelos específicos para chegada e retorno
+
+170
+00:17:19,150 --> 00:17:25,630
+para a entrada e saída de dados da nossa aplicação entrada no controle e saída do controle.
+
+171
+00:17:25,720 --> 00:17:30,320
+Ou seja agora a gente tem um modelo para tudo para todas as alterações.
+
+172
+00:17:30,520 --> 00:17:36,630
+Ficou um pouco mais trabalhoso sim ficou mas ficou melhor o nosso código.
+
+173
+00:17:36,730 --> 00:17:43,120
+A divisão de responsabilidade ficou melhor e agora a gente tem uma API profissional beleza.
