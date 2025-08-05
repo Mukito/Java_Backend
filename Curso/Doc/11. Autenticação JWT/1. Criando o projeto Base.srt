@@ -1,0 +1,595 @@
+1
+00:00:01,620 --> 00:00:03,000
+E aí, galera, beleza!
+
+2
+00:00:03,960 --> 00:00:10,050
+Bom, vamos lá pra mais uma sequência de vídeos e a partir de agora nós vamos começar a desenvolver
+
+3
+00:00:10,050 --> 00:00:14,790
+uma aplicação para trabalhar em cima de algumas novidades que nós não víamos no curso até agora.
+
+4
+00:00:15,270 --> 00:00:19,950
+Então, em cima dessa série de vídeos que nós vamos começar a trabalhar a partir de agora, nós vamos
+
+5
+00:00:19,950 --> 00:00:26,310
+aprender a trabalhar com autenticação, um relacionamento e outras coisas mais beleza.
+
+6
+00:00:26,310 --> 00:00:28,890
+Vamos aprender a fazer autenticação via JWT.
+
+7
+00:00:29,430 --> 00:00:34,920
+Então a gente vai aprender uma série de fatores bem importantes para a criação e desenvolvimento de
+
+8
+00:00:34,920 --> 00:00:40,530
+um projeto web e desenvolvimento de um projeto de uma API do projeto daqui.
+
+9
+00:00:41,250 --> 00:00:46,320
+Então, para isso, eu queria que uma estrutura bem simples, só para a gente poder conversar onde o
+
+10
+00:00:46,560 --> 00:00:48,180
+usuário e vou ter o perfil.
+
+11
+00:00:48,390 --> 00:00:50,580
+Todo o usuário vai estar vinculado a um perfil e um perfil.
+
+12
+00:00:50,580 --> 00:00:51,960
+Vai estar vinculado a muitos usuários.
+
+13
+00:00:52,260 --> 00:00:56,130
+Para a gente poder trabalhar com o relacionamento, um para um e um para muitos.
+
+14
+00:00:56,820 --> 00:01:03,870
+Dentro dessa aplicação, nós vamos ter um funcionário que vai ser uma outra entidade e uma é uma entidade
+
+15
+00:01:03,870 --> 00:01:08,760
+chamada projeto, que um funcionário vai poder estar trabalhando em vários projetos, ao mesmo tempo
+
+16
+00:01:09,060 --> 00:01:11,670
+que o projeto vai poder estar vinculado a vários funcionários.
+
+17
+00:01:12,000 --> 00:01:15,990
+Vai ser uma API para controlar projetos de sistemas.
+
+18
+00:01:16,590 --> 00:01:19,410
+Então essa pessoa vai trabalhar com autenticação.
+
+19
+00:01:19,770 --> 00:01:23,580
+Então, a primeira coisa que nós vamos fazer é criar toda a parte de autenticação.
+
+20
+00:01:23,820 --> 00:01:27,470
+Para isso, nós vamos usar o famoso JWT para autenticação.
+
+21
+00:01:27,500 --> 00:01:30,540
+Nós vamos fazer bem devagarinho, comentando.
+
+22
+00:01:30,840 --> 00:01:32,910
+Entendeu tudo o que está acontecendo?
+
+23
+00:01:32,910 --> 00:01:36,020
+Para que fique bem fácil o entendimento de todo mundo.
+
+24
+00:01:36,030 --> 00:01:38,310
+Vamos criar a ponte para autenticação.
+
+25
+00:01:38,730 --> 00:01:43,530
+Vamos fazer tudo isso funcionar perfeitamente e em cima dela.
+
+26
+00:01:43,770 --> 00:01:50,610
+Depois que a autenticação estiver toda pronta, nós vamos trabalhar pensando nos relacionamentos, fazer
+
+27
+00:01:50,610 --> 00:01:52,410
+essa abertura funcionar.
+
+28
+00:01:53,520 --> 00:01:59,190
+Então, de início vai ser quatro entidades que nós vamos trabalhar em cima dessas quatro entidades.
+
+29
+00:01:59,190 --> 00:02:01,440
+A gente vai prender um caminhão de informação.
+
+30
+00:02:02,250 --> 00:02:04,350
+Então vamos criar o nosso primeiro projeto.
+
+31
+00:02:04,620 --> 00:02:07,140
+Então, aqui eu tenho uma parte daqui chamada a novidade.
+
+32
+00:02:07,980 --> 00:02:10,140
+Aonde eu vou criar um projeto?
+
+33
+00:02:10,350 --> 00:02:11,160
+Então eu vou ver aqui.
+
+34
+00:02:13,060 --> 00:02:21,890
+Mandei abrir o Visual Studio, que vou apertar F1 e vou clicar na opção Estilingue imita Lisa, do Kuwait.
+
+35
+00:02:21,910 --> 00:02:26,650
+Chamei Vem Project para criar um projeto com Lady Ta do Spring Put.
+
+36
+00:02:27,130 --> 00:02:31,120
+Ela é a primeira pessoa a fazer criar um projeto simples, o que você já está acostumado?
+
+37
+00:02:31,120 --> 00:02:33,460
+Então vou vim aqui com cliente.
+
+38
+00:02:34,390 --> 00:02:36,370
+Eu vou escolher a versão atual do título inglês.
+
+39
+00:02:36,390 --> 00:02:39,210
+Momento 2,647 Java.
+
+40
+00:02:39,880 --> 00:02:47,350
+Com o meu projeto vai rodar dentro de de com ponto, novidades.
+
+41
+00:02:49,120 --> 00:02:55,540
+Esse vai ser o nome do nosso, do nosso domínio e o nosso artefato a dizer vamos dar um artefato como
+
+42
+00:02:56,290 --> 00:02:57,010
+gestão.
+
+43
+00:02:59,670 --> 00:03:09,030
+Vou chamar de gestão, gestão de projetos e gestão de projetos todos juntos e a gestão dos projetos.
+
+44
+00:03:09,450 --> 00:03:17,310
+Vai ser o nome do nosso, do nosso, do nosso artefato de gestão de projetos ao longo do nosso projeto.
+
+45
+00:03:17,700 --> 00:03:18,420
+Ou não é Inter?
+
+46
+00:03:19,470 --> 00:03:26,550
+Já vou trabalhar pensando na versão 11, em que uma versão intermediária nunca trabalha em cima da última,
+
+47
+00:03:26,550 --> 00:03:32,040
+sempre na versão intermediária, com as quais os pacotes que nós vamos usar nesse primeiro momento.
+
+48
+00:03:32,340 --> 00:03:37,830
+Bom, nesse primeiro momento nós vamos usar o extremo e para poder trabalhar com objetivo, trabalhar
+
+49
+00:03:37,830 --> 00:03:39,060
+com MVC.
+
+50
+00:03:39,780 --> 00:03:45,870
+Nós vamos usar os trilhos de débitos para fazer reload da aplicação em tempo de execução.
+
+51
+00:03:46,470 --> 00:03:48,120
+Nós vamos usar o JP A.
+
+52
+00:03:51,230 --> 00:03:54,450
+E nós vamos usar a lei do Joel, tapear o povo.
+
+53
+00:03:55,040 --> 00:03:56,380
+A gente vai conectar com o povo.
+
+54
+00:03:56,420 --> 00:03:57,680
+Claro que é a base.
+
+55
+00:03:58,160 --> 00:04:01,120
+Ah, mas eu queria fazer com essa que ela serve e beleza.
+
+56
+00:04:01,130 --> 00:04:06,110
+E você está lá, bota para funcionar, para descansar, fazer com Maria, beber, bombom, beber e você
+
+57
+00:04:06,110 --> 00:04:07,220
+faz do jeito que você quiser.
+
+58
+00:04:07,640 --> 00:04:11,750
+Mas nesse momento eu vou fazer composto, porque é mais prático e é o que a gente vem aprendendo ao
+
+59
+00:04:11,750 --> 00:04:12,440
+longo do curso.
+
+60
+00:04:12,830 --> 00:04:18,980
+Então, os quatro pacotes que nós vamos ter dez dependências para esse projeto de início.
+
+61
+00:04:19,310 --> 00:04:30,280
+Mas isso aqui em Espinho, Web Springs, Mute, Débitos e Strings, Data JPEG e Post SQL driver da Cisco.
+
+62
+00:04:30,410 --> 00:04:33,080
+Essas quatro dependências que era trigger aqui dentro.
+
+63
+00:04:33,080 --> 00:04:39,260
+Para mim de novidade ele vai gerar um pacote aqui dentro e eu vou mandar ele abrir esse cara.
+
+64
+00:04:39,950 --> 00:04:41,660
+Não posso deixar de traz.
+
+65
+00:04:42,230 --> 00:04:48,350
+Ele abriu para mim e vai começar a carregar que o meu pacote vai começar a baixar as dependências e
+
+66
+00:04:48,350 --> 00:04:48,850
+colocar.
+
+67
+00:04:49,300 --> 00:04:54,200
+Isso pode demorar um pouquinho de acordo com cada máquina, em questão de velocidade, de internet.
+
+68
+00:04:54,200 --> 00:04:57,230
+Tudo isso a gente já sabe e a gente já vem conversando.
+
+69
+00:04:57,230 --> 00:04:58,290
+E mesmo?
+
+70
+00:04:59,240 --> 00:05:05,690
+Então ele está começando aqui e criar um projeto para que a gente possa começar a utilizar.
+
+71
+00:05:06,200 --> 00:05:12,800
+Bom, para esse primeiro projeto, a primeira coisa que eu vou fazer é ouvir aqui na mente, ouvir que
+
+72
+00:05:14,060 --> 00:05:20,480
+pensar não é só bom, a gente poderia e vamos vir aqui no consórcio.
+
+73
+00:05:20,660 --> 00:05:24,190
+Vamos já criar a nossa Application Property.
+
+74
+00:05:24,740 --> 00:05:36,020
+Então vamos lá, os brindes vão, vão, vão, vão criar aqui os o Spring Spring, porque contrata pessoas
+
+75
+00:05:36,530 --> 00:05:37,970
+disponíveis de contratações.
+
+76
+00:05:39,670 --> 00:05:50,390
+Como é ele que aí eu vou passar a alguém para usar JDBC e criar para trabalhar com post touching SQL?
+
+77
+00:05:51,650 --> 00:06:01,100
+Dois pontos para colocar eu vou logar em local rush na porta cinco quatro três dois.
+
+78
+00:06:01,490 --> 00:06:03,890
+Ta é o nome da nossa base de dados.
+
+79
+00:06:03,900 --> 00:06:08,730
+Vai ser gestão para projetos não existe.
+
+80
+00:06:08,730 --> 00:06:14,810
+A gente ainda vai criar e então eu quero é um lugar no local ou na porta para buscar a porta que eu
+
+81
+00:06:14,810 --> 00:06:15,230
+tenho aqui.
+
+82
+00:06:15,230 --> 00:06:17,580
+Nesse exato momento, o povo está lá.
+
+83
+00:06:18,030 --> 00:06:25,400
+A marca destinada a gestão de projetos, diplomacia bom para conectar essa base do precisava com o usuário.
+
+84
+00:06:25,400 --> 00:06:26,510
+Então estranhei.
+
+85
+00:06:26,960 --> 00:06:30,680
+Só relembrando para vocês vocês fizeram isso ontem em Goiás.
+
+86
+00:06:31,250 --> 00:06:31,820
+Data?
+
+87
+00:06:33,840 --> 00:06:36,240
+Só se nada fosse.
+
+88
+00:06:37,770 --> 00:06:38,370
+Ponto.
+
+89
+00:06:39,390 --> 00:06:43,230
+E o Zé nem é o usuário utilizado pelo bochicho.
+
+90
+00:06:45,880 --> 00:06:51,220
+Beleza bom, é só agora a senha de estreia da Samsung.
+
+91
+00:06:52,190 --> 00:06:59,690
+Contudo, passo hoje a minha semana louca para lugar no carro, mas de fato não sei.
+
+92
+00:07:01,070 --> 00:07:04,400
+Eu vou dizer qual é o post sobre o traje do povo.
+
+93
+00:07:04,400 --> 00:07:16,730
+Então vai ser escrito por data dada sua foto driver class meme vai ser o que?
+
+94
+00:07:16,790 --> 00:07:17,420
+Org.
+
+95
+00:07:17,840 --> 00:07:28,730
+No a large ponto doze ponto driver e eu quero já o bam pronto para o sistema e ele simplesmente só atualizar
+
+96
+00:07:28,730 --> 00:07:29,050
+on line.
+
+97
+00:07:29,150 --> 00:07:35,300
+Então para isso vou usar o comando dell no rabanete, explica JP.
+
+98
+00:07:35,450 --> 00:07:36,980
+Todo mundo já sabe fazer isso.
+
+99
+00:07:37,940 --> 00:07:38,360
+Ponto.
+
+100
+00:07:38,480 --> 00:07:40,240
+Alegremente, pondere.
+
+101
+00:07:40,400 --> 00:07:44,210
+É algo que eu quero que seja o famoso bilhete.
+
+102
+00:07:45,380 --> 00:07:47,130
+Somente isso pra gente começar.
+
+103
+00:07:47,150 --> 00:07:48,860
+Eu não vou trocar a porta nem nada.
+
+104
+00:07:49,130 --> 00:07:52,350
+Observação Esse projeto não pode ser um micro serviço.
+
+105
+00:07:52,370 --> 00:07:57,910
+Ele pode se tornar o futuro do serviço, mas eu estou construindo como se fosse uma única bateria.
+
+106
+00:07:58,790 --> 00:08:03,260
+Mas nada impede que depois ele, que está rodando uma arquitetura do micro, serve você colocar a bola
+
+107
+00:08:03,260 --> 00:08:03,590
+na rede.
+
+108
+00:08:03,590 --> 00:08:06,500
+Possamos juntar isso sem problema algum.
+
+109
+00:08:06,950 --> 00:08:10,720
+Eu estou criando como se fosse um modem separado, descentralizado.
+
+110
+00:08:11,750 --> 00:08:14,030
+Então, já criei o meu application para o Albert.
+
+111
+00:08:14,480 --> 00:08:19,010
+O que nós vamos fazer é criar estruturas de partes que nós vamos usar dentro desse projeto.
+
+112
+00:08:19,400 --> 00:08:24,320
+Eu vou criar algumas estruturas de papéis aqui, que é o que nós vamos fazer dentro do projeto.
+
+113
+00:08:24,470 --> 00:08:31,040
+Então, essa nome de pasta é aonde e de onde já vou entrar dentro do projeto principal de gestão de
+
+114
+00:08:31,040 --> 00:08:31,670
+projetos?
+
+115
+00:08:32,330 --> 00:08:33,350
+Vou criar uma pasta.
+
+116
+00:08:33,740 --> 00:08:37,080
+Essa pasta que eu vou chamar vai ser a nossa parte de série.
+
+117
+00:08:37,400 --> 00:08:40,160
+Ele vai ser os nossos serviços, vai estar criado.
+
+118
+00:08:40,730 --> 00:08:47,120
+Vou criar uma abaixo aqui chamada móvel, aonde vai aplicar algo em nossos modelos de domínio?
+
+119
+00:08:47,720 --> 00:08:50,180
+Todo o nosso modelo de domínio vai ficar dentro.
+
+120
+00:08:50,840 --> 00:08:58,670
+Vou criar também uma pasta aqui que você já sabe o repositório onde estão os nossos repositórios.
+
+121
+00:08:59,090 --> 00:09:06,740
+Além dessa pasta, eu vou criar aquela famosa marca chamada Chat de Compartilhar onde ficam os nossos
+
+122
+00:09:06,750 --> 00:09:07,520
+demônios.
+
+123
+00:09:07,520 --> 00:09:09,860
+Se você quiser chamar de digital, também pode.
+
+124
+00:09:10,670 --> 00:09:13,550
+Segundo a arquitetura, que eu consiga.
+
+125
+00:09:13,550 --> 00:09:14,530
+Não seria um chat.
+
+126
+00:09:14,870 --> 00:09:19,490
+Eu poderia ter o controle sobre o local onde vai trabalhar, com um modelo MVC.
+
+127
+00:09:19,500 --> 00:09:22,470
+A gente vai ter uma camada de visualização a cada livro.
+
+128
+00:09:22,890 --> 00:09:29,540
+Agora a gente vai trabalhar tendo no controle do navio e toda a parte onde o usuário tem acesso vai
+
+129
+00:09:29,540 --> 00:09:30,580
+ficar no navio.
+
+130
+00:09:30,660 --> 00:09:40,250
+Então tem uma camada 1000 e dentro dessa camada e nós vamos ter uma baixa de controle e nós vamos ter
+
+131
+00:09:40,250 --> 00:09:42,380
+dentro da pasta navio também.
+
+132
+00:09:42,380 --> 00:09:54,110
+Uma parte larga uma pasta chamada Móveis, que vão ser os moderninhos que vão servir de tráfego entre
+
+133
+00:09:54,530 --> 00:09:55,350
+o usuário.
+
+134
+00:09:55,370 --> 00:09:58,090
+E aí, então, tem que nada de novo.
+
+135
+00:09:58,100 --> 00:10:05,660
+Tudo o que vocês já aprenderam durante o curso móvel na área do projeto, ele conta cujo modelo de domínio
+
+136
+00:10:05,720 --> 00:10:13,760
+repositório, chamado de repositório do serviço Shared Canada, de compartilhar serem os nossos melhores,
+
+137
+00:10:14,180 --> 00:10:18,140
+viu que dentro da camada de biologia, tira o controle remoto.
+
+138
+00:10:18,620 --> 00:10:22,230
+Além dessa camarim, vocês já estão acostumados aqui em gestão de projetos.
+
+139
+00:10:22,250 --> 00:10:32,060
+Vou criar uma nova pasta chamada Sirikit, que aqui que você que curte o grupo de serviço totalmente
+
+140
+00:10:32,060 --> 00:10:39,120
+errado, sem que o que vai ser, onde nós vamos fazer a camada de segurança dentro dessa pasta?
+
+141
+00:10:39,120 --> 00:10:42,450
+Aqui vai ser onde nós vamos começar a trabalhar.
+
+142
+00:10:42,860 --> 00:10:49,150
+É aqui dentro que nós vamos começar a criar os nossos arquivos de segurança do projeto Beleza.
+
+143
+00:10:49,370 --> 00:10:55,970
+É aqui que nós vamos criar o nosso serviço de JWT, a que nós vamos criar o nosso escritório de Confie,
+
+144
+00:10:56,450 --> 00:11:02,600
+que nós vamos criar um filtro de autenticação que a gente vai criar um detetive.
+
+145
+00:11:03,470 --> 00:11:08,630
+Então a gente vai fazer grande parte daquilo que a gente vai utilizar para a autenticação.
+
+146
+00:11:08,990 --> 00:11:12,750
+A maior parte vai ficar aqui dentro dessa parte.
+
+147
+00:11:12,750 --> 00:11:22,160
+E se quilt beleza é uma parte do que eu estou separando só para armazenar os dados e arquivos de segurança.
+
+148
+00:11:22,520 --> 00:11:22,930
+Beleza.
+
+149
+00:11:23,090 --> 00:11:30,530
+Então, a partir de agora nós vamos começar a rodar um projeto para funcionar e ver.

@@ -1,0 +1,1863 @@
+1
+00:00:02,040 --> 00:00:02,800
+Beleza.
+
+2
+00:00:02,880 --> 00:00:04,590
+Criamos a classe de usuário.
+
+3
+00:00:04,980 --> 00:00:07,480
+O que nós vamos fazer agora?
+
+4
+00:00:07,500 --> 00:00:12,470
+Nós vamos começar a trabalhar na parte de segurança, na barra de Security da rede.
+
+5
+00:00:12,540 --> 00:00:15,750
+Começa a trabalhar aqui dentro e pra gente fazer essa habilitação.
+
+6
+00:00:15,810 --> 00:00:18,180
+A gente vai usar um padrão chamado JWT?
+
+7
+00:00:18,960 --> 00:00:22,280
+J a tempo, a gente sabe.
+
+8
+00:00:24,100 --> 00:00:31,300
+Diz o editor que eles vêm de uma área de domínio e ele é uma forma de se trabalhar, contou ele na web.
+
+9
+00:00:31,570 --> 00:00:35,830
+Com uma maior segurança, ele trabalha com baixo e algoritmos de criptografia.
+
+10
+00:00:36,250 --> 00:00:39,580
+Ele tem uma chave secreta de descriptografar.
+
+11
+00:00:40,070 --> 00:00:45,970
+Ele trabalha com várias folhas, é dividido em três partes, onde ele tem na primeira parte do modo
+
+12
+00:00:45,970 --> 00:00:53,030
+mais escuro, o guia pelo sol marítimo de criptografia que originou o catolicismo.
+
+13
+00:00:53,050 --> 00:00:55,060
+O HS dois numerais.
+
+14
+00:00:55,060 --> 00:01:01,630
+Eu posso usar qualquer tipo de algoritmo de criptografia no meio, como rosa mais claro, ou True Blood,
+
+15
+00:01:02,230 --> 00:01:07,620
+que é basicamente os dados que eu quero do usuário para gerar Stone.
+
+16
+00:01:08,170 --> 00:01:16,990
+Então se passa também que ele é o único daquele usuário relacionando algumas coisas e por fim, no final
+
+17
+00:01:16,990 --> 00:01:20,690
+a gente tem a assinatura do Duque e eu, tabagismo.
+
+18
+00:01:20,710 --> 00:01:27,460
+Claro que ele usa a própria criptografia com um jogador e para mim há quatro.
+
+19
+00:01:27,760 --> 00:01:32,470
+Mas a chave secreta que ele usa para criptografar e criptografar eles.
+
+20
+00:01:32,740 --> 00:01:39,220
+Entomologia de fotografia notou se algo mais ou menos desse tipo que está aí para enviar, criptografar.
+
+21
+00:01:39,550 --> 00:01:44,650
+E o nosso back end vai conseguir colocar de acordo com uma chave de uma fonte criada para ele.
+
+22
+00:01:45,280 --> 00:01:47,920
+Ele então recebe mais ou menos que impressionar.
+
+23
+00:01:48,220 --> 00:01:52,590
+Se eu estou falando de um dos padrões de autenticação mais comuns de criminal, ele está.
+
+24
+00:01:52,930 --> 00:01:59,900
+Então, se você está na hora de fechar com um monte, você ele pode ser realmente usado na WD.
+
+25
+00:02:00,030 --> 00:02:00,920
+Existe outro?
+
+26
+00:02:00,940 --> 00:02:01,250
+Está.
+
+27
+00:02:02,260 --> 00:02:06,580
+O mais comum é um diz um e token então vão lá.
+
+28
+00:02:06,580 --> 00:02:09,730
+Então vou ver ele que eu vou criar aqui uma nova classe.
+
+29
+00:02:09,730 --> 00:02:16,980
+Dentro de séries que eu vou dar ao nome, eu vou dar um nome JWT Séries.
+
+30
+00:02:17,680 --> 00:02:19,300
+O que acontece nesse momento?
+
+31
+00:02:19,470 --> 00:02:26,860
+Agora as placas e elas vão ser o nome em inglês, porque vamos ouvir os nomes da convenção de todo mundo.
+
+32
+00:02:26,860 --> 00:02:33,640
+Geralmente utilizada como maravilhosas classes e o nome de algumas fontes, ela mantém o padrão.
+
+33
+00:02:34,090 --> 00:02:40,240
+Então, por exemplo, que serve é serviço do jornal, a TV, essa classe, mas basicamente como do de
+
+34
+00:02:40,260 --> 00:02:41,340
+autor como jogador.
+
+35
+00:02:41,350 --> 00:02:44,710
+Até então, todos os títulos de alto luxo nessa classe.
+
+36
+00:02:45,100 --> 00:02:46,450
+E vou chegar um pouco, então e?
+
+37
+00:02:47,740 --> 00:02:51,820
+Então, essa classe equilibrada que eu consigo usá la de qualquer lugar?
+
+38
+00:02:51,820 --> 00:02:58,940
+A primeira coisa que eu vou fazer com ele é um componente para que o Ruby e o livro onde consigo enxergar
+
+39
+00:02:58,940 --> 00:03:03,790
+ela dentro dele diretamente de dependência e onde eu publicizar essa experiência normal?
+
+40
+00:03:03,810 --> 00:03:09,040
+Quais tipos a gente faz tudo, como com qualquer outro tipo de serviço que a gente já vem fazendo.
+
+41
+00:03:10,390 --> 00:03:17,620
+Então eu estou criando essa classe que joga para PCs com classe, um componente bom aqui dentro dessa
+
+42
+00:03:17,620 --> 00:03:18,160
+classe.
+
+43
+00:03:18,340 --> 00:03:24,850
+Basicamente, ela vai ter uma propriedade, que é um método, uma propriedade do chip de chave privada.
+
+44
+00:03:25,600 --> 00:03:31,360
+É um método que eu não gostaria de gerar, que é a chave privada, mas você achar que vai saber e criptografar
+
+45
+00:03:31,360 --> 00:03:32,410
+de todo mundo.
+
+46
+00:03:32,980 --> 00:03:38,740
+Geralmente, isso a gente não deixa dentro do código, depende de uma configuração, de algum lugar,
+
+47
+00:03:38,950 --> 00:03:43,480
+porque isso tem que ser muito seguro mais como aquilo é simplesmente um código de teste.
+
+48
+00:03:43,720 --> 00:03:50,110
+Eu vou deixá la calma, que dentro do nosso código e ali na frente, com tudo de bom, se você quiser,
+
+49
+00:03:50,110 --> 00:03:54,820
+pode montar um arquivo por 20 da vida, pode colocar em outro lugar, a recuperar dinamicamente.
+
+50
+00:03:54,960 --> 00:03:55,800
+É bom.
+
+51
+00:03:55,930 --> 00:03:57,580
+Então eu vou voltar presente.
+
+52
+00:03:57,850 --> 00:04:02,510
+Eu quero que seja o chefe final que eu quero, que ninguém deixa.
+
+53
+00:04:03,100 --> 00:04:12,460
+Eu quero que seja entre mim e eu vou dar o nome de chave privada, joga a parte que vai ser basicamente
+
+54
+00:04:12,550 --> 00:04:13,300
+a nossa chave.
+
+55
+00:04:13,410 --> 00:04:19,180
+Isso aqui eu poderia colocar qualquer coisa que eu poderia botar letras, números, qualquer coisa que
+
+56
+00:04:20,020 --> 00:04:24,490
+para ser a chave da nossa criptografia, está isso aqui.
+
+57
+00:04:25,060 --> 00:04:28,210
+Se alguém descobrir, vai conseguir descriptografar isso tudo.
+
+58
+00:04:28,660 --> 00:04:35,730
+Mas nossa chave tem que ser segura, mas como no nosso nosso exemplo, que é simplesmente de baixo.
+
+59
+00:04:36,070 --> 00:04:39,140
+Então eu vou colocar como símbolo de.
+
+60
+00:04:41,100 --> 00:04:49,680
+Sirikit que vai ser a nossa Sigrid que significa ele e ela vai ser a nossa face como símbolo de fim.
+
+61
+00:04:51,100 --> 00:04:56,640
+Então, então, para que a nossa chanceler se verifique, eu poderia dar qualquer outro nome pelo qual
+
+62
+00:04:56,640 --> 00:04:57,450
+ela está.
+
+63
+00:04:57,750 --> 00:05:00,180
+Então eu vou deixar um comentário aqui.
+
+64
+00:05:00,930 --> 00:05:02,040
+Na verdade, eu vou.
+
+65
+00:05:02,040 --> 00:05:07,140
+Eu vos chamo fazendo um código e depois a gente vem comentando que eu vou mandar tudo isso para vocês.
+
+66
+00:05:07,380 --> 00:05:08,820
+Mas eu consiste em tudo combinado.
+
+67
+00:05:08,820 --> 00:05:09,690
+Como funciona?
+
+68
+00:05:10,200 --> 00:05:11,070
+E aí, o que ela criou?
+
+69
+00:05:11,350 --> 00:05:13,620
+Eu vou criar um método que eu não falei que eu gostaria de ter.
+
+70
+00:05:13,980 --> 00:05:15,690
+Que é um método que vai melhorar muito.
+
+71
+00:05:15,690 --> 00:05:22,350
+Cheng, que é aquele jogador que no final que me tornei auxiliar, eu vou chamar de cheirar.
+
+72
+00:05:25,450 --> 00:05:27,460
+Por padrão, esse mesmo gerador.
+
+73
+00:05:27,640 --> 00:05:29,140
+Quando chamarem, eu vou passar.
+
+74
+00:05:29,170 --> 00:05:30,610
+Qual é a autenticação?
+
+75
+00:05:30,730 --> 00:05:32,710
+E com base na autenticação do Geraldo?
+
+76
+00:05:33,250 --> 00:05:37,750
+Então eu vou colocar um cara chamado Authentication
+
+77
+00:05:39,880 --> 00:05:40,630
+do tipo.
+
+78
+00:05:41,380 --> 00:05:53,830
+Ao ler essa classe aqui, outro ponto eu tenho e vai ajudar mais do que eu e o DSK, que é string bonus
+
+79
+00:05:53,830 --> 00:05:57,610
+security core, que aqui é o cara interessado.
+
+80
+00:05:57,910 --> 00:06:02,080
+Eu não quero um desses meu aqui ou outro que eu quero deixar aqui.
+
+81
+00:06:02,980 --> 00:06:06,120
+Beleza, tem que ser esse carro show.
+
+82
+00:06:06,490 --> 00:06:08,770
+Então eu quero essa classe D.
+
+83
+00:06:09,160 --> 00:06:16,080
+E para falar de bairro só para parar de dar retorno aqui naquele país, iria correr a uma estrelinha
+
+84
+00:06:16,600 --> 00:06:22,230
+e aí ali dentro vai ter a lógica para girar sobre a loja para o gerente, sobre isso, estou com ele
+
+85
+00:06:22,250 --> 00:06:24,010
+em geral, acima de alguns passos.
+
+86
+00:06:24,370 --> 00:06:31,120
+A primeira coisa que eu preciso fazer aqui para gestor é dizer qual o de geração que eu quero, não
+
+87
+00:06:31,150 --> 00:06:31,540
+estou.
+
+88
+00:06:32,020 --> 00:06:36,040
+Então vou criar aqui aqui um termo de tiro ao alvo outra vez.
+
+89
+00:06:36,110 --> 00:06:36,900
+Isso aqui poderia.
+
+90
+00:06:36,940 --> 00:06:42,280
+Chá não era em série de domina com uma configuração, mas não quero botar a culpa em seu cliente para
+
+91
+00:06:42,280 --> 00:06:43,090
+consumo interno.
+
+92
+00:06:43,420 --> 00:06:46,780
+E depois é que vocês podem colocar isso onde você achar melhor.
+
+93
+00:06:47,200 --> 00:06:55,480
+Então, o termo destilação mistura, por exemplo, que pode durar 30/2, 01h01, 30 minutos, um dia,
+
+94
+00:06:55,510 --> 00:06:58,060
+15 dias no mesmo ano, nunca expirar.
+
+95
+00:06:58,480 --> 00:07:01,630
+Então eu posso dizer qual o tempo de duração.
+
+96
+00:07:01,690 --> 00:07:02,550
+Eles têm uma lixeira.
+
+97
+00:07:02,710 --> 00:07:07,750
+Como já era para ter que ser em milissegundos, porque ele é um inteiro.
+
+98
+00:07:08,710 --> 00:07:12,730
+Então, um segundo, só 1000 milissegundos.
+
+99
+00:07:13,270 --> 00:07:19,320
+Se eu quiser chegar a cada um segundo, não vai sentir de sacanagem no WhatsApp, nem cheirar de um
+
+100
+00:07:19,330 --> 00:07:19,690
+dia.
+
+101
+00:07:19,960 --> 00:07:22,060
+Um dia era mais ou menos isso aqui.
+
+102
+00:07:22,300 --> 00:07:27,430
+Segundo ele, se não me engano, foi 26, quatro e eles são cinco zero.
+
+103
+00:07:27,460 --> 00:07:32,740
+Se não me engano, isso é 864 um dois três quatro cinco seis cinco zero.
+
+104
+00:07:33,040 --> 00:07:45,280
+Isso que vale um dia lá no ar, um dia em mim, ali, segundos, beleza de segundos.
+
+105
+00:07:46,240 --> 00:07:49,490
+Aí aqui a gente pode botar o que gente real.
+
+106
+00:07:49,630 --> 00:07:51,310
+Ele queria muito da regra de negócio.
+
+107
+00:07:51,640 --> 00:07:55,960
+Então você acha que eles já vão querer comentar aquilo que eu já não fazia comentando?
+
+108
+00:07:55,960 --> 00:08:02,530
+Pode colocar mais, faz ele é melhor um assim.
+
+109
+00:08:02,760 --> 00:08:12,310
+Aqui pode variar de acordo com a sua área de negócio.
+
+110
+00:08:12,370 --> 00:08:14,740
+Você já parou para pensar agora?
+
+111
+00:08:14,880 --> 00:08:20,220
+Torre dura é só 30 minutos, só 15 minutos ao minuto.
+
+112
+00:08:20,230 --> 00:08:26,520
+Aí você vai colocar isso em 3/2 para que vocês consigam utilizar melhor.
+
+113
+00:08:26,830 --> 00:08:30,850
+Então, a primeira coisa é definir o tempo de expiração.
+
+114
+00:08:31,870 --> 00:08:36,550
+Segundo, era criar uma data de expiração com base no tempo de duração.
+
+115
+00:08:36,610 --> 00:08:37,210
+Como assim?
+
+116
+00:08:37,330 --> 00:08:41,990
+Então vamos criar dados, tirar, ouvir aquilo que é mandado de direção e a barra de direção.
+
+117
+00:08:42,250 --> 00:08:43,210
+Vou criar um ambiente.
+
+118
+00:08:44,890 --> 00:08:50,830
+Vamos chamar de da geração que não recebeu nenhum e-mail.
+
+119
+00:08:50,830 --> 00:08:51,250
+Deixe.
+
+120
+00:08:53,530 --> 00:08:55,380
+Ele é saudável aqui.
+
+121
+00:08:55,450 --> 00:08:56,940
+Eu quero que ela seja recriado.
+
+122
+00:08:57,160 --> 00:09:04,120
+Eu quero que seja dado algo mais do que esse termo que, por que não, historiador?
+
+123
+00:09:04,510 --> 00:09:10,740
+Eu quero que, a partir da data atual, o toque duro que algum dia então é dado ao mais que um dia,
+
+124
+00:09:10,750 --> 00:09:11,710
+então você tem que fazer o quê?
+
+125
+00:09:11,770 --> 00:09:15,800
+Porque era criar um olhar para a atual mineiridade.
+
+126
+00:09:16,330 --> 00:09:17,790
+E aí eu vou pegar o que eu vou querer.
+
+127
+00:09:17,810 --> 00:09:19,240
+Alguém está em questão?
+
+128
+00:09:19,510 --> 00:09:22,160
+O que o Guest Day é um longa.
+
+129
+00:09:22,510 --> 00:09:25,420
+Com uns milissegundos na tarde de hoje.
+
+130
+00:09:26,230 --> 00:09:31,060
+Então eu quero pegar a data de hoje mais do que mais por tempo de expiração.
+
+131
+00:09:31,210 --> 00:09:32,200
+Então, o que ele vai fazer?
+
+132
+00:09:32,470 --> 00:09:34,930
+Ele vai pegar a hora de hoje fora de hora.
+
+133
+00:09:35,050 --> 00:09:39,700
+Ele vai pegar a hora de hoje mais detida, só para dizer quanto vai ser mandado de segurança.
+
+134
+00:09:40,090 --> 00:09:42,620
+Então ele vai pegar assim cada qual mais falou Moreira.
+
+135
+00:09:42,640 --> 00:09:48,610
+O modelo novo da atual, mas vai tirar hoje minutos, 01h00, hoje de 01h00.
+
+136
+00:09:49,210 --> 00:09:55,870
+Como é que o modelo do dia vai ser amanhã na hora, na mesma hora, veículo na rua do que ele era.
+
+137
+00:09:56,260 --> 00:10:01,750
+Então vou me esforçar para que vocês possam entender isso, que é importante aqui.
+
+138
+00:10:02,050 --> 00:10:11,110
+Eu estou criando o número que aqui estou criando, uma data de expiração
+
+139
+00:10:14,950 --> 00:10:25,470
+para o token, com base no tempo de para Paulo.
+
+140
+00:10:26,050 --> 00:10:27,280
+Então é isso que eu estou fazendo.
+
+141
+00:10:27,610 --> 00:10:30,590
+Além disso, o que eu vou fazer e trabalhando?
+
+142
+00:10:30,730 --> 00:10:36,340
+Porque o horário ele pega a data atual e soma.
+
+143
+00:10:36,580 --> 00:10:47,580
+Mas o dia em que Messi e Messi no show de bola.
+
+144
+00:10:47,800 --> 00:10:49,900
+Então é isso que está acontecendo aqui.
+
+145
+00:10:50,410 --> 00:10:52,960
+Eu estou criando o termo de direção.
+
+146
+00:10:53,170 --> 00:10:56,620
+É aquela primeiro quando ele vai expirar e nada mais o tempo.
+
+147
+00:10:56,710 --> 00:11:00,250
+Eu poderia pegar isso aqui e já colocar direto aqui dentro.
+
+148
+00:11:00,670 --> 00:11:01,840
+Eu poderia fazer isso.
+
+149
+00:11:02,110 --> 00:11:05,320
+Só que eu não queriam separar para vocês, entender a lógica da coisa.
+
+150
+00:11:06,040 --> 00:11:09,620
+Mas nada impede de você deixar que a gente vai passar isso direto, né?
+
+151
+00:11:10,300 --> 00:11:14,800
+Tá no ar com o Uber uma investida contra o Uber?
+
+152
+00:11:15,280 --> 00:11:17,280
+Bem, é criada situação.
+
+153
+00:11:17,320 --> 00:11:23,440
+Eu preciso pegar qual é o usuário com base em sua identificação, ou seja, qual é o usuário que eu
+
+154
+00:11:23,920 --> 00:11:27,460
+estava tentando se autenticar e com o que eu preciso, já estou.
+
+155
+00:11:27,730 --> 00:11:36,460
+Então eu vou pegar um usuário que eu vou chamar o usuário e aí eu vou pegar ele, de onde eu vou chegar
+
+156
+00:11:36,460 --> 00:11:40,210
+dando a alguém X que sabe o que seria para pegar o usuário.
+
+157
+00:11:40,210 --> 00:11:42,970
+Eu pego através do método get ele.
+
+158
+00:11:42,970 --> 00:11:44,790
+Só o cara, explicou.
+
+159
+00:11:44,830 --> 00:11:47,350
+Ele vai me devolver os dados atuais.
+
+160
+00:11:47,620 --> 00:11:53,000
+Só que, como esse cara que me devolve um objeto, esse objeto sempre vai ser o usuário da operação.
+
+161
+00:11:53,000 --> 00:11:54,370
+Se ele parar o usuário lá dentro.
+
+162
+00:11:54,680 --> 00:11:58,230
+E esse gap, ele é um objeto, só que eu não quero.
+
+163
+00:11:58,240 --> 00:12:04,900
+Hoje eu espero um usuário, não aquilo, fazer uma creche simplesmente cometendo esse objetivo.
+
+164
+00:12:05,110 --> 00:12:10,470
+O usuário com um usuário por baixo, quando ele move, ele era relacionado.
+
+165
+00:12:10,810 --> 00:12:17,260
+Já quando eu faço aqui, eu estou fazendo um parque creche em tempo de execução do programa que está
+
+166
+00:12:17,440 --> 00:12:25,860
+aqui como agente que é o usuário do gás, telefone e como o próprio usuário explicou que hoje ele é
+
+167
+00:12:25,870 --> 00:12:30,880
+conveniente para o usuário salvar esse aparelho do usuário.
+
+168
+00:12:30,910 --> 00:12:31,480
+Então vamos lá.
+
+169
+00:12:32,050 --> 00:12:42,460
+Vão comentar aqui para você saber ele que só lá dentro, aqui, pegamos o usuário atual da autenticação.
+
+170
+00:12:43,300 --> 00:12:48,070
+Nesse momento em que eu estou pegando o usuário que está dentro da sala de espera, para onde está vindo
+
+171
+00:12:48,090 --> 00:12:49,330
+Jacob, ele.
+
+172
+00:12:49,990 --> 00:12:53,200
+Então, já peguei.
+
+173
+00:12:53,380 --> 00:12:54,970
+Agora o que eu preciso fazer?
+
+174
+00:12:54,970 --> 00:12:58,300
+Agora eu preciso retornar para retornar ao Dog.
+
+175
+00:12:58,300 --> 00:13:04,000
+Eu vou precisar carro chamado J, a WPS, que ele é um builder.
+
+176
+00:13:04,450 --> 00:13:06,340
+Ele é do chinês, um token.
+
+177
+00:13:06,760 --> 00:13:12,580
+Então eu vou em vez de retornar ele, esse cara que a gente vai rodar por aí, eu vou me tornar o que
+
+178
+00:13:12,970 --> 00:13:20,050
+um j da t s e que não é pouco.
+
+179
+00:13:21,400 --> 00:13:24,190
+Esse cara que ele é humilde, ser humilde.
+
+180
+00:13:24,310 --> 00:13:27,070
+Eu não posso construir os parâmetros que eu quiser.
+
+181
+00:13:27,190 --> 00:13:32,790
+Então vou falar assim eu vou curtir um Bill por uma linha e eu quero a primeira coisa que eu quero adicionar
+
+182
+00:13:32,790 --> 00:13:33,060
+nele.
+
+183
+00:13:33,070 --> 00:13:39,640
+É isso que eu sete subject o que ele disser.
+
+184
+00:13:39,640 --> 00:13:47,560
+Subject é alguma coisa que eu tenha usuário que seja a única que eu posso usar para validar esse usuário
+
+185
+00:13:47,560 --> 00:13:52,670
+e dizer que ninguém é igual a ele e que ele é o único para garantir que o sua.
+
+186
+00:13:53,870 --> 00:13:56,770
+Esse método aqui de autenticação é usar.
+
+187
+00:13:57,200 --> 00:14:01,400
+Eu poderia usar mais coisas por aí, usar o e-mail, poderei usar o ideal.
+
+188
+00:14:01,940 --> 00:14:05,950
+Poderia usar mais, pois geralmente é melhor porque eles são um inimigo.
+
+189
+00:14:05,960 --> 00:14:13,440
+Já no caso, não sei o que poderia ser, mas geralmente eu usei o áudio normal porque o médico louco
+
+190
+00:14:13,440 --> 00:14:16,190
+eu não fico trafegando toda hora.
+
+191
+00:14:16,430 --> 00:14:17,750
+Então o que eu faço?
+
+192
+00:14:18,020 --> 00:14:18,960
+Eu vou pegar aqui.
+
+193
+00:14:19,550 --> 00:14:21,950
+Eu quero pegar guess, Andy.
+
+194
+00:14:21,950 --> 00:14:25,430
+Eu vou pegar o Ed, só que eles merda aqui.
+
+195
+00:14:25,490 --> 00:14:29,420
+Ele chora, recebeu um estilingue e não obedece a esse ponto.
+
+196
+00:14:30,020 --> 00:14:34,350
+Tu, este é que ele se dê no que é um estilingue.
+
+197
+00:14:34,970 --> 00:14:39,590
+Então é um belo guarda do arco íris para fazer esse toque.
+
+198
+00:14:39,590 --> 00:14:42,410
+Mas seria só a bola bomba, continuou.
+
+199
+00:14:42,710 --> 00:14:45,320
+E vamos lá que eu acho que eu preciso fazer.
+
+200
+00:14:45,590 --> 00:14:52,100
+Eu preciso dizer qual é a data que eu quero me basear para esse doodle.
+
+201
+00:14:52,700 --> 00:14:54,650
+É a data em que está acontecendo isso.
+
+202
+00:14:55,100 --> 00:14:56,360
+Então eu vou fazer o quê?
+
+203
+00:14:56,690 --> 00:14:57,540
+Sete.
+
+204
+00:14:58,910 --> 00:14:59,420
+Isso?
+
+205
+00:15:01,130 --> 00:15:01,550
+ET.
+
+206
+00:15:02,070 --> 00:15:03,740
+Eu vou passar a bola do alto.
+
+207
+00:15:03,990 --> 00:15:06,020
+Posso passar no meio deles a data do álbum.
+
+208
+00:15:06,650 --> 00:15:13,310
+Eu poderia me basear amarrada a dar aquilo que eu queria e não poder criar a balada em cima e ter usado
+
+209
+00:15:13,310 --> 00:15:17,270
+antes de passar pela data de expiração.
+
+210
+00:15:17,270 --> 00:15:18,230
+Poderei fazer qualquer coisa.
+
+211
+00:15:18,240 --> 00:15:21,020
+Não vou passar a data atual, que não vai dar muita diferença.
+
+212
+00:15:22,400 --> 00:15:22,790
+Beleza.
+
+213
+00:15:23,190 --> 00:15:29,330
+Depois, a partir da data que eu quero usar como base para gerar, tomara que eu quero usar como base
+
+214
+00:15:29,330 --> 00:15:31,760
+para fazer aquilo como se fosse o start.
+
+215
+00:15:32,030 --> 00:15:33,860
+Tudo por beleza.
+
+216
+00:15:34,340 --> 00:15:37,260
+Quando eu quero expirar, estou aí.
+
+217
+00:15:37,400 --> 00:15:42,160
+Vai passar na propriedade de sete a despirem.
+
+218
+00:15:43,100 --> 00:15:50,750
+E aí aquele esperma eu vou passar a ter a data de tirar o que a gente criou aqui em cima dele e atirar.
+
+219
+00:15:51,320 --> 00:15:54,590
+Então, essa tubulação, o Ilhéu do Ar para fazer isso?
+
+220
+00:15:54,620 --> 00:16:00,110
+Porque esse usuário eu quero o que estou fazendo com a data de início do álbum do Jean.
+
+221
+00:16:00,160 --> 00:16:02,030
+Ele é a data de expiração.
+
+222
+00:16:02,030 --> 00:16:04,050
+Vai ser o que vai ser falado em cima.
+
+223
+00:16:04,310 --> 00:16:06,310
+Perfeito, igual.
+
+224
+00:16:07,040 --> 00:16:07,370
+E aí?
+
+225
+00:16:07,490 --> 00:16:08,360
+O que eu vou fazer?
+
+226
+00:16:08,390 --> 00:16:09,890
+Eu vou dizer agora o que?
+
+227
+00:16:09,920 --> 00:16:14,690
+Qual tipo de criptografia que eu quero usar como a chave primária?
+
+228
+00:16:14,750 --> 00:16:19,130
+Então não tem esse método que sai em with, ou seja.
+
+229
+00:16:21,290 --> 00:16:25,920
+É assim com e assim é com ele chegar à morte para o primeiro.
+
+230
+00:16:26,090 --> 00:16:29,750
+Qual o algoritmo de criptografia que eu vou usar no segundo?
+
+231
+00:16:29,750 --> 00:16:30,890
+Do qual é a chave?
+
+232
+00:16:31,260 --> 00:16:32,630
+Ok que eu vou usar?
+
+233
+00:16:33,050 --> 00:16:39,560
+Então, mesmo com a criptografia que eu vou usar vocês abaixo a criptografia, então eu vou usar o Chaves,
+
+234
+00:16:39,570 --> 00:16:41,600
+método que está em mim.
+
+235
+00:16:43,070 --> 00:16:44,530
+Signature algoritmo.
+
+236
+00:16:45,470 --> 00:16:46,040
+Ponto.
+
+237
+00:16:46,040 --> 00:16:52,210
+E aí eu posso usar como muito bom, porque como se usa vários tipos de criptografia, largura de criptografia,
+
+238
+00:16:52,220 --> 00:16:52,850
+outra linha.
+
+239
+00:16:53,390 --> 00:16:55,080
+São vários tipos de criptografia.
+
+240
+00:16:56,390 --> 00:17:04,100
+Dá para usar hs que as duas e de quatro dois cinco meia e vaza que ele era bom.
+
+241
+00:17:04,280 --> 00:17:11,990
+Eu particularmente gosto de usar esse cara aqui porque não sei, eu vou usar a escala que é o chumbo,
+
+242
+00:17:11,990 --> 00:17:12,350
+não tem.
+
+243
+00:17:12,380 --> 00:17:18,620
+O que é mal dele vai funcionar, mas não resolve 12 porque não tem um motivo específico.
+
+244
+00:17:19,070 --> 00:17:26,120
+E aí, com a chave que eu quero usar, criptografar informação que Mashable vale, o JW pode ser a chave
+
+245
+00:17:26,120 --> 00:17:26,600
+privada.
+
+246
+00:17:27,300 --> 00:17:31,070
+Ele acha que ele vai usar a criptografia para gravar.
+
+247
+00:17:31,440 --> 00:17:37,420
+Depois de fazer tudo isso, eu vou mandar o que o JW ia fazer, que compactar isso no momento que o
+
+248
+00:17:37,480 --> 00:17:38,630
+método compactar.
+
+249
+00:17:39,160 --> 00:17:45,000
+N ele é tudo isso, mas se ele cria o toque e retorna.
+
+250
+00:17:45,650 --> 00:17:49,500
+Mas seria legal, então ela fica aqui.
+
+251
+00:17:50,450 --> 00:17:54,500
+Esse cara é o cara que tem todos os dados e é um pouco bonitinho.
+
+252
+00:17:54,500 --> 00:17:55,190
+Já era para ter.
+
+253
+00:17:55,520 --> 00:18:10,380
+Então vamos combinar aqui ele pega todos os dados e torna muito bonito do jogo até prova.
+
+254
+00:18:11,330 --> 00:18:15,830
+É aqui que o token realmente é a beleza.
+
+255
+00:18:16,160 --> 00:18:20,320
+Então olha só, nosso método verificou o nosso método aqui.
+
+256
+00:18:21,320 --> 00:18:22,580
+Ficou dessa forma.
+
+257
+00:18:22,910 --> 00:18:25,560
+Shot gerado, tá aqui.
+
+258
+00:18:25,580 --> 00:18:28,190
+Ele vai gerar todo ele só para poder entender.
+
+259
+00:18:28,400 --> 00:18:30,080
+Vou começar a comentar em cima.
+
+260
+00:18:31,100 --> 00:18:43,040
+Então, o que ele ficar, que sabe que faz isso tudo aquilo que é a chave secreta utilizada pelo JWT
+
+261
+00:18:43,910 --> 00:18:51,770
+para codificar e decodificar o plano, a professora, decorar tudo isso?
+
+262
+00:18:51,860 --> 00:18:52,590
+Claro que não.
+
+263
+00:18:53,340 --> 00:18:58,200
+Ah, mas eu não quero fazer o mundo com a beleza com que você encontra no meio urbano, na classe média.
+
+264
+00:18:58,420 --> 00:19:05,360
+Lá, o que vai mudar talvez se torne o código, ou mesmo você só tem que entender o que ele faz por
+
+265
+00:19:05,360 --> 00:19:11,150
+isso tudo, explicando linha por linha detalhadamente, comentando para ele possível pelo realmente
+
+266
+00:19:11,150 --> 00:19:11,750
+que ele faz.
+
+267
+00:19:12,530 --> 00:19:18,770
+Por exemplo, aqui eu moro no comentário aqui no módulo comandante do Java ad hoc.
+
+268
+00:19:18,770 --> 00:19:27,230
+Tá lá método para gerar por token gerado ou token.
+
+269
+00:19:27,950 --> 00:19:29,330
+J wt.
+
+270
+00:19:32,540 --> 00:19:38,990
+A autenticação do usuário com a autenticação, ele vai retornar.
+
+271
+00:19:38,990 --> 00:19:39,920
+O que mudou?
+
+272
+00:19:42,440 --> 00:19:45,880
+Ele retorna do país quando parar a mão em cima.
+
+273
+00:19:45,880 --> 00:19:50,200
+O método para a geração chamada de autenticação do usuário e reboque.
+
+274
+00:19:51,060 --> 00:19:58,190
+Beleza, então, está documentado no site que eu acho que a gente pode criar a nossa, para que pode
+
+275
+00:19:58,190 --> 00:19:59,450
+ter duas outras coisas.
+
+276
+00:20:00,080 --> 00:20:01,140
+Dois outros métodos.
+
+277
+00:20:01,160 --> 00:20:05,030
+Eu vou criar mais dois métodos aqui, porque eu sei que a gente vai precisar de lá na frente.
+
+278
+00:20:06,200 --> 00:20:09,560
+Um deles eu já era uma criança para diagnosticar o porquê.
+
+279
+00:20:10,130 --> 00:20:16,970
+Um deles vai dizer que ele vai retornar, porque eu vou dizer que vai tornar um opcional opcional.
+
+280
+00:20:19,040 --> 00:20:30,920
+Chamam intelectual ONG porque ele vai doar um fuzil que vai de novo a Long Long e vai ser possível obter
+
+281
+00:20:31,310 --> 00:20:35,150
+nova resolução que vai demorar o a isolar.
+
+282
+00:20:35,390 --> 00:20:41,420
+Então, o que eu vou fazer é uma chance de obter a dica do usuário.
+
+283
+00:20:41,870 --> 00:20:45,260
+Só que ele vai me dar o direito de um token.
+
+284
+00:20:45,350 --> 00:20:46,490
+Eu vou receber um todo.
+
+285
+00:20:46,940 --> 00:20:50,370
+Na verdade, eu vou passar com uma string que eu vou chamar de tudo.
+
+286
+00:20:50,780 --> 00:20:56,360
+Eu quero passar um todo para esse método muito bom para reportar já.
+
+287
+00:20:56,420 --> 00:21:07,050
+Hoje eu quero passar algum tempo certo, esse método descriptografar o token e depois pegar o Edge e
+
+288
+00:21:07,070 --> 00:21:09,920
+me retornar DNS shot.
+
+289
+00:21:10,490 --> 00:21:11,570
+É isso que ele faz.
+
+290
+00:21:11,990 --> 00:21:14,780
+Bom, prova fazer isso aqui pode dar errado.
+
+291
+00:21:14,780 --> 00:21:20,030
+E o cara então no momento mostrar que está de sacanagem para não ter problema?
+
+292
+00:21:20,330 --> 00:21:22,880
+Tá só pra não ter problema.
+
+293
+00:21:23,210 --> 00:21:24,620
+Então é o contrário.
+
+294
+00:21:24,800 --> 00:21:26,480
+Eu vou tentar fazer isso.
+
+295
+00:21:26,780 --> 00:21:30,320
+Bom para eu descobrir qual é a ideia do usuário.
+
+296
+00:21:31,410 --> 00:21:34,820
+O haitiano, usuário e policial que de um certo subject.
+
+297
+00:21:35,450 --> 00:21:39,530
+Isso aqui, por baixo dos panos, ele vira uma baleia.
+
+298
+00:21:40,100 --> 00:21:45,440
+Clan Klei é como se fosse um objeto de autorização de permissão do usuário.
+
+299
+00:21:45,980 --> 00:21:49,850
+O que se usuário tem beleza, então, é uma clara.
+
+300
+00:21:50,030 --> 00:21:51,800
+Eu posso ir mais leve do usuário.
+
+301
+00:21:52,190 --> 00:21:54,680
+É basicamente o que eu vou chamar.
+
+302
+00:21:54,770 --> 00:22:01,730
+Eu vou criar uma leva de clientes e suportar a conta do ponto.
+
+303
+00:22:04,330 --> 00:22:05,020
+Porém.
+
+304
+00:22:05,020 --> 00:22:08,740
+Santos, Luis Luis o faço isso.
+
+305
+00:22:11,980 --> 00:22:18,290
+Clarence recebe recebe de que recebeu um passe para o que eu vou fazer?
+
+306
+00:22:18,310 --> 00:22:19,210
+Eu quero pegar um pouco.
+
+307
+00:22:19,900 --> 00:22:23,110
+Só que o que é duro, toque pegar alguma coisa.
+
+308
+00:22:23,230 --> 00:22:25,780
+Então vamos falar desse que eu chamo menos o passe.
+
+309
+00:22:28,170 --> 00:22:38,070
+Esse passe que eu vou chegar para receber por ele e aí eu vou dar um Get get iss.
+
+310
+00:22:38,070 --> 00:22:39,780
+Sete Get Born!
+
+311
+00:22:43,690 --> 00:22:47,510
+Como a crispação deixou jogo, seria, acho.
+
+312
+00:22:47,640 --> 00:22:50,740
+Agora eles já colocaram essa JW.
+
+313
+00:22:51,140 --> 00:22:57,870
+Que beleza de um povo desses para frear o crescimento do país.
+
+314
+00:22:58,600 --> 00:23:04,600
+Não vou ter que criar esse método que eles chamam agora crescimento que o eleitorado Passos tem.
+
+315
+00:23:05,410 --> 00:23:09,350
+Ele sabe que só ele sabe que eu vou criar.
+
+316
+00:23:09,370 --> 00:23:10,330
+Eu quero, eu quero.
+
+317
+00:23:10,330 --> 00:23:15,340
+Simplesmente estou aqui ele retornar, estou aqui.
+
+318
+00:23:15,910 --> 00:23:18,370
+O que eu quero é retornar no J.
+
+319
+00:23:18,550 --> 00:23:19,120
+W.
+
+320
+00:23:20,500 --> 00:23:26,530
+Se bem que eu não tive uma série que hoje do Chico Mendes.
+
+321
+00:23:26,870 --> 00:23:27,790
+É isso que vai acontecer.
+
+322
+00:23:27,790 --> 00:23:33,420
+Eu acho que isso acontecerá e vai ter as temperaturas mais altas aqui.
+
+323
+00:23:34,170 --> 00:23:35,840
+Por que eles ficaram aqui no Brasil?
+
+324
+00:23:36,030 --> 00:23:41,920
+Está tudo criado aqui e o que está acontecendo aqui é o cara que realmente está brigando por recuperar
+
+325
+00:23:41,940 --> 00:23:45,220
+lá, aquele do usuário que era um alívio.
+
+326
+00:23:45,220 --> 00:23:48,480
+Vai acontecer que ele vai descriptografar tudo.
+
+327
+00:23:49,030 --> 00:23:51,550
+Se eu quisesse, nem precisava fazer isso aqui.
+
+328
+00:23:51,580 --> 00:23:52,900
+Não era nem vou fazer isso.
+
+329
+00:23:53,260 --> 00:23:54,790
+Não vou fazer, não vou melhorar.
+
+330
+00:23:55,380 --> 00:23:56,740
+Vou fazer em cima direto.
+
+331
+00:23:57,160 --> 00:24:01,870
+Vou fazer isso, ficar só para cara grande, para caramba.
+
+332
+00:24:01,870 --> 00:24:04,240
+Não vou fazer porque senão marcava muito grande.
+
+333
+00:24:04,540 --> 00:24:07,090
+Se não marcava muito grande, então o que eu vou fazer?
+
+334
+00:24:07,330 --> 00:24:08,830
+Eu vou dizer o seguinte eu vou falar agora.
+
+335
+00:24:08,950 --> 00:24:13,230
+Até já está na hora de um retorno.
+
+336
+00:24:13,690 --> 00:24:23,230
+Eu quero que você faça um passe e eu quero que você faça um set sem saída.
+
+337
+00:24:23,680 --> 00:24:30,970
+Ou seja, eu quero que você valide e faça uma assinatura, porque com essa chave privada que ela achar
+
+338
+00:24:31,030 --> 00:24:36,480
+que eu acertou beleza acaba sendo o mentor.
+
+339
+00:24:36,640 --> 00:24:42,820
+Eu quero que você pegue, passe em plena jornada, dê o que era, o que você tem, o exclui e joga ao
+
+340
+00:24:42,820 --> 00:24:45,480
+lado direito de querer direto do meu corpo.
+
+341
+00:24:46,480 --> 00:24:50,440
+Basicamente, o que esse método que fazer isso na mesa?
+
+342
+00:24:50,710 --> 00:24:59,340
+Ele vai lá dentro do token com a chave do WD, joga na dele e retorna um jogo.
+
+343
+00:24:59,700 --> 00:25:02,280
+Descuidos de classe, beleza.
+
+344
+00:25:02,380 --> 00:25:03,790
+Então eu vou comentar aqui.
+
+345
+00:25:04,030 --> 00:25:10,000
+Mas esse método que não precisa decorar a sua ideia de que o que ele faz vocês vão depois usar é meio
+
+346
+00:25:10,000 --> 00:25:28,530
+que no automático método que sabe descobrir de dentro do token, com base na chave privada e a qual
+
+347
+00:25:29,770 --> 00:25:37,900
+as permissões e as leis de resolve do usuário presa desde então.
+
+348
+00:25:37,900 --> 00:25:39,760
+Esse método é o que faz isso.
+
+349
+00:25:39,820 --> 00:25:45,010
+Ele vai ligar as permissões do usuário e vai detonar show de bola.
+
+350
+00:25:45,460 --> 00:25:48,150
+E aí desligar escala para devolver.
+
+351
+00:25:48,280 --> 00:25:53,890
+E aí, quando um chama em cima, chama o get bore significa Copeland.
+
+352
+00:25:53,900 --> 00:25:59,830
+Dentro desse jogo de terreno para game que a gente pode conseguir, eu estou mandando ele vir aqui ganhar
+
+353
+00:25:59,830 --> 00:26:00,240
+chaves.
+
+354
+00:26:00,610 --> 00:26:02,830
+Então esse cara lá.
+
+355
+00:26:04,390 --> 00:26:05,530
+Ele vai retornar aqui.
+
+356
+00:26:05,850 --> 00:26:08,980
+Isso aqui é para eu pegar isso daqui.
+
+357
+00:26:09,010 --> 00:26:17,080
+Só além de Ronaldo, Gareth Bale e do período no corpo do que ele estará devolvendo ele e até bola e
+
+358
+00:26:17,080 --> 00:26:18,710
+ainda devolver com a estreia em.
+
+359
+00:26:19,480 --> 00:26:23,950
+O show dele é ainda problemático e não vou comentar.
+
+360
+00:26:24,250 --> 00:26:26,500
+Eu não vou comentar o método primeiro
+
+361
+00:26:30,700 --> 00:26:37,020
+método para retornar ou agir do usuário.
+
+362
+00:26:39,740 --> 00:26:41,420
+Dono do povo.
+
+363
+00:26:42,320 --> 00:26:43,790
+Ele vai ser o dono do povo.
+
+364
+00:26:45,110 --> 00:26:50,180
+Aqui eu não preciso nem falar por loucos ou usar.
+
+365
+00:26:50,440 --> 00:26:59,830
+Eu estou aí do usuário, do uso cada vez mais de usuários.
+
+366
+00:27:00,000 --> 00:27:01,190
+Então tudo começa no metro.
+
+367
+00:27:01,580 --> 00:27:08,320
+E aí eu explico aquele sonho que faz para que vocês entendam, ele retorna as permissões.
+
+368
+00:27:09,410 --> 00:27:15,110
+É possível errar edições com cara de teste no sonho do tour?
+
+369
+00:27:15,650 --> 00:27:17,320
+Depois que ele pegou, ele me ajudou.
+
+370
+00:27:17,540 --> 00:27:22,370
+Eu quero fazer o que eu tornar, o que eu queria, me tornar um robô.
+
+371
+00:27:22,750 --> 00:27:25,250
+O de dentro do dock,
+
+372
+00:27:28,310 --> 00:27:33,620
+com base com base no nosso cliente.
+
+373
+00:27:33,890 --> 00:27:35,120
+Como ele vai funcionar?
+
+374
+00:27:35,120 --> 00:27:37,160
+Eu vou fazer um código que vou explicar.
+
+375
+00:27:37,190 --> 00:27:38,570
+Olha só, eu vou retornar.
+
+376
+00:27:38,930 --> 00:27:40,130
+Vou chamar que é um ótimo.
+
+377
+00:27:44,720 --> 00:27:49,430
+Faz isso aqui uma foto tirada por profile no que pode dar um erro.
+
+378
+00:27:49,430 --> 00:27:53,690
+Pode ser que aqui ele não encontre ninguém, então ele pode ser duro.
+
+379
+00:27:54,200 --> 00:27:57,310
+Então, aqui dentro, basicamente alguém que lance.
+
+380
+00:27:57,740 --> 00:27:58,340
+Ponto!
+
+381
+00:27:58,940 --> 00:28:08,450
+Get subject, subject get sua gerente para eu poderia ir, ainda que o subject que define os dados.
+
+382
+00:28:09,020 --> 00:28:09,500
+Beleza!
+
+383
+00:28:09,800 --> 00:28:12,500
+Só o seguinte esse cara aqui ele vai devolver.
+
+384
+00:28:12,500 --> 00:28:18,550
+O que ma estranhe é o e-mail que o dinheiro do usuário que seria do usuário é um.
+
+385
+00:28:19,490 --> 00:28:22,550
+Ele é um nome e um nome.
+
+386
+00:28:23,000 --> 00:28:28,790
+Então temos que fazer o login, não o jeito de pegar o que tá aqui e transformar em Wong antes de retornar.
+
+387
+00:28:29,180 --> 00:28:30,530
+Então, aqui eu vou fazer isso aqui.
+
+388
+00:28:30,570 --> 00:28:39,860
+Uma combinação base de Java Long com passe long bomba para esse monte de coisa que eu ouvi e vou passar
+
+389
+00:28:39,860 --> 00:28:42,500
+de cliente subject como dando.
+
+390
+00:28:44,840 --> 00:28:50,030
+Eu estou criando um ótimo para poder retornar uma número de nome que pode me dar um erro, pode ser
+
+391
+00:28:50,030 --> 00:28:52,630
+nulo e aí eu vou pegar esse plano.
+
+392
+00:28:52,700 --> 00:29:01,730
+Se tiver alguma coisa, eu converso em que no algo para poder devolver ele e então vamos lá e retorna
+
+393
+00:29:01,970 --> 00:29:06,260
+por agir de dentro do token.
+
+394
+00:29:06,980 --> 00:29:14,960
+Se encontrar, Cassandra abre e retorna no mesmo.
+
+395
+00:29:15,110 --> 00:29:17,340
+É isso que Melo faz show.
+
+396
+00:29:17,840 --> 00:29:20,630
+E aí seguinte ele vai tentar fazer isso.
+
+397
+00:29:20,840 --> 00:29:22,820
+E Sidney se lembra.
+
+398
+00:29:23,030 --> 00:29:29,720
+Cara, eu simplesmente quero que faça o que eu quero, que ele nem retorne, que um não vale.
+
+399
+00:29:29,900 --> 00:29:30,710
+Eu quero que ele retorne.
+
+400
+00:29:30,710 --> 00:29:34,180
+Um ótimo ponto a mente.
+
+401
+00:29:34,580 --> 00:29:37,310
+Quero que ele retorne à morte no vazio que encontrou.
+
+402
+00:29:37,310 --> 00:29:41,330
+A ideia, então, significa que ele está com dendê dentro desse estoque.
+
+403
+00:29:41,540 --> 00:29:44,140
+Pode ser que seja um tubarão que não existe.
+
+404
+00:29:45,230 --> 00:29:48,830
+Pode ter sido tentativa de errar ou alguma coisa do tipo tá?
+
+405
+00:29:49,130 --> 00:29:51,800
+Então você não comentaria o que isso faz.
+
+406
+00:29:52,250 --> 00:29:58,550
+Se não encontrar nada, devolve.
+
+407
+00:29:59,330 --> 00:30:03,520
+É ótimo, óptimo ou não.
+
+408
+00:30:04,010 --> 00:30:12,490
+Não significa que ela aconteceu algo de errado e passa o domínio absoluto de modo a quebrar a gente
+
+409
+00:30:12,490 --> 00:30:18,470
+que tinha baixado desde outubro, a saber que eu posso muito bem fazer o seguinte tomara que na aplicação
+
+410
+00:30:18,470 --> 00:30:25,040
+você logar aí e aí não se omitir para dar o seu que para ele tentar acessar quando tentar acessar com
+
+411
+00:30:25,040 --> 00:30:31,100
+meu usuário e senha é o seu toque na madeira ele mandar eu, porque o meu celular é minha senha.
+
+412
+00:30:31,430 --> 00:30:33,770
+O meu endereço de usuário não é o mesmo ideia.
+
+413
+00:30:33,780 --> 00:30:40,720
+Por muito tempo que eu estou no autenticar que eu teria, então que só uma equipe de segurança tá.
+
+414
+00:30:41,120 --> 00:30:48,890
+Então, basicamente, o nosso JW percebe que foi difícil, bastante coisa, mas é importante só agora
+
+415
+00:30:48,910 --> 00:30:50,690
+pulando essa animação.
+
+416
+00:30:50,690 --> 00:30:56,260
+Chamar de roubo é um serviço do JB que vamos usar fazendo mais coisas primeiro.
+
+417
+00:30:56,300 --> 00:30:56,820
+Geraldo.
+
+418
+00:30:57,470 --> 00:31:01,790
+Segundo, sabe quem é o Hardy do usuário double double?
+
+419
+00:31:02,270 --> 00:31:06,550
+Você me passou por que falei para o lobisomem para poder validar.
+
+420
+00:31:06,920 --> 00:31:11,250
+É assim que o método interno que eu criei ele simplesmente só para facilitar.
+
+421
+00:31:11,270 --> 00:31:14,600
+Ele poderia ter esse código de todos aqui e colocar aqui.
+
+422
+00:31:14,600 --> 00:31:21,020
+Eu poderia fazer isso, que iria ficar mais ruim de vocês verem e não poderia, que era isso aqui só
+
+423
+00:31:21,020 --> 00:31:22,610
+para vocês entender a.
+
+424
+00:31:25,710 --> 00:31:27,180
+E fazer isso e aquilo.
+
+425
+00:31:30,810 --> 00:31:33,120
+Eu não sei se poderei fazer isso.
+
+426
+00:31:34,140 --> 00:31:36,540
+Só que aí ficou ruim de registro.
+
+427
+00:31:36,810 --> 00:31:38,970
+Então, é mais fácil fazer isso que eu queria.
+
+428
+00:31:38,970 --> 00:31:40,530
+Um método só para separar.
+
+429
+00:31:40,800 --> 00:31:45,990
+Então, méritos privados só pra deixar separarem o que cada coisa está fazendo para que vocês possam
+
+430
+00:31:45,990 --> 00:31:46,920
+realmente entender.
+
+431
+00:31:47,340 --> 00:31:54,390
+Então, eu tenho aqui uma chave privada para que eu possa dar o que eu quiser e montar o município.
+
+432
+00:31:55,260 --> 00:32:04,290
+Eu chamei sempre que eu criei um método chamado gerador, que refere autenticação e é aquele que não
+
+433
+00:32:04,320 --> 00:32:05,430
+tem destilação.
+
+434
+00:32:05,430 --> 00:32:11,220
+Criará a destilação com base sempre no atual, mas não destilação, que pode ser do tempo que você fizer.
+
+435
+00:32:11,700 --> 00:32:14,700
+Eu perco o usuário que está abrindo por indicação.
+
+436
+00:32:15,000 --> 00:32:17,040
+Eu pego através do mangá, explicou.
+
+437
+00:32:17,340 --> 00:32:21,060
+O Guest No escolhessem para devolver o objeto como se fosse usuário.
+
+438
+00:32:21,150 --> 00:32:27,840
+A autenticação sobre deu um formato de object e para transformar o usuário de que eu faço o show, o
+
+439
+00:32:27,840 --> 00:32:37,260
+faço um teste com mais de um usuário, e aí tudo que eu faço aqui eu chamo JWT, que tem um líder que
+
+440
+00:32:37,290 --> 00:32:38,220
+cria um token pra mim.
+
+441
+00:32:38,220 --> 00:32:45,570
+Com base em vários dados, eu passo que o usuário que eu quero seja o único pra eu saber quem é o dono,
+
+442
+00:32:45,960 --> 00:32:51,430
+o que ele não toma, gritou com a marca do que era realmente já estava inicial.
+
+443
+00:32:52,200 --> 00:32:53,100
+Qual é a analogia?
+
+444
+00:32:53,310 --> 00:32:56,250
+Ou seja, a partir da data inicial, ele vai validar os dados.
+
+445
+00:32:57,630 --> 00:33:02,880
+Qual é a assinatura ou noite de acordo, usando com a chave para retornar para criptografar?
+
+446
+00:33:03,400 --> 00:33:08,190
+É aí que eu estou mandando compactar, ou seja, pegar toda essa brincadeira, tudo aquilo transformado
+
+447
+00:33:08,610 --> 00:33:16,650
+numa estrela do game bonitinho, um token machine bonitinha e de erguer um átomo para a gente.
+
+448
+00:33:17,700 --> 00:33:19,270
+Eu tenho um método que eu uso.
+
+449
+00:33:19,290 --> 00:33:21,600
+A coragem que ele recebe do blog.
+
+450
+00:33:21,960 --> 00:33:28,350
+Pega as credenciais, permissões e aí ele vai lá e verifica se tem alguma permissão.
+
+451
+00:33:28,350 --> 00:33:31,170
+Ele transforma em 11 e me devolvo um ótimo.
+
+452
+00:33:31,170 --> 00:33:37,050
+Se não recebe que uma vez no mundo ele me retornando, se algum eu quinina, por algum motivo você me
+
+453
+00:33:37,050 --> 00:33:39,060
+junte em relação ao último número.
+
+454
+00:33:39,180 --> 00:33:45,300
+Isso aqui era só um tratamento para ela não passar aplicação aos usuários do que vários em qualquer
+
+455
+00:33:45,300 --> 00:33:47,670
+coisa de errado que ele era.
+
+456
+00:33:48,060 --> 00:33:49,620
+Basicamente é isso.
+
+457
+00:33:49,890 --> 00:33:56,190
+Então, aqui a gente conseguiu criar a nossa primeira classe de segurança pra essa classe que eu como
+
+458
+00:33:56,190 --> 00:33:57,990
+literatura que você entende.
+
+459
+00:33:58,470 --> 00:34:04,760
+Mas se você usar e o projeto não vai deixar esses comentários aqui e ali, vai ser bom pra ele.
+
+460
+00:34:04,770 --> 00:34:10,740
+Projeto de 50.000 engenheiros cara que trouxeram essa classe pra vender hoje a vocês eu estou criando
+
+461
+00:34:10,950 --> 00:34:13,620
+uma única vez e posso usar ela em projetos.
+
+462
+00:34:14,400 --> 00:34:21,270
+Pode ser que eu possa mudar uma coisinha ou por exemplo, isso aqui poderia vir lá de 1A1 Application
+
+463
+00:34:21,270 --> 00:34:27,120
+Program, que tem outras coisa que eu poderia vir de uma marca de prova, de como chamar privado e outras
+
+464
+00:34:27,120 --> 00:34:27,480
+coisas.
+
+465
+00:34:27,870 --> 00:34:28,260
+Beleza.
+
+466
+00:34:28,620 --> 00:34:34,230
+Mas basicamente, essa é a nossa classe de nossa análise seria do JWT.
