@@ -1,0 +1,1291 @@
+1
+00:00:00,210 --> 00:00:07,350
+Beleza construímos aqui o front end mas como o que nós fazemos para comunicar com o back end quem é
+
+2
+00:00:07,350 --> 00:00:08,410
+esse back in.
+
+3
+00:00:08,430 --> 00:00:10,860
+Como é que essa brincadeira toda funciona.
+
+4
+00:00:10,860 --> 00:00:14,910
+Então vamos começar a entender aqui como é que essa brincadeira funciona.
+
+5
+00:00:14,910 --> 00:00:16,290
+Então vamos vir aqui.
+
+6
+00:00:16,440 --> 00:00:24,900
+Eu vou mudar aqui para Flow Chart e vou criar aqui o seguinte Aqui vai ser o nosso front.
+
+7
+00:00:26,780 --> 00:00:27,650
+Front end.
+
+8
+00:00:29,630 --> 00:00:39,680
+E aqui vai ser o nosso Back Back end back end ou gosta de botar ele mais escurinho que ele e mais curto
+
+9
+00:00:40,130 --> 00:00:46,580
+e o front end vou botar Laranjinha que beleza aumentar o tamanho da fonte aumentar o tamanho da fonte
+
+10
+00:00:46,580 --> 00:00:47,650
+também.
+
+11
+00:00:47,840 --> 00:00:48,660
+Beleza.
+
+12
+00:00:48,660 --> 00:00:51,200
+Então eu tenho um front end e o back end.
+
+13
+00:00:52,400 --> 00:00:55,690
+Como que essa comunicação Course funciona.
+
+14
+00:00:55,700 --> 00:00:57,130
+Vou arrancar isso daqui.
+
+15
+00:00:57,320 --> 00:01:03,770
+Vou melhorar isso aqui um pouquinho COMENTAR AQUI COMENTAR AQUI COMO que essa como que essa comunicação
+
+16
+00:01:03,770 --> 00:01:07,250
+entre os dois funciona ela funciona.
+
+17
+00:01:07,250 --> 00:01:13,880
+Daqui pra cá e ela também funciona daqui pra cá
+
+18
+00:01:16,730 --> 00:01:24,010
+ela funciona o front end enviando dados e o front end recebendo dados.
+
+19
+00:01:24,020 --> 00:01:30,760
+A comunicação entre entre um front um back pode acontecer desta forma.
+
+20
+00:01:30,830 --> 00:01:38,780
+Na verdade acontece dessa forma eu não só envio dados ou eu só recebo dados eu envio e recebo.
+
+21
+00:01:38,960 --> 00:01:40,820
+Então como é que funciona.
+
+22
+00:01:40,820 --> 00:01:44,710
+Isso aqui é feito através de um protocolo.
+
+23
+00:01:44,780 --> 00:01:54,230
+Existe vários protocolos de comunicação mas o protocolo que a gente usa para comunicação entre aplicações
+
+24
+00:01:54,230 --> 00:01:56,840
+o mais comum é o protocolo
+
+25
+00:01:58,760 --> 00:02:01,070
+HTTP.
+
+26
+00:02:01,070 --> 00:02:06,290
+Esse é o protocolo mais comum eu não sei se vocês já viram mas toda vez que você clica aqui em cima
+
+27
+00:02:06,290 --> 00:02:08,120
+aparece um HTTP.
+
+28
+00:02:08,120 --> 00:02:14,000
+Nesse caso aqui está aparecendo esses Iñaki HTTPS que é somente uma segurança.
+
+29
+00:02:14,040 --> 00:02:23,930
+Baixe o USB Security no protocolo HTTP dizendo que esse site ele é seguro mas basicamente toda comunicação
+
+30
+00:02:23,930 --> 00:02:28,800
+aqui é feita através do protocolo HTTP o protocolo HTTP galera.
+
+31
+00:02:28,880 --> 00:02:35,180
+Ele é um dos protocolos de comunicação na web ele é o protocolo mais utilizado na web.
+
+32
+00:02:35,180 --> 00:02:41,700
+Tem outros tipos de protocolo tem tem sim mais o http ou o mais comum ele é o mais utilizado.
+
+33
+00:02:41,750 --> 00:02:49,730
+Então a maioria das aplicações cerca de 90 e poucos %100 das aplicações vão comunicar entre si através
+
+34
+00:02:49,730 --> 00:02:51,140
+do protocolo HTTP.
+
+35
+00:02:51,530 --> 00:02:55,330
+E como que funciona essa comunicação.
+
+36
+00:02:55,520 --> 00:03:04,460
+O front end quando ele quer enviar alguma coisa ou ele quer pedir alguma coisa para o back end ele faz
+
+37
+00:03:04,460 --> 00:03:16,060
+algo que nós chamamos de reconhece ele faz um reconhece reconhece galera seria uma requisição da reconhece
+
+38
+00:03:16,430 --> 00:03:19,160
+seria uma requisição.
+
+39
+00:03:19,160 --> 00:03:22,140
+Ou seja é um pedido para o back end.
+
+40
+00:03:22,170 --> 00:03:24,950
+Esse pedido pode ser para obter dados.
+
+41
+00:03:24,960 --> 00:03:28,310
+Esse pedido pode ser para atualizar dados.
+
+42
+00:03:28,310 --> 00:03:31,490
+Esse pedido pode ser para criar dados.
+
+43
+00:03:31,490 --> 00:03:34,340
+Esse pedido pode ser para deletar dados.
+
+44
+00:03:34,340 --> 00:03:44,210
+Geralmente são 4 tipos de verbos aí que nós temos aí no protocolo HTTP não existe outros mais os mais
+
+45
+00:03:44,210 --> 00:03:53,960
+comuns são 4 né que é para cadastrar deletar obter e atualizar são os quatro mais comuns ainda o protocolo
+
+46
+00:03:53,960 --> 00:03:55,350
+HTTP.
+
+47
+00:03:55,350 --> 00:04:02,330
+Beleza então front end ele faz um reconhece através do protocolo HTTP para o back end o back end por
+
+48
+00:04:02,330 --> 00:04:05,780
+sua vez recebe essa requisição.
+
+49
+00:04:05,890 --> 00:04:13,070
+Processos dados aqui podem se comunicar com o banco pode comunicar com o back end com outro micro serviço
+
+50
+00:04:13,080 --> 00:04:13,850
+não sei.
+
+51
+00:04:13,940 --> 00:04:20,150
+A lógica aqui vai depender de cada aplicação e no final geralmente ele devolve essa informação para
+
+52
+00:04:20,150 --> 00:04:21,510
+o front end.
+
+53
+00:04:21,550 --> 00:04:33,490
+Essa resposta nós chamamos de Response dá o back end geralmente devolve um Response para o front end.
+
+54
+00:04:33,560 --> 00:04:40,220
+Então a gente faz um reconhece e a gente recebe um Response.
+
+55
+00:04:40,310 --> 00:04:47,480
+Então dentro do protocolo HTTP quando você estiver enviando alguma coisa independente se é para gravar
+
+56
+00:04:47,480 --> 00:04:54,300
+atualizar deletar ou obter um pedido para algum lugar a gente está fazendo uma requisição que está fazendo
+
+57
+00:04:54,300 --> 00:04:55,270
+um reconhece.
+
+58
+00:04:55,370 --> 00:05:03,050
+E quando a gente recebe alguma coisa a gente está recebendo uma resposta que é um Response beleza o
+
+59
+00:05:03,050 --> 00:05:04,010
+reconhece.
+
+60
+00:05:04,070 --> 00:05:14,870
+Ele geralmente é dividido em duas partes que são o Ryder que são os cabos Riders são os cabeçalhos da
+
+61
+00:05:14,870 --> 00:05:19,690
+requisição e o BOPE que é o corpo da requisição.
+
+62
+00:05:19,700 --> 00:05:25,910
+Geralmente ele é dividido em duas parte o Response também da mesma forma e ele devolve geralmente em
+
+63
+00:05:25,910 --> 00:05:26,870
+duas parte.
+
+64
+00:05:26,960 --> 00:05:28,130
+Os riders que.
+
+65
+00:05:28,480 --> 00:05:36,640
+Os cabeçalhos do retorno dessa resposta e o bode que é o corpo com a resposta em si sobre aquilo que
+
+66
+00:05:36,640 --> 00:05:39,150
+foi solicitado.
+
+67
+00:05:39,820 --> 00:05:41,890
+E nós vamos começar a entender isso.
+
+68
+00:05:41,890 --> 00:05:50,710
+Então vou vir aqui no Google e vou botar o protocolo H HT TP.
+
+69
+00:05:54,130 --> 00:06:02,190
+E A GENTE VAI VIR AQUI NESSE CARA QUE O Mozilla Developer Mozilla dá uma visão geral.
+
+70
+00:06:02,390 --> 00:06:08,990
+O QUE ESSE CARA TIRA aqui é a página do MDM e tá aqui.
+
+71
+00:06:09,050 --> 00:06:10,450
+é a melhor.
+
+72
+00:06:10,460 --> 00:06:18,540
+A meu ver a meu ver é a melhor documentação sobre o protocolo HTTP para a qual vocês possam estudar.
+
+73
+00:06:18,620 --> 00:06:25,490
+Por que aqui ele vai te dar uma visão geral sobre o que é o protocolo HTTP e como ele funciona como
+
+74
+00:06:25,490 --> 00:06:28,510
+é que o que tem dentro dele está.
+
+75
+00:06:28,550 --> 00:06:32,780
+Então aqui ele vai explicar exatamente como é que funciona cada parte.
+
+76
+00:06:32,780 --> 00:06:38,470
+Ele vai dar uma visão geral sobre o protocolo HTTP como é que funciona.
+
+77
+00:06:38,480 --> 00:06:43,960
+Componentes o que tem dentro desse protocolo HTTP.
+
+78
+00:06:44,420 --> 00:06:49,870
+O que acontece por baixo do HTTP o que é um HTTP simples.
+
+79
+00:06:50,900 --> 00:06:55,120
+Como é que funciona essa brincadeira todinha aqui do HTTP.
+
+80
+00:06:55,130 --> 00:07:02,040
+Então para quem tiver mais interesse eu acho uma leitura muito útil dá uma olhada nesse cara aqui e
+
+81
+00:07:02,060 --> 00:07:07,070
+aqui ele vai chegar numa parte muito legal do HTTP que é onde nós vamos conversar.
+
+82
+00:07:07,760 --> 00:07:15,360
+Por exemplo quando a gente faz uma requisição no HTTP acontece algumas coisas.
+
+83
+00:07:15,500 --> 00:07:28,130
+Por exemplo acontece o seguinte acontece que ele envia um método que é o verbo um PF que é o caminho
+
+84
+00:07:28,130 --> 00:07:32,240
+e a versão do protocolo é dentro.
+
+85
+00:07:32,240 --> 00:07:38,920
+Aqui nós temos os Riders e o que ele está enviando no cabeçalho para o back end.
+
+86
+00:07:39,380 --> 00:07:48,600
+E existe uma série de verbos e gêneros para Você Trabalhar com um protocolo HTTP mais os mais comuns
+
+87
+00:07:48,600 --> 00:07:53,000
+é só isso que o Get POST PUT e demite.
+
+88
+00:07:53,030 --> 00:07:59,090
+Então aqui no protocolo HTTP nós temos vários tipos de verbos.
+
+89
+00:07:59,540 --> 00:08:03,290
+Por exemplo vou começar a fazer aqui.
+
+90
+00:08:05,760 --> 00:08:17,550
+O verbo mais comum que tem aqui esse aqui é o Get o Get o Get galera o Get ele é um verbo de consulta.
+
+91
+00:08:17,610 --> 00:08:26,330
+Ele serve para obter informações de algum lugar.
+
+92
+00:08:26,400 --> 00:08:35,370
+Então toda vez que eu quero obter informações em algum lugar eu vou fazer uma requisição do tipo Get
+
+93
+00:08:36,030 --> 00:08:42,300
+que significa consulta dá o Get serve para isso.
+
+94
+00:08:44,050 --> 00:08:50,740
+Vou duplicar o colar aqui e agora nós vamos mudar essa brincadeira que queremos.
+
+95
+00:08:55,430 --> 00:09:04,970
+Eu posso obter mas se eu quiser cadastrar alguma coisa para cadastrar a gente usa o verbo post-it o
+
+96
+00:09:05,070 --> 00:09:17,150
+voucher serve para cadastrar ou adicionar alguma coisa.
+
+97
+00:09:21,640 --> 00:09:27,290
+No destino porque pode ser uma BR pode ser um outro serviço e tudo mais.
+
+98
+00:09:27,330 --> 00:09:33,120
+Então o Get serve para obter informações.
+
+99
+00:09:33,310 --> 00:09:36,430
+O post serve para o poder cadastrar ou adicionar.
+
+100
+00:09:36,490 --> 00:09:42,190
+Toda vez que eu quero mandar cadastrar um produto adicionar um usuário fazer qualquer coisa que eu tenha
+
+101
+00:09:42,190 --> 00:09:46,470
+que inserir alguma informação nós vamos usar o verbo.
+
+102
+00:09:46,570 --> 00:09:50,680
+Por este andar o post vai servir para isso.
+
+103
+00:09:53,840 --> 00:10:07,910
+Beleza e aí além desse cara nós temos um outro verbo aqui muito legal que é o verbo put o Put serve
+
+104
+00:10:08,360 --> 00:10:10,790
+para atualizar.
+
+105
+00:10:13,340 --> 00:10:23,570
+Um elemento atualiza o elemento inteiro.
+
+106
+00:10:23,570 --> 00:10:32,870
+Então quando nós queremos atualizar alguma coisa por exemplo você fez um cadastro mandou um post e falou
+
+107
+00:10:32,900 --> 00:10:37,860
+Se acabasse esse produto para mim aí ele foi lá e cadastrou.
+
+108
+00:10:37,860 --> 00:10:42,100
+Aí depois você falou você me devolve esse produto para mostrar na tela que fez um GET.
+
+109
+00:10:43,250 --> 00:10:48,680
+Aí vamos supor que agora você viu que o nome do produto estava errado você precisa alterar.
+
+110
+00:10:48,950 --> 00:10:55,430
+Você vai mandar para pedir agora um put e aí você vai mandar o objeto.
+
+111
+00:10:55,430 --> 00:10:59,690
+No caso do push você vai mandar um produto inteiro né.
+
+112
+00:11:00,230 --> 00:11:08,210
+Como com os dados dele é anterior e mais um novo nome e com isso a API que estiver recebendo aqui é
+
+113
+00:11:08,230 --> 00:11:16,340
+o destino quem te vai receber nesse bot vai entender interpretar esse put e o vai pegar e vai atualizar
+
+114
+00:11:16,790 --> 00:11:20,530
+aquele produto em algum lugar no banco na pia onde for.
+
+115
+00:11:20,570 --> 00:11:29,300
+Então Get serve para obter post para cadastrar ou adicionar e o puxe para atualizar e por fim se eu
+
+116
+00:11:29,300 --> 00:11:39,270
+quiser deletar eu tenho aqui o verbo de Lite o deleite.
+
+117
+00:11:39,440 --> 00:11:43,040
+Ele serve para deletar alguma.
+
+118
+00:11:45,990 --> 00:11:50,340
+Alguma coisa de algum lugar.
+
+119
+00:11:50,370 --> 00:11:58,320
+Toda vez que eu quero deletar alguma coisa eu posso usar o deleite e no verbo delete eu digo dentro
+
+120
+00:11:58,320 --> 00:12:05,310
+da requisição eu falo assim olha deleta para mim o produto que tiver esse dia aqui eu passo a ideia
+
+121
+00:12:05,310 --> 00:12:08,470
+do produto ele vai lá e vai deletar beleza.
+
+122
+00:12:08,610 --> 00:12:20,490
+Esses verbos aqui esse esses verbos aqui eles são os verbos comuns mais comuns que têm data do mundo
+
+123
+00:12:20,490 --> 00:12:21,510
+HTTP.
+
+124
+00:12:21,570 --> 00:12:23,410
+Existe outros aqui.
+
+125
+00:12:23,520 --> 00:12:33,390
+Existe o Pet existe o dele existe rede existe vários outros verbos HTTP mas esses quatro são a base
+
+126
+00:12:33,390 --> 00:12:35,310
+para todos os outros.
+
+127
+00:12:35,310 --> 00:12:41,370
+Esses quatro verbos juntos transformam em algo chamado.
+
+128
+00:12:51,480 --> 00:12:52,860
+Chamado crude.
+
+129
+00:12:56,270 --> 00:12:56,780
+Crude.
+
+130
+00:12:59,970 --> 00:13:08,190
+Botar aqui em baixo o crude e o que seria um crude o crude geralmente ele é
+
+131
+00:13:10,920 --> 00:13:23,030
+uma aplicação que executa as quatro operações básicas.
+
+132
+00:13:23,970 --> 00:13:26,780
+As quatro operações básicas de um sistema.
+
+133
+00:13:26,800 --> 00:13:31,040
+Eu vou chamar de um sistema para ficar fácil de um sistema.
+
+134
+00:13:31,110 --> 00:13:32,080
+Por quê.
+
+135
+00:13:32,130 --> 00:13:33,770
+O que é um crude.
+
+136
+00:13:33,870 --> 00:13:38,850
+O C do crude significa de cliente de criação.
+
+137
+00:13:39,090 --> 00:13:44,760
+Então o crude aqui seria o nosso Porsche.
+
+138
+00:13:44,910 --> 00:13:53,520
+O post seria o nosso C do crude que é para cadastrar adicionar e o cliente.
+
+139
+00:13:53,520 --> 00:13:58,790
+O erro aqui do crude é o ID de leitura.
+
+140
+00:13:59,400 --> 00:14:05,640
+E o que é o leitura que não verbo HTTP é o Get então Get seria o nosso id.
+
+141
+00:14:05,670 --> 00:14:12,150
+Ou seja C Create R rede de leitura.
+
+142
+00:14:12,150 --> 00:14:16,940
+Então eu estou criando e estou lendo.
+
+143
+00:14:17,100 --> 00:14:26,970
+O que significa o PDT e o que seriam o PDT que no verbo HTTP e o Put o Put serve para atualizar um elemento
+
+144
+00:14:28,020 --> 00:14:37,350
+e o dele de delitos que eu tenho o verbo Delete que serve para deletar ou seja esses quatro verbos juntos
+
+145
+00:14:37,800 --> 00:14:45,900
+equivalem ou criam servem para criar um crowd que é uma aplicação que executa as quatro operações básicas
+
+146
+00:14:45,900 --> 00:14:53,340
+de um sistema que é cadastrar ler atualizar e deletar são as quatro operações básicas de um sistema
+
+147
+00:14:54,450 --> 00:14:59,760
+praticamente todo o sistema sabe fazer essas quatro operações básicas que quer cadastrar alguma coisa
+
+148
+00:15:00,540 --> 00:15:04,950
+ler alguma coisa deletar alguma coisa e atualizar alguma coisa.
+
+149
+00:15:05,070 --> 00:15:14,960
+Então esses verbos aqui são os verbos mais comuns e são os verbos que a gente mais utiliza.
+
+150
+00:15:15,120 --> 00:15:17,570
+Então vamos ver como é que isso daqui funciona.
+
+151
+00:15:17,610 --> 00:15:20,310
+Por exemplo vou tentar dar um exemplo aqui
+
+152
+00:15:23,310 --> 00:15:25,680
+vamos vamos pegar o YouTube.
+
+153
+00:15:25,680 --> 00:15:30,660
+Eu gosto de pegar o YouTube como exemplo que todo mundo tem acesso fica fácil.
+
+154
+00:15:30,660 --> 00:15:35,910
+Eu vou vir aqui vou mandar inspecionar inspecionar.
+
+155
+00:15:38,420 --> 00:15:48,500
+Vou jogar aqui para baixo aqui e vou me ouvir na aba Network aba Network e a aba de comunicação e a
+
+156
+00:15:48,500 --> 00:15:52,630
+aba onde acontece todas as requisições.
+
+157
+00:15:53,240 --> 00:15:57,820
+Então vamos fazer o seguinte eu vou vir aqui e vou digitar assim.
+
+158
+00:15:58,250 --> 00:15:58,910
+Teste.
+
+159
+00:16:00,560 --> 00:16:10,490
+De HTTP o cliquei quando eu fiz isso ele executou aqui embaixo.
+
+160
+00:16:10,490 --> 00:16:13,700
+Olha só várias coisas.
+
+161
+00:16:13,700 --> 00:16:16,630
+Olha só se vocês pararem para ver aqui.
+
+162
+00:16:16,700 --> 00:16:18,220
+Ele fez várias coisas.
+
+163
+00:16:18,260 --> 00:16:20,690
+Olha só várias coisas.
+
+164
+00:16:22,880 --> 00:16:23,070
+A.
+
+165
+00:16:24,120 --> 00:16:25,390
+Várias coisas.
+
+166
+00:16:25,620 --> 00:16:29,130
+Cada coisa que está aqui embaixo.
+
+167
+00:16:29,160 --> 00:16:36,900
+Cada informação dessa é uma requisição que ele fez para algum lugar para poder obter os dados necessários
+
+168
+00:16:36,900 --> 00:16:38,970
+para me mostrar nessa pesquisa que na tela.
+
+169
+00:16:43,090 --> 00:16:46,350
+E aí cada requisição dessa daqui.
+
+170
+00:16:46,360 --> 00:16:52,340
+Se eu clicar por exemplo vou pegar uma qualquer aqui clicar nessa hora.
+
+171
+00:16:52,480 --> 00:16:58,000
+Ela é dividida em Release Preview Response.
+
+172
+00:17:01,550 --> 00:17:03,590
+Então está aqui.
+
+173
+00:17:04,520 --> 00:17:16,110
+Aqui no Reed no Ryder eu tenho o cabeçalho dessa requisição ou seja o que foi enviado.
+
+174
+00:17:16,160 --> 00:17:27,080
+Então olha só foi feito um reconhece para o RL que esse destinatário o verbo que foi utilizado foi o
+
+175
+00:17:27,650 --> 00:17:31,640
+Get que é o verbo de consulta.
+
+176
+00:17:33,950 --> 00:17:38,660
+Encerrei essa essa essa requisição aqui.
+
+177
+00:17:38,660 --> 00:17:43,910
+Ela veio com o status quo de duzentos 200 significa OK tá.
+
+178
+00:17:44,640 --> 00:17:50,290
+Aquela guerrilheira ali representa esse endereço de IP aqui.
+
+179
+00:17:50,420 --> 00:18:00,950
+Então aquela RL do YouTube está apontando para esse endereço de IP aqui nessa porta que o 4 4 3 e aqui
+
+180
+00:18:01,580 --> 00:18:09,170
+é o Response do que aquela a essa o RL aqui devolveu.
+
+181
+00:18:09,170 --> 00:18:12,190
+Aí é que o responsável cabeçalho devolveu em.
+
+182
+00:18:12,200 --> 00:18:18,910
+Aí ele devolveu um monte de coisa que o número de páginas da data e hora.
+
+183
+00:18:18,980 --> 00:18:24,730
+Só que aqui ele não devolveu Response.
+
+184
+00:18:24,800 --> 00:18:26,540
+Essa daqui não teve resposta.
+
+185
+00:18:26,570 --> 00:18:29,060
+Ele só devolveu o cabeçalho.
+
+186
+00:18:29,540 --> 00:18:37,190
+Já essa outra de baixa que foi feita para essa outra RL por algum motivo ele fez um post Olha só ele
+
+187
+00:18:37,190 --> 00:18:47,120
+mandou cadastrar uma informação não sei o que ele mandou cadastrar mas ele mandou que possivelmente
+
+188
+00:18:47,120 --> 00:18:53,510
+foi uma chave dizendo olha esse cara aqui está cadastra a chaves desse cara que por um motivo não sei.
+
+189
+00:18:53,520 --> 00:18:59,900
+E aí ele mandou fazer um post cadastrar alguma coisa lá e olha só que interessante.
+
+190
+00:19:02,460 --> 00:19:04,260
+Ele deixa eu vir aqui.
+
+191
+00:19:06,490 --> 00:19:06,720
+O.
+
+192
+00:19:10,660 --> 00:19:18,850
+Reconhece pen Loud aqui foi o que ele mandou enviar pra poder cadastrar la no YouTube possivelmente
+
+193
+00:19:18,850 --> 00:19:20,840
+com informações da minha máquina.
+
+194
+00:19:21,160 --> 00:19:24,420
+Quem é que está fazendo a requisição.
+
+195
+00:19:24,490 --> 00:19:25,950
+Está pedindo as coisas.
+
+196
+00:19:26,020 --> 00:19:26,730
+Tá vendo.
+
+197
+00:19:26,800 --> 00:19:30,540
+Ele botou algumas coisas aqui o cliente isso que eles colocaram.
+
+198
+00:19:30,550 --> 00:19:39,280
+Tá vendo o cliente HL PT ou seja um cliente daqui do Brasil né cliente um.
+
+199
+00:19:39,370 --> 00:19:41,630
+Ele está nessa versão aqui.
+
+200
+00:19:41,740 --> 00:19:43,900
+Alguma coisa ele mandou cadastrar lá.
+
+201
+00:19:43,910 --> 00:19:46,150
+Tá vendo os dados.
+
+202
+00:19:46,480 --> 00:19:48,560
+Foi feito através do Chrome.
+
+203
+00:19:48,580 --> 00:19:49,230
+Tá vendo.
+
+204
+00:19:49,300 --> 00:19:51,520
+Ele vai mostrando aqui algumas informações.
+
+205
+00:19:51,850 --> 00:19:54,520
+Ele obteve algumas informações da minha máquina.
+
+206
+00:19:55,060 --> 00:19:55,850
+Diferença.
+
+207
+00:19:56,140 --> 00:20:00,780
+Sistema operacional a versão com a plataforma.
+
+208
+00:20:00,790 --> 00:20:05,510
+Tá vendo ele gravou as informações por eu ter usado o YouTube.
+
+209
+00:20:05,590 --> 00:20:10,540
+Ele pegou informações da minha máquina e mandou para lá para saber quem é que está usando o YouTube.
+
+210
+00:20:10,540 --> 00:20:11,350
+Beleza.
+
+211
+00:20:11,440 --> 00:20:12,220
+E aí.
+
+212
+00:20:12,220 --> 00:20:16,330
+Por fim ele me deu um response ou seja uma resposta que veio aqui.
+
+213
+00:20:16,690 --> 00:20:23,940
+Response Content um objeto que fazem a aprovação não entendo nada do que eles estão fazendo aí beleza
+
+214
+00:20:23,950 --> 00:20:26,910
+e porque isso daqui é da lógica de negócio deles lá.
+
+215
+00:20:26,980 --> 00:20:34,060
+Possivelmente eu também não vou entender mas para eles isso não faz sentido eles construíram para fazer
+
+216
+00:20:34,060 --> 00:20:43,750
+sentido mas o nosso objetivo é só entender isso aqui o que eles fazem requisições do tipo HTTP tá pra
+
+217
+00:20:44,800 --> 00:20:47,910
+conseguir comunicar essas informações.
+
+218
+00:20:47,920 --> 00:20:56,620
+Beleza bom tem algumas ferramentas que a gente consegue também simular requisições HTTP.
+
+219
+00:20:57,970 --> 00:21:05,260
+Essas ferramentas são o povo chileno que é o mais comum.
+
+220
+00:21:08,510 --> 00:21:09,520
+O Pochmann.
+
+221
+00:21:09,590 --> 00:21:17,610
+Ele é uma ferramenta que te permite fazer requisições simulando um front end.
+
+222
+00:21:17,870 --> 00:21:22,850
+Você consegue fazer requisições HTTP para qualquer API através dele.
+
+223
+00:21:22,970 --> 00:21:23,580
+Beleza.
+
+224
+00:21:23,750 --> 00:21:26,730
+Ele é bem simples bem fácil de utilizar.
+
+225
+00:21:26,810 --> 00:21:33,390
+é só você fazer a subscrição aqui no site deles ou logar com uma conta do Google e fazer o download.
+
+226
+00:21:33,410 --> 00:21:40,770
+Ele vai gerar um carinha que você vai instalar igualzinho Esse daqui é um cliente para você fazer requisições.
+
+227
+00:21:41,000 --> 00:21:47,660
+Tá esse cara aqui ele é muito completo tem muita informação dá para fazer muita coisa por dentro dele
+
+228
+00:21:48,050 --> 00:21:59,720
+da beleza além do Pochmann Nós temos um outro cara chamado Insomniac o Insomniac galera ele também é
+
+229
+00:21:59,720 --> 00:22:01,680
+um cara uma plataforma.
+
+230
+00:22:01,700 --> 00:22:10,330
+Ele é uma aplicação que serve para você fazer requisições HTTP dá pra qualquer lugar.
+
+231
+00:22:10,670 --> 00:22:16,700
+O insone eu também é bem simples você pode fazer o download do sommelier Paulinho do Linux Mac depende
+
+232
+00:22:16,700 --> 00:22:20,390
+muito da máquina que você tiver para você pode baixar.
+
+233
+00:22:20,390 --> 00:22:23,540
+Ele é muito simples de utilizá lo.
+
+234
+00:22:23,540 --> 00:22:24,800
+Aqui estão os verbos.
+
+235
+00:22:25,040 --> 00:22:27,680
+Você consegue fazer requisição para qualquer lugar.
+
+236
+00:22:27,680 --> 00:22:29,140
+Ele é muito legal.
+
+237
+00:22:29,150 --> 00:22:34,910
+Ele é muito bom e você tem essas duas opções aqui.
+
+238
+00:22:35,060 --> 00:22:40,230
+Para ter aplicações na sua máquina para você fazer testes aí da sua API.
+
+239
+00:22:40,280 --> 00:22:43,730
+Testes de comunicação de terceiros e tudo o mais.
+
+240
+00:22:43,730 --> 00:22:50,740
+Eu uso os dois mas particularmente eu gosto mais do Insomniac porque acho ele mais leve.
+
+241
+00:22:51,230 --> 00:22:58,130
+Eu acho ele mais rápido apesar do miolo estar com muita coisa eu acho ele mais leve.
+
+242
+00:22:58,190 --> 00:23:02,100
+Então o que eu vou fazer eu vou usar o Insomniac como exemplo.
+
+243
+00:23:02,240 --> 00:23:09,230
+Mas se vocês quiserem fazer no Pochmann Não tem problema eu vou vir aqui fazer o download e após fazer
+
+244
+00:23:09,230 --> 00:23:13,280
+o download ele vai instalar na sua máquina o meu já está instalado.
+
+245
+00:23:13,280 --> 00:23:17,190
+ESSA BOLINHA roxa que eu fixei no Meu Menu Iniciar.
+
+246
+00:23:17,210 --> 00:23:20,360
+Então você pode fazer o download normal.
+
+247
+00:23:20,480 --> 00:23:27,080
+Assim que você terminar de fazer o download você vai mandar abrir e quando abrir vai abrir bem parecido
+
+248
+00:23:27,080 --> 00:23:28,600
+com a minha tela.
+
+249
+00:23:28,820 --> 00:23:29,600
+Bem parecido.
+
+250
+00:23:31,360 --> 00:23:32,350
+Espera abre aqui.
+
+251
+00:23:37,940 --> 00:23:40,500
+Abriu aqui beleza.
+
+252
+00:23:40,500 --> 00:23:40,640
+Bom
+
+253
+00:23:44,030 --> 00:23:52,310
+olha só o meu já traz um monte de coisa que no canto por que eu já o uso em Some é direto aqui são as
+
+254
+00:23:52,310 --> 00:23:55,940
+minhas Collection as minhas coleções.
+
+255
+00:23:56,000 --> 00:24:04,320
+Eu tenho várias coleções é como se fosse projetos e dentro de projetos eu posso ter subi pastas.
+
+256
+00:24:04,820 --> 00:24:12,230
+Por exemplo eu vou criar uma nova coleção eu vou vir aqui vou criar eu vou criar um folder e vou botar
+
+257
+00:24:12,230 --> 00:24:14,270
+aqui o teste.
+
+258
+00:24:16,500 --> 00:24:18,510
+Com o eixo.
+
+259
+00:24:23,160 --> 00:24:25,050
+Alunos teste com os alunos.
+
+260
+00:24:30,610 --> 00:24:31,720
+E aí aqui.
+
+261
+00:24:31,720 --> 00:24:35,440
+Olha só que interessante eu posso clicar aqui.
+
+262
+00:24:37,680 --> 00:24:44,370
+E adicionar o meu primeiro reconhece ou posso clicar aqui criar novas pastas ou então vou criar aqui.
+
+263
+00:24:46,340 --> 00:24:52,970
+Uma pasta aqui dentro só para separar bem o exemplo então dentro dessa parte tem essa página e que eu
+
+264
+00:24:52,970 --> 00:24:54,380
+vou criar o meu primeiro reconhece.
+
+265
+00:24:54,380 --> 00:24:55,750
+Eu posso clicar aqui.
+
+266
+00:24:55,880 --> 00:25:02,870
+Ele pergunta em seu primeiro reconhece com o que dá uma descrição para ele é um nome para ele.
+
+267
+00:25:02,870 --> 00:25:09,560
+Bom eu vou fingir o seguinte eu quero passar o meu o meu.
+
+268
+00:25:09,560 --> 00:25:15,890
+Eu quero passar um CEP e eu queria que ele me devolvesse o endereço desse CEP Eu quero usar o endereço
+
+269
+00:25:15,890 --> 00:25:17,320
+dos Correios aqui.
+
+270
+00:25:17,480 --> 00:25:24,080
+Eu quero simular uma requisição HTTP para app dos Correios eu quero enviar um CEP e eu quero que ela
+
+271
+00:25:24,080 --> 00:25:25,790
+me devolva o endereço.
+
+272
+00:25:25,790 --> 00:25:35,810
+Então como é que eu poderia fazer aqui um nome que eu poderia dar e consultar o endereço por CEP e aqui
+
+273
+00:25:36,380 --> 00:25:37,880
+qual o verbo que eu vou usar.
+
+274
+00:25:37,880 --> 00:25:44,990
+Por padrão ele traz o Get mas olha eu tenho Get Tim no post tem o Put tem o Pet Delícia tem o Optimus
+
+275
+00:25:44,990 --> 00:25:51,050
+tem rede tá vendo que eu tenho outros verbos aqui mas um que eu falei que são base são esses daquele
+
+276
+00:25:51,470 --> 00:25:54,050
+tipo de post e Get.
+
+277
+00:25:54,050 --> 00:26:00,380
+Então eu quero um Get mesmo quero fazer uma consulta eu vou clicar aqui em Create quando eu clique aqui
+
+278
+00:26:00,380 --> 00:26:08,150
+em Create ele criou aqui pra mim um reconhece aqui em cima eu vou dizer pra onde eu vou fazer essa requisição.
+
+279
+00:26:08,150 --> 00:26:19,940
+Bom eu já tenho o RL aqui do do CEP dos Correios está aqui em cima copiar aqui e vou voltar pra cá.
+
+280
+00:26:20,630 --> 00:26:21,440
+Essa URL.
+
+281
+00:26:25,240 --> 00:26:37,210
+Essa é o RL dos Correios http: dois pontos Barra Barra via CEP ponto com.br Barra WS Barra a que você
+
+282
+00:26:37,210 --> 00:26:45,610
+vai botar o teu CEP é aqui aquele teu CEP deixar alguns interrogações.
+
+283
+00:26:45,670 --> 00:26:54,610
+Barra diz que ela te devolver isso em formato de Alison então essa é o RM do via CEP uma das mulheres
+
+284
+00:26:54,610 --> 00:27:04,180
+mais utilizadas aí para você conseguir obter os dados do seu endereço ou dos endereços de algum CEP
+
+285
+00:27:04,180 --> 00:27:06,380
+específico.
+
+286
+00:27:06,580 --> 00:27:17,470
+Então vamos botar um CEP que qualquer vão inventar um CEP que vou botar aqui 25.000 novas 25.000 570
+
+287
+00:27:17,650 --> 00:27:27,320
+970 que aceitem a top 5 1970 76 é um CEP daqui da cidade de Teresópolis estado do Rio de Janeiro.
+
+288
+00:27:28,180 --> 00:27:34,100
+Se eu vier aqui a idéia de mandar enviar o que vai acontecer.
+
+289
+00:27:34,150 --> 00:27:47,660
+Essa ferramenta vai enviar uma requisição do tipo GET para esse endereço que a enviou e enviou essa
+
+290
+00:27:47,660 --> 00:27:55,690
+API lá no servidor deles recebeu essa requisição como ela é pública que não precisa de alteração de
+
+291
+00:27:55,690 --> 00:27:56,980
+autenticação.
+
+292
+00:27:56,980 --> 00:28:00,980
+Ela processou pegou os dados e devolveu.
+
+293
+00:28:01,060 --> 00:28:06,640
+E aí ele devolveu o endereço aqui no endereço completo desse endereço aqui.
+
+294
+00:28:07,000 --> 00:28:07,200
+O.
+
+295
+00:28:10,070 --> 00:28:12,310
+E aí ele devolveu o status.
+
+296
+00:28:12,340 --> 00:28:22,710
+Ok sucesso aqui é o corpo que ele devolveu os dados do endereço onde é que está esse esse CEP.
+
+297
+00:28:22,770 --> 00:28:31,860
+Esse CPqD servidor o meu no bairro KLM localidade de Teresópolis estado do Rio de Janeiro o código do
+
+298
+00:28:31,860 --> 00:28:35,610
+IBGE e esse DDD 21 se a vs.
+
+299
+00:28:35,610 --> 00:28:42,690
+Olha que legal ele me devolve um corpo que é o Bope e me devolvo também o.
+
+300
+00:28:42,750 --> 00:28:50,030
+Informações do servidor o que ele fez aqui algumas informações aqui.
+
+301
+00:28:50,100 --> 00:28:53,740
+O que importa pra gente aqui é o corpo da requisição.
+
+302
+00:28:53,760 --> 00:29:01,250
+E por padrão a maior parte das APIs devolvem nesse formato que um formato de som.
+
+303
+00:29:01,440 --> 00:29:11,670
+é um formato JavaScript Object não deixam que basicamente você ter separado os seus dados como se fosse
+
+304
+00:29:11,670 --> 00:29:19,420
+um objeto JavaScript onde todo atributo fica entre aspas duplas Gotti CEP vai entre aspas duplas.
+
+305
+00:29:19,470 --> 00:29:21,170
+O valor também.
+
+306
+00:29:21,370 --> 00:29:25,350
+Bom vamos mudar aqui esse CEP que vão botar um outro CEP aqui.
+
+307
+00:29:25,390 --> 00:29:37,920
+Vamos botar vão inventar um CEP que nem sei se tem como ver se tem esse CEP que não deu erro não existe
+
+308
+00:29:37,920 --> 00:29:38,300
+certo.
+
+309
+00:29:38,310 --> 00:29:46,080
+Vamos pegar um CEP que aqui na internet que a CEP Rio de Janeiro é um exemplo.
+
+310
+00:29:48,120 --> 00:29:57,110
+O certo é que o Google vai saber que vão ver se funciona se CEP por vir aqui e vou botar aqui o
+
+311
+00:29:59,720 --> 00:30:03,320
+importante é que tu tem que botar assim sem máscara.
+
+312
+00:30:03,590 --> 00:30:16,850
+Só os números olhe ela trouxe esse CEP aqui da rua um complemento seja tijolinho bairro Sepetiba Rio
+
+313
+00:30:16,850 --> 00:30:21,980
+de Janeiro RJ código do IBGE e DDD.
+
+314
+00:30:21,980 --> 00:30:23,740
+Ah vamos pegar aqui.
+
+315
+00:30:23,840 --> 00:30:34,940
+CEP sei lá em MG Minas Gerais vai pegar um CEP aí cada um aí pode pegar o CEP da sua residência e testar
+
+316
+00:30:34,940 --> 00:30:39,800
+para ver se realmente está funcionando certinho e vai funcionar certinho.
+
+317
+00:30:39,810 --> 00:30:39,900
+A.
+
+318
+00:30:42,020 --> 00:30:48,840
+Trouxe esse sebo aqui do bairro Novo Horizonte não tem o nome da rua não tem complemento.
+
+319
+00:30:48,950 --> 00:30:52,660
+A localidade Atalaia está em Minas Gerais.
+
+320
+00:30:52,730 --> 00:31:01,760
+Olha só DDD 33 ou seja através desse desse software aqui do Insomniac ou do Pochmann a gente consegue
+
+321
+00:31:01,760 --> 00:31:14,150
+fazer requisições do tipo HTTP pra conseguir obter dados cadastrar dados deletar dados e outras coisas
+
+322
+00:31:14,540 --> 00:31:15,350
+desse tipo.
+
+323
+00:31:15,920 --> 00:31:16,480
+Beleza.

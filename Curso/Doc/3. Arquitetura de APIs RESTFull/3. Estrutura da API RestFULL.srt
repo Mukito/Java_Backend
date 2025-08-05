@@ -1,0 +1,931 @@
+1
+00:00:03,000 --> 00:00:10,630
+Beleza galera agora que nós criamos a nossa estrutura de projeto utilizamos Frank Abbott.
+
+2
+00:00:10,680 --> 00:00:13,900
+Vamos conhecer como ela foi construída.
+
+3
+00:00:14,250 --> 00:00:20,010
+Aqui nós vamos trabalhar sempre dentro da pasta SRC.
+
+4
+00:00:20,160 --> 00:00:28,230
+Essa parte daqui foi criada automaticamente e essa daqui tão bem dentro de um projeto e Springer nós
+
+5
+00:00:28,230 --> 00:00:35,790
+sempre vamos trabalhar dentro da pasta SRC e o arquivo mais importante do nosso projeto é esse cara
+
+6
+00:00:35,790 --> 00:00:37,560
+que é o bom XML.
+
+7
+00:00:38,010 --> 00:00:46,620
+Se você dá um duplo clique ele abre o bom XML em um arquivo XML que contém toda a configuração desse
+
+8
+00:00:46,620 --> 00:00:54,960
+projeto para ser bio dado e ser configurado através do MEI que é o gerenciador de pacotes que a gente
+
+9
+00:00:54,960 --> 00:00:56,040
+escolheu.
+
+10
+00:00:56,040 --> 00:01:07,290
+Então dentro desse desse bom XML tem versão de Do Spring Builder tem versão do meio vem o teu grupo
+
+11
+00:01:07,290 --> 00:01:08,010
+Haiti.
+
+12
+00:01:08,730 --> 00:01:14,690
+O nome do teu artefato a versão que você está desenvolvendo por padrão é zero pontos zero ponto um ponto
+
+13
+00:01:14,700 --> 00:01:22,310
+Snapshot com a versão de teste o nome do primeiro projeto o nome do projeto aqui uma descrição desse
+
+14
+00:01:22,320 --> 00:01:26,040
+projeto e trouxe um padrão mas você pode mudar.
+
+15
+00:01:26,040 --> 00:01:28,830
+Você poderia botar aqui qualquer coisa.
+
+16
+00:01:28,830 --> 00:01:35,790
+A versão do Java que você está usando nesse projeto e aqui dentro de dependências tem todas as dependências
+
+17
+00:01:35,790 --> 00:01:38,610
+desse projeto o que ele depende para funcionar.
+
+18
+00:01:38,700 --> 00:01:44,150
+Ele depende do Starter web que foi aquele plug in que a gente baixou.
+
+19
+00:01:44,160 --> 00:01:54,060
+A gente está louca para trabalhar com um racha PI ele tem uma dependência também do Dead dus que foi
+
+20
+00:01:54,060 --> 00:02:00,170
+aquela dependentes pra ele fazer live reluz de atualizar pra gente aplicação de acordo com o que a gente
+
+21
+00:02:00,300 --> 00:02:07,980
+alterou no arquivo e tem uma dependência nativa dos Spring springboks que é o starter Test que ele já
+
+22
+00:02:07,980 --> 00:02:14,460
+traz uma opção para você fazer o teste unitário para você caso você queira trabalhar com TDT ou outro
+
+23
+00:02:14,460 --> 00:02:17,970
+tipo de abordagem de teste unitário.
+
+24
+00:02:21,840 --> 00:02:29,880
+Beleza se eu quisesse botar qualquer outra nova versão aqui com conta da dependência que não seja uma
+
+25
+00:02:29,880 --> 00:02:33,600
+dependência de Friend but que não esteja naquela linha de dependências.
+
+26
+00:02:33,600 --> 00:02:40,500
+Eu colocaria aqui dentro dessa aba Dependentes pegaria lá dependência do mapa e colar aqui dentro.
+
+27
+00:02:40,500 --> 00:02:48,780
+Após alterar e você salvar eles pergunta se você deseja baixar a nova configuração sincronizar e só
+
+28
+00:02:48,780 --> 00:02:54,000
+você clicar em algo que vai baixar todas as dependências do novo e vai vincular para você.
+
+29
+00:02:55,160 --> 00:02:57,680
+Beleza então vamos lá.
+
+30
+00:02:57,740 --> 00:02:59,360
+Esse é o arquivo principal.
+
+31
+00:02:59,420 --> 00:03:01,500
+A gente não vai mexer nele.
+
+32
+00:03:01,700 --> 00:03:09,110
+Nós vamos vir aqui em SRC dentro de estarrecer contém praticamente duas pastas de estrutura e Spring
+
+33
+00:03:09,110 --> 00:03:09,710
+MVC.
+
+34
+00:03:11,830 --> 00:03:12,610
+Que amem.
+
+35
+00:03:12,670 --> 00:03:15,040
+Que é onde nós vamos trabalhar e a baixa taxa.
+
+36
+00:03:15,090 --> 00:03:21,850
+Até onde nós temos o nosso primeiro arquivo de teste de exemplo.
+
+37
+00:03:21,910 --> 00:03:22,440
+Tá.
+
+38
+00:03:22,540 --> 00:03:27,370
+Então tá aqui o primeiro exemplo Application Test que foi criado automaticamente para a gente poder
+
+39
+00:03:27,370 --> 00:03:28,470
+fazer teste.
+
+40
+00:03:28,570 --> 00:03:31,190
+Nós não vamos trabalhar com isso agora.
+
+41
+00:03:31,750 --> 00:03:36,370
+Mas se a gente fosse trabalhar com o teste estaria aqui um exemplo pra gente trabalhar.
+
+42
+00:03:36,370 --> 00:03:39,680
+Mas vamos ver aqui na pasta bem dentro da pasta também.
+
+43
+00:03:39,700 --> 00:03:47,290
+Nós temos duas outras faixas a pasta Java onde nós vamos entrar e a pasta Resources a pasta Resources
+
+44
+00:03:47,290 --> 00:03:55,180
+e a pasta onde vai ficar todos os teus arquivos estáticos como imagens arquivos físicos que estiver
+
+45
+00:03:55,180 --> 00:03:56,620
+dentro do projeto.
+
+46
+00:03:56,620 --> 00:04:04,180
+Vai ficar tudo aqui dentro e esse arquivo aqui Application ponto Property é onde vai ficar configurações
+
+47
+00:04:04,180 --> 00:04:11,020
+específicas do nosso projeto talvez conexão com o banco de dados conexão com outros serviços configuração
+
+48
+00:04:11,020 --> 00:04:12,100
+de porta.
+
+49
+00:04:12,100 --> 00:04:14,830
+Tudo vai ficar aqui dentro por enquanto a gente não precisa mexer.
+
+50
+00:04:17,940 --> 00:04:22,330
+Dentro da pasta Java ele criou uma arquitetura de pastas.
+
+51
+00:04:22,410 --> 00:04:29,290
+De acordo com o grupo a pedido do nosso projeto então de acordo com o grupo então era com teste.
+
+52
+00:04:29,820 --> 00:04:35,260
+O nosso grupo é o nome do nosso projeto que foi o nosso hater fato foi o primeiro exemplo.
+
+53
+00:04:35,340 --> 00:04:41,900
+Ali criou se uma estrutura de pastas e dentro dessa estrutura de pastas ele criou aqui um arquivo chamado
+
+54
+00:04:41,920 --> 00:04:44,280
+primeiro exemplo Application.
+
+55
+00:04:44,280 --> 00:04:48,210
+Esse é o arquivo principal do projeto.
+
+56
+00:04:48,210 --> 00:04:55,590
+Esse arquivo que ele já está totalmente configurado pelo Spring para poder levantar e estar para uma
+
+57
+00:04:55,590 --> 00:04:56,570
+aplicação.
+
+58
+00:04:56,610 --> 00:05:00,310
+Então é esse cara que vai ser o primeiro arquivo a ser executado.
+
+59
+00:05:00,360 --> 00:05:05,610
+Quando você estar para esse projeto ele vai ser o primeiro arquivo a ser executado.
+
+60
+00:05:05,610 --> 00:05:12,410
+Ele vai levantar essa aplicação vai pegar todas as configurações e vai botar sua aplicação de pé mesmo
+
+61
+00:05:13,680 --> 00:05:17,880
+só para ver se está funcionando para você estar.
+
+62
+00:05:17,890 --> 00:05:25,160
+Esse projeto tem várias formas uma das formas mais comuns e agora se vocês olharem depois que você está
+
+63
+00:05:25,530 --> 00:05:31,380
+depois que vocês instalaram a extensão do Spring boot ele cria um cara que embaixo chamado Spring boot
+
+64
+00:05:31,380 --> 00:05:33,250
+Dashboard.
+
+65
+00:05:33,480 --> 00:05:41,390
+Se você vier aqui ele vai já selecionar o seu projeto como um projeto Spring mude.
+
+66
+00:05:41,580 --> 00:05:47,370
+Aqui eu posso estar para ele e é que eu posso estar estar em modo de ter bug que é para ele depurar
+
+67
+00:05:47,370 --> 00:05:49,770
+para eu poder ver passo a passo o que está acontecendo.
+
+68
+00:05:49,800 --> 00:05:53,310
+Eu vou simplesmente estar lá e vamos ver o que vai acontecer.
+
+69
+00:05:53,400 --> 00:05:54,760
+Vou dar um clique aqui.
+
+70
+00:05:54,810 --> 00:05:59,060
+A primeira vez está resolvendo dependências a primeira vez.
+
+71
+00:05:59,190 --> 00:06:05,850
+Ele pode demorar um pouquinho porque ele está baixando as dependências configurando levantando.
+
+72
+00:06:05,850 --> 00:06:09,900
+Então tem um tempo zen para levantar vai estar toda a nossa aplicação.
+
+73
+00:06:13,860 --> 00:06:22,830
+E aqui ele abre esse terminal Zen aqui que na aba console ele explicou Estou espartano de boot na versão
+
+74
+00:06:22,830 --> 00:06:32,220
+2 pontos um ponto 3 aí aqui tem tudo o que ele está fazendo levantando o nome da minha máquina levantando
+
+75
+00:06:32,220 --> 00:06:34,200
+aqui os dados tudo certinho.
+
+76
+00:06:34,200 --> 00:06:47,160
+E olha só aqui ele falou Tomcat Web Service inicia lá de com porta 80 80 ou seja ele levantou a nossa
+
+77
+00:06:47,160 --> 00:06:56,490
+aplicação na porta 80 ou 80 por padrão e a porta do Spring Push é a porta padrão se eu quiser mudar
+
+78
+00:06:56,490 --> 00:07:03,040
+o posso mudar mas essa é a porta padrão dos de boot então essa aplicação já está rodando.
+
+79
+00:07:03,060 --> 00:07:15,300
+Se eu vier aqui no meu navegador e botar assim o local Route 2 pontos 80 80 por que local Roxy porque
+
+80
+00:07:15,300 --> 00:07:21,300
+está rodando na minha máquina 80 80 porque é a minha porta que está rodando.
+
+81
+00:07:21,300 --> 00:07:29,160
+Ele vai te mostrar sua mensagem aqui tá essa mensagem que quem está te devolvendo ela é o próprio estilingue
+
+82
+00:07:29,160 --> 00:07:29,960
+Bot.
+
+83
+00:07:30,030 --> 00:07:32,040
+Por quê.
+
+84
+00:07:32,040 --> 00:07:38,660
+Porque quando você botou aqui %80 o navegador tenta fazer um Get pra API.
+
+85
+00:07:38,790 --> 00:07:46,220
+E como eu não tenho nada ainda configurado ele me retornou uma mensagem de erro uma mensagem de 404
+
+86
+00:07:46,230 --> 00:07:55,470
+note falsa de que é o status gold que a gente utiliza quando alguma coisa não é encontrada.
+
+87
+00:07:55,470 --> 00:08:01,860
+Então basicamente está dizendo o seguinte cara eu não encontrei nada na raiz desse projeto então tomam
+
+88
+00:08:01,860 --> 00:08:07,650
+404 beleza então eu sei que ela já está funcionando.
+
+89
+00:08:07,710 --> 00:08:09,340
+Então tá funcionando.
+
+90
+00:08:09,360 --> 00:08:16,950
+O objetivo era esse daqui de início e agora vamos fazer uma pequena brincadeira Vamos começar a desenvolver
+
+91
+00:08:17,280 --> 00:08:19,440
+a estrutura desse projeto.
+
+92
+00:08:19,590 --> 00:08:28,200
+Vamos começar a desenvolver pensando em uma aplicação a MVC é uma aplicação completa então vamos criar
+
+93
+00:08:28,200 --> 00:08:30,650
+um cenário aqui para a gente desenvolver.
+
+94
+00:08:30,810 --> 00:08:37,320
+Vamos pensar da seguinte forma Eu vou matar aqui porque eu não faz sentido deixá lo em pé nesse exato
+
+95
+00:08:37,320 --> 00:08:38,410
+momento.
+
+96
+00:08:38,550 --> 00:08:41,760
+Vamos fazer o seguinte eu quero fazer um cadastro de usuários.
+
+97
+00:08:41,850 --> 00:08:46,840
+Então eu vou criar um arquivo aqui e só é só de exemplo.
+
+98
+00:08:46,980 --> 00:08:57,990
+Eu vou criar um arquivo aqui aqui na raiz do projeto que eu vou chamar de exemplo ponto TXT arquivo
+
+99
+00:08:57,990 --> 00:09:02,210
+TXT qualquer só pra gente poder escrever o que a gente vai fazer.
+
+100
+00:09:02,220 --> 00:09:02,760
+Então vamos lá.
+
+101
+00:09:03,510 --> 00:09:04,590
+O objetivo.
+
+102
+00:09:07,070 --> 00:09:11,010
+Criar uma API reste tipo.
+
+103
+00:09:13,050 --> 00:09:22,710
+Para controle de voos para controle de produtos vão de produtos para controle de produtos para controlar
+
+104
+00:09:22,710 --> 00:09:26,400
+os produtos então beleza.
+
+105
+00:09:26,400 --> 00:09:28,030
+Esse é o nosso objetivo.
+
+106
+00:09:28,080 --> 00:09:34,680
+Beleza pra gente criar ela primeiro a gente precisa saber o que é um produto pra gente então vamos dizer
+
+107
+00:09:34,680 --> 00:09:43,500
+que nossos produtos ele vai ter ideia que é um identificador dizendo que ele é o único dentro do nosso
+
+108
+00:09:43,830 --> 00:09:50,580
+da nossa B.I. e geralmente esse identificador é criado pelo banco de dados de forma incremental.
+
+109
+00:09:50,580 --> 00:10:00,210
+O nome do produto é a quantidade do produto e o valor do produto.
+
+110
+00:10:00,240 --> 00:10:04,260
+é uma observação sobre esse produto.
+
+111
+00:10:04,680 --> 00:10:07,190
+é uma observação sobre esse produto.
+
+112
+00:10:07,300 --> 00:10:13,100
+Então só algumas propriedades vizinhas para ficar bem bem tranquilo.
+
+113
+00:10:13,650 --> 00:10:21,570
+O ideal é o nome a quantidade o valor e observação.
+
+114
+00:10:21,600 --> 00:10:27,540
+Então eu quero quando eu for cadastrar um produto eu vou informar as opções aqui o nome quantidade valor
+
+115
+00:10:27,540 --> 00:10:33,750
+e observação o ID vai ser criado automaticamente pela PM e quando eu pedi para obter ele vai me devolver
+
+116
+00:10:33,750 --> 00:10:38,320
+tudo inclusive o ID que foi criado automaticamente.
+
+117
+00:10:38,340 --> 00:10:48,680
+Então a nossa entidade o nosso modelo o nosso modelo de negócio é que o produto chegou.
+
+118
+00:10:48,720 --> 00:10:54,910
+Então se o nosso modelo é o produto primeira coisa que nós vamos fazer é criar o nosso modelo então
+
+119
+00:10:54,990 --> 00:10:58,280
+aqui dentro da SRC bem Java.
+
+120
+00:10:58,470 --> 00:11:01,050
+Nós vamos fazer o seguinte nós vamos criar aqui.
+
+121
+00:11:01,860 --> 00:11:04,210
+Eu estou dentro da pasta primeiro exemplo.
+
+122
+00:11:05,010 --> 00:11:10,920
+Aqui eu posso clicar aqui para o folder ou o botão direito e o folder.
+
+123
+00:11:10,920 --> 00:11:15,660
+Eu vou criar uma pasta que chamada Model A pasta chamada Model.
+
+124
+00:11:15,720 --> 00:11:19,920
+é uma pasta onde eu vou colocar todos os meus modelos.
+
+125
+00:11:19,960 --> 00:11:23,400
+Essa paz só vou aguardar o modelo.
+
+126
+00:11:23,710 --> 00:11:26,220
+Beleza só modelo.
+
+127
+00:11:28,470 --> 00:11:34,720
+Aí outras pastas já vou até criar outras pastas aqui de uma vez dentro de primeiro exemplo.
+
+128
+00:11:34,740 --> 00:11:43,620
+Nós vamos criar mais algumas pastas nós vamos criar uma chamada Controller que vai ficar os nossos controladores
+
+129
+00:11:44,010 --> 00:11:49,320
+as classes que vão receber requisições dentro também dessa paixão.
+
+130
+00:11:49,320 --> 00:11:55,800
+Nós vamos ter uma outra para chamar os serviços que vai ficar os nossos serviços aonde os controladores
+
+131
+00:11:56,220 --> 00:12:03,790
+vão se comunicar e dentro de primeiro exemplo nós também vamos criar uma outra pasta chamada RER repositório
+
+132
+00:12:04,090 --> 00:12:11,970
+em que a pasta de repositório onde os nossos serviços vão se comunicar para poder fazer persistência
+
+133
+00:12:12,300 --> 00:12:16,790
+de dados da beleza aqui.
+
+134
+00:12:17,520 --> 00:12:25,950
+A princípio são essas quatro pastas Controller que a pasta responsável por criar por guardar os nossos
+
+135
+00:12:25,950 --> 00:12:35,710
+controladores da moda e abaixa para guardar os nossos modelos repositório e a paixão onde vai ter os
+
+136
+00:12:35,730 --> 00:12:43,380
+nossas entidades de persistência de dados aonde nós vamos gravar os dados e serviços.
+
+137
+00:12:43,380 --> 00:12:45,510
+Vai ser a paixão de nós vamos gravar.
+
+138
+00:12:45,510 --> 00:12:51,550
+Hoje nós vamos ter de nossas classes de serviços e vão ser responsável pela regra de negócio.
+
+139
+00:12:51,810 --> 00:12:52,950
+Então vamos lá.
+
+140
+00:12:53,190 --> 00:12:57,710
+Então aqui dentro de um modelo eu tenho que criar um modelo chamado produto.
+
+141
+00:12:57,720 --> 00:13:03,370
+Então vamos criar o nosso primeiro modelo aqui o botão direito Mio fail.
+
+142
+00:13:03,450 --> 00:13:12,720
+Vamos criar um produto ponto Java toda a classe Java começa com letra maiúscula e um padrão de escrita
+
+143
+00:13:12,720 --> 00:13:15,290
+chamado Pascal 15.
+
+144
+00:13:16,200 --> 00:13:21,720
+E eu termino com a extensão do Java quando deu um entre o Visconde inteligente ele já vai criar essa
+
+145
+00:13:21,720 --> 00:13:23,300
+classe para mim.
+
+146
+00:13:23,730 --> 00:13:25,030
+Já criou.
+
+147
+00:13:25,030 --> 00:13:35,280
+Olha só já criou ela aqui criou a classe Produto bonitinho e já colocou dentro do pacote o pacote que
+
+148
+00:13:35,280 --> 00:13:40,080
+está dentro de ponto com ponto deste primeiro exemplo o ponto modelo.
+
+149
+00:13:40,110 --> 00:13:45,210
+Ou seja essa classe está dentro desse pacote então ele já criou isso pra gente tudo certinho.
+
+150
+00:13:46,330 --> 00:13:47,910
+Beleza então vamos lá.
+
+151
+00:13:48,010 --> 00:13:54,360
+O que eu preciso fazer criar esses atributos para o nosso modelo de produto.
+
+152
+00:13:54,370 --> 00:14:05,610
+Então vamos lá então vamos criar aqui o peixe e dê uma ideia de qual tipo bom o dele pode ser um impedir
+
+153
+00:14:08,140 --> 00:14:16,510
+ou pode ser um long se a tua base de dados for conter muitos produtos.
+
+154
+00:14:16,510 --> 00:14:23,680
+é legal que seja um long por que um long ele aguenta números muito grandes entre Gerdau.
+
+155
+00:14:23,680 --> 00:14:26,550
+Agora não eu vou ter no máximo 100 mil produtos.
+
+156
+00:14:26,660 --> 00:14:32,170
+Bom se você vai ter no máximo mil produtos dentro do seu sistema inteligente tá de bom tamanho como
+
+157
+00:14:32,170 --> 00:14:33,520
+a gente está em teste.
+
+158
+00:14:33,590 --> 00:14:42,700
+Eu vou deixar entender mesmo nos próximos exemplos a gente coloca longue então criei um presente aí
+
+159
+00:14:42,700 --> 00:14:52,020
+de presente e string nome Private.
+
+160
+00:14:52,030 --> 00:14:55,430
+Aí eu preciso do quê da quantidade né.
+
+161
+00:14:55,570 --> 00:15:01,390
+Vamos fingir que a quantidade que fosse números inteiros a gente não vai trabalhar com caixa fração
+
+162
+00:15:01,390 --> 00:15:02,490
+nada disso.
+
+163
+00:15:02,530 --> 00:15:11,980
+Então vamos fingir que números inteiros então a quantidade vai ser um inteiro também só para ficar fácil.
+
+164
+00:15:11,980 --> 00:15:20,250
+E nós vamos ter um Private que vai ser o valor que vai ser um double é um valor flutuante o dobro do
+
+165
+00:15:20,680 --> 00:15:25,240
+valor e por fim vamos ver o que falta.
+
+166
+00:15:25,240 --> 00:15:39,570
+Observação vamos criar que observação Private Estrela Guia observar são beleza boa salvar isso daqui.
+
+167
+00:15:39,640 --> 00:15:40,320
+Show de bola.
+
+168
+00:15:40,390 --> 00:15:42,760
+Então ela é só criei que os atributos.
+
+169
+00:15:43,030 --> 00:15:47,560
+Bom se eu criei os atributos eu preciso criar o quê os guerreiros etc.
+
+170
+00:15:48,130 --> 00:15:57,190
+Se eu separar assim se você para eles por uma linha quando eu clicar aqui e mandar vir aqui só Horse
+
+171
+00:15:57,190 --> 00:16:01,740
+Edition pra poder gerar o espectro de setas ele já vai criar tudo separado.
+
+172
+00:16:01,900 --> 00:16:04,740
+Então vamos criar os vetores de setas para o produto.
+
+173
+00:16:04,780 --> 00:16:09,880
+Como a gente cria então o botão direito na tela pra gente não criar na mão.
+
+174
+00:16:09,880 --> 00:16:13,180
+A gente vai criar de forma automática o botão direito na tela.
+
+175
+00:16:13,390 --> 00:16:22,700
+Só se Action generation gap 37 Hours clique ele pergunta para quê e para quem que você quer gerar só
+
+176
+00:16:22,700 --> 00:16:25,780
+para dia só para quantidade não quero para todo mundo.
+
+177
+00:16:26,770 --> 00:16:29,350
+Selecionei e mando gerar.
+
+178
+00:16:29,380 --> 00:16:36,650
+Olha que legal ele gerou os Get e os setes de cada atributo.
+
+179
+00:16:36,710 --> 00:16:40,390
+Separados por uma linha bonitinha por que ele fez isso.
+
+180
+00:16:40,720 --> 00:16:44,770
+Porque é que eu separei os atributos por uma linha.
+
+181
+00:16:44,770 --> 00:16:51,220
+Toda vez que separa os atributos com o mesmo espaço que eu dou para cada atributo é o mesmo espaço que
+
+182
+00:16:51,220 --> 00:16:54,520
+ele usa para gerar os Get Em cetro.
+
+183
+00:16:54,610 --> 00:16:58,270
+E aí fica organizado em bonitinha beleza.
+
+184
+00:16:58,270 --> 00:16:59,410
+Então tá aqui.
+
+185
+00:16:59,440 --> 00:17:03,730
+Os Gathering Center de todos esses atributos.
+
+186
+00:17:03,730 --> 00:17:07,720
+Vou botar aqui isso aqui dentro de uma região para botar uma região.
+
+187
+00:17:07,720 --> 00:17:18,430
+Basta você usar a isso que eu vou fazer vai funcionar ou se você tiver no eclipse ou no STF isso daqui
+
+188
+00:17:18,430 --> 00:17:19,960
+não vai funcionar.
+
+189
+00:17:20,110 --> 00:17:31,070
+Eu vou botar aqui na região do boto um sinal de hashtag ou sinal de tralha no jogo da velha Região.
+
+190
+00:17:31,070 --> 00:17:38,680
+E aí eu boto aqui atributos significa que essa daqui é a região dos atributos e onde eu vou terminar
+
+191
+00:17:38,680 --> 00:17:47,830
+essa região eu vou ter eu vou botar assim o tralha em região com isso daqui.
+
+192
+00:17:47,830 --> 00:17:51,510
+Olha que legal eu consigo vir aqui e minimizar a região.
+
+193
+00:17:51,520 --> 00:18:02,900
+Olha que legal ele minimiza a região da Praia diminuiu o código fica bem legal vou fazer a mesma coisa
+
+194
+00:18:02,900 --> 00:18:04,330
+aqui com as gatas etc.
+
+195
+00:18:04,750 --> 00:18:12,550
+Região que é terceiro setor na região.
+
+196
+00:18:12,670 --> 00:18:17,650
+E aqui no final vou botar em região salvei.
+
+197
+00:18:17,650 --> 00:18:20,110
+E agora eu posso minimizar.
+
+198
+00:18:20,110 --> 00:18:27,160
+Olha que legal eu quero ver só os atributos eu maximizar o quero ver só os gays 7 sete marketing maximiza
+
+199
+00:18:27,700 --> 00:18:31,070
+a beleza é só um facilitador.
+
+200
+00:18:31,090 --> 00:18:32,080
+Show de bola.
+
+201
+00:18:32,200 --> 00:18:34,830
+Preciso criar algum construtor não.
+
+202
+00:18:34,900 --> 00:18:39,040
+Por que eu não preciso criar nenhum construtor porque a gente ainda não sabe como é que vai construir
+
+203
+00:18:39,040 --> 00:18:40,090
+esse produto.
+
+204
+00:18:40,090 --> 00:18:45,040
+Então deixa o consultor de fora o que se virar para a gente.
+
+205
+00:18:45,730 --> 00:18:54,760
+Luiza está aqui a minha classe de produtos tá show de bola tudo bonitinho tudo certinho.
+
+206
+00:18:54,820 --> 00:19:00,460
+Criamos aqui o nosso modelo então vamos lá para criar a primeira coisa.
+
+207
+00:19:02,810 --> 00:19:05,110
+Criar o modelo de produtos.
+
+208
+00:19:05,150 --> 00:19:06,840
+Criei o modelo de produtos.
+
+209
+00:19:07,010 --> 00:19:09,860
+Segunda coisa que eu tenho que criar.
+
+210
+00:19:09,860 --> 00:19:13,830
+Seria talvez o controle que aonde vai receber a requisição.
+
+211
+00:19:13,940 --> 00:19:21,650
+Só que o controle vai depender do serviço porque o controle vai chamar o serviço e o serviço vai depender
+
+212
+00:19:21,650 --> 00:19:28,600
+do repositório porque o serviço depende da classe de persistência.
+
+213
+00:19:28,640 --> 00:19:30,730
+Então eu vou começar de trás para frente.
+
+214
+00:19:30,740 --> 00:19:44,730
+Então depois do modelo eu vou precisar de um repositor tório de usuário e o meu repositório de usuário.
+
+215
+00:19:44,750 --> 00:19:51,620
+Nesse primeiro momento ele não vai se comunicar com o banco de dados ele vai simular um banco de dados.
+
+216
+00:19:51,620 --> 00:19:55,310
+Ele poderia se comunicar com o banco de dados mas nesse primeiro momento eu quero que ele simule um
+
+217
+00:19:55,310 --> 00:19:56,690
+banco de dados.
+
+218
+00:19:56,810 --> 00:20:03,010
+Então nós vamos criar um repositório dentro desse repositório nós vamos precisar de alguns métodos.
+
+219
+00:20:03,080 --> 00:20:17,690
+Nós vamos precisar de um método obter todos que devolva todos os os usuários obter ou bitter por dia
+
+220
+00:20:18,110 --> 00:20:21,820
+para obter um usuário específico quando passa o id.
+
+221
+00:20:22,400 --> 00:20:28,970
+Eu vou precisar do cadastrar ou adicionar.
+
+222
+00:20:29,180 --> 00:20:38,600
+Se você quiser adicionar ou cadastrar são sinônimos que é para adicionar um produto e repositório de
+
+223
+00:20:38,600 --> 00:20:47,600
+produto não de usuário produtor de produto obter todos os produtos obter produto por aí de adicionar
+
+224
+00:20:47,600 --> 00:20:48,980
+um produto.
+
+225
+00:20:48,980 --> 00:21:00,500
+Preciso de um para atualizar o produto e para atualizar o produto e preciso de um para deletar o produto.
+
+226
+00:21:00,500 --> 00:21:09,660
+Geralmente nomes de métodos nós utilizamos como o verbo estar galera a gente usa como verbo.
+
+227
+00:21:09,830 --> 00:21:13,580
+Então obter deletar cadastrar.
+
+228
+00:21:13,750 --> 00:21:17,630
+Bom então nós vamos criar esse repositório aqui.
+
+229
+00:21:17,960 --> 00:21:20,950
+Como é que a gente cria esse repositório.
+
+230
+00:21:20,950 --> 00:21:23,960
+Então vamos lá aqui dentro de repositório.
+
+231
+00:21:23,960 --> 00:21:30,260
+Eu vou vir aqui e vou criar um novo arquivo aqui dentro do repositório o novo arquivo que eu vou chamar
+
+232
+00:21:30,260 --> 00:21:36,290
+de produto repositório e ponto Java.
+
+233
+00:21:38,680 --> 00:21:43,100
+é aí que nós vamos criar o nosso produto repositório.

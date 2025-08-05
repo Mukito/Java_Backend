@@ -1,0 +1,1115 @@
+1
+00:00:02,100 --> 00:00:04,970
+E aí galera tudo bem.
+
+2
+00:00:05,060 --> 00:00:10,050
+Chegamos a ir para mais uma aula na última aula nós vimos aqui como é que funciona o conceito de API
+
+3
+00:00:10,710 --> 00:00:17,430
+em micro serviços e hoje nós vamos começar a preparar o nosso ambiente para poder trabalhar.
+
+4
+00:00:17,610 --> 00:00:24,780
+Bom a gente pode trabalhar com Java com essa arquitetura aqui e de várias formas.
+
+5
+00:00:25,470 --> 00:00:31,670
+A gente pode usar essa arquitetura independente da linguagem mas aqui nós vamos usar Java e a ideia
+
+6
+00:00:31,670 --> 00:00:37,230
+é que é a ferramenta que nós vamos usar vocês podem usar qualquer uma mas é que nós vamos usar o Visual
+
+7
+00:00:37,230 --> 00:00:38,470
+Studio Gold.
+
+8
+00:00:38,590 --> 00:00:45,160
+A professora eu gosto do eclipse eu posso usar o eclipse pode dizer eclipsar professor eu gosto do inteligente
+
+9
+00:00:45,180 --> 00:00:50,510
+eu posso usar entre a hipótese aí você pode usar o que você quiser.
+
+10
+00:00:50,820 --> 00:00:52,610
+Eu tive que escolher um para usar.
+
+11
+00:00:52,630 --> 00:00:54,690
+Então eu poderia ter escolhido qualquer um.
+
+12
+00:00:55,890 --> 00:01:02,880
+Eu escolhi o visconde por ser mais simples mais leve e a meu ver mais prático.
+
+13
+00:01:03,070 --> 00:01:03,850
+Então
+
+14
+00:01:07,210 --> 00:01:10,300
+você pode escolher qualquer ferramenta para utilizar.
+
+15
+00:01:10,380 --> 00:01:12,820
+Bom então que eu fiz aqui.
+
+16
+00:01:12,820 --> 00:01:17,180
+Para quem ainda não tem o VS Cold é só fazer o download aqui.
+
+17
+00:01:17,410 --> 00:01:19,510
+Parece que o ódio está longe.
+
+18
+00:01:20,910 --> 00:01:22,310
+é algo bem simples.
+
+19
+00:01:22,380 --> 00:01:24,450
+Você pode clicar aqui e esconde
+
+20
+00:01:27,150 --> 00:01:28,770
+se até a linha do vice Cold.
+
+21
+00:01:30,480 --> 00:01:36,780
+Fazer o download para Windows para Linux e para Mac que você faz o download aqui tem essa interface
+
+22
+00:01:36,780 --> 00:01:37,760
+que é bem legal.
+
+23
+00:01:37,860 --> 00:01:41,780
+Assim que você baixar é só você da Mac OS X Next.
+
+24
+00:01:41,880 --> 00:01:48,900
+A única parte que eu peço para você ter atenção na parte onde ele mostra quatro opções eu sugiro vocês
+
+25
+00:01:48,900 --> 00:01:50,370
+marcarem essas quatro opções.
+
+26
+00:01:50,370 --> 00:01:51,480
+Por quê.
+
+27
+00:01:51,480 --> 00:01:57,330
+Uma vai colocar o VS cult vai criar um atalho para você na área de trabalho que isso é muito útil.
+
+28
+00:01:57,360 --> 00:01:57,960
+Outro.
+
+29
+00:01:57,960 --> 00:02:00,760
+Ele vai adicionar um verso o de no pé Fido.
+
+30
+00:02:00,810 --> 00:02:07,140
+No caso do Windows só no teste do Windows que é para você poder usar ele via Command Lines também é
+
+31
+00:02:07,140 --> 00:02:08,210
+muito útil.
+
+32
+00:02:08,370 --> 00:02:15,330
+O outro ele vai botar o versículo como sugestão para abertura de arquivos então se tiver um arquivo
+
+33
+00:02:15,330 --> 00:02:21,420
+com uma extensão qualquer ele vai sugerir um versículo de pra pra abrir esse arquivo também é muito
+
+34
+00:02:21,420 --> 00:02:22,060
+útil.
+
+35
+00:02:22,170 --> 00:02:29,910
+é o terceiro e o último é colocar o conde como como ferramenta de menu de contexto que é basicamente
+
+36
+00:02:29,910 --> 00:02:31,260
+fazer o seguinte.
+
+37
+00:02:31,260 --> 00:02:37,890
+Toda vez que você estiver dentro de uma pasta você pode clicar com o botão direito mandar o Vasco um
+
+38
+00:02:37,890 --> 00:02:38,310
+dia ali.
+
+39
+00:02:38,310 --> 00:02:39,980
+Isso é muito útil.
+
+40
+00:02:40,230 --> 00:02:44,670
+Então após instalar o versículo de configurar vocês podem fazer com calma.
+
+41
+00:02:44,710 --> 00:02:45,140
+Tá bom.
+
+42
+00:02:45,180 --> 00:02:53,070
+Depois da da pausa e no vídeo e depois configurar ele só voltar no vídeo não tem problema.
+
+43
+00:02:53,070 --> 00:03:00,870
+E aí beleza está lá houvesse hoje tudo certinho a gente pode criar uma pasta ou crie uma pasta qualquer
+
+44
+00:03:00,870 --> 00:03:03,010
+aqui chamado Projeto back end.
+
+45
+00:03:03,150 --> 00:03:06,680
+Vai ser aqui que eu vou começar a trabalhar com vocês.
+
+46
+00:03:06,730 --> 00:03:07,580
+Pasta Vazia.
+
+47
+00:03:07,620 --> 00:03:09,780
+Não tem nada a pasta vazia.
+
+48
+00:03:09,780 --> 00:03:15,780
+é aí que eu vou fazer o seguinte eu vou clicar aqui com o botão direito e aqui agora já tem uma opção
+
+49
+00:03:16,770 --> 00:03:18,690
+Abrir com Cold que é.
+
+50
+00:03:20,580 --> 00:03:22,440
+Para abrir o Visconde a.
+
+51
+00:03:26,630 --> 00:03:27,500
+Ele abriu aqui.
+
+52
+00:03:32,320 --> 00:03:37,600
+Beleza abriu aqui e traz nessa tela de Welcome tudo bonitinho tudo certinho.
+
+53
+00:03:39,440 --> 00:03:40,190
+Beleza.
+
+54
+00:03:40,250 --> 00:03:41,770
+Ele mostre projetos recentes.
+
+55
+00:03:41,770 --> 00:03:44,540
+Eu trabalhei de algumas opções.
+
+56
+00:03:44,660 --> 00:03:51,100
+Beleza uma passada rápida que não veste Gold para a gente poder trabalhar.
+
+57
+00:03:51,740 --> 00:03:58,990
+Para quem ainda não viu o Veste Gold ele tem aqui um menu lateral e um menu que simula o menu lateral.
+
+58
+00:03:59,120 --> 00:04:06,250
+Tem o Explorer que eu posso minimizar e maximizar o bem útil aqui que vai ficar todo o nosso código.
+
+59
+00:04:06,260 --> 00:04:11,180
+Aqui eu crio um arquivo aqui eu crio uma pasta atualizou.
+
+60
+00:04:11,180 --> 00:04:16,940
+Então nós vamos trabalhar tudo aqui dentro é outra opção muito útil para a gente vai ser essa daqui
+
+61
+00:04:17,330 --> 00:04:20,110
+que está em shows para baixar extensões.
+
+62
+00:04:20,210 --> 00:04:23,550
+Então vou mostrar aqui algumas extensões que eu utilizo.
+
+63
+00:04:23,750 --> 00:04:29,450
+Você pode utilizar ou não para ter identidade visual aqui parecido com a minha.
+
+64
+00:04:29,480 --> 00:04:31,250
+Eu uso o tema on line.
+
+65
+00:04:34,930 --> 00:04:35,290
+Se cada.
+
+66
+00:04:37,370 --> 00:04:42,890
+Só selecionar ele e vai ter um botãozinho distal aqui ou o meu não tem porque o meu já está instalado.
+
+67
+00:04:42,890 --> 00:04:46,080
+Ele vai instalar esse tema aqui no vai ser útil para vocês.
+
+68
+00:04:46,160 --> 00:04:53,800
+Para ficar com uma visão bem parecida com a minha da outra uma outra que eu gosto muito de usar esse
+
+69
+00:04:53,810 --> 00:04:54,140
+aqui.
+
+70
+00:04:57,070 --> 00:04:59,380
+Matilha I PM.
+
+71
+00:04:59,470 --> 00:05:01,080
+Isso aqui também é legal.
+
+72
+00:05:01,270 --> 00:05:03,660
+Só clicar em Instalar esse cara aqui.
+
+73
+00:05:03,670 --> 00:05:09,430
+Ele sabe colocar ícones personalizados nos arquivos que você criar.
+
+74
+00:05:09,430 --> 00:05:10,450
+Isso é muito útil.
+
+75
+00:05:10,540 --> 00:05:15,580
+Como a gente vai trabalhar com Java todo arquivo Java que a gente criar ele vai botar assim a xícara
+
+76
+00:05:15,580 --> 00:05:16,980
+senha do Java.
+
+77
+00:05:17,020 --> 00:05:19,810
+Isso é muito útil na mesa.
+
+78
+00:05:19,810 --> 00:05:26,400
+Ele vai configurar e vai botar aqui na tela para a gente é muito fácil bem é bem pedir o boné e a gente
+
+79
+00:05:26,410 --> 00:05:33,880
+encontrar alguma coisa pelo iPhone tão bem então eu goste bastante dessa extensão não é obrigatório
+
+80
+00:05:34,690 --> 00:05:43,180
+ser baixa se você quiser é agora obrigatório você precisa ter instalado aqui esse cara que Java.
+
+81
+00:05:46,240 --> 00:05:47,840
+é que sentimos.
+
+82
+00:05:48,160 --> 00:05:53,960
+Você tem que estar lá essa extensão aqui o jailbreak shows a já bastante HomeKit.
+
+83
+00:05:54,040 --> 00:05:59,590
+Ele é o seguinte ele é uma extensão que contém mais seis extensões aqui dentro e aqui dentro ele vai
+
+84
+00:05:59,590 --> 00:06:04,900
+instalar vários plug ins para Você Trabalhar com Java no desktop independente de estar trabalhando com
+
+85
+00:06:04,910 --> 00:06:07,190
+a API ou não.
+
+86
+00:06:07,570 --> 00:06:08,230
+é bem legal.
+
+87
+00:06:09,830 --> 00:06:12,380
+Esse é o primeiro que nós vamos instalar.
+
+88
+00:06:13,660 --> 00:06:16,040
+Ok está lá esse carinho aqui.
+
+89
+00:06:16,090 --> 00:06:17,710
+Ele vai instalar todas as escolinhas aqui.
+
+90
+00:06:19,060 --> 00:06:26,760
+Com essa extensão aqui a gente já consegue trabalhar com Java no México outro sem problema algum.
+
+91
+00:06:26,810 --> 00:06:33,690
+A gente já consegue instalar com o Java no Vasco de sem sem sem problemas.
+
+92
+00:06:34,120 --> 00:06:36,070
+Beleza.
+
+93
+00:06:36,070 --> 00:06:39,370
+Após instalar sua versão essa extensão.
+
+94
+00:06:41,970 --> 00:06:43,050
+Deixa eu ver aqui.
+
+95
+00:06:50,140 --> 00:06:51,130
+Nós vamos instalar.
+
+96
+00:06:54,460 --> 00:06:56,610
+Esse cara aqui.
+
+97
+00:06:58,770 --> 00:07:10,640
+A gente vai instalar essa extensão aqui e Spring but Extension Beckett e Spring but a Station Beckett.
+
+98
+00:07:10,800 --> 00:07:13,460
+Por que nós vamos instalar essa extensão.
+
+99
+00:07:14,700 --> 00:07:23,340
+O Java eu posso criar um projeto do zero configurar ele todo usando o Maven e tudo mais.
+
+100
+00:07:23,340 --> 00:07:31,800
+Mas existe um frame uma tecnologia que é o Spring o espião que é muito legal no Java que já tem um monte
+
+101
+00:07:31,800 --> 00:07:37,300
+de coisa pronta já tem um monte de configuração o template tem um monte de coisa legal já pronta para
+
+102
+00:07:37,300 --> 00:07:43,090
+a gente e o Spring bot é uma melhoria do Spring.
+
+103
+00:07:43,200 --> 00:07:49,890
+é um framework do Spring que dá poderes para a gente gerar várias templates várias coisas já prontas
+
+104
+00:07:49,890 --> 00:07:51,520
+pré configuradas.
+
+105
+00:07:51,540 --> 00:07:56,220
+Isso vai dar um poder de desenvolvimento muito grande pra gente que vai precisar ficar configurando
+
+106
+00:07:56,220 --> 00:07:58,320
+várias coisas do zero.
+
+107
+00:07:58,410 --> 00:08:05,040
+Ele vai vir com muita coisinha pronta então experimente um framework bem legal.
+
+108
+00:08:05,160 --> 00:08:05,550
+Ele.
+
+109
+00:08:09,020 --> 00:08:16,520
+Ele praticamente nenhuma template pré configurada de desenvolvimento que ele é totalmente baseado no
+
+110
+00:08:16,520 --> 00:08:16,970
+Spring.
+
+111
+00:08:18,120 --> 00:08:24,450
+Esse cara já configura muita coisa pra gente vai deixar a coisa pronto ele é bem legal então nós vamos
+
+112
+00:08:24,450 --> 00:08:31,040
+instalar ele nós vamos usá lo como ferramenta pra gente ganhar produtividade da galera.
+
+113
+00:08:31,120 --> 00:08:33,380
+Então é só instalar ele.
+
+114
+00:08:33,480 --> 00:08:38,760
+Beleza anexa ia até o fim e clicar em testar o que ele vai instalar aqui.
+
+115
+00:08:40,600 --> 00:08:43,930
+Esse cara esse cara ele está lá pra gente 5 pq diz também.
+
+116
+00:08:45,770 --> 00:08:47,810
+E todos esses caras aqui a gente vai usar.
+
+117
+00:08:50,080 --> 00:08:56,500
+Beleza instalou então o Java que um paquete e o Spring boot.
+
+118
+00:08:58,750 --> 00:09:08,010
+Station Petit estamos com tudo preparado para trabalhar com Java com o espírito de boot no nosso Vasco.
+
+119
+00:09:12,870 --> 00:09:14,070
+Beleza então vamos lá.
+
+120
+00:09:14,910 --> 00:09:16,680
+Aqui que nós vamos criar o nosso projeto.
+
+121
+00:09:16,680 --> 00:09:21,690
+Mas antes de criar o nosso projeto vamos fazer o seguinte para você trabalhar com Java.
+
+122
+00:09:23,580 --> 00:09:27,180
+No Visconde você precisa baixar o JD.
+
+123
+00:09:27,270 --> 00:09:29,820
+Para quem já tem instalada só a seguir.
+
+124
+00:09:29,910 --> 00:09:37,770
+Para quem não tem instalado você vai vir aqui no Google vai escrever JD cara eu vou instalar a versão
+
+125
+00:09:37,770 --> 00:09:40,430
+8 porque a versão 8 é a mais comum.
+
+126
+00:09:40,570 --> 00:09:45,870
+Tá mas já tem versão 11 13 16.
+
+127
+00:09:45,930 --> 00:09:47,980
+Beleza.
+
+128
+00:09:48,450 --> 00:09:53,240
+A professora quer usar a versão mais recente beleza então você pode trocar a versão mais recente se
+
+129
+00:09:53,250 --> 00:09:58,380
+ela bota 13 13 uma versão legal então você pode vir aqui download
+
+130
+00:10:01,140 --> 00:10:09,720
+e aí aqui ele tem dentro do site da hora por aqui ele tem várias versões para Linux para Mac e para
+
+131
+00:10:09,720 --> 00:10:12,340
+o Windows ou um instalador.
+
+132
+00:10:13,080 --> 00:10:16,820
+Aí é só você vir aqui baixar o binário clicar aqui.
+
+133
+00:10:16,890 --> 00:10:19,260
+Beleza sentar e clicar.
+
+134
+00:10:19,260 --> 00:10:24,600
+Só que quando você clicar aqui possivelmente ele vai te direcionar com uma tela de login.
+
+135
+00:10:24,600 --> 00:10:30,090
+Por que para você baixar o Java você tem que ter o login você tem que ter uma conta.
+
+136
+00:10:30,130 --> 00:10:36,540
+Então se você já tiver só botar o nome de usuário e senha para poder fazer o download.
+
+137
+00:10:36,540 --> 00:10:43,280
+Senão você cria uma conta rapidinho da galera só clicar aqui e criar uma conta rapidinho.
+
+138
+00:10:43,380 --> 00:10:48,520
+Isso é importante tem que fazer senão você não vai ter o Java aqui na sua máquina.
+
+139
+00:10:48,520 --> 00:10:55,230
+Então você coloca aqui alguns dados aqui que ele pede cria sua conta usa esse usuário e senha para poder
+
+140
+00:10:55,620 --> 00:11:03,680
+acessar aqui e fazer o download e instalar o processos são ações simples Nex x x x x.
+
+141
+00:11:03,690 --> 00:11:06,020
+Ele vai avançar beleza
+
+142
+00:11:08,700 --> 00:11:12,800
+depois que ele que ele está lá possivelmente ele vem pra cá.
+
+143
+00:11:13,290 --> 00:11:14,580
+Arquivos de programa.
+
+144
+00:11:16,710 --> 00:11:19,710
+Java e ele coloca aqui as versões.
+
+145
+00:11:19,710 --> 00:11:28,620
+Eu tenho a versão 8 instalada está aqui e tem a versão 13 aqui instalada aqui também beleza.
+
+146
+00:11:28,830 --> 00:11:33,960
+Então eu tenho as duas versões tanto a 8 quanto a 13 instaladas aqui está.
+
+147
+00:11:39,070 --> 00:11:39,810
+SHOW DE BOLA.
+
+148
+00:11:41,520 --> 00:11:49,320
+OK beleza vou voltar aqui para a nossa pasta.
+
+149
+00:11:49,350 --> 00:11:50,710
+Estou aqui na nossa paixão.
+
+150
+00:11:50,790 --> 00:11:52,410
+Beleza.
+
+151
+00:11:52,410 --> 00:11:59,820
+Após instalar tudo se você quiser feche gol de dele de novo para garantir que ele carregou todos os
+
+152
+00:11:59,820 --> 00:12:00,540
+dados.
+
+153
+00:12:00,640 --> 00:12:01,890
+E nós vamos fazer o seguinte.
+
+154
+00:12:03,010 --> 00:12:04,740
+Nós vamos vir aqui em cima.
+
+155
+00:12:04,960 --> 00:12:05,470
+Envio.
+
+156
+00:12:06,620 --> 00:12:14,060
+E vamos clicar em Command Parish e aqui em cima ele vai te mostrar algumas opções.
+
+157
+00:12:14,120 --> 00:12:16,080
+Eu quero que vocês pesquisem essa opção aqui.
+
+158
+00:12:16,670 --> 00:12:20,740
+Java over viu a.
+
+159
+00:12:22,490 --> 00:12:26,570
+Essa linha que eu quero que abra essa linha aqui para vocês.
+
+160
+00:12:30,280 --> 00:12:32,590
+Beleza assim que.
+
+161
+00:12:33,700 --> 00:12:41,800
+Abrir essa telinha aqui vem mostrar várias opções e se vocês instalaram os clubes corretamente vai mostrar
+
+162
+00:12:41,800 --> 00:12:43,860
+essas opções aqui.
+
+163
+00:12:44,200 --> 00:12:47,710
+Parecido comigo parecido com o meu.
+
+164
+00:12:47,830 --> 00:12:55,540
+Então olha só nós vamos vir aqui nós vamos clicar nessa segunda opção aqui para criar um projeto com
+
+165
+00:12:55,930 --> 00:12:57,800
+expressão de Bush.
+
+166
+00:12:59,260 --> 00:13:08,740
+Como isso vai funcionar eu vou vir aqui vou clicar e ele pergunta qual o gerenciador de pacotes que
+
+167
+00:13:08,740 --> 00:13:13,420
+você vai usar para o seu projeto Maven ou gratidão.
+
+168
+00:13:13,450 --> 00:13:20,260
+Nós vamos usar o meio vem galera gerir o meio vem o Ratão são gerenciadores de pacotes aqueles que sabem
+
+169
+00:13:20,260 --> 00:13:28,480
+baixar as dependências bio dá o projeto fazer toda essa parte burocrática para gente vamos ao meio maluco
+
+170
+00:13:30,370 --> 00:13:31,390
+beleza.
+
+171
+00:13:31,450 --> 00:13:35,210
+Qual a versão dos Spring que você está utilizando.
+
+172
+00:13:35,210 --> 00:13:37,440
+Bom na data de hoje.
+
+173
+00:13:37,570 --> 00:13:44,800
+Na hora que eu estou gravando aqui a versão mais recente daqui dois pontos cinco pontos três está sempre
+
+174
+00:13:44,800 --> 00:13:49,480
+bem e versão que não esteja Pixote nem em nenhum.
+
+175
+00:13:49,510 --> 00:13:51,220
+São versões em teste.
+
+176
+00:13:51,220 --> 00:13:58,990
+Então pegue versões que já estejam fechadas por exemplo logo dois ponto 4 ponto nove a dois pontos em
+
+177
+00:13:59,230 --> 00:14:00,030
+três.
+
+178
+00:14:00,220 --> 00:14:05,620
+A versão 2 pontos a ponto zero que já é superior e está em teste.
+
+179
+00:14:05,620 --> 00:14:09,280
+Essa está em teste então vou pegar uma recente.
+
+180
+00:14:11,170 --> 00:14:16,750
+E aqui os Springboks se ele funciona não somente para Java ele funciona para outras linguagens como
+
+181
+00:14:16,750 --> 00:14:18,700
+Kotler groove.
+
+182
+00:14:18,790 --> 00:14:22,130
+Então nós vamos gerar para Java.
+
+183
+00:14:22,150 --> 00:14:31,540
+Ele começa a perguntar e aqui ele pergunta qual é o grupo a pedir o grupo aí dia é como se fosse o domínio
+
+184
+00:14:31,540 --> 00:14:33,230
+da sua empresa.
+
+185
+00:14:33,310 --> 00:14:38,420
+é como se fosse o nome do teu site.
+
+186
+00:14:38,470 --> 00:14:43,250
+é como se fosse basicamente o domínio da sua empresa.
+
+187
+00:14:43,270 --> 00:14:45,700
+Só que aqui é o contrário.
+
+188
+00:14:45,700 --> 00:14:53,440
+Por exemplo as empresas geralmente é empresa X ponto com.br.
+
+189
+00:14:53,440 --> 00:14:55,370
+Aqui a gente inverte.
+
+190
+00:14:56,350 --> 00:15:05,890
+Ao contrário por exemplo com um ponto exemplo se fosse a minha empresa fosse assim e deste ponto com.br
+
+191
+00:15:06,460 --> 00:15:16,180
+fosse o domínio da minha empresa aqui eu inverter teria botaria PR ponto com ponto dez da o grupo a
+
+192
+00:15:16,180 --> 00:15:19,190
+pedir ele ao domínio ao contrário.
+
+193
+00:15:19,720 --> 00:15:29,130
+Então aqui como é simplesmente de teste didático eu vou botar aqui ou botar aqui.
+
+194
+00:15:29,500 --> 00:15:36,400
+Com um ponto teste beleza esse vai ser o meu grupo pedir a.
+
+195
+00:15:39,400 --> 00:15:46,840
+Aí ele pergunta que o artefato aí diz o que é o artefato aí é o nome do seu projeto o nome do artefato
+
+196
+00:15:46,840 --> 00:15:48,960
+que ele vai gerar.
+
+197
+00:15:49,180 --> 00:15:53,650
+Então por exemplo está criando um sistema para Bam porque seria alguma coisa voltada para Bam ou sei
+
+198
+00:15:53,650 --> 00:15:59,560
+lá o sistema para ir para a faculdade.
+
+199
+00:15:59,620 --> 00:16:06,790
+Aí tu botaria o teu nome da faculdade uma coisa do tipo que o nome do seu projeto aí um nome aqui galera
+
+200
+00:16:06,790 --> 00:16:08,880
+ele não pode conter espaço.
+
+201
+00:16:08,950 --> 00:16:12,930
+Ele pode ser separado por on line ou hífen.
+
+202
+00:16:13,240 --> 00:16:15,850
+Então aqui eu vou criar aqui.
+
+203
+00:16:15,880 --> 00:16:27,640
+Primeiro exemplo vai ser o nome do meu artefato o primeiro exemplo é o nome do meu projeto e ele pergunta
+
+204
+00:16:27,650 --> 00:16:36,100
+no final você quer que esse projeto seja gerado o que um JAR ou um ar Jar e o ar são duas extensões
+
+205
+00:16:36,760 --> 00:16:38,380
+para quando nós geramos.
+
+206
+00:16:40,220 --> 00:16:45,660
+Para quando nós mudamos o nosso projeto no final é como se fosse executada e está a galera.
+
+207
+00:16:45,690 --> 00:16:50,490
+é como se eu estivesse compilando juntando tudo dentro de um único arquivo.
+
+208
+00:16:50,490 --> 00:16:52,760
+Então está perguntando Você quer gerar um jargão.
+
+209
+00:16:52,780 --> 00:16:54,510
+A gente vai manter o jaraqui.
+
+210
+00:16:56,110 --> 00:16:58,290
+Ele pergunta qual a versão.
+
+211
+00:16:59,990 --> 00:17:09,080
+Do Java você quer usar aqui para ser uma versão específica do seu do seu Spring embutido seu projeto
+
+212
+00:17:09,530 --> 00:17:15,960
+bom na versão do explica que a gente está usando ele suporta a versão de 11 16 e 8.
+
+213
+00:17:16,070 --> 00:17:23,140
+Eu vou deixar 11 mesmo isso aqui não vai impactar em nada pra gente tá vou deixar 11 mesmo dia aqui
+
+214
+00:17:23,180 --> 00:17:28,060
+ele pergunta o seguinte quais as dependências que você quer utilizar.
+
+215
+00:17:28,070 --> 00:17:28,310
+Bom.
+
+216
+00:17:29,950 --> 00:17:35,110
+Basicamente de início nós vamos usar duas dependências.
+
+217
+00:17:35,110 --> 00:17:39,970
+A primeira delas é que nós vamos usar essa daqui desprende Spring.
+
+218
+00:17:43,050 --> 00:17:43,710
+Bush.
+
+219
+00:17:45,580 --> 00:17:49,670
+Deve Turks e Spring but deve touch.
+
+220
+00:17:49,810 --> 00:17:51,940
+Essa é uma dependência que é muito maneira.
+
+221
+00:17:51,940 --> 00:17:59,320
+Por quê é uma dependência que fica dando restart na nossa aplicação quando há alguma alteração é feita
+
+222
+00:17:59,440 --> 00:18:04,810
+por exemplo imagino eu estou ficando aqui minha aplicação tem perna rodando lá na porta Sei Lá %80.
+
+223
+00:18:06,630 --> 00:18:07,600
+Ai eu vou.
+
+224
+00:18:07,680 --> 00:18:11,280
+Mudo um arquivo que vai impactar diretamente no funcionamento.
+
+225
+00:18:11,280 --> 00:18:18,190
+Em vez de ter que parar a aplicação levantar de novo automaticamente o Spring faz isso para mim.
+
+226
+00:18:18,720 --> 00:18:22,040
+Ele viu o que você alterou quando você deu um contra o Oeste para salvar.
+
+227
+00:18:22,140 --> 00:18:24,670
+Ele vai matar e vai levantar automaticamente.
+
+228
+00:18:24,670 --> 00:18:27,440
+Isso é muito útil ajuda bastante.
+
+229
+00:18:27,510 --> 00:18:33,020
+Então nós vamos clicar nele que já tem uma dependência selecionada.
+
+230
+00:18:33,120 --> 00:18:38,170
+Um outro que nós vamos usar isso daqui desprende web.
+
+231
+00:18:38,250 --> 00:18:52,950
+O ex-premiê web vai ser a dependência que vai dar poder para gerar o que o fundo está usando.
+
+232
+00:18:52,980 --> 00:19:02,910
+O Spring MVC pra gente poder trabalhar com os controles e trabalhar com os nossos serviços e é muito
+
+233
+00:19:02,910 --> 00:19:04,710
+maneiro e muito legal.
+
+234
+00:19:04,710 --> 00:19:05,640
+Por quê.
+
+235
+00:19:05,640 --> 00:19:06,450
+Por quê.
+
+236
+00:19:06,510 --> 00:19:11,180
+A expressão de web além de ela já vir com todas as dependências para trabalhar com a API.
+
+237
+00:19:12,150 --> 00:19:21,630
+Ela já traz embutida o Apache Tomcat que é um mini servidor para gente poder subir a nossa aplicação.
+
+238
+00:19:23,880 --> 00:19:29,920
+A nossa saberia que beleza tudo isso de forma automática.
+
+239
+00:19:29,980 --> 00:19:37,090
+Então eu vou vir aqui vou selecionar a professora que iria selecionar outras dependências pois depois
+
+240
+00:19:37,090 --> 00:19:40,530
+que você criar você já tiver mais conhecimento você pode.
+
+241
+00:19:40,630 --> 00:19:45,090
+Aqui tem várias dependências da galera dependência para um monte de coisa.
+
+242
+00:19:45,220 --> 00:19:48,570
+Pode ser que talvez você precise de uma dependência que eu não esteja aqui.
+
+243
+00:19:48,640 --> 00:19:54,690
+Você baixa por fora via o vem vou mostrar depois como fazer algumas coisas desse tipo.
+
+244
+00:19:55,120 --> 00:20:00,260
+Mas de início eu quero essas duas dependências são as dependências que nós vamos usar.
+
+245
+00:20:00,280 --> 00:20:07,780
+Então nós vamos clicar aqui o ícone pergunta Onde você quer gerar o projeto Bom eu quero gerar dentro
+
+246
+00:20:07,780 --> 00:20:11,060
+da pasta que eu estou usando.
+
+247
+00:20:11,060 --> 00:20:11,830
+Então vou mandar gerar.
+
+248
+00:20:15,400 --> 00:20:23,510
+Após ele fazer isso ele pergunta Quer já abrir essa esse projeto ou adicionar no seu país.
+
+249
+00:20:23,510 --> 00:20:28,480
+Tanto faz você clica aqui ou clique aqui ou clicar no meu ateliê o espaço.
+
+250
+00:20:29,670 --> 00:20:31,820
+Ele está aqui dentro do meu projeto.
+
+251
+00:20:31,950 --> 00:20:40,260
+Ele ama a professora e se eu tivesse clicado no outro se eu tivesse clicado no outro vai acontecer algo
+
+252
+00:20:40,260 --> 00:20:41,730
+parecido com isso daqui.
+
+253
+00:20:41,760 --> 00:20:44,010
+Eu vou fechar aqui vou fazê lo.
+
+254
+00:20:44,070 --> 00:20:45,840
+Se eu tivesse clicado no outro.
+
+255
+00:20:47,530 --> 00:20:51,310
+Eu é a mesma coisa que se eu tivesse fechado.
+
+256
+00:20:52,980 --> 00:20:58,830
+Mesmo que estivesse fechado a entrada da nossa pasta que é o do projeto o primeiro exemplo de mandado
+
+257
+00:20:58,830 --> 00:20:59,550
+abrir aqui.
+
+258
+00:21:01,440 --> 00:21:03,260
+é isso que vai acontecer.
+
+259
+00:21:03,300 --> 00:21:06,270
+Beleza então vou vir para cá para vocês verem.
+
+260
+00:21:06,450 --> 00:21:08,070
+Toda vez que você abre.
+
+261
+00:21:10,130 --> 00:21:18,200
+Toda vez que você abre um projeto Java ele vai te fazer uma pergunta quem baixa deseja importar os projetos.
+
+262
+00:21:18,200 --> 00:21:19,420
+Clique em Sim.
+
+263
+00:21:19,490 --> 00:21:20,360
+Por.
+
+264
+00:21:20,570 --> 00:21:29,120
+Ele vai começar a carregar aqui e vai baixar todas as dependências que tem e que o projeto vai baixar
+
+265
+00:21:29,120 --> 00:21:31,730
+todas as dependências que tem no seu projeto.
+
+266
+00:21:36,580 --> 00:21:42,760
+Trinta e sete por cento assim que ele baixar todas as dependências criou uma nova pasta e vai botar
+
+267
+00:21:42,760 --> 00:21:43,750
+uma mãozinha que.
+
+268
+00:21:45,210 --> 00:21:45,530
+Ainda.
+
+269
+00:21:49,270 --> 00:21:53,760
+Baixou todas as dependências o serviço já foi carregado.
+
+270
+00:21:54,310 --> 00:21:57,710
+Então tá aqui o nosso projeto é olha só que legal.
+
+271
+00:21:57,730 --> 00:21:59,530
+Olha os ícones né.
+
+272
+00:21:59,530 --> 00:22:06,100
+Olha como é que cada arquivo com uma extensão diferente ele bota um ícone diferente até a pasta.
+
+273
+00:22:06,100 --> 00:22:06,760
+Olha que legal.
+
+274
+00:22:07,710 --> 00:22:16,390
+Isso quem fez pra gente foi aquela extensão que a gente instalou o martírio com o PM que o faz essa
+
+275
+00:22:16,390 --> 00:22:17,080
+brincadeira.
+
+276
+00:22:17,080 --> 00:22:26,200
+Então aqui a gente criou o nosso primeiro projeto Java com o Spring embutido no nosso projeto Spring
+
+277
+00:22:26,200 --> 00:22:35,450
+boot com Java melhorando o nosso primeiro projeto de boot com Java usando o versículo de beleza.
+
+278
+00:22:35,470 --> 00:22:40,280
+E nós vamos entender como é que esse projeto foi criado essa estrutura.
+
+279
+00:22:40,330 --> 00:22:41,110
+Tudo certinho.

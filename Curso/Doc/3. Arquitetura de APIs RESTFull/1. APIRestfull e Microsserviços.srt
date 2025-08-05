@@ -1,0 +1,1223 @@
+1
+00:00:02,210 --> 00:00:04,130
+E aí galera tudo bem.
+
+2
+00:00:04,220 --> 00:00:06,500
+Estamos aí para mais uma aula.
+
+3
+00:00:06,680 --> 00:00:11,210
+A última aula nós entendemos aí como é que funciona o protocolo HTTP.
+
+4
+00:00:11,210 --> 00:00:15,370
+Nós vimos o que queremos que ele é e como ele funciona.
+
+5
+00:00:15,380 --> 00:00:22,700
+São verbos o que reconhece o que é Response e o objetivo dessa aula que é entender um pouco da arquitetura
+
+6
+00:00:22,700 --> 00:00:28,490
+de como nós vamos trabalhar no back end tendo um pouquinho como é que funciona um pé quente.
+
+7
+00:00:28,610 --> 00:00:35,270
+A gente sabe que o front end se comunica com o back end e como quis saber quem é estruturado como ele
+
+8
+00:00:35,270 --> 00:00:36,720
+é montado.
+
+9
+00:00:36,740 --> 00:00:39,870
+Isso nós vamos começar a entender hoje.
+
+10
+00:00:39,890 --> 00:00:41,670
+Então eu vou começar.
+
+11
+00:00:43,800 --> 00:00:47,970
+Começar a desenhar aqui para a gente poder entender.
+
+12
+00:00:47,980 --> 00:00:48,450
+Então vamos lá.
+
+13
+00:00:50,150 --> 00:00:51,530
+Como é que isso pode funcionar.
+
+14
+00:00:51,680 --> 00:00:58,190
+Por exemplo um pedindo que a gente tão prontamente continue botar uma coisinha aqui laranja.
+
+15
+00:01:01,730 --> 00:01:12,090
+Front end beleza é que nós temos o que a gente pode ter um back end ou mudar a cor dele ou por cima
+
+16
+00:01:12,200 --> 00:01:13,740
+sozinho não está aqui.
+
+17
+00:01:13,790 --> 00:01:20,950
+Eu tenho um front end que se comunica com Beck beleza como o que pode ser a estrutura desse bem quente.
+
+18
+00:01:21,020 --> 00:01:25,970
+Bom esse paciente galera ele pode ser estruturado de várias formas.
+
+19
+00:01:25,970 --> 00:01:34,310
+Ele pode ser estruturado como uma pele fundo ou ele pode ser estruturado como se fosse micro serviços.
+
+20
+00:01:34,310 --> 00:01:40,220
+Vários serviços e várias pequenas aplicações se comunicam ao mesmo tempo.
+
+21
+00:01:40,970 --> 00:01:43,210
+Não é um peixe.
+
+22
+00:01:43,460 --> 00:01:52,430
+Geralmente ele tem uma porta de entrada que são os controles sobre os controles.
+
+23
+00:01:58,300 --> 00:02:07,330
+São os controladores esses controladores que eles recebem toda a requisição HTTP.
+
+24
+00:02:07,480 --> 00:02:14,440
+Toda vez que o front end manda alguma coisa pede alguma coisa ou envia uma coisa sempre vai bater nos
+
+25
+00:02:14,440 --> 00:02:15,350
+controles.
+
+26
+00:02:15,430 --> 00:02:22,750
+Os controles são responsáveis por receber essa requisição são os famosos vem de ponte e dentro deles
+
+27
+00:02:22,750 --> 00:02:27,150
+que nós vamos dizer quais são os verbos que eles vão aceitar.
+
+28
+00:02:27,280 --> 00:02:34,370
+Quais o que eles vão fazer quando receber uma requisição que vão devolver os controle.
+
+29
+00:02:34,380 --> 00:02:44,530
+Geralmente são os responsáveis numa bem maior botar a pedir mas se for.
+
+30
+00:02:51,330 --> 00:02:51,870
+Peixe.
+
+31
+00:02:57,540 --> 00:02:57,820
+Então.
+
+32
+00:02:59,160 --> 00:03:04,050
+Nós temos aqui o banho quente que pode ser dividido da seguinte forma.
+
+33
+00:03:04,170 --> 00:03:10,590
+Ele pode ter o controle que é a porta de entrada de toda requisição no banho quente.
+
+34
+00:03:10,590 --> 00:03:18,960
+O front end mandou para o back back end receber isso através de um controle através de um controlador.
+
+35
+00:03:19,170 --> 00:03:23,490
+E aí esse cara aqui ele pode.
+
+36
+00:03:23,490 --> 00:03:32,370
+Ele pode se comunicar com outras coisas mas geralmente a gente vai aprender um pouquinho de uma arquitetura
+
+37
+00:03:32,370 --> 00:03:37,690
+chamado MVC é um padrão bem comum no Java.
+
+38
+00:03:37,720 --> 00:03:40,490
+Bom para a criação de API.
+
+39
+00:03:40,530 --> 00:03:44,350
+Então o que acontece esse Controller aqui.
+
+40
+00:03:44,460 --> 00:03:50,730
+Ele pode e muitas das vezes se comunica com um cara chamado Service.
+
+41
+00:03:52,030 --> 00:03:58,660
+Services o que seriam os serviços os cérebros seriam os serviços da aplicação.
+
+42
+00:03:58,750 --> 00:04:05,080
+Vamos fingir que o front end está querendo pedir ou manipular dados de um usuário.
+
+43
+00:04:05,080 --> 00:04:10,800
+Se ele fosse manipular dados de um usuário possivelmente dentro de um controle ele teria um controle
+
+44
+00:04:10,900 --> 00:04:12,120
+para o usuário.
+
+45
+00:04:12,120 --> 00:04:16,700
+Então eu vou escrever eu vou ter que mudar a cor aqui só para poder entender.
+
+46
+00:04:16,930 --> 00:04:20,900
+Seria algo mais ou menos o seu controle seria algo assim.
+
+47
+00:04:21,290 --> 00:04:29,020
+O usuário controla a gente teria um cara assim o usuário controla.
+
+48
+00:04:30,370 --> 00:04:42,490
+Que seria uma classe específica dentro do pé do pacote de controle que seria responsável por toda requisição.
+
+49
+00:04:42,490 --> 00:04:48,630
+Toda a comunicação do usuário todo o controle deve ser o único por entidade.
+
+50
+00:04:48,640 --> 00:04:56,590
+Por exemplo você tem usuário e tem empresa Bom você tem que ter um controle para o usuário outra empresa
+
+51
+00:04:56,590 --> 00:04:59,820
+você não pode ter um controle geral que saiba cuidar dos dois.
+
+52
+00:04:59,820 --> 00:05:02,310
+Isso não é uma boa prática de programação.
+
+53
+00:05:02,380 --> 00:05:04,960
+Você tem que separar responsabilidade.
+
+54
+00:05:05,050 --> 00:05:10,210
+Então você vai ter um controle para o usuário e depois de um controle ir para a empresa mas se fingindo
+
+55
+00:05:10,380 --> 00:05:18,430
+que a gente só tem um controle de usuário esse controle de usuário por sua vez ele vai se comunicar
+
+56
+00:05:18,910 --> 00:05:32,470
+com o outro com outro cara que vai ser o usuário segue se o que usar o serviço e o serviço de usuário.
+
+57
+00:05:32,530 --> 00:05:41,650
+Esse cara aqui vai ser a classe responsável por cuidar de toda regra de negócio.
+
+58
+00:05:41,650 --> 00:05:43,520
+O que acontece é o controle.
+
+59
+00:05:43,570 --> 00:05:46,620
+Ele tem que ser simplesmente sua porta de entrada.
+
+60
+00:05:46,720 --> 00:05:53,080
+Ele tem que ser simplesmente o cara que recebe a sua requisição e sabe direcionar para quem é de respeito
+
+61
+00:05:53,410 --> 00:05:57,970
+não é ele que vai fazer toda regra de negócio não é ele que tem que acessar o banco.
+
+62
+00:05:58,060 --> 00:05:59,800
+Não é responsabilidade dele.
+
+63
+00:05:59,800 --> 00:06:06,700
+Imagina numa imagina numa empresa muito grande numa fábrica talvez a pessoa que recebe o pedido não
+
+64
+00:06:06,700 --> 00:06:10,840
+é a mesma pessoa que executa o pedido.
+
+65
+00:06:11,080 --> 00:06:16,720
+A pessoa que recebe o pedido delega para alguém que sabe delegar para as pessoas que vão executar aquele
+
+66
+00:06:16,720 --> 00:06:21,420
+pedido geralmente por exemplo uma fábrica estou chutando aqui.
+
+67
+00:06:21,470 --> 00:06:30,550
+O pessoal de vendas recebe pedido esse pessoal de vendas e delega para alguém responsável e se alguém
+
+68
+00:06:30,550 --> 00:06:35,790
+responsável vai delega para setores que têm que executar aquele pedido.
+
+69
+00:06:35,890 --> 00:06:43,390
+Quando aquele pedido está pronto geralmente é avisado aí a pessoa que delegou é avisado o pessoal de
+
+70
+00:06:43,390 --> 00:06:49,700
+vendas para o pessoal de vendas comunicar com o cliente dizer que está pronto talvez enviar não sei.
+
+71
+00:06:49,700 --> 00:06:52,180
+Então o que acontece aqui.
+
+72
+00:06:54,430 --> 00:07:02,410
+Toda vez que o front end faz uma requisição para o back end o front end manda para o back para o falante
+
+73
+00:07:02,420 --> 00:07:12,190
+End isso é invisível está mas o back end recebe esses dados e aí no controle ele se comunica com um
+
+74
+00:07:12,580 --> 00:07:13,490
+serviço.
+
+75
+00:07:13,490 --> 00:07:24,310
+Então o controle recebe a requisição se é um Get um pulso e um puxão demite recebe a requisição HTTP
+
+76
+00:07:25,000 --> 00:07:27,550
+e sabe de acordo com o verbo.
+
+77
+00:07:27,550 --> 00:07:35,170
+De acordo com o que foi solicitado para quem vai pedir e aí geralmente ele pede para um usuário serviço
+
+78
+00:07:35,170 --> 00:07:41,350
+para um serviço e esse serviço por sua vez sabe tomar sua ação.
+
+79
+00:07:41,350 --> 00:07:50,230
+Esse serviço por sua vez é responsável pela regra de negócio e responsável por saber delegar e informar
+
+80
+00:07:51,490 --> 00:07:59,440
+para quem é e para quem é de responsabilidade tomar uma ação sobre o que foi pedido.
+
+81
+00:07:59,440 --> 00:08:06,400
+Por exemplo foi pedido uma consulta de todos os usuários então ele sabe pedir e consultar todos esses
+
+82
+00:08:06,400 --> 00:08:13,540
+usuários foi pedido para cadastrar um usuário então ele sabe para onde ele tem que mandar esse cadastro
+
+83
+00:08:13,540 --> 00:08:14,610
+de usuários.
+
+84
+00:08:14,620 --> 00:08:22,450
+Esse cara aqui geralmente a gente coloca nossa regra de negócio e esse cara aqui não é o cara que geralmente
+
+85
+00:08:22,450 --> 00:08:25,920
+vai ao banco de dados não é responsabilidade dele.
+
+86
+00:08:25,930 --> 00:08:32,680
+Vamos fingir que eu como Frontin que faleceu em 15 de cadastre se usuário e para mim fiz um post mandando
+
+87
+00:08:32,680 --> 00:08:34,630
+cadastrar um usuário.
+
+88
+00:08:34,700 --> 00:08:39,210
+Chego no meu controla o controle e validou os dados que vieram.
+
+89
+00:08:39,220 --> 00:08:45,250
+Tá tudo certinho mas não é responsabilidade de fazer isso ele manda pro usuário séries ou muito das
+
+90
+00:08:45,250 --> 00:08:52,540
+vezes ele só recebe e manda para o usuário certos usuários serviço valida todos os dados está tudo ok
+
+91
+00:08:52,540 --> 00:09:00,250
+está tudo certo se precisa de alguma coisa se não tiver ele lanço uma exceção aqui manda ou talvez um
+
+92
+00:09:00,250 --> 00:09:05,490
+bad reconhece que é um erro por parte do usuário.
+
+93
+00:09:06,640 --> 00:09:13,570
+Mas estando tudo certinho ele precisa gravar e o usuário no banco não é usuário séries que grava no
+
+94
+00:09:13,570 --> 00:09:19,300
+palco não é responsabilidade dele ele sabe validar ele que sabe cuidar do sistema da regra de negócio
+
+95
+00:09:19,320 --> 00:09:21,970
+ele que sabe com quem vai se comunicar.
+
+96
+00:09:22,000 --> 00:09:28,270
+Então esse cara que ele tem que se comunicar com alguém que saiba gravar no banco alguém que tem a responsabilidade
+
+97
+00:09:28,270 --> 00:09:28,780
+sócio.
+
+98
+00:09:29,990 --> 00:09:37,280
+No balcão ou gravado no txt ou mandar para outra aplicação não sei depende muito da arquitetura que
+
+99
+00:09:37,280 --> 00:09:44,670
+for criada esse cara aqui então ele vai se comunicar com mais uma camada que é a camada de repositório
+
+100
+00:09:45,410 --> 00:09:54,850
+ou a camada de repositório o repositório e uma camada onde nós fazemos a persistência de dados.
+
+101
+00:09:54,900 --> 00:10:06,860
+Essa persistência pode ser um banco de dados pode ser um TXT pode ser uma planilha pode ser num outro
+
+102
+00:10:06,860 --> 00:10:09,950
+micro serviço pode ser em uma outra PI.
+
+103
+00:10:10,010 --> 00:10:11,900
+Tanto faz.
+
+104
+00:10:11,900 --> 00:10:24,140
+Então o usuário sabe se ele vai saber se comunicar com um novo ou um novo uma nova classe ou uma nova
+
+105
+00:10:24,140 --> 00:10:33,850
+parte do meu código que vai se chamar usuário por torna.
+
+106
+00:10:34,820 --> 00:10:39,350
+Beleza então ele vai saber se comunicar com a escala que o usuário repositório.
+
+107
+00:10:41,880 --> 00:10:51,840
+E aí assim acontece a comunicação o front end faz uma requisição um reconhece o tempo ataque ele faz
+
+108
+00:10:51,840 --> 00:10:53,850
+um teste.
+
+109
+00:10:55,980 --> 00:11:01,140
+O front end faz o reconhecimento após o ataque do tipo poucos para a gente poder entender.
+
+110
+00:11:01,440 --> 00:11:08,230
+Um reflexo pode ser burros pode ser Gate não deixa Assassin 1 reconhece.
+
+111
+00:11:08,280 --> 00:11:14,970
+Para o back end o back end por sua vez recebe essa requisição esse pedido o que pode ser um puxão útil
+
+112
+00:11:14,970 --> 00:11:20,870
+demite qualquer coisa ele recebe aqui mas ele recebe dentro de um controle.
+
+113
+00:11:20,910 --> 00:11:27,720
+De acordo com o que foi vendo que não reconhece por exemplo se não reconhece vem lá eu quero mandar
+
+114
+00:11:27,720 --> 00:11:28,740
+para usuários.
+
+115
+00:11:28,740 --> 00:11:31,320
+Ele sabe mandar para o controle do usuário.
+
+116
+00:11:31,470 --> 00:11:34,260
+Eu pedi para a empresa ele vai mandar para controle de empresa.
+
+117
+00:11:34,270 --> 00:11:39,930
+Eu pedi produto ele vai abandonar o controle de produto mas no nosso caso aqui a gente simulando o usuário
+
+118
+00:11:40,710 --> 00:11:47,730
+vai fazer a requisição back end recebe isso no controle por exemplo recebeu isso no controle de usuário
+
+119
+00:11:48,150 --> 00:11:49,930
+e do controle do usuário.
+
+120
+00:11:49,950 --> 00:11:57,630
+Ele pega esses dados envia para o um serviço de usuário para poder validar sisuda que realmente está
+
+121
+00:11:57,930 --> 00:12:01,980
+correto se pode prosseguir se todos os dados estão ok.
+
+122
+00:12:01,980 --> 00:12:07,920
+Tudo certinho processa esses dados e aí ele manda para alguém guardar essa informação.
+
+123
+00:12:07,920 --> 00:12:11,900
+Quem que vai guardar essa informação é um serviço de persistência.
+
+124
+00:12:12,000 --> 00:12:17,310
+O que é um serviço de persistência é o nosso repositório e é um cara que sabe guardar.
+
+125
+00:12:17,730 --> 00:12:19,690
+Só que ele pode guardar em qualquer lugar.
+
+126
+00:12:19,710 --> 00:12:26,640
+Ele pode guardar numa TXT e pode guardar um banco de dados pode enviar para outra pessoa e pode fazer
+
+127
+00:12:26,640 --> 00:12:27,900
+qualquer coisa.
+
+128
+00:12:28,170 --> 00:12:30,960
+Mas geralmente aqui é um banco de dados.
+
+129
+00:12:30,960 --> 00:12:38,430
+Então aqui a última camada a última camada geralmente é um.
+
+130
+00:12:40,430 --> 00:12:47,360
+Banco de dados eu vou botar PD de banco de dados para ficar fácil.
+
+131
+00:12:47,360 --> 00:12:48,890
+é um banco de dados.
+
+132
+00:12:50,540 --> 00:12:51,050
+E aí.
+
+133
+00:12:53,540 --> 00:13:00,920
+Aqui por exemplo fosse usuário poder talvez ele poderia estar salvando uma tabela.
+
+134
+00:13:00,950 --> 00:13:01,520
+O usuário.
+
+135
+00:13:07,740 --> 00:13:09,720
+Uma mudança que parou quadradinhos.
+
+136
+00:13:18,680 --> 00:13:19,670
+Tabela de usuários.
+
+137
+00:13:22,650 --> 00:13:24,600
+Então funcionaria mais ou menos assim.
+
+138
+00:13:25,680 --> 00:13:32,330
+A requisição veio bateu no controle o controle e recebe essa requisição manda para o usuário para o
+
+139
+00:13:32,330 --> 00:13:36,060
+serviço validar se esses dados estão ok.
+
+140
+00:13:36,200 --> 00:13:39,150
+Esses dados estão aqui.
+
+141
+00:13:39,530 --> 00:13:46,700
+Ele pega e envia para o repositório ou repositório por sua vez sabe se comunicar alguma coisa para persistir
+
+142
+00:13:46,700 --> 00:13:47,780
+esses dados.
+
+143
+00:13:47,960 --> 00:13:53,030
+Então possivelmente ele vai se comunicar com o banco de dados e vai mandar salvar isso em algum lugar
+
+144
+00:13:53,300 --> 00:13:56,990
+pertinente aonde tenha os dados disse o usuário.
+
+145
+00:13:57,020 --> 00:14:02,720
+Por exemplo aqui um exemplo aqui se mandasse o usuário de salvaria talvez de uma tabela de usuário lá
+
+146
+00:14:02,720 --> 00:14:04,500
+no banco de dados.
+
+147
+00:14:04,660 --> 00:14:13,370
+Beleza então essa aqui é uma estrutura de como funciona a arquitetura de um projeto back end API um
+
+148
+00:14:13,370 --> 00:14:20,180
+projeto bem simples um projeto bem comum aí no mercado está uma arquitetura comum.
+
+149
+00:14:20,180 --> 00:14:27,670
+Existe vários tipos de arquitetura mas isso aqui é uma comum que vocês podem evoluir bastante.
+
+150
+00:14:27,740 --> 00:14:34,190
+Então nós vamos começar nessa arquitetura que beleza e além.
+
+151
+00:14:34,190 --> 00:14:43,460
+Além dessa arquitetura aqui vamos pensar o seguinte isso aqui é uma API aonde tenha.
+
+152
+00:14:46,150 --> 00:14:53,180
+Uma única porta de entrada de todo o sistema está construído em um único back end.
+
+153
+00:14:53,260 --> 00:15:01,900
+Aqui a gente chama de back end monolítico e uma única aplicação e um único back end que tem toda a responsabilidade
+
+154
+00:15:02,350 --> 00:15:08,920
+dentro dele que é um exemplo Back índia onde tem toda a responsabilidade dentro dele.
+
+155
+00:15:08,960 --> 00:15:15,380
+Então aqui eu poderia ter toda a opção controle de uma empresa inteira aqui dentro.
+
+156
+00:15:15,610 --> 00:15:18,790
+Mas agora vamos pensar um novo cenário.
+
+157
+00:15:18,790 --> 00:15:26,410
+Imagine o seguinte acontece muito também o seguinte vou criar aqui um outro cara que vai ser o nosso
+
+158
+00:15:26,410 --> 00:15:27,910
+cliente.
+
+159
+00:15:28,270 --> 00:15:31,380
+Só pra gente ter mais ou menos uma ideia nosso cliente vai ser amarelo.
+
+160
+00:15:36,460 --> 00:15:40,150
+Se o nosso cliente o nosso cliente ele.
+
+161
+00:15:41,740 --> 00:15:44,980
+Vai se comunicar com a nossa aplicação.
+
+162
+00:15:45,120 --> 00:15:47,320
+Então ele se comunica com o front end.
+
+163
+00:15:50,470 --> 00:15:56,050
+Só num cenário num cenário tipo uma Netflix da vida vamos pensar na Netflix.
+
+164
+00:15:57,820 --> 00:16:06,220
+Você como cliente você se conecta lá na Netflix na sua televisão no seu celular seu computador onde
+
+165
+00:16:06,220 --> 00:16:07,820
+você estiver acessando.
+
+166
+00:16:07,840 --> 00:16:16,200
+Quando você acessa o front end de lá da Netflix para botar usuário e senha para fazer acesso.
+
+167
+00:16:16,300 --> 00:16:17,170
+O que acontece.
+
+168
+00:16:18,710 --> 00:16:29,170
+Esse cara aqui ele se comunica com um outro cara que seria como se fosse a porta de entrada da Netflix.
+
+169
+00:16:29,240 --> 00:16:31,310
+A gente geralmente chama isso de gueto
+
+170
+00:16:34,160 --> 00:16:34,460
+tá.
+
+171
+00:16:35,460 --> 00:16:39,510
+Vou botar esse quadradinho só vou mudar a cor.
+
+172
+00:16:39,510 --> 00:16:41,800
+é como se fosse a porta de entrada.
+
+173
+00:16:41,800 --> 00:16:47,270
+Tá bom então o cliente e nós usuários acessamos o front end de lá.
+
+174
+00:16:47,280 --> 00:16:51,330
+No celular uma televisão um computador.
+
+175
+00:16:51,960 --> 00:16:57,240
+E aí nós pegamos esse front end por sua vez ele vai se comunicar com alguém.
+
+176
+00:16:59,090 --> 00:17:05,810
+Aqui a gente vai trabalhar em cima de uma arquitetura chamando de micro serviços só para vocês terem
+
+177
+00:17:05,810 --> 00:17:06,380
+uma ideia.
+
+178
+00:17:10,560 --> 00:17:14,370
+Então o front end ele vai se comunicar com um cara que chamado Get.
+
+179
+00:17:20,740 --> 00:17:32,890
+Esse Iguatemi por sua vez ele sabe de acordo com que o cliente pediu direcionar para alguma coisa então
+
+180
+00:17:33,130 --> 00:17:36,460
+debaixo dele aqui eu poderia ter um.
+
+181
+00:17:38,700 --> 00:17:45,440
+Ms 1 que é um micro serviço meu micro serviços.
+
+182
+00:17:45,510 --> 00:17:49,660
+Ele poderia ter um outro micro serviço aqui.
+
+183
+00:17:49,840 --> 00:17:50,730
+MS 2.
+
+184
+00:17:54,450 --> 00:17:57,720
+é mais um aqui MS 3.
+
+185
+00:18:01,620 --> 00:18:02,850
+Vou botar só quatro.
+
+186
+00:18:05,370 --> 00:18:09,270
+Só quatro mas sei que poderia ter N N micro serviços.
+
+187
+00:18:12,210 --> 00:18:14,120
+Então vou botar até.
+
+188
+00:18:14,310 --> 00:18:24,080
+Isso vem pra cá e pra cá vim pra cá e vou deixar esse mesmo inchaço e este passado a gente entendesse
+
+189
+00:18:24,090 --> 00:18:24,450
+melhor.
+
+190
+00:18:27,770 --> 00:18:29,360
+Beleza então olha só.
+
+191
+00:18:30,560 --> 00:18:39,430
+De acordo com o que o cliente pede para você falar só Netflix mandou botar seu usuário e senha.
+
+192
+00:18:39,440 --> 00:18:48,560
+Bom pode ser que o seu usuário senha a Netflix tenha um micro serviço ou seja uma aplicação um serviço
+
+193
+00:18:48,560 --> 00:18:51,200
+totalmente separado só para autenticação.
+
+194
+00:18:51,200 --> 00:18:52,820
+Olha que legal.
+
+195
+00:18:52,820 --> 00:19:00,680
+Então quando você pede para acessar esse Get Out que ele sabe é direcionar para algum micro serviço
+
+196
+00:19:00,690 --> 00:19:06,470
+então no caso um físico micro o serviço é o de sei lá o de autenticação.
+
+197
+00:19:06,560 --> 00:19:13,250
+Vou botar aqui um de login ele faz isso seria o serviço de autenticação.
+
+198
+00:19:13,250 --> 00:19:23,160
+Então quando você vai mudar cozinha dele aqui é só pra gente poder é melhor quando você manda bota lá
+
+199
+00:19:23,160 --> 00:19:25,190
+até o e-mail tua senha.
+
+200
+00:19:25,370 --> 00:19:30,950
+Ele vem aqui para o micro serviço e esse micro serviço por sua vez ele tem uma arquitetura totalmente
+
+201
+00:19:30,950 --> 00:19:32,040
+separada.
+
+202
+00:19:32,060 --> 00:19:40,110
+Aí aqui eu poderia ter aqui eu poderia ter controle aqui eu poderia ter debaixo de controle.
+
+203
+00:19:40,130 --> 00:19:46,340
+Eu poderia ter serviços poderia ter toda a arquitetura que a gente viu aqui.
+
+204
+00:19:48,620 --> 00:19:55,460
+Eu posso ter dentro de cada micro serviços desse dentro de cada serviço posso ter um controle postamos
+
+205
+00:19:55,460 --> 00:19:57,060
+serve.
+
+206
+00:19:57,860 --> 00:20:05,460
+Essa mesma arquitetura que está aqui eu poderia ter aqui mais pra facilitar o entendimento.
+
+207
+00:20:05,510 --> 00:20:11,240
+Eu vou fazer o seguinte Aqui eu vou botar como se fosse só um banquinho de dados está aonde a gente
+
+208
+00:20:11,360 --> 00:20:17,730
+aonde a gente consultar é só para facilitar mas nesse meio é que pode ter um monte de coisa.
+
+209
+00:20:17,780 --> 00:20:25,100
+Então o micro serviço por sua vez ele sabe se conectar nesse banco que tem todos os dados de acesso.
+
+210
+00:20:27,360 --> 00:20:33,300
+E sabe devolver para dizer se você pode acessar ou não a Netflix para você assistir sua série.
+
+211
+00:20:33,360 --> 00:20:44,640
+Por sua vez se esse se o teu usuário estiver correto tiver errado ou qualquer coisa do tipo ele vai
+
+212
+00:20:44,640 --> 00:20:48,500
+devolver isso para um gato e que por sua vez vai devolver o cliente.
+
+213
+00:20:48,510 --> 00:20:55,890
+Mas se tiver certo muitas das vezes o que acontece vai resolver como autenticada ele vai devolver e
+
+214
+00:20:56,090 --> 00:21:04,740
+isso vai vir para o front end e o front end pode fazer talvez uma segunda requisição que é pedir talvez
+
+215
+00:21:05,010 --> 00:21:06,360
+o teu.
+
+216
+00:21:06,360 --> 00:21:08,960
+Esse cara aqui vai devolver o seu perfil.
+
+217
+00:21:09,050 --> 00:21:10,050
+Vão fingir.
+
+218
+00:21:10,080 --> 00:21:17,520
+Olha só você foi lá e louco usuário e senha ele pegou validou diz que você está ok e o devolveu a ele
+
+219
+00:21:17,520 --> 00:21:25,350
+lá na tua tela vai apresentar lá você é porque geralmente todo mundo tem mais de uma conta no Netflix
+
+220
+00:21:25,350 --> 00:21:28,140
+e mais de um perfil ele vai devolver o teu perfil.
+
+221
+00:21:28,140 --> 00:21:35,580
+Quando você clica no seu perfil e o Frontier demanda uma nova requisição o gato e recebe essa requisição
+
+222
+00:21:35,940 --> 00:21:38,010
+e o manda talvez para um outro serviço.
+
+223
+00:21:38,040 --> 00:21:40,530
+Galera eu não sei se é cem por cento.
+
+224
+00:21:40,780 --> 00:21:48,900
+Estou tentando explicar que uma arquitetura micro serviços baseada é algo que vocês conhece é algo tangível.
+
+225
+00:21:48,900 --> 00:21:57,420
+Então aqui viria para um micro serviço onde vai devolver os dados de acordo com o seu perfil.
+
+226
+00:21:57,420 --> 00:22:03,880
+Então esse cara aqui vai devolver sei lá lista de preferências.
+
+227
+00:22:03,950 --> 00:22:09,350
+Melhor vou botar na lista de opções e vou te devolver a lista de opções.
+
+228
+00:22:09,360 --> 00:22:15,790
+Essa lista de opções aqui é de acordo com o perfil que você selecionou mas tá vendo que esse cara aqui
+
+229
+00:22:15,990 --> 00:22:23,520
+é o único serviço que a responsabilidade dele é só fazer login é só fazer login ele não tem lógica nenhuma
+
+230
+00:22:23,520 --> 00:22:27,540
+de nicho de serviços de filmes nada disso.
+
+231
+00:22:27,540 --> 00:22:30,730
+Não gosto de fazer o login e devolver o perfil do usuário.
+
+232
+00:22:30,810 --> 00:22:32,080
+Só isso.
+
+233
+00:22:32,130 --> 00:22:35,840
+Esse que por sua vez não tem que saber fazer o login.
+
+234
+00:22:36,000 --> 00:22:42,410
+Ele só entende que se chegou aqui porque o cara está autenticado e se o cara tá autenticado então recebo
+
+235
+00:22:42,420 --> 00:22:44,460
+que ele precisa e eu devolvo.
+
+236
+00:22:44,460 --> 00:22:50,510
+Então esse cara que eu vou ver a lista de opções que são geralmente aqueles filmes que mostra na tela.
+
+237
+00:22:50,550 --> 00:22:56,520
+Aí ele vai devolvê lo devolveu a lista de opções o cliente o cliente olhou poxa eu postei aqui quero
+
+238
+00:22:56,520 --> 00:22:57,800
+ver essa série aqui.
+
+239
+00:22:58,140 --> 00:23:05,790
+Clicou na série quando ele clica possivelmente possivelmente ele está fazendo uma nova requisição que
+
+240
+00:23:05,790 --> 00:23:07,380
+talvez pode estar.
+
+241
+00:23:07,380 --> 00:23:15,120
+Não tenho certeza pode estar batendo num outro meio para um serviço que é o serviço de streaming que
+
+242
+00:23:15,120 --> 00:23:17,980
+é onde é que está aquele vídeo.
+
+243
+00:23:18,090 --> 00:23:28,590
+Então chegou aqui o serviço de streaming processa esses dados e devolve para tela para que o vídeo carregue
+
+244
+00:23:28,590 --> 00:23:32,340
+e você consiga acessar aí na sua tela.
+
+245
+00:23:32,350 --> 00:23:33,300
+Olha que legal.
+
+246
+00:23:33,450 --> 00:23:40,740
+Então eu posso ter um micro serviço de autenticação um só para listar as opções.
+
+247
+00:23:40,890 --> 00:23:43,680
+Só para devolver o vídeo que foi selecionado.
+
+248
+00:23:43,740 --> 00:23:53,130
+Então assim eu posso ter vários Back in vários mini back end e vários mini micro serviços que juntos
+
+249
+00:23:53,610 --> 00:24:00,460
+que juntos formam toda uma aplicação formam todo um sistema.
+
+250
+00:24:00,510 --> 00:24:08,610
+Esse tipo de arquitetura que é muito comum é usado em plataforma de streaming como o Netflix esporte
+
+251
+00:24:08,610 --> 00:24:17,370
+FAI Amazon Prime então tem vários sistemas que trabalham com arquitetura micro serviços aonde eu tenho
+
+252
+00:24:17,370 --> 00:24:25,500
+um gap que é a nossa porta de entrada e essa porta de entrada sabe orquestrar essa brincadeira sabe
+
+253
+00:24:25,500 --> 00:24:35,640
+enviar o pedido para qualquer um desses micro serviços de acordo com a sua lógica e tudo mais.
+
+254
+00:24:35,730 --> 00:24:42,510
+E cada micro o serviço deles pode ter um banco de dados separado galera ou pode ter um banco de dados
+
+255
+00:24:42,510 --> 00:24:43,680
+compartilhado.
+
+256
+00:24:47,230 --> 00:24:52,350
+Eles podem ter um banco de dados separado mas também pode ter um banco de dados compartilhado por exemplo
+
+257
+00:24:52,360 --> 00:24:57,310
+esse mesmo serviço que pode ter um banco de dados só dele mas pode ser que esse outro meio com o serviço
+
+258
+00:24:57,310 --> 00:24:57,670
+aqui.
+
+259
+00:25:03,320 --> 00:25:08,810
+Esse outro micro serviço aqui usa é talvez o mesmo banco de dados.
+
+260
+00:25:09,110 --> 00:25:15,320
+Pode ser que esse bom que seja compartilhado nesse micro serviço NSS banca só desse micro serviço ou
+
+261
+00:25:15,320 --> 00:25:21,140
+pode ser que esse também tem um bom separado não sei depende da arquitetura que foi criada para cada
+
+262
+00:25:21,140 --> 00:25:26,420
+sistema para cada caso cada caso é um caso e pode acontecer muita coisa do seguinte.
+
+263
+00:25:27,350 --> 00:25:34,310
+Pode ser que antes de mostrar o vídeo na tela esse micro serviço precise se comunicar com outro serviço
+
+264
+00:25:34,640 --> 00:25:38,470
+para poder verificar se ele pode mostrar aquele vídeo.
+
+265
+00:25:38,780 --> 00:25:50,510
+Se o perfil da pessoa não está atende aquilo dali então aqui poderia ser um serviço aqui de de segurança
+
+266
+00:25:50,660 --> 00:26:02,480
+e segurança talvez aqui mostre só permitir talvez vídeos que sejam adequados para aquele perfil não
+
+267
+00:26:02,480 --> 00:26:03,560
+sei então.
+
+268
+00:26:03,580 --> 00:26:11,180
+Assim quando a gente trabalha numa arquitetura de micro serviços nós podemos ter uma única fonte de
+
+269
+00:26:11,180 --> 00:26:18,540
+entrada que pode se comunicar com vários micro serviços ou micro serviço 1 2 3.
+
+270
+00:26:18,560 --> 00:26:27,560
+Aqui a gente está fazendo um único micro serviço para cada opção um único micro serviço por exemplo
+
+271
+00:26:27,620 --> 00:26:33,920
+login único novo serviço para opções o único para estrear em um único para segurança e todos eles aqui
+
+272
+00:26:34,010 --> 00:26:40,470
+se comunicam nesse Gateway e aqui cada micro serviço é totalmente independente.
+
+273
+00:26:40,580 --> 00:26:49,250
+Ele pode ter um banco de dados ou mais ele pode ou não compartilhar um banco de dados ele pode ou não
+
+274
+00:26:49,250 --> 00:26:53,800
+se comunicar com outro micro serviço e assim por diante.
+
+275
+00:26:53,900 --> 00:27:02,690
+E essa evolução ao guia pode ainda ficar maior ainda em micros serviços por que eu posso ter o mesmo
+
+276
+00:27:02,690 --> 00:27:07,670
+micro serviços dependendo da arquitetura isso é um pouco mais avançado na sua frente.
+
+277
+00:27:07,670 --> 00:27:16,850
+Vocês possivelmente vão aprender isso que é o seguinte eu posso fazer um Low de balance e pegar esse
+
+278
+00:27:16,850 --> 00:27:23,130
+micro serviços aqui e duplicar ele ter vários micros serviços iguais por quê.
+
+279
+00:27:23,210 --> 00:27:29,240
+Imagina que esse micro serviço que ficou fora se ficou fora ninguém consegue acessar Netflix por quê.
+
+280
+00:27:29,840 --> 00:27:35,840
+Porque é o único micro serviço que faz autenticação se o cara não faz a autenticação não pode acessar
+
+281
+00:27:35,840 --> 00:27:38,920
+mais nenhum desses outros micros serviços.
+
+282
+00:27:39,230 --> 00:27:42,400
+Então esse é um micro serviço que não pode ficar fora.
+
+283
+00:27:42,410 --> 00:27:49,490
+Então se esse cara caiu ferrou então o que é muito muitas arquiteturas fazem que uma arquitetura onde
+
+284
+00:27:49,490 --> 00:27:55,230
+faz um morro de balas levanta várias instâncias do mesmo serviço.
+
+285
+00:27:55,550 --> 00:27:56,480
+E aí.
+
+286
+00:27:56,480 --> 00:27:58,160
+De acordo com o pedido.
+
+287
+00:27:59,740 --> 00:28:08,680
+Cada instância vai receber uma requisição e se uma delas cair simplesmente tem outra no lugar para poder
+
+288
+00:28:08,680 --> 00:28:15,110
+ficar recebia requisições até que a instância que caiu volte ao ar de novo.
+
+289
+00:28:15,190 --> 00:28:22,420
+Isso é uma estratégia muito comum principalmente trabalhando com o Doc e com companheiros e tudo mais
+
+290
+00:28:22,990 --> 00:28:23,990
+beleza.
+
+291
+00:28:24,250 --> 00:28:30,140
+Mas o que eu quero que vocês entendam é para trabalhar com micro serviços.
+
+292
+00:28:30,160 --> 00:28:38,920
+Eu tenho uma fonte de dados aqui a minha porta de entrada o meu gato é o meu orquestrador que vai receber
+
+293
+00:28:38,920 --> 00:28:44,860
+essas requisições e ele sabe delegar para quem for de direito.
+
+294
+00:28:44,950 --> 00:28:52,180
+Ou seja o front end não faz a menor ideia Quantos micros serviços tem atrás do back end ou não sabe
+
+295
+00:28:52,510 --> 00:29:00,040
+é simplesmente pedir para uma única porta e essa porta que sabe direcionar para vários tipos de micro
+
+296
+00:29:00,040 --> 00:29:07,000
+serviços que eu mostrei quatro mas poderia ter uma infinidade Que Beleza galera.
+
+297
+00:29:07,090 --> 00:29:10,960
+Então é assim que funciona uma arquitetura micro serviços.
+
+298
+00:29:10,960 --> 00:29:19,240
+Mas antes de trabalhar com micro serviços vou trabalhar com a reis aonde nós vamos fazer exatamente
+
+299
+00:29:19,240 --> 00:29:23,920
+isso daqui nós vamos criar uma estrutura aonde.
+
+300
+00:29:25,660 --> 00:29:28,840
+O cliente é o nosso fronte onde possa fazer uma requisição.
+
+301
+00:29:29,870 --> 00:29:33,500
+Essa requisição chega ao nosso controle.
+
+302
+00:29:34,400 --> 00:29:39,760
+O nosso controle se comunique com o nosso serviço por nossos serviços comunica o nosso repositório e
+
+303
+00:29:39,770 --> 00:29:43,220
+nosso repositório se comunica com o nosso banco de dados.
+
+304
+00:29:43,700 --> 00:29:53,600
+E aí esses dados eu quero fazer essa comunicação com vocês fazendo tanto para cadastrar para atualizar
+
+305
+00:29:53,600 --> 00:30:00,650
+para deletar e obtido pelo nosso famoso Crush Beleza galera então essa é a estrutura que nós vamos começar
+
+306
+00:30:00,650 --> 00:30:01,190
+a trabalhar.

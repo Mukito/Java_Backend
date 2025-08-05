@@ -1,0 +1,123 @@
+1
+00:00:01,200 --> 00:00:03,090
+E aí galera tudo bem.
+
+2
+00:00:03,090 --> 00:00:06,500
+Prazer meu nome é web ação Rodrigues está.
+
+3
+00:00:06,570 --> 00:00:13,050
+Sou especialista em engenharia de software sou graduado em Desenvolvimento de Sistemas atua há mais
+
+4
+00:00:13,050 --> 00:00:22,170
+de oito anos como desenvolvedor Fuchs Tec há mais de seis anos eu venho ministrando cursos tanto cursos
+
+5
+00:00:22,170 --> 00:00:30,420
+técnicos cursos profissionalizantes sou professor acadêmico e nesse período todo venho tentando montar
+
+6
+00:00:30,420 --> 00:00:38,070
+materiais tentando fazer com que pessoas possam alcançar os seus objetivos possam buscar encontrar sua
+
+7
+00:00:38,070 --> 00:00:40,080
+carreira profissional.
+
+8
+00:00:40,320 --> 00:00:48,360
+Criei esse curso de back end completo com Java é um curso muito completo um curso muito rico cheio de
+
+9
+00:00:48,360 --> 00:00:53,670
+informações e um curso onde nós vamos parte do princípio de API.
+
+10
+00:00:53,850 --> 00:00:57,490
+Então nós vamos começar a entender o que é uma peixe.
+
+11
+00:00:57,720 --> 00:01:00,890
+Como funciona fomos zero uma API.
+
+12
+00:01:00,960 --> 00:01:03,770
+Passamos por todos os conceitos e boas práticas.
+
+13
+00:01:03,840 --> 00:01:08,940
+Vamos aprender a trabalhar com o Spring Push vamos aprender a trabalhar com conexão com o banco de dados
+
+14
+00:01:08,940 --> 00:01:16,060
+conheceremos o posto de trabalhar com DT ou trabalhar com contêineres injeção de dependência.
+
+15
+00:01:16,080 --> 00:01:19,130
+Vamos aprender a fazer depois em cloud.
+
+16
+00:01:19,140 --> 00:01:24,870
+Depois disso nós vamos entrar na categoria de micro serviços vamos entender o que são micro serviços
+
+17
+00:01:24,870 --> 00:01:27,630
+como é que eles funcionam como eles interligam.
+
+18
+00:01:27,630 --> 00:01:33,720
+Vamos aprender criar uma estrutura de micro serviço utilizando os serviços mais comuns do mercado.
+
+19
+00:01:33,810 --> 00:01:41,130
+Vamos utilizar os micro serviços baseados na Netflix os cookies que a Netflix criou e o usa internamente
+
+20
+00:01:41,130 --> 00:01:46,040
+dentro da sua arquitetura não vamos utilizar aqui durante o curso.
+
+21
+00:01:46,080 --> 00:01:51,170
+Então é um curso muito rico muito muito cheio de informação.
+
+22
+00:01:51,190 --> 00:01:56,330
+Creio que o profissional que fizer esse curso ele vai sair com uma bagagem muito sólida muito importante
+
+23
+00:01:56,330 --> 00:01:57,230
+para o mercado.
+
+24
+00:01:57,300 --> 00:02:00,810
+Será um diferencial muito grande muito grande.
+
+25
+00:02:00,810 --> 00:02:07,080
+Eu abri aqui um dos projetos que nós vamos fazer isso daqui é um projeto de uma API completa com Java
+
+26
+00:02:07,470 --> 00:02:16,410
+ou com uma arquitetura MVC toda separada com os modelos com os repositórios e serviços com os compartilhados
+
+27
+00:02:16,860 --> 00:02:23,190
+tudo certinho tudo tudo comentado tudo estruturado tudo muito bem feito.
+
+28
+00:02:23,190 --> 00:02:29,640
+Então o aluno que fizer o curso ele vai aprender que é um projeto profissional um projeto rico aonde
+
+29
+00:02:29,640 --> 00:02:35,960
+ele vai poder evoluir muito esse projeto vai poder utilizar rede seu trabalho no seu mercado de trabalho
+
+30
+00:02:35,970 --> 00:02:43,410
+conseguir aí uma promoção ou talvez trocar de emprego mudar de empresa e um curso muito bom muito rico
+
+31
+00:02:43,410 --> 00:02:48,060
+com bastante informação espero que gostem e vamo que vamo galera.
