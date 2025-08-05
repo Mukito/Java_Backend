@@ -1,0 +1,707 @@
+1
+00:00:02,140 --> 00:00:08,590
+E aí galera agora é que a gente aprendeu como é que funciona arquitetura de micro serviços entendemos
+
+2
+00:00:08,590 --> 00:00:10,750
+como é que ela funciona o que é um gueto.
+
+3
+00:00:11,200 --> 00:00:15,760
+O que é um Discover serve como é que os micro serviços se integram.
+
+4
+00:00:15,760 --> 00:00:17,440
+Vamos fazer na prática.
+
+5
+00:00:17,440 --> 00:00:17,980
+Então vamos lá.
+
+6
+00:00:18,250 --> 00:00:22,910
+A primeira coisa que eu vou fazer eu vou criar uma pasta aqui.
+
+7
+00:00:23,020 --> 00:00:24,640
+Na verdade não vou abrir o último.
+
+8
+00:00:29,310 --> 00:00:33,220
+And WS could sem pasta sem nada.
+
+9
+00:00:33,300 --> 00:00:34,590
+Pano para fechar aqui.
+
+10
+00:00:40,510 --> 00:00:50,590
+Com o país de onde saiu em defesa parou ele sem nada aberto não tem nada de Abril Vasco hoje não tem
+
+11
+00:00:50,590 --> 00:00:57,380
+nada que o fazer eu vou criar um cara chamado Work Facebook que mas só o nosso local de trabalho.
+
+12
+00:00:58,270 --> 00:01:06,340
+é dentro dele que nós vamos organizar e vamos manter organizado as nossas as nossas APIs de nossos micro
+
+13
+00:01:06,340 --> 00:01:14,310
+serviços então dentro dele vai ficar o nosso gateway de redirecionamento vai ficar o nosso desconversar
+
+14
+00:01:14,500 --> 00:01:21,790
+no nosso micro serviços posso botar pastas que estejam fora do Word dispense dentro do espaço posso
+
+15
+00:01:22,150 --> 00:01:25,840
+estar mas nós vamos fazer tudo dentro de uma mesma pasta para ficar fácil.
+
+16
+00:01:25,840 --> 00:01:29,890
+Vamos ver aqui fail e vou mandar salvar um país.
+
+17
+00:01:32,000 --> 00:01:41,260
+Eu vou vir aqui na área de trabalho vou com uma pasta chamada micros serviços micros serviços e dentro
+
+18
+00:01:41,260 --> 00:01:48,700
+dela eu vou querer um carinha chamado Meu Work Space eu posso dar qualquer nome.
+
+19
+00:01:48,700 --> 00:01:55,690
+Ele é do tipo que este país código do tio porque dispensa um arquivo de On está como mandar salvar quando
+
+20
+00:01:55,690 --> 00:01:56,470
+eu faço isso.
+
+21
+00:01:56,470 --> 00:01:59,200
+Ele criou a equipe ensinando essa pasta está aqui.
+
+22
+00:02:00,610 --> 00:02:02,440
+Só que ele não abre essa pasta.
+
+23
+00:02:02,660 --> 00:02:04,050
+Ele só cria.
+
+24
+00:02:04,120 --> 00:02:05,860
+Então vou mandar abrir essa pasta.
+
+25
+00:02:05,860 --> 00:02:08,320
+Então ouvir aqui o Open Folder.
+
+26
+00:02:12,300 --> 00:02:21,080
+Micro serviços opa seleciona a pasta e mandam abrir a pasta beleza.
+
+27
+00:02:21,180 --> 00:02:27,290
+Quando eu faço isso ele já abre a pasta e já identificou que tem um hospício conta deseja abrir o Word
+
+28
+00:02:27,300 --> 00:02:33,780
+fez seu clicar aqui ele me mostra o que tem aqui dentro e se o que espaço ele tem aqui dentro um atributo
+
+29
+00:02:33,780 --> 00:02:37,250
+chamado Folder que são as pastas que fazem parte do país.
+
+30
+00:02:37,290 --> 00:02:39,690
+Por enquanto há rei vazio não tem nada.
+
+31
+00:02:39,750 --> 00:02:42,090
+Não vou clicar aqui em open space.
+
+32
+00:02:44,340 --> 00:02:48,120
+Para quê ele vai pegar e vai carregar o outro espaço para mim.
+
+33
+00:02:48,120 --> 00:02:53,910
+Beleza eu estou dentro do país mas não tenho nenhuma pasta aqui que eu vou fazer.
+
+34
+00:02:53,910 --> 00:02:58,800
+Então vou dar um filme que vou mandar criar um projeto para vir aqui.
+
+35
+00:02:59,040 --> 00:03:06,930
+As digitais Spring para achar o prende que me deixa lá e vou criar um projeto Maven.
+
+36
+00:03:07,650 --> 00:03:15,420
+Vou usar a versão 2 com 5 pontos 5 dos Pink Bolt vou usar linguagem Java no grupo aí dia eu posso botar
+
+37
+00:03:15,420 --> 00:03:16,320
+qualquer grupo em dia.
+
+38
+00:03:16,320 --> 00:03:24,020
+Vou botar meu exemplo de como o grupo pedir e como o nome do artefato vou botar.
+
+39
+00:03:24,030 --> 00:03:25,670
+Que textura.
+
+40
+00:03:25,740 --> 00:03:27,660
+Só pra ficar fácil.
+
+41
+00:03:28,050 --> 00:03:35,650
+Para saber melhor a arquitetura não é esse que a gente está criando o nosso Discovery certos.
+
+42
+00:03:35,730 --> 00:03:39,180
+Então eu vou chamar esse cara aqui de Eureka.
+
+43
+00:03:41,140 --> 00:03:51,100
+Serve se mesmo nome dele vai se chamar Eureka Service que é o nosso serviço de descoberta o nosso serviço
+
+44
+00:03:51,100 --> 00:03:58,720
+de de que vai ser o nosso registrador onde todos os micro serviços vão se registrar pela beleza no final
+
+45
+00:03:58,720 --> 00:04:04,000
+quero que ele gera um já vou usar a versão 11 do Java mas você pode usar qualquer um.
+
+46
+00:04:04,000 --> 00:04:05,110
+Eu gosto de usar 11.
+
+47
+00:04:06,950 --> 00:04:17,150
+E aqui mais é nas dependências nós vamos usar uma dependência chamada Eureka server.
+
+48
+00:04:17,330 --> 00:04:22,250
+Temos uma outra dependência chamada Eureka Discover client mas nós não vamos usar ela.
+
+49
+00:04:22,260 --> 00:04:28,790
+Nós vamos usar a Eureka Server cliquei nela e só ela vai ser suficiente.
+
+50
+00:04:28,790 --> 00:04:29,600
+Vou clicar aqui.
+
+51
+00:04:30,170 --> 00:04:32,260
+Continue.
+
+52
+00:04:32,420 --> 00:04:34,820
+Ele vai perguntar onde eu quero gerar esse projeto.
+
+53
+00:04:34,850 --> 00:04:44,390
+Eu vou gerar dentro da pasta que a gente criou micro serviços o GeNeRation diz folder ou seja gerar
+
+54
+00:04:44,390 --> 00:04:47,100
+dentro desta pasta.
+
+55
+00:04:47,420 --> 00:04:51,860
+Ele gerou e eu já vou clicar aqui e adicionar Work Space.
+
+56
+00:04:53,320 --> 00:05:01,270
+Olha que legal ele já carregou o meu respeito e já mostrou que tem um projeto dando ao país todo projeto
+
+57
+00:05:01,270 --> 00:05:05,790
+que foi dando ao que dispensa ELE BOTA ESSA BOLINHA aqui.
+
+58
+00:05:07,000 --> 00:05:13,270
+Então eu tenho um projeto dentro do nosso país nosso Eureka serve.
+
+59
+00:05:15,640 --> 00:05:16,120
+Beleza.
+
+60
+00:05:16,930 --> 00:05:17,840
+Show de bola.
+
+61
+00:05:17,890 --> 00:05:21,420
+Agora que nós criamos ele vamos dar uma olhada na estrutura dele.
+
+62
+00:05:21,550 --> 00:05:27,370
+A estrutura dele é bem simples ele é um projeto meio vem que tem um clique aqui viu Project para sempre
+
+63
+00:05:27,370 --> 00:05:29,420
+carregar o meu projeto aqui embaixo.
+
+64
+00:05:29,480 --> 00:05:35,440
+Ele é meu projeto meio que tem um ponto XML nada demais tudo o que a gente aprendeu até agora beleza
+
+65
+00:05:35,800 --> 00:05:43,570
+que nós vamos fazer é fazer uma configuração dele pra ele são o nosso serviço de Discovery service ou
+
+66
+00:05:43,570 --> 00:05:47,980
+seja o nosso serviço de descoberta de serviços de micro serviços.
+
+67
+00:05:47,980 --> 00:05:58,510
+Então nós vamos fazer o seguinte nós vamos ver na SRC também nós vamos vir aqui na pasta Java e no nosso
+
+68
+00:05:58,530 --> 00:06:02,760
+Eureka Server application que é nosso arquivo principal.
+
+69
+00:06:02,800 --> 00:06:12,310
+Nós vamos colocar uma nova anotação aqui nós vamos colocar essa anotação aqui arroba e tempo
+
+70
+00:06:16,130 --> 00:06:17,980
+n é bom.
+
+71
+00:06:19,570 --> 00:06:20,290
+Eureka.
+
+72
+00:06:22,130 --> 00:06:27,590
+Serve a ENI e a Cáceres beleza.
+
+73
+00:06:27,710 --> 00:06:33,590
+Nós vamos adicionar essa essa essa essa anotação.
+
+74
+00:06:35,910 --> 00:06:42,610
+Beleza bom essa essa essa notação boa boneca serve.
+
+75
+00:06:42,720 --> 00:06:51,540
+Ela vai configurar a nossa aplicação para ser um serviço de descoberta a qual nós vamos poder utilizar
+
+76
+00:06:51,600 --> 00:06:54,260
+para todos os serviços e registrar nele.
+
+77
+00:06:54,450 --> 00:07:01,830
+Mas antes de terminar nós vamos fazer algumas configurações mas vamos alterar a porta para a gente rodar
+
+78
+00:07:01,830 --> 00:07:03,330
+numa porta específica.
+
+79
+00:07:03,360 --> 00:07:11,010
+Vamos dar um nome a esse serviço e vamos também configurar uma RL beleza.
+
+80
+00:07:11,010 --> 00:07:14,550
+Então vamos lá aonde é que a gente faz toda essa configuração.
+
+81
+00:07:14,550 --> 00:07:22,800
+Bom vou salvar aqui adicionem aqui foi o primeiro ponto moverem Resource Application Properties e aqui
+
+82
+00:07:22,920 --> 00:07:29,070
+eu vou fazer algumas configurações então a primeira configuração que vai fazer aqui alterando a porta
+
+83
+00:07:30,960 --> 00:07:35,980
+é aqui eu vou usar aquele Server ponto forte para trocar a porta.
+
+84
+00:07:36,030 --> 00:07:42,090
+Tudo minúsculo perdão Server ponto forte para trocar a porta.
+
+85
+00:07:42,130 --> 00:07:53,640
+é aí que eu posso botar qualquer porta pra galera eu vou botar a porta 80 sei lá 80 80 80 0 %82.
+
+86
+00:07:55,750 --> 00:08:07,930
+Beleza %82 nem sei se essa porta usando da minha máquina melhor %81 %81 vai ser a porta do nosso do
+
+87
+00:08:07,930 --> 00:08:10,060
+nosso server.
+
+88
+00:08:10,180 --> 00:08:13,060
+E aí eu vou vir aqui e vou dar um nome pra ele.
+
+89
+00:08:13,060 --> 00:08:21,400
+Vamos botar ordem dando nome ao nosso micro serviço.
+
+90
+00:08:21,430 --> 00:08:31,790
+Esse cara já vai ser um micro serviço como a gente dá um nome pra ele exprime ponto a ponto aquele que
+
+91
+00:08:32,560 --> 00:08:39,510
+nem já tem aqui e que eu vou dar um nome eu vou chamar esse cara de Eureka.
+
+92
+00:08:39,770 --> 00:08:44,410
+Eureka server que é o que ele faz.
+
+93
+00:08:44,620 --> 00:08:46,070
+Ele é um eureka serve.
+
+94
+00:08:46,090 --> 00:08:51,550
+Ele é o cara que vai poder fazer do nosso Discovery serviço pra gente que vai descobrir os serviços
+
+95
+00:08:51,820 --> 00:08:54,160
+e vai registrar.
+
+96
+00:08:54,580 --> 00:09:01,900
+Beleza então eu tenho aqui o nosso Eureka server que é o nome do nosso aplicativo e nós precisamos agora
+
+97
+00:09:01,900 --> 00:09:10,880
+fazer algumas configurações eu vou fazer aqui e vou e vou explicar que configurações são essas.
+
+98
+00:09:10,900 --> 00:09:18,850
+Vamos lá eu quero fazer o seguinte eu vou botar uma aqui chamada Eureka.
+
+99
+00:09:19,090 --> 00:09:19,980
+Eureka.
+
+100
+00:09:20,050 --> 00:09:22,140
+Ponto caliente.
+
+101
+00:09:23,680 --> 00:09:28,090
+Um cliente ponto.
+
+102
+00:09:28,880 --> 00:09:32,540
+O Eureka que ponto o cliente ponto fecha traço.
+
+103
+00:09:32,540 --> 00:09:36,150
+Registre eu vou botar false.
+
+104
+00:09:36,150 --> 00:09:42,420
+Já vou explicar o que isso e depois eu vou botar o Eureka.
+
+105
+00:09:42,860 --> 00:09:44,240
+Ponto cliente
+
+106
+00:09:47,300 --> 00:09:57,650
+ponto registre ponto Register ponto Register fi e HORECA.
+
+107
+00:09:57,650 --> 00:10:00,050
+Esse cara que mesmo eu também vou botar falso.
+
+108
+00:10:01,790 --> 00:10:13,010
+SHOW DE BOLA esses dois caras o seguinte esses dois caras ele servem para a gente de desabilitar o registro
+
+109
+00:10:13,010 --> 00:10:15,480
+dessa mesma aplicação.
+
+110
+00:10:15,620 --> 00:10:21,740
+O serviço de descoberta ou seja a gente fazendo o que a gente está dizendo que o Eureka ele só é um
+
+111
+00:10:21,740 --> 00:10:26,110
+registrador ele não deve se registrar nele mesmo.
+
+112
+00:10:26,210 --> 00:10:34,490
+Ele vai servir somente como um serviço de descoberta a Deus ele vai servir só como serviço de descoberta
+
+113
+00:10:36,050 --> 00:10:40,500
+e falta mais uma outra configuração que a gente tem que passar.
+
+114
+00:10:40,730 --> 00:10:44,440
+Vou montar uma outra configuração aqui que vai ser Eureka.
+
+115
+00:10:44,570 --> 00:10:45,720
+Eureka.
+
+116
+00:10:45,890 --> 00:10:48,050
+Ponto cliente.
+
+117
+00:10:48,380 --> 00:10:59,040
+Ponto serve se Serra vc ou r o r.
+
+118
+00:11:00,440 --> 00:11:10,330
+Ponto d fou Defcon Zone é o que eu vou passar a mão rs.
+
+119
+00:11:10,540 --> 00:11:17,550
+O que acontece o que é isso é só o RDD Fools One vai somar o RL básica que eu vou criar aqui dentro
+
+120
+00:11:17,550 --> 00:11:19,930
+o que todo mundo vai se registrar nela.
+
+121
+00:11:20,000 --> 00:11:27,040
+Ou seja todo o serviço que quisesse registrar o nosso serviço vai ter que ter essa mesmo RL dentro dela.
+
+122
+00:11:27,050 --> 00:11:27,620
+Beleza.
+
+123
+00:11:27,680 --> 00:11:34,160
+é como se fosse uma chave então a URL vai ser essa daqui que eu vou inventar agora HTTP 2 pontos não
+
+124
+00:11:34,160 --> 00:11:35,280
+é só inventar né.
+
+125
+00:11:35,450 --> 00:11:41,000
+Tem que ser aonde está rodando a tua aplicação e você cria uma rota específica.
+
+126
+00:11:41,090 --> 00:11:44,030
+Então vai ser HTTP 2 pontos Barrabás.
+
+127
+00:11:44,210 --> 00:11:57,290
+Eu quero que a rede seja local ou 2 pontos 80 80 81 que é a porta que está rodando o nosso default Zone
+
+128
+00:11:57,860 --> 00:12:00,970
+é o nosso Senhor acessa onde ele vai rodar.
+
+129
+00:12:01,020 --> 00:12:02,240
+é aí que eu vou botar Barra.
+
+130
+00:12:02,240 --> 00:12:03,260
+Eureka.
+
+131
+00:12:03,380 --> 00:12:11,450
+Ou seja qualquer aplicação que tentar chegar nessa RL aqui por Barra Eureka vai se registrar aqui dentro
+
+132
+00:12:12,370 --> 00:12:13,150
+de casa.
+
+133
+00:12:13,220 --> 00:12:15,290
+Então vou botar uns comentários aqui.
+
+134
+00:12:16,880 --> 00:12:23,360
+O RL a qual os serviços vão se registrar.
+
+135
+00:12:25,600 --> 00:12:25,990
+Desde.
+
+136
+00:12:27,780 --> 00:12:28,410
+SHOW DE BOLA.
+
+137
+00:12:29,640 --> 00:12:38,910
+Beleza então está aqui alteramos a porta demos um nome e fizemos isso aqui todos os nossos serviços
+
+138
+00:12:38,910 --> 00:12:42,660
+vão ter que ter essas três parâmetros aqui está show.
+
+139
+00:12:42,720 --> 00:12:48,210
+Eu vou até copiar eles só que cada um vai ter o seu nome e vai ter a sua porta.
+
+140
+00:12:48,290 --> 00:12:50,710
+Show só isso é que vai ser igual para todo mundo.
+
+141
+00:12:50,710 --> 00:12:52,370
+Então vou deixar ir daqui.
+
+142
+00:12:52,530 --> 00:12:55,220
+Criei esse cara.
+
+143
+00:12:56,160 --> 00:13:05,490
+Beleza se eu vier aqui no Spring but 10 bote eu vou levantar esse cara mandar levantar em vão ver que
+
+144
+00:13:05,490 --> 00:13:06,030
+funciona.
+
+145
+00:13:09,180 --> 00:13:12,520
+O a Sérvia está levantando.
+
+146
+00:13:16,350 --> 00:13:16,950
+Beleza.
+
+147
+00:13:19,400 --> 00:13:29,800
+A aplicação está rodando na porta 80 81 então vou ter que botar o local ou os dois pontos 80 81 tem
+
+148
+00:13:29,850 --> 00:13:30,480
+só isso.
+
+149
+00:13:41,660 --> 00:13:45,140
+O local puxa 80 81.
+
+150
+00:13:47,360 --> 00:13:53,750
+O PAN acha que tem alguma coisa rodando na minha máquina na porta 80 81 porque deu ruim aqui.
+
+151
+00:13:55,880 --> 00:13:58,130
+Não nossa aplicação caiu.
+
+152
+00:13:58,130 --> 00:14:04,720
+Se eu mudar aqui deixa eu fazer uma outra coisa que vou mudar a porta aqui.
+
+153
+00:14:04,730 --> 00:14:09,290
+Vou botar uma outra porta que sei lá vou mudar a porta.
+
+154
+00:14:09,290 --> 00:14:14,910
+Eu acho que a porta 80 88 31 estava rodando e aí derrubou a aplicação 80 10 aqui.
+
+155
+00:14:14,930 --> 00:14:15,320
+Vamos ver.
+
+156
+00:14:17,160 --> 00:14:28,980
+Ele 10 Server porte 80 10 e seu nome Spring Application name Show e aqui hackear ao RL Horeca aponta
+
+157
+00:14:28,980 --> 00:14:38,550
+o cliente ponto Service Service o RL ponto default Zone que é HTTP nos pontos Barra Barra local roxo
+
+158
+00:14:38,760 --> 00:14:47,340
+local roxo certo dos pontos 80 10 agora Barra e HORECA beleza e aqui eu estou parando os serviços Fast
+
+159
+00:14:47,340 --> 00:14:53,320
+Registry e wi fi Horeca beleza bom show de bola.
+
+160
+00:14:53,400 --> 00:14:59,280
+Aparentemente está tudo ok vou mandar levantar de novo que eu acho que a porta 80 81 estava rodando
+
+161
+00:14:59,280 --> 00:15:01,800
+num aplicativo Meu na minha máquina.
+
+162
+00:15:01,800 --> 00:15:06,270
+E aí deu ruim se chover aqui botar outra porta.
+
+163
+00:15:08,860 --> 00:15:11,860
+Veneza 87.
+
+164
+00:15:11,990 --> 00:15:13,420
+Local roxo dos pontos.
+
+165
+00:15:15,370 --> 00:15:18,380
+O cálculo dos pontos 80 10.
+
+166
+00:15:20,180 --> 00:15:21,710
+Agora sim funcionou.
+
+167
+00:15:21,740 --> 00:15:23,750
+Tá vendo a porta 80 10 funcionou.
+
+168
+00:15:23,780 --> 00:15:28,760
+Beleza então está aqui rodando na porta 80 10 o nosso serviço de Horeca como funcionou.
+
+169
+00:15:28,760 --> 00:15:34,610
+Olha só ele traz uma interface gráfica para a gente exprime a Horeca que eu estou no nome eu consigo
+
+170
+00:15:34,610 --> 00:15:40,390
+ver aqui algumas informações eu consigo ver alguém vai me te dar essa sentença tiver um servidor da
+
+171
+00:15:40,400 --> 00:15:41,780
+piora.
+
+172
+00:15:41,810 --> 00:15:44,150
+Aqui só tem alguma réplica.
+
+173
+00:15:44,210 --> 00:15:52,450
+Quais os serviços que estão vinculados ou seja estâncias atuais dos serviços que estão no nosso Horeca
+
+174
+00:15:52,460 --> 00:15:58,790
+registrados aqui no nosso Horeca que eu algumas outras informações serviços dessa nossa estância.
+
+175
+00:15:58,790 --> 00:16:04,600
+Beleza então aqui basicamente a tela principal do nosso Horeca se chegou aqui.
+
+176
+00:16:04,730 --> 00:16:08,920
+O nosso serviço de descobrir senhas significa que está funcionando.
+
+177
+00:16:08,930 --> 00:16:11,750
+Se chegou aqui é porque está OK beleza.

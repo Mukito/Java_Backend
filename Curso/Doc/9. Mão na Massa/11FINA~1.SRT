@@ -1,0 +1,327 @@
+1
+00:00:02,520 --> 00:00:06,420
+Beleza galera consegui resolver aqui qual era o problema.
+
+2
+00:00:07,110 --> 00:00:11,520
+O problema aqui foi entre a cadeira e o computador.
+
+3
+00:00:11,520 --> 00:00:12,650
+Aqui eu não consigo.
+
+4
+00:00:12,660 --> 00:00:22,680
+Eu tinha escrito Application com s no final Applications e aí o que acontece o Conficker sérvia não
+
+5
+00:00:22,680 --> 00:00:27,930
+estava pegando daqui porque ele não precisa disso daqui porque ele não se registra e ninguém mais usou
+
+6
+00:00:28,830 --> 00:00:29,490
+o Zu.
+
+7
+00:00:29,490 --> 00:00:32,380
+Ele depende para poder se registrar.
+
+8
+00:00:32,580 --> 00:00:39,750
+Então como ele não sabia quem era Applications ele sabe que em Application ele não conseguia se conectar.
+
+9
+00:00:39,750 --> 00:00:45,290
+Foi só arrancar USB daqui escrever Application que tudo voltou a funcionar.
+
+10
+00:00:45,300 --> 00:00:49,470
+Aí levantei o serviço levantei na ordem aqui Conficker.
+
+11
+00:00:49,710 --> 00:00:53,230
+Depois Eureka Server depois o uso.
+
+12
+00:00:53,370 --> 00:00:56,670
+Depois o controle de pessoas e o controle de animais.
+
+13
+00:00:56,670 --> 00:01:08,190
+Bom eu vou vir aqui vou testar o local os 80 10 que o RL do Eureka.
+
+14
+00:01:08,520 --> 00:01:11,300
+Os três micros serviços estão em pé.
+
+15
+00:01:11,460 --> 00:01:18,270
+Estão aqui rodando beleza e agora vamos testar a nossa teia consultar animais.
+
+16
+00:01:18,480 --> 00:01:22,470
+Ver vc linda continua consultando custarem estarem mais.
+
+17
+00:01:23,860 --> 00:01:27,970
+Funcionou trouxe todos os animais consultar por dono.
+
+18
+00:01:30,420 --> 00:01:31,070
+Conseguiu.
+
+19
+00:01:31,110 --> 00:01:31,620
+Funcionou.
+
+20
+00:01:31,620 --> 00:01:37,850
+Alberto foi mudar o dono que continua funcionando.
+
+21
+00:01:38,070 --> 00:01:42,040
+Consultar pessoas continuou funcionando.
+
+22
+00:01:42,120 --> 00:01:53,490
+Quem está por aí dia vou pegar quem tem um álibi é de um sono trouxe aí de dois funcionou perfeito.
+
+23
+00:01:53,970 --> 00:01:57,900
+Bom galera o que acontece agora é que nós criamos isso daqui.
+
+24
+00:01:59,170 --> 00:02:06,660
+Nós conseguimos fechar a nossa arquitetura ou seja o nosso projeto agora ele está completo.
+
+25
+00:02:06,670 --> 00:02:11,700
+Como assim completo eu tenho agora deixou minimizar aqui.
+
+26
+00:02:13,200 --> 00:02:21,150
+Um serviço de Horeca um dos ou um de configuração os meus arquivos de configuração.
+
+27
+00:02:22,900 --> 00:02:26,580
+E os meus outros micro serviços.
+
+28
+00:02:27,010 --> 00:02:35,740
+Como toda configuração agora estás terceirizado está internalizada aqui em arquivos específicos.
+
+29
+00:02:35,860 --> 00:02:44,620
+Se eu precisar subir vários serviços ou vários micros serviços de animais de pessoas eu posso subir
+
+30
+00:02:44,620 --> 00:02:49,230
+tranquilamente que todos eles vão pegar a mesma configuração daqui.
+
+31
+00:02:50,530 --> 00:02:57,210
+Controle de Animais com tantas pessoas e aí automaticamente eles vão se registrar porque eles vão pegar
+
+32
+00:02:57,220 --> 00:03:00,970
+além de pegar configuração global eles vão pegar daqui.
+
+33
+00:03:01,300 --> 00:03:03,550
+Vamos fingir que eu quisesse foto de pessoa.
+
+34
+00:03:03,560 --> 00:03:07,420
+Ele vai pegar essa configuração daqui para se registrar e vai vir aqui.
+
+35
+00:03:07,420 --> 00:03:10,300
+Cadê o de pessoas que vai pegar esses dados aqui.
+
+36
+00:03:10,690 --> 00:03:11,620
+Como está na porta.
+
+37
+00:03:11,620 --> 00:03:12,850
+Zero.
+
+38
+00:03:12,850 --> 00:03:20,410
+Automaticamente ele vai escolher uma porta padrão a primeira que tiver disponível vai vincular o serviço
+
+39
+00:03:20,410 --> 00:03:22,060
+e vai ficar disponível.
+
+40
+00:03:22,240 --> 00:03:25,980
+E com isso o Zoom vai conseguir reconhecer esse micro serviço.
+
+41
+00:03:26,050 --> 00:03:29,330
+Então essa estrutura que nós criamos aqui é bem legal.
+
+42
+00:03:29,350 --> 00:03:34,270
+é uma estrutura muito útil que dá pra gente reaproveitar ela em vários lugares.
+
+43
+00:03:34,600 --> 00:03:41,070
+Então um aplicativo que se conecta ao nosso Gateway que que nossos um dos nossos Hugo Barra Gateway
+
+44
+00:03:41,080 --> 00:03:48,070
+que está conectado a um Discover envia essa requisição para algum dos nossos serviços que por sua vez
+
+45
+00:03:48,070 --> 00:03:51,420
+se conecta com outro micro serviço que está conectado ao banco.
+
+46
+00:03:51,430 --> 00:03:57,880
+Tudo isso a gente fez funcionar de forma assíncrona e todos os micro serviços agora estão consumindo
+
+47
+00:03:57,880 --> 00:04:05,020
+informações de um outro micro serviço que é um serviço de configuração que pode estar obtendo dados
+
+48
+00:04:05,020 --> 00:04:09,670
+de um kit da vida de um SDN e de um pai.
+
+49
+00:04:09,670 --> 00:04:12,160
+O histórico de qualquer outro lugar.
+
+50
+00:04:12,220 --> 00:04:20,710
+Então aqui nós temos um dois três quatro cinco micro serviços se comunicam uma arquitetura completa
+
+51
+00:04:21,130 --> 00:04:23,230
+beleza e agora para onde eu vou.
+
+52
+00:04:23,230 --> 00:04:29,710
+Bom agora é só você pegar essa estrutura que a gente criou até o local que está o local e levar para
+
+53
+00:04:29,710 --> 00:04:30,970
+um servidor.
+
+54
+00:04:30,970 --> 00:04:34,650
+Você pode colocar isso aqui tudo dentro de contêineres estoque.
+
+55
+00:04:34,780 --> 00:04:40,630
+Dá para você levantar cada micro serviço que em um ambiente separado não tem problema.
+
+56
+00:04:42,460 --> 00:04:45,250
+Com base nas configurações eles vão pegar.
+
+57
+00:04:45,270 --> 00:04:50,500
+Ah mas se fosse em um outro servidor em vez de usar local roxo você vai usar o IP do servidor que aquele
+
+58
+00:04:50,500 --> 00:04:51,890
+micro serviço está.
+
+59
+00:04:51,910 --> 00:04:56,430
+Então vamos supor que eu tivesse um servidor onde estivesse só o configure.
+
+60
+00:04:56,470 --> 00:05:02,050
+Então todo lugar que fosse conectar um servidor por exemplo aqui o nosso.
+
+61
+00:05:02,050 --> 00:05:08,140
+Se o nosso configurar crime eu vou pegar todo o micro serviço vai se conectar não confie eu botei o
+
+62
+00:05:08,140 --> 00:05:13,090
+local roxa mas aqui seria o IP do mundo do servidor.
+
+63
+00:05:13,510 --> 00:05:16,190
+Onde está esse serviço de configuração.
+
+64
+00:05:16,750 --> 00:05:20,710
+E aí eu poderia ter vários serviços de configuração também rodando.
+
+65
+00:05:20,800 --> 00:05:26,520
+E aí todo mundo se registra em algum deles para poder pegar as configurações.
+
+66
+00:05:26,530 --> 00:05:33,850
+Então aqui o exemplo de uma estrutura de micro serviços que funciona e funciona bem utilizando aí os
+
+67
+00:05:33,850 --> 00:05:39,760
+principais recursos aí do mercado utilizando tecnologias que são usadas por grandes empresas que trabalham
+
+68
+00:05:39,760 --> 00:05:49,810
+com micro serviços como o Netflix por exemplo a gente usou o Gateway da Netflix o que alguns usam e
+
+69
+00:05:49,810 --> 00:05:56,290
+HORECA serviço da Netflix para fazer essa comunicação aqui usamos o Open feed um feito de um cliente
+
+70
+00:05:56,680 --> 00:05:58,450
+também Clix.
+
+71
+00:05:58,510 --> 00:06:02,450
+Então usamos várias tecnologias interessantes do mercado.
+
+72
+00:06:02,470 --> 00:06:08,290
+Bom espero que tenham gostado dessa arquitetura de micro serviço e a gente finaliza por aqui.
+
+73
+00:06:08,360 --> 00:06:16,030
+Então agora é só evoluir pegar essa arquitetura treinar bastante praticar bastante pega ela sobe esses
+
+74
+00:06:16,030 --> 00:06:22,320
+micro serviços em vários servidores botam para se comunicar coloca isso dentro de container doc.
+
+75
+00:06:22,900 --> 00:06:28,630
+Nós não vamos ver conteúdo Doc nesse curso mas você pode estar fazendo outros cursos de container DOC
+
+76
+00:06:28,630 --> 00:06:32,510
+e mais para frente eu devo trazer alguma coisa também sobre doc.
+
+77
+00:06:32,740 --> 00:06:38,850
+Você pode colocar dentro de containers para que isso possa se comunicar de forma mais fluída.
+
+78
+00:06:39,160 --> 00:06:45,610
+Mas aqui a ideia de entender a arquitetura como funciona como é que a gente cria e com essa arquitetura
+
+79
+00:06:45,610 --> 00:06:49,240
+mesmo que local já daria para trabalhar comigo do serviço.
+
+80
+00:06:49,240 --> 00:06:51,330
+Bem legal galera.
+
+81
+00:06:51,580 --> 00:06:52,540
+Show de Bola.
+
+82
+00:06:52,630 --> 00:06:54,580
+A gente se vê nas próximas aulas.

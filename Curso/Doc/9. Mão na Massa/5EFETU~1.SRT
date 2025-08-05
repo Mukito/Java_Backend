@@ -1,0 +1,1283 @@
+1
+00:00:02,520 --> 00:00:04,520
+Beleza galera.
+
+2
+00:00:04,530 --> 00:00:10,340
+Na última aula deixei para vocês baixarem um arquivo chamado Micro serviços.
+
+3
+00:00:10,380 --> 00:00:16,590
+Ele estava gripado e ao extrair esse arquivo de compactar ele gera uma pasta.
+
+4
+00:00:17,340 --> 00:00:23,340
+Essa pasta Eu já deixei algumas coisas prontas pra gente pra gente poder trabalhar na aula de hoje.
+
+5
+00:00:23,340 --> 00:00:30,450
+E o que tem dentro dessa pasta tem o nosso Word espécie o nosso zu serras que nós criamos até agora
+
+6
+00:00:30,990 --> 00:00:37,670
+temos o nosso Eureka e aqui dentro eu vou ter uma parte arquitetura que tem duas imagens aqui escrito
+
+7
+00:00:37,700 --> 00:00:41,830
+na nossa arquitetura de apenas arquitetura de serviços.
+
+8
+00:00:41,940 --> 00:00:50,040
+Coloquei aqui dentro um serviço de controle de animais e um serviço de controle de pessoas pessoas e
+
+9
+00:00:50,040 --> 00:00:56,970
+bem parecido com o que nós fizemos só que um crowd pronto é um serviço onde se comunica com um banco
+
+10
+00:00:56,970 --> 00:01:05,200
+de dados posto onde ele pode cadastrar uma pessoa pode cadastrar deletar atualizar o dia um crush e
+
+11
+00:01:05,250 --> 00:01:07,080
+aqui é a mesma coisa para animais.
+
+12
+00:01:07,170 --> 00:01:14,310
+A única diferença é que o de animais a gente pode cadastrar o animal e dizer quem é o dono dessa pessoa
+
+13
+00:01:14,490 --> 00:01:19,860
+quem é o dono desse animal e de acordo com o que a gente cadastra.
+
+14
+00:01:19,860 --> 00:01:27,390
+De acordo com o que a gente informa ele vai vincular isso tem uma pessoa e o nosso objetivo vai fazer
+
+15
+00:01:28,050 --> 00:01:33,650
+vai ser fazer esses dois micro serviços aqui se comunicar em tempo de execução.
+
+16
+00:01:33,780 --> 00:01:38,460
+Vamos fazer o seguinte vamos dar uma olhada no projeto primeiro mandato aqui no PS cujo.
+
+17
+00:01:43,640 --> 00:01:46,040
+Beleza e carregou as faixas aqui.
+
+18
+00:01:46,940 --> 00:01:49,130
+Clique aqui para abrir isso como em outros países.
+
+19
+00:01:53,250 --> 00:01:54,480
+Perfeito.
+
+20
+00:01:54,480 --> 00:02:00,810
+Aqui abre os nossos serviços para eu não dou uma olhada nessa parte de arquitetura.
+
+21
+00:02:00,920 --> 00:02:04,830
+Aqui nós temos uma imagem da nossa arquitetura de API como é que ela funciona.
+
+22
+00:02:05,430 --> 00:02:06,720
+Tem um usuário.
+
+23
+00:02:06,840 --> 00:02:07,680
+Eu tenho aqui.
+
+24
+00:02:11,200 --> 00:02:15,800
+O front end é a aplicação que vai consumir.
+
+25
+00:02:15,910 --> 00:02:23,550
+Nós temos aqui o nosso que índia ele é composto por controle serviço repositório ele tem uma pasta compartilhada
+
+26
+00:02:23,560 --> 00:02:28,520
+e tem um modelo de depósito em banco de dados dada.
+
+27
+00:02:28,680 --> 00:02:35,050
+Nada muito surpreendente a nossa arquitetura para ficar fácil o entendimento é que a nossa arquitetura
+
+28
+00:02:35,050 --> 00:02:42,460
+de micro serviços está aqui e a arquitetura que nós vamos usar agora para a gente poder desenvolver.
+
+29
+00:02:42,460 --> 00:02:49,210
+Ou seja o usuário vai interagir com a aplicação através do nosso Gateway que é nosso Zune o nosso Subway
+
+30
+00:02:49,210 --> 00:02:51,550
+está conectado ao nosso Server.
+
+31
+00:02:51,650 --> 00:02:57,460
+A nossa área Casseb é hoje o cara que registra todo mundo e o nosso registrador de serviços é o nosso
+
+32
+00:02:57,460 --> 00:02:58,540
+Discovery.
+
+33
+00:02:58,690 --> 00:03:04,320
+E aqui eu posso ter ele aplicativos n micro serviços se comunicando.
+
+34
+00:03:04,360 --> 00:03:10,810
+Eu posso ter micros serviços independentes ou se comuniquem no mesmo banco posso ter micros serviços
+
+35
+00:03:11,260 --> 00:03:16,800
+que além de se conectar no mesmo banco eles podem se comunicar entre si.
+
+36
+00:03:16,870 --> 00:03:23,290
+E é justamente essa situação aqui que nós vamos tentar resolver o que é que situação é essa.
+
+37
+00:03:23,290 --> 00:03:30,520
+Eu quero fazer com que o meu serviço de pessoas se comunique dinamicamente com meu serviço de animais
+
+38
+00:03:31,480 --> 00:03:40,060
+com uma conexão síncrona ou seja ele espere o serviço de animais me responder para obter os detalhes
+
+39
+00:03:40,390 --> 00:03:41,040
+da pessoa.
+
+40
+00:03:41,050 --> 00:03:46,210
+Por exemplo eu quero simplesmente fazer o seguinte eu quero um serviço de animais e cadastrar um cachorro
+
+41
+00:03:46,840 --> 00:03:50,990
+da seguinte forma quero botar tudo cadastrar um cachorro joguinho.
+
+42
+00:03:51,040 --> 00:03:58,930
+Ele é da pessoa fulano quero cadastrar a gata Mel da pessoa ciclano.
+
+43
+00:03:58,930 --> 00:04:02,320
+Então todinho de fulano e meu de ciclano.
+
+44
+00:04:02,380 --> 00:04:06,730
+Então são dois animais cadastrados para pessoas diferentes.
+
+45
+00:04:07,270 --> 00:04:12,850
+Quando houve erro do meu serviço de pessoas e pedi os detalhes da pessoa por exemplo cheguei a falar
+
+46
+00:04:12,880 --> 00:04:22,510
+assim me faz um gato por aí impedindo todos os detalhes da pessoa quando eu fizer isso eu quero que
+
+47
+00:04:22,520 --> 00:04:27,280
+o meu serviço de pessoas além de trazer os detalhes daquela pessoa que eu pedi.
+
+48
+00:04:27,430 --> 00:04:33,220
+Eu quero que ele vá no serviço de animais e veja se tem algum animal vinculado àquela pessoa se tiver
+
+49
+00:04:33,340 --> 00:04:37,420
+eu quero que ele pegue esses animais e retorne também na consulta.
+
+50
+00:04:37,420 --> 00:04:43,120
+Ou seja eu quero que através de serviços de pessoas eu possa consultar se tem animais vinculados àquela
+
+51
+00:04:43,120 --> 00:04:43,870
+pessoa.
+
+52
+00:04:43,910 --> 00:04:47,580
+Esse sim eu quero trazer de volta para a tela beleza.
+
+53
+00:04:47,650 --> 00:04:50,850
+Então é isso que nós vamos fazer pra que a gente possa fazer isso.
+
+54
+00:04:50,860 --> 00:04:59,050
+Vamos entender primeiro a nossa estrutura e vamos lá o nosso serviço de animais não tem nada de não
+
+55
+00:04:59,050 --> 00:05:05,800
+tem cadeira ele não tem nada demais está dentro dentro dele está ele.
+
+56
+00:05:06,060 --> 00:05:09,520
+Ele é um serviço de animais bem simples.
+
+57
+00:05:09,550 --> 00:05:13,510
+Ele é um homem de sorte.
+
+58
+00:05:13,720 --> 00:05:20,660
+Se vocês abrirem aqui vocês vão ver que está conectando a um banco de dados que eu chamei de pet shop.
+
+59
+00:05:20,740 --> 00:05:32,030
+Só você criar um banco de dados chamado Pet Shop no seu post aqui é o nome dá o nome do usuário a senha.
+
+60
+00:05:32,060 --> 00:05:40,960
+O driver desde que aqui eu aporta 0 Horeca poder saber qual é a porta que ele vai utilizar o nome da
+
+61
+00:05:40,960 --> 00:05:51,440
+aplicação o nome que eu dei aqui para instância o RL de conexão com Horeca é aqui ou estância e ele
+
+62
+00:05:51,460 --> 00:05:57,180
+pega o nome da aplicação mais uma ideia aleatória para poder montar o nome da aplicação.
+
+63
+00:05:57,210 --> 00:06:00,190
+Não tem nada demais no nosso Application.
+
+64
+00:06:00,190 --> 00:06:02,350
+Ele tem um nome ao controle de animais.
+
+65
+00:06:03,040 --> 00:06:05,560
+Nada disso nada demais.
+
+66
+00:06:06,040 --> 00:06:12,330
+Aqui eu tenho o meu modelo de animal.
+
+67
+00:06:13,000 --> 00:06:21,240
+Esse cara que não é necessário estar aqui está criado aqui mas a gente não está usando a lei para nada.
+
+68
+00:06:21,580 --> 00:06:26,950
+Mas a gente tem esse cara que não vou dizer que eu posso excluir se o fizer porque a gente não está
+
+69
+00:06:26,950 --> 00:06:29,920
+usando ele próprio beleza.
+
+70
+00:06:31,660 --> 00:06:32,890
+Então nós estamos aqui.
+
+71
+00:06:34,090 --> 00:06:37,750
+Olha só nós temos o animal que o animal.
+
+72
+00:06:37,840 --> 00:06:44,470
+O animal é uma classe onde tem uma indica a chave primária tem o dono.
+
+73
+00:06:45,100 --> 00:06:50,270
+Esse dono aqui está como string mas isso daqui vai ter que ser inteiro.
+
+74
+00:06:50,270 --> 00:06:53,400
+Então vamos daqui pra índio entender.
+
+75
+00:06:56,780 --> 00:07:02,240
+Entender por que no nosso banco de dados o IDH é inteiro então a gente vai fazer algumas alterações
+
+76
+00:07:02,240 --> 00:07:02,570
+aqui.
+
+77
+00:07:03,020 --> 00:07:06,440
+O IDH também vai se entender.
+
+78
+00:07:07,160 --> 00:07:10,320
+Então entendi.
+
+79
+00:07:10,610 --> 00:07:15,620
+Então o dono é o ideal e a medida do animal vai ser inteiro.
+
+80
+00:07:15,650 --> 00:07:20,270
+Tá beleza aí um monte de coisa que vai parar de funcionar.
+
+81
+00:07:20,720 --> 00:07:23,620
+Então aonde é que for foi string que.
+
+82
+00:07:25,980 --> 00:07:33,140
+Eu vou trocar aqui para pará para entender.
+
+83
+00:07:33,750 --> 00:07:37,080
+Beleza ainda tem mais um que ainda é preciso trocar.
+
+84
+00:07:40,130 --> 00:07:43,240
+A beleza é um truque.
+
+85
+00:07:43,240 --> 00:07:47,050
+Eu mudei porque a gente está num banco de dados.
+
+86
+00:07:47,410 --> 00:07:49,780
+SHOW DE BOLA.
+
+87
+00:07:50,620 --> 00:07:59,840
+Que mais vão ouvir aqui no modelo melhor melhores vão vir aqui no avião vão entrar em Controle Animal
+
+88
+00:07:59,840 --> 00:08:00,840
+o controle.
+
+89
+00:08:00,850 --> 00:08:02,410
+Vamos dar uma olhada aqui.
+
+90
+00:08:02,560 --> 00:08:05,110
+Quais são que é esse controle.
+
+91
+00:08:05,180 --> 00:08:08,850
+Bom está apontando para Ibarra de mais nada demais.
+
+92
+00:08:09,010 --> 00:08:11,930
+Ele chama o serviço.
+
+93
+00:08:11,950 --> 00:08:18,310
+Ele tem um gatinha que só para obter o status da aplicação para saber em qual porta ela está rodando.
+
+94
+00:08:18,310 --> 00:08:28,240
+Se o serviço está ativo ou não há algo bem simples aqui e aqui ele tem um post porque ele recebe um
+
+95
+00:08:28,780 --> 00:08:31,030
+animal modelo para inclusão.
+
+96
+00:08:32,230 --> 00:08:39,100
+Então está aqui o animal modelo e um post tem um guest Map que retorna uma lista de animais.
+
+97
+00:08:42,400 --> 00:08:43,700
+Nós temos aqui.
+
+98
+00:08:43,750 --> 00:08:47,560
+Olha só um cara legal Get mapping.
+
+99
+00:08:47,620 --> 00:08:57,450
+Olha só que eu passo o ideia do dono e aí automaticamente esse cara aqui vai vai pegar e vai
+
+100
+00:09:00,430 --> 00:09:03,770
+e vai tentar obter todos os animais desse dono.
+
+101
+00:09:03,770 --> 00:09:07,390
+Bom a gente diz que o dono não é mais uma string.
+
+102
+00:09:07,510 --> 00:09:10,630
+Ele é um inteiro então eu tenho que vir aqui tem que mudar não
+
+103
+00:09:13,360 --> 00:09:17,500
+mudando aqui eu tenho que mudar também dentro do meu serviço.
+
+104
+00:09:19,150 --> 00:09:20,530
+Então vamos ver em que ano.
+
+105
+00:09:22,930 --> 00:09:25,310
+No meu serviço carioca eu queria poder.
+
+106
+00:09:31,030 --> 00:09:38,380
+Pela primeira vez na implementação nós vamos ver aqui vamos mudar isso daqui para a outra coisa obter
+
+107
+00:09:38,380 --> 00:09:38,970
+por aí.
+
+108
+00:09:39,580 --> 00:09:41,580
+Não é mais uma Extreme.
+
+109
+00:09:42,910 --> 00:09:49,330
+O nosso general também é uma estilingue é uma beleza.
+
+110
+00:09:49,600 --> 00:09:50,670
+Show de bola.
+
+111
+00:09:50,690 --> 00:09:57,700
+Então o nosso animal é o dono agora é sempre o inteiro e nós vamos ver aqui na nossa implementação e
+
+112
+00:09:57,700 --> 00:10:02,890
+aonde tiver aqui como string e por aí vai botar.
+
+113
+00:10:06,160 --> 00:10:07,870
+Veja aqui também.
+
+114
+00:10:09,920 --> 00:10:10,170
+Veja.
+
+115
+00:10:12,530 --> 00:10:18,380
+Beleza o de parou de funcionar e o funk barítono também parou de funcionar por quê.
+
+116
+00:10:18,380 --> 00:10:21,200
+Porque no meu repositório da apontou
+
+117
+00:10:23,570 --> 00:10:31,460
+dizendo que o End é uma estrela mas eu quero que ele seja um gênio ao ter aqui também um repositório
+
+118
+00:10:32,240 --> 00:10:34,750
+beleza alterando um repositório.
+
+119
+00:10:34,770 --> 00:10:40,520
+Então agora esse cara que sabe trabalhar com inteiro e o mundo inteiro.
+
+120
+00:10:44,290 --> 00:10:51,780
+Esse é um método que eu criei fase de barítono ou seja esse cara que sabe retornar uma lista de dono
+
+121
+00:10:51,780 --> 00:10:59,280
+o password do dono como no banco de dados tem existe uma entidade com o nome do dono.
+
+122
+00:10:59,350 --> 00:11:05,470
+Eu passo ideia do dono ele vai saber encontrar pelo IP do dono e vai me retorna uma lista de animais
+
+123
+00:11:05,470 --> 00:11:06,880
+de acordo com a ideia do dono.
+
+124
+00:11:06,910 --> 00:11:11,260
+Beleza delete Bay de delete pai de.
+
+125
+00:11:13,970 --> 00:11:16,310
+Porque quem está criticando vamos ver que a.
+
+126
+00:11:16,370 --> 00:11:23,940
+Por que isso é que eles esperavam um entenderia que está interpretar da extrema pobreza entender.
+
+127
+00:11:26,800 --> 00:11:27,760
+Aqui também vai ser.
+
+128
+00:11:30,890 --> 00:11:38,210
+Beleza e aí nós temos que mudar também aqui onde for ideia a gente vai ter que mudar para impedir.
+
+129
+00:11:42,130 --> 00:11:49,090
+Beleza do show de bola então ficou em Tiger em Tiger.
+
+130
+00:11:49,250 --> 00:11:52,470
+Vou estar aqui e se tem mais algum lugar.
+
+131
+00:11:52,470 --> 00:11:55,520
+Beleza falta um ponto aqui.
+
+132
+00:11:55,850 --> 00:12:00,320
+Tem que mudar isso aqui pra mim diz Beleza.
+
+133
+00:12:02,370 --> 00:12:07,650
+E o animal é o animal aqui.
+
+134
+00:12:07,780 --> 00:12:15,160
+Esse animal aqui é do tipo animal de teor ainda deve estar como como o extraindo a que ele não está
+
+135
+00:12:15,160 --> 00:12:16,390
+conseguindo resolver.
+
+136
+00:12:16,390 --> 00:12:21,980
+Tá vendo o 7 aí esperando no extremo de não não está sendo aplicado para inglês.
+
+137
+00:12:22,000 --> 00:12:31,750
+Então nós vamos vir aqui animal até o dia aonde tiver aquilo no No Way e no dono a gente vai colocar
+
+138
+00:12:31,750 --> 00:12:33,910
+muita gente também não tem jeito.
+
+139
+00:12:36,660 --> 00:12:37,290
+Beleza.
+
+140
+00:12:39,930 --> 00:12:40,710
+SHOW DE BOLA.
+
+141
+00:12:45,660 --> 00:12:51,990
+Um gênio beleza então eu tenho o edir e o dono como inteiro.
+
+142
+00:12:51,990 --> 00:12:54,090
+Mudei ou estou mudando algumas coisas.
+
+143
+00:12:54,090 --> 00:12:55,300
+Show de bola.
+
+144
+00:12:55,470 --> 00:12:56,820
+Aqui eu também tenho que mudá la.
+
+145
+00:13:00,260 --> 00:13:02,870
+Controle de controle de controle de.
+
+146
+00:13:04,140 --> 00:13:09,920
+Em Tânger onde nos quatro pontos o também beleza mudei de cor.
+
+147
+00:13:09,940 --> 00:13:16,470
+Posso achar do teor ou seja esse cara que se acha aqui e está criticando em algum lugar.
+
+148
+00:13:16,470 --> 00:13:17,770
+Beleza.
+
+149
+00:13:17,770 --> 00:13:24,490
+Bom ele está criticando aqui agora beleza porque ainda está mostrando outra como queiram um deus.
+
+150
+00:13:28,320 --> 00:13:32,450
+Um empate também dá calor extremo.
+
+151
+00:13:32,450 --> 00:13:39,180
+VAMOS BOTAR EM TODOS OS PONTOS QUE ESTIVER estreando o indigente vai mudar para impedir a beleza.
+
+152
+00:13:39,240 --> 00:13:39,870
+Por quê.
+
+153
+00:13:39,870 --> 00:13:46,650
+Porque no outro banco que eu estava utilizando não era uma estreia aqui com vocês eu estou fazendo isso
+
+154
+00:13:46,650 --> 00:13:48,160
+com o mundo inteiro.
+
+155
+00:13:48,180 --> 00:13:50,850
+Então a gente tem que fazer essa alteração.
+
+156
+00:13:51,190 --> 00:13:51,990
+Beleza.
+
+157
+00:13:52,880 --> 00:13:53,110
+Show.
+
+158
+00:13:54,220 --> 00:13:58,230
+Não está pronto controla então o controle.
+
+159
+00:13:58,240 --> 00:14:01,180
+Tem método para poder atualizar para poder deletar.
+
+160
+00:14:01,180 --> 00:14:04,210
+Tem método para tudo que tem vários exemplos aqui.
+
+161
+00:14:04,320 --> 00:14:13,900
+Então beleza fechei fechei achei então compartilhados ajustem moda e geral Existem repositórios de os
+
+162
+00:14:13,900 --> 00:14:17,460
+três serviços de controle Justin.
+
+163
+00:14:17,560 --> 00:14:23,440
+Um desses modelos o modelo de alteração.
+
+164
+00:14:23,450 --> 00:14:29,570
+Isso que o ideal não é uma string ou um inteiro.
+
+165
+00:14:29,770 --> 00:14:38,560
+O modelo de alteração é o seguinte é o modelo que o usuário vai enviar que vai ser convertido para poder
+
+166
+00:14:40,390 --> 00:14:42,500
+trabalhar em cima dele por exemplo.
+
+167
+00:14:42,550 --> 00:14:48,320
+Toda vez que eu quiser alterar um animal o usuário vai ter que passar esses dados que o ID do animal
+
+168
+00:14:48,330 --> 00:14:49,570
+o nome idade raça.
+
+169
+00:14:49,570 --> 00:14:50,620
+Se ele está vivo ou não.
+
+170
+00:14:54,580 --> 00:14:55,560
+Não deixa.
+
+171
+00:14:57,960 --> 00:14:58,440
+Beleza.
+
+172
+00:15:02,320 --> 00:15:11,100
+Aqui o modelo de inclusão modelo de inclusão tem que passar o dono ou o dono não é uma string é um indígena
+
+173
+00:15:13,960 --> 00:15:21,490
+que a gente altera também em dizer que nós estamos fazendo aqui uma rede fatoração básica.
+
+174
+00:15:21,790 --> 00:15:27,300
+Isso é muito comum quando você estiver programando e aproveitando o código de outro lugar.
+
+175
+00:15:27,310 --> 00:15:38,350
+Beleza é que o modelo de responsa que a resposta eu sempre vou devolver o teu o dono o nome idade raça
+
+176
+00:15:38,360 --> 00:15:41,620
+se ele está vivo o dono é o ideal do dono.
+
+177
+00:15:41,830 --> 00:15:50,380
+é uma simplismente uma string e uma ou identificador daqui para ficar fácil para não passar o objeto
+
+178
+00:15:50,380 --> 00:16:03,490
+completo lá mas daqui eu poder concorrer contra o D e interagir Tereza mudei.
+
+179
+00:16:03,520 --> 00:16:05,930
+Então eu acho que eu mudei todos os pontos.
+
+180
+00:16:06,010 --> 00:16:09,900
+Então todos os pontos aqui já estão certinho.
+
+181
+00:16:09,910 --> 00:16:12,890
+Esse é o nosso serviço de animais.
+
+182
+00:16:12,940 --> 00:16:13,960
+Então vamos lá.
+
+183
+00:16:14,050 --> 00:16:18,490
+Recapitulando aqui agora que a gente mudou Vamos recapitular primeiro lugar que a gente tem que ver
+
+184
+00:16:18,840 --> 00:16:21,250
+é o animal o animal.
+
+185
+00:16:21,340 --> 00:16:25,430
+Ele tem ideia ou ideia do dono que é o dono.
+
+186
+00:16:25,480 --> 00:16:27,380
+Nome idade raça.
+
+187
+00:16:27,380 --> 00:16:29,040
+Se ele está vivo.
+
+188
+00:16:29,200 --> 00:16:31,620
+São os dados do animal.
+
+189
+00:16:32,080 --> 00:16:35,980
+Toda vez que eu crio um animal é óbvio que ele está vivo ou não vou querer um animal morto por isso
+
+190
+00:16:35,990 --> 00:16:38,720
+que eu não construtor já certo que ele está vivo.
+
+191
+00:16:38,740 --> 00:16:39,180
+7.
+
+192
+00:16:39,190 --> 00:16:40,560
+Vivo como trunfo.
+
+193
+00:16:40,690 --> 00:16:42,660
+Beleza é o primeiro ponto.
+
+194
+00:16:42,670 --> 00:16:50,560
+Segundo ponto que a gente tem que ver é que dentro de vírus é moda o modelo de inclusão.
+
+195
+00:16:50,620 --> 00:16:57,240
+Quando alguém for cadastrar um animal ele quer saber se alguém vai sempre passar o ideia do dono.
+
+196
+00:16:57,340 --> 00:17:03,000
+O nome do animal a idade do animal que eu botei entendido aqui é a raça dele.
+
+197
+00:17:03,000 --> 00:17:09,250
+Beleza então eu quero cadastrar o animal para fulano vou ter que passar a ideia do fulano o nome do
+
+198
+00:17:09,250 --> 00:17:11,080
+animal a idade dele e a raça.
+
+199
+00:17:14,290 --> 00:17:21,880
+Esse segundo ponto o terceiro ponto que a gente tem que olhar esse aqui é o de alteração o modelo de
+
+200
+00:17:21,880 --> 00:17:28,150
+alteração toda vez que eu for atualizar algum animal eu vou ter que passar todos esses campos aqui mais
+
+201
+00:17:28,150 --> 00:17:34,100
+o Aydin do animal senão não sei qual animal tem que alterar nada demais.
+
+202
+00:17:34,120 --> 00:17:40,590
+E por fim nós temos aqui o animal modelo Response que a resposta que eu vou devolver para o usuário
+
+203
+00:17:40,990 --> 00:17:48,190
+está então toda vez que alguém pedir os detalhes de um animal ou pedir pra retornar uma lista de animal
+
+204
+00:17:48,190 --> 00:17:49,560
+sempre vou retornar isso daqui.
+
+205
+00:17:49,600 --> 00:17:50,720
+O ideal dele.
+
+206
+00:17:50,890 --> 00:17:54,190
+O ideal do dono dele é o nome dele e a idade dele a raça dele.
+
+207
+00:17:54,190 --> 00:17:57,570
+Vou devolver se ele está vivo ou não.
+
+208
+00:17:57,590 --> 00:18:04,690
+Então sempre vou devolver esses detalhes aqui quando eu for devolver um Response de animal e por fim
+
+209
+00:18:04,690 --> 00:18:10,680
+aqui nós temos o compartilhado toda Olhe aqui é a mesma coisa do que eu devolvo no Response o que eu
+
+210
+00:18:10,690 --> 00:18:16,660
+fico trafegando em três camadas até chegar na camada onde eu vou gravar no balcão.
+
+211
+00:18:16,730 --> 00:18:24,190
+Então tá aqui o nosso o nosso serviço de animais eu vou fechar todas as abas aqui ele é bem simples
+
+212
+00:18:24,190 --> 00:18:32,290
+bem bem bem fácil vamos dar uma olhada aqui umas pessoas rapidamente então aqui de pessoas eu vou vir
+
+213
+00:18:32,290 --> 00:18:33,010
+aqui.
+
+214
+00:18:33,820 --> 00:18:42,460
+Que sorte a partir de um palpite e aí que eu tenho o banco também está apontando para o pet shop é o
+
+215
+00:18:42,460 --> 00:18:48,850
+mesmo bom pois eles são um banco separado mas está comprando com o mesmo bom pet shop usuário e senha
+
+216
+00:18:48,850 --> 00:18:51,730
+do Bolshoi Drive e a porta.
+
+217
+00:18:51,760 --> 00:18:59,230
+O nome aqui tem que botar a mão cálculos ou cálculos Spring Application Rust eu quero que seja local
+
+218
+00:18:59,230 --> 00:19:05,590
+algum show seja eu quero que mandou chamar o serviço de controle de pessoas ele abra dessa forma que
+
+219
+00:19:06,400 --> 00:19:10,360
+beleza aqui para comunicação com o Eureka.
+
+220
+00:19:10,360 --> 00:19:11,200
+Tudo certinho.
+
+221
+00:19:11,470 --> 00:19:13,780
+Show de bola nada demais.
+
+222
+00:19:13,870 --> 00:19:16,780
+Vamos ver se isso aqui funciona.
+
+223
+00:19:16,810 --> 00:19:23,530
+Então vamos dar uma olhada primeiro nas classes que ele tem só compartilhado.
+
+224
+00:19:23,540 --> 00:19:33,730
+Então pessoa de teoria que tem um Idea nome e sobrenome dê o nome sobrenome três campos só mais do que
+
+225
+00:19:33,730 --> 00:19:37,000
+o suficiente para gente poder brincar aqui.
+
+226
+00:19:37,150 --> 00:19:40,510
+O modelo também é a mesma coisa de nome e sobrenome.
+
+227
+00:19:44,570 --> 00:19:54,020
+Service o serviço vai ter um método que sabe criar pessoa a pessoa vai saber que a pessoa que recebe
+
+228
+00:19:54,020 --> 00:19:57,640
+uma pessoa adquire a pessoa pelo método que obtém todo mundo.
+
+229
+00:19:57,650 --> 00:20:02,450
+O método que vai obter por aí de um método que é para remover a pessoa ao mesmo tempo atualizar a pessoa
+
+230
+00:20:02,930 --> 00:20:04,130
+beleza nada de mais.
+
+231
+00:20:05,790 --> 00:20:17,010
+Aqui está as implementações do bonitinho beleza serviço cobrindo a de um crush e Aqui envio.
+
+232
+00:20:17,220 --> 00:20:23,700
+Eu tenho aqui uma pessoa modelo reconhece que já tem algumas validações.
+
+233
+00:20:24,300 --> 00:20:31,320
+Então por exemplo eu para eu cadastrar uma pessoa por exemplo o nome deve possuir caracteres não brancos
+
+234
+00:20:31,320 --> 00:20:34,800
+ou seja eu não posso achar uma pessoa com caracteres brancos.
+
+235
+00:20:34,800 --> 00:20:40,170
+O nome deve ser preenchido ou seja se eu não passar a propriedade de nome ele vai estourar uma exceção
+
+236
+00:20:40,650 --> 00:20:44,130
+o nome deve ter no mínimo 5 caracteres.
+
+237
+00:20:45,690 --> 00:20:51,420
+Um exemplo que eu quis fazer que a não mas eu quero poder cadastrar a pessoa que tenha 3 caracteres
+
+238
+00:20:51,630 --> 00:20:59,730
+cadastrar Ana beleza e você vem aqui e muda pra três só você muda para três.
+
+239
+00:20:59,730 --> 00:21:04,670
+Beleza mudar para três aqui porque pode acontecer de ter Ana.
+
+240
+00:21:05,570 --> 00:21:08,400
+Eu esqueci desse detalhe ela só tem 3 caracteres.
+
+241
+00:21:10,700 --> 00:21:19,010
+Ou se eu quiser poderia ter dois sei lá eu quero cadastrar um Jó em pessoas que poderia se chamar Jônia
+
+242
+00:21:19,500 --> 00:21:23,670
+e José.
+
+243
+00:21:23,930 --> 00:21:26,420
+Vamos botar no mínimo deve ter dois caracteres.
+
+244
+00:21:26,420 --> 00:21:27,400
+Beleza.
+
+245
+00:21:27,560 --> 00:21:32,840
+Veja uma coisa por sobre o nome e sobrenome deve possuir não deve possuir caracteres em branco e deve
+
+246
+00:21:32,840 --> 00:21:34,070
+ser preenchido.
+
+247
+00:21:34,130 --> 00:21:41,150
+Aí é que a quantidade de caracteres tanto faz da beleza então a função de validações linhas bem básicas
+
+248
+00:21:41,150 --> 00:21:48,650
+aqui para a gente poder brincar aqui no modelo de responsa o que eu vou devolver sempre vou devolveu
+
+249
+00:21:48,650 --> 00:21:54,050
+e deu o nome e o sobrenome a gente ainda não tem nada de animal a gente vai ter que criar toda a parte
+
+250
+00:21:54,050 --> 00:21:57,330
+de retorno de animais isso ainda não tem nada pronto.
+
+251
+00:21:57,470 --> 00:21:59,960
+Mas vamos ter que desenrolar isso.
+
+252
+00:22:01,010 --> 00:22:05,350
+E acho que isso não é beleza.
+
+253
+00:22:05,630 --> 00:22:08,810
+Vamos ver se isso daqui levanta essa arquitetura funciona.
+
+254
+00:22:08,830 --> 00:22:10,430
+Bom então vamos lá.
+
+255
+00:22:10,700 --> 00:22:16,700
+Quando eu tenho o euro e acuso em vários micros serviços a ordem que tem que levantar é sempre o que
+
+256
+00:22:17,120 --> 00:22:22,820
+é Horeca primeiro porque não serviço que vai registrar e então todo mundo vai depender dele.
+
+257
+00:22:22,820 --> 00:22:30,710
+Então vou clicar para levantar o véu Horeca observação se você não tiver criado um banco de dados vai
+
+258
+00:22:30,710 --> 00:22:31,400
+dar erro.
+
+259
+00:22:31,400 --> 00:22:36,770
+Então antes de você mandar levantar confira se você está apontando para a porta certa do seu banco por
+
+260
+00:22:36,770 --> 00:22:41,730
+exemplo na minha máquina está rodando o local Rush na porta 5 4 3 4.
+
+261
+00:22:41,840 --> 00:22:48,890
+Se você está lá o post por padrão ali vai estar rodando na porta 5 4 3 2 e aí eu crio o bom chamado
+
+262
+00:22:48,890 --> 00:22:49,550
+Pet Shop.
+
+263
+00:22:49,580 --> 00:22:54,830
+Só isso que você tem que se atentar a isso ao usuário é assim que você está usando isso daqui a particular
+
+264
+00:22:54,840 --> 00:22:56,110
+de cada um.
+
+265
+00:22:56,390 --> 00:23:04,030
+E aí nós vamos depois de levantar o Eureka a gente usou o Zoom vai se registrar no nosso ego ou clicar
+
+266
+00:23:04,190 --> 00:23:07,080
+nos para levantar primeiro de todos.
+
+267
+00:23:07,100 --> 00:23:14,570
+Eureka é o que todo mundo vai se registrar depois é o Zoom que é o nosso serviço de gato que vai fazer
+
+268
+00:23:14,570 --> 00:23:15,680
+o nosso Ox.
+
+269
+00:23:15,770 --> 00:23:19,420
+Então ele tem que ser o segundo a ser levantado.
+
+270
+00:23:19,640 --> 00:23:20,140
+Beleza.
+
+271
+00:23:20,150 --> 00:23:22,160
+E agora qual o que eu levanto.
+
+272
+00:23:22,310 --> 00:23:24,300
+O de pessoas ou de animais.
+
+273
+00:23:24,300 --> 00:23:27,020
+Bom você pode levantar o que você quiser.
+
+274
+00:23:27,260 --> 00:23:35,500
+Por que você pode levantar o que você quiser que tanto faz porque eles não são dependentes um do outro.
+
+275
+00:23:35,810 --> 00:23:37,950
+Eles não são dependentes um do outro.
+
+276
+00:23:38,090 --> 00:23:43,700
+Mesmo que o de pessoas vá se comunicar depois com de animais tanto faz a ordem que eu vou levantar eu
+
+277
+00:23:43,700 --> 00:23:47,410
+vou levantar de pessoas primeiro e depois vou levantar os pais.
+
+278
+00:23:47,990 --> 00:23:53,210
+A importância maior interior é que o uso tem que levantar o Gareca primeiro e depois o uso e os demais
+
+279
+00:23:53,210 --> 00:23:53,840
+serviços.
+
+280
+00:23:55,400 --> 00:24:00,080
+Podem ser adicionados posteriormente sem problema algum.
+
+281
+00:24:02,580 --> 00:24:04,050
+Mandei levantar todos eles aqui.
+
+282
+00:24:04,050 --> 00:24:05,640
+Eles estão levantando.
+
+283
+00:24:05,640 --> 00:24:11,910
+Tá tá tudo depende que abater Hotel.
+
+284
+00:24:15,230 --> 00:24:18,560
+Ele deixou o arquivo abrir uma aba.
+
+285
+00:24:22,590 --> 00:24:35,070
+B mesa abrir aqui uma aba no navegador botar aqui o bicho dos pontos 80 10 que a porta do Note 7
+
+286
+00:24:38,010 --> 00:24:38,740
+botei aqui.
+
+287
+00:24:38,760 --> 00:24:47,550
+Ele abriu e a uretra já registrou zoa mas ele ainda não registrou em outros micro serviços então deu
+
+288
+00:24:47,550 --> 00:24:52,590
+um F5 e agora ele registro registrou controle de animais e controle de pessoas.
+
+289
+00:24:53,100 --> 00:25:01,290
+Botou o nome dos serviços e botou um número aqui um reste randômico que vai dizer que é o único que
+
+290
+00:25:01,350 --> 00:25:06,270
+poderia ter vários sistemas aqui ou vários micro serviços de controle de animais.
+
+291
+00:25:06,270 --> 00:25:12,990
+Como é que ele ia saber qual o que ele sabe através do resto da beleza.
+
+292
+00:25:13,080 --> 00:25:21,050
+Eu tenho aqui o nosso Horeca e os nossos três os nossos três micros serviços conectado nele.
+
+293
+00:25:21,060 --> 00:25:29,760
+Aqui aparentemente funcionando vou clicar aqui nos um certo a beleza local Route 80 11 retornou um objeto
+
+294
+00:25:29,760 --> 00:25:34,110
+vazio tal significa que está funcionando.
+
+295
+00:25:34,110 --> 00:25:40,840
+Se o clicar aqui e no de animais aqui ele vai me retornar o 404 porque eu não tem nada.
+
+296
+00:25:40,890 --> 00:25:52,320
+Se eu vir aqui botar a barra de animais deixa eu só confirmar e de animais e barro animais.
+
+297
+00:25:54,760 --> 00:25:55,120
+Culpa.
+
+298
+00:25:57,400 --> 00:25:58,340
+A pedir.
+
+299
+00:26:01,300 --> 00:26:03,820
+Deixa eu ver sei que ele já vai funcionar mais.
+
+300
+00:26:06,590 --> 00:26:08,880
+Não funcionou.
+
+301
+00:26:09,050 --> 00:26:15,610
+Ele está atualizando a tela que eu vou fazer isso de outro lugar porque ele está pegando aquele local
+
+302
+00:26:15,650 --> 00:26:22,350
+o está sobre a escrever beleza mas a gente vai testar esse cara aqui a gente vai testar direto pelo
+
+303
+00:26:22,970 --> 00:26:24,080
+Peluso.
+
+304
+00:26:24,170 --> 00:26:26,760
+Vamos ver que se consegue se comunicar com ele.
+
+305
+00:26:26,780 --> 00:26:28,160
+Vamos ver aqui.
+
+306
+00:26:28,400 --> 00:26:31,010
+Boa tarde o metrô de.
+
+307
+00:26:34,500 --> 00:26:39,070
+Vou tentar de controle de pessoas primeiro que já está pronto já estava até pronta.
+
+308
+00:26:40,020 --> 00:26:42,070
+Retornou um objeto aqui vazio.
+
+309
+00:26:42,120 --> 00:26:44,950
+Beleza é todo um objeto básico.
+
+310
+00:26:44,970 --> 00:26:47,580
+SHOW DE BOLA.
+
+311
+00:26:47,640 --> 00:26:50,860
+Beleza não tem nada ele atualizou aqui.
+
+312
+00:26:50,970 --> 00:26:52,980
+Tem que descobrir por ele está atualizando.
+
+313
+00:26:53,130 --> 00:27:01,110
+Beleza mas eles estão aqui porque nós vamos fazer o seguinte nós vamos fazer o seguinte nós vamos criar
+
+314
+00:27:01,110 --> 00:27:08,100
+aqui no Insomniac uma Collection pra gente poder cadastrar demais e pra gente cadastrar pessoas e com
+
+315
+00:27:08,100 --> 00:27:15,120
+base nesse cadastro de animais e com base na escadaria de pessoas nós vamos depois fazer esse vínculo
+
+316
+00:27:15,120 --> 00:27:17,900
+entre eles e fazer essa brincadeira toda funcionar.
+
+317
+00:27:17,910 --> 00:27:26,550
+Beleza então o que nós vamos fazer na próxima aula é botar isso daqui para funcionar primeiro e fazer
+
+318
+00:27:26,550 --> 00:27:33,300
+cadastrar animais fazer cadastrar pessoas beleza tudo totalmente separado e depois como é que a gente
+
+319
+00:27:33,300 --> 00:27:34,500
+vai juntar isso aí.
+
+320
+00:27:34,560 --> 00:27:38,220
+E aí a gente vai juntar e vai botar tudo isso para funcionar.
+
+321
+00:27:38,220 --> 00:27:38,640
+Beleza.

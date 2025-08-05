@@ -1,0 +1,1391 @@
+1
+00:00:01,890 --> 00:00:09,030
+SHOW DE BOLA galera criamos aí o nosso serviço de Horeca criamos o nosso serviço de ou então a nossa
+
+2
+00:00:09,030 --> 00:00:19,950
+arquitetura está com um gueto em que um serve se do nosso Discover serve esse que é o nosso Horeca beleza
+
+3
+00:00:20,600 --> 00:00:26,000
+que nós precisamos fazer agora é deixar esse serviço um pouco melhor antes de criar o nosso aplicativo.
+
+4
+00:00:26,010 --> 00:00:32,400
+Se eu vou fazer aqui embaixo vou fazer isso no nosso serviço do Zune.
+
+5
+00:00:33,150 --> 00:00:33,760
+Por quê.
+
+6
+00:00:33,810 --> 00:00:42,400
+O nosso serviço do Zune hoje ele está baseado na.
+
+7
+00:00:43,380 --> 00:00:45,330
+Ele está baseado no nome da minha máquina.
+
+8
+00:00:45,330 --> 00:00:49,630
+Então se eu mandar registrar ele vai colocar lá o nome da minha máquina.
+
+9
+00:00:49,690 --> 00:00:53,340
+Meu domínio isso muitas das vezes não é o que a gente quer.
+
+10
+00:00:53,460 --> 00:00:58,800
+A gente quer que ele mostre o nome da aplicação e talvez um número 1 e dê alguma coisa que ele possa
+
+11
+00:00:58,800 --> 00:00:59,600
+gerar.
+
+12
+00:00:59,610 --> 00:01:04,020
+Então aqui eu vou montar uma configuração linha que vai ser o seguinte vai ser assim.
+
+13
+00:01:04,750 --> 00:01:06,180
+Eureka.
+
+14
+00:01:06,360 --> 00:01:06,990
+Ponto.
+
+15
+00:01:06,990 --> 00:01:07,800
+Estão se.
+
+16
+00:01:13,350 --> 00:01:19,310
+Estância estância estância Horeca ponto estância ponto.
+
+17
+00:01:19,320 --> 00:01:20,310
+Instância
+
+18
+00:01:23,250 --> 00:01:28,470
+estância acho que é instancia traço a IDH.
+
+19
+00:01:28,590 --> 00:01:30,180
+Isso aí esse cara mesmo.
+
+20
+00:01:30,330 --> 00:01:33,520
+Beleza o que esse cara que faz esse cara aqui.
+
+21
+00:01:33,570 --> 00:01:39,840
+Ele vai dar um nome para aplicação quando ela ficar registrada na nossa aplicação toda vez que esse
+
+22
+00:01:39,840 --> 00:01:47,080
+serviço aqui se registrar ele vai pegar e vai mostrar isso daquilo lá não Eureka.
+
+23
+00:01:47,100 --> 00:01:49,320
+Então como é que eu quero que isso funcione lá.
+
+24
+00:01:49,710 --> 00:01:56,730
+Aqui a gente tem uns caracteres de interpolação que é basicamente ao injetar variáveis dentro de um
+
+25
+00:01:56,730 --> 00:01:57,610
+código.
+
+26
+00:01:57,630 --> 00:02:03,640
+Então o que eu posso fazer assim o cifrão abre e fecha o Chaves quando eu faço isso.
+
+27
+00:02:03,660 --> 00:02:11,580
+O uso do cifrão Chaves ele serve para delimitar valores que vão ser usados que podem ser entendidos
+
+28
+00:02:11,580 --> 00:02:19,830
+pelo Spring como variáveis e eles vão ser avaliados e substituídos aqui dentro.
+
+29
+00:02:19,860 --> 00:02:22,160
+Beleza então vamos lá.
+
+30
+00:02:22,470 --> 00:02:34,140
+Eu quero que o nome da instância o ID dela seja uma junção do meu bem me botar aqui em tempo de execução.
+
+31
+00:02:34,140 --> 00:02:36,210
+Isso aqui vai virar o nome da minha aplicação.
+
+32
+00:02:38,060 --> 00:02:45,950
+Fui lá dois pontos um número qualquer um número randômico um número qualquer que ele gere.
+
+33
+00:02:46,040 --> 00:02:55,880
+Então vou botar aqui uma outra variável que eu vou chamar dirão de Random Random Ponto Zero é o que
+
+34
+00:02:55,880 --> 00:03:02,140
+ele vai fazer em tempo de execução o espião que vai dar o nome para esse serviço lá não é Horeca.
+
+35
+00:03:02,150 --> 00:03:10,400
+De acordo com o que eu fizer aqui então vai pegar os uso serve dois pontos e um número aleatório.
+
+36
+00:03:10,400 --> 00:03:12,590
+Vamos fingir que eu esteja fazendo isso aqui.
+
+37
+00:03:12,740 --> 00:03:14,490
+Então qual é o número.
+
+38
+00:03:14,540 --> 00:03:18,120
+O nome da minha aplicação vai ficar sem o serviço.
+
+39
+00:03:18,380 --> 00:03:21,260
+Dois pontos e toda hora ele vai gerar um número aleatório.
+
+40
+00:03:21,260 --> 00:03:25,300
+Sei lá 55 quando levantar de novo.
+
+41
+00:03:26,740 --> 00:03:32,120
+A trinta e três mas isso é só número para registro.
+
+42
+00:03:32,120 --> 00:03:40,180
+Não é a porta a porta sempre vai ser o 80 11 que vai ser a porta que vou conectar e Sete e assim sucessivamente.
+
+43
+00:03:40,190 --> 00:03:42,830
+Ok então vamos lá.
+
+44
+00:03:44,030 --> 00:03:48,580
+Se eu quiser eu posso remover esse cara que deixou só o nome da aplicação.
+
+45
+00:03:48,600 --> 00:03:50,000
+Então vou fazer o seguinte não uso.
+
+46
+00:03:50,000 --> 00:03:56,640
+Eu só vou deixar o nome da aplicação e nos outros serviços ou vou botar o desenho que um número aleatório.
+
+47
+00:03:56,780 --> 00:03:58,970
+Beleza então vou fazer isso aqui.
+
+48
+00:03:58,970 --> 00:04:00,170
+Vamos ver se vai funcionar.
+
+49
+00:04:00,680 --> 00:04:02,420
+Salvei.
+
+50
+00:04:02,570 --> 00:04:06,620
+Vou vir aqui nos nossos cérebros.
+
+51
+00:04:06,650 --> 00:04:07,670
+Beleza Está tudo aqui.
+
+52
+00:04:07,670 --> 00:04:15,260
+Vou levantar o Eureka de novo e vou levantar o zoom de novo.
+
+53
+00:04:15,270 --> 00:04:16,880
+Espera ambos se levantarem.
+
+54
+00:04:22,190 --> 00:04:25,340
+Assim que eles levantarem nós vamos vir aqui.
+
+55
+00:04:25,400 --> 00:04:28,220
+Vamos botar a culpa.
+
+56
+00:04:28,250 --> 00:04:35,720
+Hoje os pontos 80 10 que está rodando
+
+57
+00:04:39,620 --> 00:04:40,400
+a Cáceres.
+
+58
+00:04:42,800 --> 00:04:43,790
+Para disputar.
+
+59
+00:04:46,440 --> 00:04:55,300
+Ele levantou já levantou eureka não tem nada registrado AINDA QUE IA atualizada e que há poucos registros
+
+60
+00:04:55,320 --> 00:04:57,120
+o levantou.
+
+61
+00:04:57,120 --> 00:05:02,900
+E olha só olha qual é o nome do meu aplicativo que serve.
+
+62
+00:05:03,390 --> 00:05:05,050
+O nome virou zero serve.
+
+63
+00:05:05,130 --> 00:05:09,120
+Quando eu clicar aqui ele vai carregar para cá.
+
+64
+00:05:09,300 --> 00:05:12,040
+Só que aqui ele ainda está trazendo o nome da minha máquina no meu domínio.
+
+65
+00:05:12,040 --> 00:05:18,840
+Então eu vou apagar e vou fazer mais uma configuração mais uma configuração.
+
+66
+00:05:19,740 --> 00:05:26,130
+Deixa eu pensar que o que vai ser a configuração vou botar aqui pra ele pegar colocar o roux na minha
+
+67
+00:05:26,130 --> 00:05:33,630
+máquina eu podia botar o endereço de Pi para ficar bonitinho mas eu vou botar para pegar o nome da minha
+
+68
+00:05:33,630 --> 00:05:36,030
+máquina deixou lembra.
+
+69
+00:05:37,860 --> 00:05:38,730
+Acho que a Spring.
+
+70
+00:05:41,220 --> 00:05:43,650
+Ponto final.
+
+71
+00:05:43,740 --> 00:05:45,420
+A Espanha não tem Horeca.
+
+72
+00:05:47,590 --> 00:05:50,030
+Eureka ponto.
+
+73
+00:05:51,960 --> 00:05:55,320
+Application na verdade Horeca ponto Estância.
+
+74
+00:05:57,610 --> 00:05:59,530
+Ou chinês.
+
+75
+00:06:00,090 --> 00:06:11,230
+E eu quero que o Bush nem me dela seja local ou este ou seja o nome de registro vai ser este que serve
+
+76
+00:06:11,470 --> 00:06:16,380
+mas quando eu clicar eu quero que ele me mostre local roxo dois pontos 80 11.
+
+77
+00:06:16,470 --> 00:06:19,330
+Eu mesmo vou parar esse serviço aqui.
+
+78
+00:06:22,190 --> 00:06:23,630
+E vou levantar ele de novo.
+
+79
+00:06:29,690 --> 00:06:36,950
+O certo era este parar tudo e levantar tudo de novo porque a gente ainda está configurando mas em inglês
+
+80
+00:06:37,730 --> 00:06:45,350
+depois que tiver a estratégia básica configurada a gente parar tudo levantar tudo mandar atualizar aqui
+
+81
+00:06:45,350 --> 00:06:46,940
+para ver o que acontece.
+
+82
+00:06:49,430 --> 00:06:49,940
+Mesa
+
+83
+00:06:53,450 --> 00:06:59,520
+agora sem o local Lochte foi tentar mais beleza perfeito.
+
+84
+00:06:59,540 --> 00:07:03,340
+Ele traz uma URL que não existe de informação só tirar isso daqui.
+
+85
+00:07:04,220 --> 00:07:08,060
+404 ou seja não tem nada para funcionar.
+
+86
+00:07:08,090 --> 00:07:09,050
+Beleza mas está pior.
+
+87
+00:07:11,060 --> 00:07:19,060
+Show trouxe um ar Rei vazio perfeito então o nosso o nosso azul está configurado do certinho com um
+
+88
+00:07:19,060 --> 00:07:20,380
+nome bonitinho.
+
+89
+00:07:20,450 --> 00:07:28,330
+O RL certinha Beleza agora vamos criar um serviço pra gente poder trabalhar como a gente vai fazer.
+
+90
+00:07:28,330 --> 00:07:29,890
+Vou criar um novo serviço aqui.
+
+91
+00:07:33,620 --> 00:07:41,160
+Spring boot com Java VOU CHAMAR ELE DE BOTAR dentro do meu pacote meu exemplo de novo.
+
+92
+00:07:41,160 --> 00:07:46,910
+Por exemplo vou adicionar o nome dele vai ser pessoas.
+
+93
+00:07:49,390 --> 00:07:57,540
+Vou botar controle de pessoas e controle de pessoas que vai ser um sistema para poder controlar a pessoa
+
+94
+00:07:57,550 --> 00:08:01,630
+cada pessoa deletar e ditar.
+
+95
+00:08:01,990 --> 00:08:02,900
+Beleza.
+
+96
+00:08:02,950 --> 00:08:09,080
+Ele vai ser uma aplicação web vai ser um micro serviço web então a gente vai usar o Spring web.
+
+97
+00:08:09,190 --> 00:08:12,880
+Nós vamos usar os princípios de débito para poder atualizar.
+
+98
+00:08:12,880 --> 00:08:18,550
+Nós vamos usar o expediente
+
+99
+00:08:21,010 --> 00:08:24,370
+eu vou fazer memória eu não vou conectar com o banco de dados não vou ficar rápido.
+
+100
+00:08:24,970 --> 00:08:28,040
+Eureka Discovery claro.
+
+101
+00:08:28,060 --> 00:08:32,740
+Para ele poder conseguir se registrar então só esses três aqui o suficiente ou excluindo web para poder
+
+102
+00:08:32,740 --> 00:08:34,280
+trabalhar com o app.
+
+103
+00:08:35,020 --> 00:08:39,370
+Vou desmarcar os títulos ou só botar o do Leme para ser um app.
+
+104
+00:08:39,800 --> 00:08:41,200
+é um Discovery Cloud.
+
+105
+00:08:41,350 --> 00:08:44,830
+Não vou conectar com o banco é simplesmente didático.
+
+106
+00:08:45,190 --> 00:08:49,960
+Se eu quisesse se conectar com o banco é só pegar qualquer instância minha ou qualquer bem minha que
+
+107
+00:08:49,960 --> 00:08:53,950
+já esteja conectando Cuba ou um só conectar com o banco tanto faz.
+
+108
+00:08:55,210 --> 00:08:57,940
+Mas eu vou usar esses dois como ver aqui.
+
+109
+00:08:57,940 --> 00:09:00,510
+Vou mandar aligeirar esse pacote aqui dentro.
+
+110
+00:09:01,150 --> 00:09:03,550
+Micros serviços vou botar aqui.
+
+111
+00:09:04,600 --> 00:09:11,390
+Gerar aqui dentro mandar ali abrindo meu espaço e automaticamente ele vir para cá.
+
+112
+00:09:11,410 --> 00:09:19,670
+Bom para ele funcionar no nosso comum como um serviço registrado do nosso Horeca.
+
+113
+00:09:19,730 --> 00:09:28,180
+A primeira coisa que eu tenho que fazer é vir aqui também no nosso no nosso controle no controle de
+
+114
+00:09:28,180 --> 00:09:34,570
+pessoas vir aqui colocar a notação em nível Eureka cliente.
+
+115
+00:09:34,600 --> 00:09:38,410
+Sem isso ele não consegue registrar segundo ponto que eu vou fazer.
+
+116
+00:09:38,410 --> 00:09:47,910
+Eu vou mandar ele se registrar no nosso no nosso serviço de no nosso serviço de
+
+117
+00:09:50,680 --> 00:09:51,430
+cliente.
+
+118
+00:09:51,520 --> 00:09:52,810
+Beleza.
+
+119
+00:09:52,810 --> 00:09:54,440
+Como que eu vou fazer isso.
+
+120
+00:09:54,490 --> 00:10:00,010
+Bom aqui eu vou ter que passar uma porta para ele porta de conexão.
+
+121
+00:10:02,260 --> 00:10:05,350
+E vou ter que fazer o seguinte vou ter que passar um nome.
+
+122
+00:10:07,780 --> 00:10:13,300
+Um homem e vou ter que passar o RL de conexão.
+
+123
+00:10:16,560 --> 00:10:17,250
+SHOW DE BOLA.
+
+124
+00:10:17,250 --> 00:10:22,800
+Além disso vou fazer a mesma coisa que eu fiz nos passar o ideia de Estância.
+
+125
+00:10:24,760 --> 00:10:35,520
+E vou passar também o nome do Rouge só pra ficar tudo bonitinho mesmo roxo e caso clique nesse cara.
+
+126
+00:10:35,530 --> 00:10:36,100
+Então vamos lá.
+
+127
+00:10:38,280 --> 00:10:40,620
+Beleza porta de conexão.
+
+128
+00:10:40,620 --> 00:10:45,930
+Bom eu vou usar Server ponto forte só que aqui eu vou fazer o seguinte eu vou dizer que ele vai rodar
+
+129
+00:10:45,930 --> 00:10:49,050
+na porta zero porque o porta zero.
+
+130
+00:10:49,230 --> 00:10:54,370
+Eu quero que a porta seja escolhida dinamicamente pelo meu serviço de Horeca serras.
+
+131
+00:10:54,390 --> 00:10:56,240
+Olha que legal show.
+
+132
+00:10:56,400 --> 00:11:01,710
+Então ele vai gerar uma porta e o Eureka vai conseguir saber que porta é essa.
+
+133
+00:11:01,770 --> 00:11:03,120
+Show de bola.
+
+134
+00:11:03,240 --> 00:11:05,020
+Agora vamos colocar o nome.
+
+135
+00:11:05,100 --> 00:11:09,750
+Bom eu posso vir aqui eu vou precisar exatamente disso daqui.
+
+136
+00:11:11,280 --> 00:11:16,380
+Essas configurações do Zune ou copiar ou substituir o.
+
+137
+00:11:18,320 --> 00:11:30,920
+Beleza é aqui em vez de ser azul serve sim eu posso chamar de controle traço pessoas traço ms de micro
+
+138
+00:11:30,920 --> 00:11:32,550
+serviço.
+
+139
+00:11:32,570 --> 00:11:37,680
+Eu quero que o nome da estância seja local roxo e mesmo quero que me conecte no Eureka.
+
+140
+00:11:37,730 --> 00:11:46,820
+Nessa o RL e eu quero que a estância seja doce ou seja o nome da aplicação dos pontos mais o ID aleatório
+
+141
+00:11:46,910 --> 00:11:48,330
+e um ideal dinâmico.
+
+142
+00:11:48,350 --> 00:12:00,420
+Então eu vou usar aqui Random House do verbo Random ponto velho beleza daquele show de bola.
+
+143
+00:12:00,620 --> 00:12:05,990
+Estou aqui com as nossas configurações porta zero que é a porta de conexão.
+
+144
+00:12:06,260 --> 00:12:12,920
+O nome e a distância lembrando portas para ele gerar essa porta dinâmica porque imagino o seguinte eu
+
+145
+00:12:12,920 --> 00:12:21,410
+quero poder fazer sei lá tem umas 50 instâncias do mesmo serviço pois toda hora eu tiver que ficar calculando
+
+146
+00:12:21,410 --> 00:12:24,480
+porta para estar em uso ou não é muito ruim.
+
+147
+00:12:24,590 --> 00:12:29,930
+Eu boto zero ele vai criar essa porta dinâmica de acordo com as portas disponíveis na minha máquina
+
+148
+00:12:30,680 --> 00:12:32,960
+e aí ele vai disponibilizar essa porta.
+
+149
+00:12:32,990 --> 00:12:35,350
+Meu Horeca serve para eu poder me conectar nela.
+
+150
+00:12:35,990 --> 00:12:40,960
+O nome da nossa aplicação o nome da estância que eu quero que ele mostre na tela para seu clicar caso
+
+151
+00:12:40,970 --> 00:12:47,880
+na nossa estância é aqui o nome que eu quero que ele fique registrado lá no nosso Horeca beleza.
+
+152
+00:12:47,900 --> 00:12:50,840
+Só isso que eu vou fazer.
+
+153
+00:12:50,870 --> 00:12:57,400
+Levantei aqui o serviço vamos construir um serviço aqui bem rápido então aqui dentro de Java.
+
+154
+00:12:57,710 --> 00:13:02,360
+Controle de pessoas eu vou criar uma pasta chamada Controller.
+
+155
+00:13:04,590 --> 00:13:05,130
+Controle
+
+156
+00:13:07,830 --> 00:13:11,280
+e vou criar uma pasta aqui chamada Model só isso.
+
+157
+00:13:11,360 --> 00:13:14,350
+Modelo só para a gente poder brincar.
+
+158
+00:13:14,430 --> 00:13:20,900
+Vou criar um modelo aqui poderia ter toda a arquitetura toda acabada que a gente aprendeu ia bem.
+
+159
+00:13:21,240 --> 00:13:24,630
+Eu vou fazer bem rápido aqui só pra gente poder ver como é que funciona.
+
+160
+00:13:24,930 --> 00:13:31,320
+O objetivo não é criar a camada de novo aqui é só para a gente poder ver essa estrutura funcionando.
+
+161
+00:13:31,320 --> 00:13:36,300
+Então o que eu vou criar aqui eu vou criar um modelo de pessoas pessoas pontos Java.
+
+162
+00:13:38,340 --> 00:13:48,570
+Beleza criou aqui pessoas Java vou dizer que pessoa tem um atributo Private estranho que nome ele vai
+
+163
+00:13:48,570 --> 00:14:01,230
+ter um private string email e vai ter um outro Private Strength telefone.
+
+164
+00:14:01,680 --> 00:14:02,260
+Beleza.
+
+165
+00:14:02,310 --> 00:14:04,040
+Por enquanto só isso daqui.
+
+166
+00:14:04,440 --> 00:14:06,510
+Show de Bola botão direito.
+
+167
+00:14:08,360 --> 00:14:09,050
+Source
+
+168
+00:14:11,660 --> 00:14:12,440
+só Section.
+
+169
+00:14:14,500 --> 00:14:19,550
+Quero gerar letras insetos de todo o mundo manda gerar beleza.
+
+170
+00:14:19,660 --> 00:14:23,500
+Não vou criar construtor não vou fazer nada só isso daqui pra gente poder brincar.
+
+171
+00:14:24,310 --> 00:14:34,360
+E aí aqui dentro do controller eu vou criar um Controller para a pessoa cria um arquivo chamado Controller.
+
+172
+00:14:34,360 --> 00:14:45,520
+Uma pessoa controla o Java pra eles são Controller Java eu tenho que dizer que em cima ele é um reste
+
+173
+00:14:46,090 --> 00:14:52,220
+Controller e eu vou fazer um arroba rico este.
+
+174
+00:14:52,240 --> 00:14:59,170
+Ou seja eu quero que só bata aqui dentro quando vier a barra pessoas tudo o que a gente já aprendeu
+
+175
+00:14:59,170 --> 00:15:00,890
+até agora nada de novo.
+
+176
+00:15:01,030 --> 00:15:02,840
+E aqui dentro eu vou fazer uma brincadeira.
+
+177
+00:15:02,870 --> 00:15:08,140
+Eu vou criar um método aqui chamado public liste.
+
+178
+00:15:11,730 --> 00:15:18,060
+Melhor vou devolver uma trinca e sempre mais tenho só pra ver que está funcionando a string vou levar
+
+179
+00:15:18,060 --> 00:15:30,120
+umas 30 vou chamar de obter todos um exemplo e aqui eu vou retornar o seguinte Aqui eu retornar retornaria
+
+180
+00:15:30,660 --> 00:15:34,740
+todos hoje todas as pessoas.
+
+181
+00:15:38,170 --> 00:15:43,500
+E aqui eu vou fazer o seguinte eu quero que bata aqui quando eu fizer um foguete mapping.
+
+182
+00:15:44,600 --> 00:15:46,690
+Só pra gente ver se está funcionando.
+
+183
+00:15:46,780 --> 00:15:52,010
+Ok não vou criar post não vou criar Putin vou criar nada é só pra gente poder ver.
+
+184
+00:15:52,010 --> 00:15:57,170
+Na verdade a gente nem precisava a gente poderia devolver uma pessoa e mandar devolver uma pessoa.
+
+185
+00:15:59,220 --> 00:16:05,370
+Só para ficar fácil eu vou fazer o seguinte vou retornar uma lista de pessoas e vou botar uma única
+
+186
+00:16:05,370 --> 00:16:09,290
+pessoa que dentro só para ficar fácil vou retornar ao extremo de lá.
+
+187
+00:16:10,530 --> 00:16:17,790
+Como a gente criou aqui ali ou importar aqui pode tornar uma lista que eu vou fazer o seguinte eu vou
+
+188
+00:16:17,790 --> 00:16:19,970
+criar aqui uma lista de pessoas aqui.
+
+189
+00:16:20,010 --> 00:16:28,860
+Então eu vou fazer o seguinte eu vou querer uma pessoa que pessoa vou chamar de P1 vai receber 1 mil
+
+190
+00:16:30,090 --> 00:16:30,630
+pessoa
+
+191
+00:16:33,930 --> 00:16:34,590
+ou importar.
+
+192
+00:16:36,980 --> 00:16:41,360
+Opa opa opa para aqui de molho.
+
+193
+00:16:43,390 --> 00:16:50,000
+Eu chamei de pessoas e na verdade eu creio ter errado a frio no chão mudar aqui a pessoa do singular
+
+194
+00:16:50,250 --> 00:16:54,590
+não existe não existir no plural beleza.
+
+195
+00:16:54,720 --> 00:16:58,030
+Aqui a gente muda apenas sua beleza.
+
+196
+00:16:58,050 --> 00:16:58,710
+Show de Bola.
+
+197
+00:16:58,790 --> 00:16:59,520
+O que vou fazer.
+
+198
+00:16:59,520 --> 00:17:03,000
+Eu vou criar aqui o cara mais uma pessoa.
+
+199
+00:17:05,540 --> 00:17:08,760
+P2 P2.
+
+200
+00:17:08,840 --> 00:17:20,180
+Aí eu vou dizer que p um ponto 7 7 o nome vai receber João.
+
+201
+00:17:22,960 --> 00:17:40,740
+Um ponto sete ou até um ponto sete e meio vai receber João arroba Gmail muito bom e é um ponto sete
+
+202
+00:17:40,750 --> 00:17:48,670
+telefone vai receber 21 9 9 9 9 9 9 9 9.
+
+203
+00:17:48,670 --> 00:17:50,120
+Beleza.
+
+204
+00:17:50,500 --> 00:17:51,350
+Show de Bola.
+
+205
+00:17:51,430 --> 00:17:56,410
+O P2 eu não vou botar nada dentro dele vou deixar ele todo nulo só para a gente poder ver.
+
+206
+00:17:56,410 --> 00:18:00,150
+Vou fazer o seguinte eu vou criar uma revistinha.
+
+207
+00:18:01,470 --> 00:18:02,940
+Na verdade eu achei.
+
+208
+00:18:04,340 --> 00:18:05,840
+Liste de.
+
+209
+00:18:07,410 --> 00:18:15,480
+Pessoa ou pessoa eu vou retornar essa a de Pessoa.
+
+210
+00:18:15,600 --> 00:18:17,430
+Vou botar aqui todo.
+
+211
+00:18:24,620 --> 00:18:31,430
+Peraí peraí faz uma outra coisa que primeiro o Botafogo pessoas só para ficar fácil para todo mundo
+
+212
+00:18:31,430 --> 00:18:36,890
+entender porque pode ser que tenham pessoas que tenham mais conhecimento pessoas que tenham menos conhecimento.
+
+213
+00:18:36,980 --> 00:18:40,910
+Eu não quero que todo mundo saiba exatamente o que a gente está fazendo.
+
+214
+00:18:41,020 --> 00:18:45,470
+Eu vou pegar esse cara que posso fazer isso de maneira mais fácil mas posso fazer isso de maneira mais
+
+215
+00:18:45,470 --> 00:18:46,040
+fácil.
+
+216
+00:18:46,410 --> 00:18:52,310
+Botão rei poderia fazer qualquer coisa mas eu vou botar dessa forma que mesmo só pra gente poder entender
+
+217
+00:18:52,310 --> 00:18:53,180
+o que está acontecendo.
+
+218
+00:18:53,630 --> 00:19:01,760
+Show de bola contra o Uber para poder diminuir a tela que eu vou dizer que pessoas ponto a poder ou
+
+219
+00:19:01,790 --> 00:19:02,870
+adicionado tem um.
+
+220
+00:19:06,250 --> 00:19:15,250
+Pessoas ponto a DD vão adicionar P2 para que nada de novo tudo o que vocês já sabem cria uma pessoa
+
+221
+00:19:15,250 --> 00:19:16,180
+preenchendo tudo.
+
+222
+00:19:16,180 --> 00:19:21,970
+Uma pessoa que não preenche nada cria uma rede de pessoas numa lista de pessoas e vou retornar e essa
+
+223
+00:19:21,970 --> 00:19:29,890
+lista retorne com pessoas simulando o que eu for um banco de dados que eu peguei isso de uma outra.
+
+224
+00:19:30,250 --> 00:19:31,630
+Tanto faz.
+
+225
+00:19:32,170 --> 00:19:39,480
+O objetivo é eu conseguir consumir esse cara aqui por dentro de tudo nosso micro serviço.
+
+226
+00:19:39,550 --> 00:19:40,750
+SHOW DE BOLA.
+
+227
+00:19:40,990 --> 00:19:41,660
+Vamos lá.
+
+228
+00:19:41,770 --> 00:19:46,990
+Como eu vou fazer isso vou vir aqui agora vou levantar o meu serviço de pessoas mandar levantar.
+
+229
+00:19:49,950 --> 00:19:55,300
+Se eu não fiz nenhuma besteira ele vai levantar e desatar levantando show de bola.
+
+230
+00:19:55,330 --> 00:20:00,240
+Vou ver aqui vou mandar atualizar.
+
+231
+00:20:00,360 --> 00:20:02,730
+Ainda não está registrado.
+
+232
+00:20:02,790 --> 00:20:06,870
+Ainda não está demora alguns segundos para se registrar.
+
+233
+00:20:06,930 --> 00:20:07,870
+Beleza.
+
+234
+00:20:07,950 --> 00:20:10,800
+Show de bola até mostrou a mensagem de alerta aqui.
+
+235
+00:20:11,670 --> 00:20:14,430
+Mas eu estou com o meu serviço aqui.
+
+236
+00:20:14,430 --> 00:20:21,060
+O show que olha só que legal ele deu o nome do meu serviço que postou um número aleatório ou uma coisa
+
+237
+00:20:21,060 --> 00:20:23,550
+randômico com um valor randômico.
+
+238
+00:20:23,560 --> 00:20:27,900
+Isso que ele fez por conta desse código que nós colocamos aqui.
+
+239
+00:20:28,170 --> 00:20:35,570
+A distância é de que é o nome da aplicação mais um renda um velho.
+
+240
+00:20:36,060 --> 00:20:42,060
+Aí ele gerou a randômico isso é muito legal porque eu poderia ter uns 50 o serviço de pessoa e todos
+
+241
+00:20:42,060 --> 00:20:50,610
+os serviços de pessoas iam ter um resto diferente se eu clicar aqui agora beleza ele me jogou para o
+
+242
+00:20:50,610 --> 00:20:52,540
+meu serviço de pessoa.
+
+243
+00:20:52,680 --> 00:20:57,090
+Eu ainda não estou passando pelo Get Naked direto do serviço de pessoa então se o botão que barra a
+
+244
+00:20:58,350 --> 00:21:06,130
+barra pessoas que vai acontecer ele vai fazer um GET para essa URL aqui que nós criamos.
+
+245
+00:21:06,130 --> 00:21:07,590
+Cadê o RL que nós criamos.
+
+246
+00:21:08,600 --> 00:21:12,790
+O PAN vai fazer um bilhete para a Barra.
+
+247
+00:21:12,800 --> 00:21:15,230
+Eu nem escrevi ter errado nem a bateria.
+
+248
+00:21:16,680 --> 00:21:22,140
+Show Barra by está levantando de novo.
+
+249
+00:21:25,000 --> 00:21:26,590
+Show voltar aqui.
+
+250
+00:21:29,480 --> 00:21:33,360
+Deixou fechar aqui de novo porque ele vai levantar talvez com outra porta.
+
+251
+00:21:36,560 --> 00:21:38,510
+Ela espera levantar a esperar.
+
+252
+00:21:43,140 --> 00:21:47,070
+Vamos tentar barrar pessoas.
+
+253
+00:21:50,810 --> 00:21:55,010
+Ele ainda não deve ter levantado ainda lá o show de bola show atualizar.
+
+254
+00:21:58,700 --> 00:22:00,020
+Final C6.
+
+255
+00:22:02,150 --> 00:22:05,660
+Eu acho que ele não atualizou seu o Botafogo Barra.
+
+256
+00:22:08,730 --> 00:22:11,350
+Ele ainda não atualizou a data sem ar beleza.
+
+257
+00:22:11,400 --> 00:22:16,850
+Eu tenho que matar e fechar de novo que matar a aplicação levantar de novo ele está sem o devido.
+
+258
+00:22:16,980 --> 00:22:20,530
+é por isso que eu não funcionou mas está funcionando a serviço de Pessoa.
+
+259
+00:22:20,610 --> 00:22:24,040
+Vou matar e vou levantar de novo ou pegar.
+
+260
+00:22:24,060 --> 00:22:26,880
+Sei que a sua pessoa vai matar a guarita certinho.
+
+261
+00:22:29,300 --> 00:22:31,770
+Vou me levantar de novo.
+
+262
+00:22:32,180 --> 00:22:35,560
+O que estou fazendo aqui.
+
+263
+00:22:35,570 --> 00:22:38,450
+Eu vim no meu serviço que está registrado Cliquei nele.
+
+264
+00:22:38,460 --> 00:22:42,290
+Ele está me jogando direto pro meu micro serviço.
+
+265
+00:22:42,290 --> 00:22:43,340
+Isso deixou o micro serviço.
+
+266
+00:22:43,340 --> 00:22:51,280
+é como se eu tivesse vindo aqui daqui está tentando acessar diretamente aqui sem passar pelo meu gato.
+
+267
+00:22:51,290 --> 00:22:54,540
+Na verdade eu vim daqui pra cá pra cá.
+
+268
+00:22:54,860 --> 00:22:59,350
+Ou seja eu consigo sim acessar um micro serviço sem passar pelo Iguatemi.
+
+269
+00:22:59,480 --> 00:23:01,490
+Só tenho que saber qual é a porta.
+
+270
+00:23:01,490 --> 00:23:02,600
+Qual é a rota.
+
+271
+00:23:03,260 --> 00:23:08,890
+Eu tenho que saber que está levantando uma porta muito doida teria que saber tudo isso só que como a
+
+272
+00:23:08,900 --> 00:23:15,290
+nossa porta dinâmica a gente botou um zero lá ele cria uma porta dinâmica de acordo com um disponível
+
+273
+00:23:15,680 --> 00:23:17,410
+é praticamente inviável a gente saber.
+
+274
+00:23:17,450 --> 00:23:20,370
+A gente vai ter que usar o zoom para isso.
+
+275
+00:23:20,900 --> 00:23:23,450
+Vamos lá vão ver se levantou.
+
+276
+00:23:23,450 --> 00:23:24,560
+Vou dar um F5 aqui.
+
+277
+00:23:25,160 --> 00:23:31,570
+Show de bola aparentemente levantou ele montou o serviço antigo ainda.
+
+278
+00:23:32,000 --> 00:23:37,750
+Por isso que a gente tem que matar o nosso cérebro se ele não ele não montou não sei me senti algo novo
+
+279
+00:23:37,760 --> 00:23:40,330
+esse pequeno beleza.
+
+280
+00:23:40,340 --> 00:23:42,420
+Show de Bola levantou tem outra porta.
+
+281
+00:23:42,450 --> 00:23:49,820
+Então se eu vir aqui botar a barra de pessoas olha lá funciona.
+
+282
+00:23:49,880 --> 00:23:51,370
+SHOW DE BOLA.
+
+283
+00:23:51,410 --> 00:23:58,370
+Beleza e agora como é que a gente faz uma requisição assim o aplicativo pedir por Get para o gueto e
+
+284
+00:23:58,790 --> 00:24:07,160
+pedir pro Discover o desculpa pedir um serviço como funciona da seguinte forma vamos pegar o RG do Sul
+
+285
+00:24:08,300 --> 00:24:11,390
+aqui como se estivesse fazendo uma requisição de qualquer lugar pra galera.
+
+286
+00:24:11,390 --> 00:24:16,040
+Então o que eu faço uso ele consegue acessar qualquer micro serviço.
+
+287
+00:24:16,040 --> 00:24:23,200
+Basta eu passar o nome do meu micro serviço por exemplo o meu micro serviço de pessoas cadê o nome dele.
+
+288
+00:24:23,330 --> 00:24:27,830
+Eu sei que esse nome aqui o controle de pessoas MS tá.
+
+289
+00:24:28,010 --> 00:24:35,690
+Eu posso até vir aqui pegar o nome o controle de pessoas MS então aqui eu passo local roxo das ponto
+
+290
+00:24:36,320 --> 00:24:43,730
+80 11 eu falo assim micro o serviço do Zulu conecta no meu micro serviço de pessoas MS que pode ser
+
+291
+00:24:43,730 --> 00:24:54,290
+qualquer um e acessa pra mim para barrar pessoas quando eu não entendo essa guerrilha do Zulu ela vai
+
+292
+00:24:54,290 --> 00:25:00,680
+lá dentro do meu Eureka Service procurar quem é o micro serviço que tem esse nome e dentro dele vai
+
+293
+00:25:00,800 --> 00:25:01,870
+executar essa série que.
+
+294
+00:25:04,760 --> 00:25:06,830
+Ela funcionou.
+
+295
+00:25:06,860 --> 00:25:15,320
+Olha que legal pela URL dos UM CONE QUE TEM AO MEU MICRO serviço de pessoas mandei executar com ele
+
+296
+00:25:15,330 --> 00:25:17,370
+aqui como aqui acontece um GET.
+
+297
+00:25:17,450 --> 00:25:23,650
+Ele foi lá e trouxe um rei com duas coisas que o meu usuário preenche João meu usuário que não preenchia
+
+298
+00:25:23,650 --> 00:25:31,610
+que deixei tudo nulo ou seja com isso o que eu fiz aqui eu fiz basicamente o seguinte o meu navegador
+
+299
+00:25:31,610 --> 00:25:33,380
+é quem é meu aplicativo.
+
+300
+00:25:36,400 --> 00:25:43,800
+Esse nome que está representando os serviços que está registrado porque está registrado com esse nome.
+
+301
+00:25:44,140 --> 00:25:50,010
+Serviço de pessoas o controle de pessoas CMS é o nome que eu estou mandando ele pegar então pela URL
+
+302
+00:25:50,020 --> 00:25:57,590
+do Sul mandei ele pegar esse cara aqui Show e dentro desse serviço eu mandei acessar e realizem aqui.
+
+303
+00:25:57,700 --> 00:26:06,080
+Ou seja as nossas aplicações se estivesse usando essa arquitetura esse cara aqui só conseguiria.
+
+304
+00:26:06,190 --> 00:26:09,940
+Vamos pegar essa URL e vamos jogar pra cá.
+
+305
+00:26:09,940 --> 00:26:11,700
+Vamos botar ela aqui.
+
+306
+00:26:19,610 --> 00:26:20,230
+Vou estar aqui.
+
+307
+00:26:23,400 --> 00:26:24,950
+Eu vou mudar isso aqui um pouquinho.
+
+308
+00:26:31,980 --> 00:26:34,700
+Aqui não estou conseguindo clicar aqui dentro.
+
+309
+00:26:35,970 --> 00:26:36,450
+Olha só.
+
+310
+00:26:39,060 --> 00:26:40,220
+Contra o X.
+
+311
+00:26:40,500 --> 00:26:45,590
+Esse cara aqui é a minha o RL do zoom e o nosso gatinho.
+
+312
+00:26:45,630 --> 00:26:52,410
+Então sei que eu vou botar as usinas essa RL que aqueles que o Hezbollah.
+
+313
+00:27:11,260 --> 00:27:12,770
+Era aí que está dando um dia.
+
+314
+00:27:20,100 --> 00:27:22,950
+Esse pedaço aqui seria.
+
+315
+00:27:25,450 --> 00:27:27,640
+O que está registrado no Discovery Server.
+
+316
+00:27:30,300 --> 00:27:34,180
+Está registrado aqui beleza.
+
+317
+00:27:34,200 --> 00:27:35,640
+E por fim.
+
+318
+00:27:45,640 --> 00:27:49,730
+Essa participava seriam os nossos micro serviços.
+
+319
+00:27:49,750 --> 00:27:56,610
+Certo seria a RL que vai acessar daqui para micro serviço.
+
+320
+00:27:56,650 --> 00:27:59,830
+Então o que acontece se primeiro a partir da conexão.
+
+321
+00:28:03,440 --> 00:28:04,120
+O uso.
+
+322
+00:28:12,180 --> 00:28:15,300
+Chegou a segunda parte da conexão.
+
+323
+00:28:19,290 --> 00:28:19,890
+Eureka.
+
+324
+00:28:27,860 --> 00:28:34,040
+E a terceira parte da conexão o RL aqui vai ser a nossa.
+
+325
+00:28:34,050 --> 00:28:39,850
+Nosso micro serviços focados a nossa API.
+
+326
+00:28:40,280 --> 00:28:42,890
+Show então é assim que ficou galera.
+
+327
+00:28:42,890 --> 00:28:43,370
+Olha só.
+
+328
+00:28:46,950 --> 00:28:54,800
+Eu tenho um aplicativo que pode se conectar num serviço de descoberta em um gateway que através desse
+
+329
+00:28:54,810 --> 00:29:00,810
+Gateway ele se conecta a um servidor que onde tem serviço registrados e consegue fazer requisição foi
+
+330
+00:29:00,810 --> 00:29:02,990
+o que nós fizemos aqui.
+
+331
+00:29:03,000 --> 00:29:11,190
+Eu tenho esses três casos aqui que eu posso ter n serviços aqui muitos serviços aqui mas nesse momento
+
+332
+00:29:11,190 --> 00:29:12,880
+tenho esses daqui.
+
+333
+00:29:12,900 --> 00:29:14,170
+Qual a opção.
+
+334
+00:29:14,280 --> 00:29:23,280
+O meu Eureka server que é o registrador usou ou server que é o gateway de redirecionamento e o nosso
+
+335
+00:29:23,280 --> 00:29:26,920
+controle de pessoas que é o nosso micro serviço de conexão.
+
+336
+00:29:26,940 --> 00:29:35,040
+Então nós temos esse cara esse cara esse cara é esse cara esse que sou eu através do navegador simulando
+
+337
+00:29:35,040 --> 00:29:40,620
+as requisições ou fiz uma requisição GET para ver o que está funcionando mas eu poderia usar um Sony
+
+338
+00:29:40,650 --> 00:29:46,770
+ou qualquer outro aplicativo para consumir bons put elite Pet que tivesse.
+
+339
+00:29:46,860 --> 00:29:52,040
+Então nós criamos o nosso Gateway nosso Discover e um micro serviço.
+
+340
+00:29:52,320 --> 00:29:57,720
+O nosso micro serviço poderia estar conectado ao mongo DB poderia ele poderia estar conectado ao post
+
+341
+00:29:57,720 --> 00:30:03,120
+e ele poderia comer o nosso micro serviço poderia estar fazendo uma requisição para outro serviço poderia.
+
+342
+00:30:03,120 --> 00:30:09,150
+Tudo isso pode ser feito daqui em diante mas a estrutura inicial.
+
+343
+00:30:09,150 --> 00:30:15,600
+Nós conseguimos criar aqui ou seja dessa estrutura a gente consegue evoluir para qualquer coisa.
+
+344
+00:30:15,930 --> 00:30:21,960
+Aqui foi feito de maneira didática para vocês conhecerem compreenderem o que é essa estrutura de micro
+
+345
+00:30:21,970 --> 00:30:30,380
+serviços usando tecnologias que são usadas no mercado tecnologias disponibilizadas pela Netflix tecnologias
+
+346
+00:30:30,420 --> 00:30:37,470
+despois dispostas por eles que eles mesmos utilizam e que funcionam muito bem que se integram muito
+
+347
+00:30:37,470 --> 00:30:38,620
+bem entre si.
+
+348
+00:30:38,760 --> 00:30:44,430
+Beleza então nós criamos o Eureka criamos o gateway e criamos o micro serviço.

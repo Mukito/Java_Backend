@@ -1,0 +1,1379 @@
+1
+00:00:02,770 --> 00:00:12,430
+Beleza galera agora que nós criamos aqui a conexão síncrona pra gente fechar com chave de ouro o nosso
+
+2
+00:00:12,430 --> 00:00:19,750
+projeto de micro serviço antes mesmo de subir ele para um contêiner botá lo em vários servidores para
+
+3
+00:00:19,750 --> 00:00:28,680
+se comunicar para fechar a arquitetura com chave de ouro a gente precisa criar mais uma camada pra gente
+
+4
+00:00:28,750 --> 00:00:33,040
+poder finalizar que camada essa mas não comigo.
+
+5
+00:00:33,040 --> 00:00:41,410
+Hoje eu tenho um dois três quatro micro serviços à gerência quatro micro serviços ainda é tranquilo
+
+6
+00:00:41,410 --> 00:00:42,000
+e fácil.
+
+7
+00:00:42,010 --> 00:00:52,360
+Agora imagina quando tiver 50 100 200 500.000 micros serviços gerenciar tudo isso vai ficar muito ruim
+
+8
+00:00:53,710 --> 00:01:00,910
+vai ficar muito complicado mas nas configurações que eu tenho que fazer para cada micro o serviço ficaria
+
+9
+00:01:00,910 --> 00:01:02,470
+meio que inviável.
+
+10
+00:01:02,530 --> 00:01:08,200
+Eu tenho que ficar acessando pasta por pasta de micro serviço para poder configurar ele.
+
+11
+00:01:08,260 --> 00:01:18,660
+Então o ideal é que nós possamos ter um outro cara aqui que vai ser a nossa camada de configuração ou
+
+12
+00:01:18,670 --> 00:01:21,430
+a nossa camada de configuração.
+
+13
+00:01:21,430 --> 00:01:32,290
+Botelho tem uma cozinha diferente e essa camada de configuração ela vai ser acessada por todos os micro
+
+14
+00:01:32,300 --> 00:01:33,820
+serviços.
+
+15
+00:01:33,820 --> 00:01:36,800
+Todos os micro serviços vão acessar ela.
+
+16
+00:01:36,820 --> 00:01:46,660
+Como assim essa camada vai ser uma camada que vai ser responsável por fazer a configuração inicial de
+
+17
+00:01:46,990 --> 00:01:48,570
+todo micro serviço.
+
+18
+00:01:48,580 --> 00:01:56,650
+Ou seja não importa se a Gateway se al Zur não importa descobrir se o Eureka não importa se é micro
+
+19
+00:01:56,650 --> 00:01:57,650
+serviço.
+
+20
+00:01:57,760 --> 00:02:02,070
+Todos os micro serviços vão passar por essa camada de configuração.
+
+21
+00:02:02,200 --> 00:02:09,280
+Nós vamos centralizar em um único lugar para poder gerenciar todas as configurações de micros serviços
+
+22
+00:02:09,280 --> 00:02:17,830
+de aplicação e o com isso há diversas vantagens e inúmeras vantagens para essa abordagem que vão desde
+
+23
+00:02:17,830 --> 00:02:25,240
+o seu reúso até a maior facilidade nas atualizações de parâmetros de configuração incluindo sua propagação
+
+24
+00:02:25,240 --> 00:02:28,360
+entre todos os serviços envolvidos.
+
+25
+00:02:28,360 --> 00:02:36,040
+Então esse reúso facilidade de configuração propagação tem muita coisa legal que dá para fazer.
+
+26
+00:02:36,040 --> 00:02:43,120
+Então nós vamos precisar de uma camada de configuração e para isso nós vamos criar um servidor de configurações
+
+27
+00:02:43,750 --> 00:02:44,680
+e esse servidor.
+
+28
+00:02:44,680 --> 00:02:48,140
+Ele também vai ser um serviço receptivo.
+
+29
+00:02:48,190 --> 00:02:56,950
+Ele também vai ser um API que vai ficar disponível dentro da arquitetura do projeto para que qualquer
+
+30
+00:02:56,950 --> 00:03:04,330
+outro micro serviço se conecte nele para gerenciar todas as suas configurações.
+
+31
+00:03:04,330 --> 00:03:13,140
+Ele vai ser um micro serviço que vai gerenciar todas as configurações de micro serviços e dele próprio.
+
+32
+00:03:13,420 --> 00:03:17,260
+E esse cara só vai ter que estar on line antes de todo mundo.
+
+33
+00:03:17,260 --> 00:03:20,450
+Esse micro serviço vai ser o primeiro a ser executado.
+
+34
+00:03:20,470 --> 00:03:23,850
+Ele vai ser executado antes mesmo do Eureka.
+
+35
+00:03:23,890 --> 00:03:29,110
+Então ele vai ser um micro serviço que vai ter alta disponibilidade para todo mundo.
+
+36
+00:03:29,110 --> 00:03:38,650
+O princípio básico é de que cada micro serviço iniciado vai se conectar.
+
+37
+00:03:38,650 --> 00:03:42,550
+Então vamos supor que o Discover iniciou então o que ele vai fazer.
+
+38
+00:03:42,550 --> 00:03:49,270
+Ele vai se conectar no serviço de configuração e vai obter os arquivos de propriedade que estiverem
+
+39
+00:03:49,270 --> 00:03:50,870
+disponíveis para ele.
+
+40
+00:03:50,980 --> 00:03:55,910
+Olha que legal e com isso ele vai conseguir fazer uma arquitetura bem legal.
+
+41
+00:03:55,910 --> 00:04:03,370
+Então todos os micros serviços vai passar aqui e está onde esse serviço de configuração ele vai pegar
+
+42
+00:04:03,370 --> 00:04:04,960
+as configurações.
+
+43
+00:04:04,960 --> 00:04:08,810
+Bom isso aqui pode acontecer de algumas formas diferentes.
+
+44
+00:04:08,860 --> 00:04:12,020
+Você pode configurar para fazer isso de várias formas.
+
+45
+00:04:12,040 --> 00:04:20,530
+O serviço de configuração ele pode querer pegar essas configurações de um repositório Git que é bem
+
+46
+00:04:20,530 --> 00:04:25,780
+comum a gente ter essas configurações mencionadas em algum lugar um repositório Git um botão botar uma
+
+47
+00:04:25,780 --> 00:04:32,110
+bolinha aqui não o botão como se fosse um banquinho de dados um repositório Git um kit Ruby da vida
+
+48
+00:04:33,850 --> 00:04:39,010
+ou pode estar também em um arquivo comum.
+
+49
+00:04:39,010 --> 00:04:47,290
+Um filme da vida que a gente pode chamar de fiel Store um arquivo uma loja de arquivos é um lugar onde
+
+50
+00:04:47,290 --> 00:04:52,800
+eu posso pegar esses arquivos ou mudar a cozinha aqui para um laranja.
+
+51
+00:04:52,840 --> 00:05:00,340
+Então eu posso além de pegar do que Ruby eu posso também pegar de uma loja de arquivos um arquivo local
+
+52
+00:05:00,340 --> 00:05:01,440
+na minha máquina de qualquer.
+
+53
+00:05:02,370 --> 00:05:06,370
+Beleza então é algo que a gente consegue fazer.
+
+54
+00:05:06,390 --> 00:05:09,300
+Então o que nós vamos fazer nessa aula.
+
+55
+00:05:09,300 --> 00:05:15,330
+O que nós vamos fazer a partir de agora é criar essa configuração aqui criar o Conficker criar o kit
+
+56
+00:05:15,630 --> 00:05:17,310
+e criar o filme histórico.
+
+57
+00:05:19,280 --> 00:05:21,580
+Bom agora é que nós temos ele aqui.
+
+58
+00:05:21,590 --> 00:05:26,860
+Vamos fazer o seguinte vamos começar a desenvolver essa arquitetura.
+
+59
+00:05:27,230 --> 00:05:28,520
+Então vamos lá.
+
+60
+00:05:29,150 --> 00:05:30,550
+Antes de mais nada.
+
+61
+00:05:30,830 --> 00:05:38,480
+Uma outra vantagem que a gente tem que usar o serviço de arquitetura é a possibilidade de criar diversos
+
+62
+00:05:38,480 --> 00:05:41,210
+arquivos para um mesmo serviço.
+
+63
+00:05:41,270 --> 00:05:46,530
+Ou seja podemos ter um Application Properties geral que vai dar.
+
+64
+00:05:46,550 --> 00:05:52,820
+Por exemplo eu posso ter um Application Properties geral que é o serviço de pessoas geral que vai ficar
+
+65
+00:05:52,820 --> 00:05:57,800
+aqui dentro que tem todas as configurações básicas do serviço de pessoas.
+
+66
+00:05:57,800 --> 00:06:05,030
+Mas eu posso querer ter algo muito específico aqui dentro que é só desse micro serviço que não tem nada
+
+67
+00:06:05,030 --> 00:06:06,830
+a ver com os demais micro serviços.
+
+68
+00:06:06,830 --> 00:06:09,160
+Eu poderia botar aqui dentro também.
+
+69
+00:06:09,170 --> 00:06:16,510
+Isso também é uma vantagem muito grande e a gente tem quando a gente cria esse micro serviço de rede
+
+70
+00:06:16,670 --> 00:06:19,640
+de configurações está então beleza.
+
+71
+00:06:23,240 --> 00:06:29,300
+Vamos fazer o seguinte vamos tentar criar esse micro serviço para que a gente possa.
+
+72
+00:06:29,840 --> 00:06:32,320
+Para que a gente possa evoluir.
+
+73
+00:06:32,480 --> 00:06:36,750
+Então vamos fazer o seguinte a primeira coisa que nós vamos fazer é criar um novo projeto.
+
+74
+00:06:36,750 --> 00:06:39,030
+Então eu vou vir aqui.
+
+75
+00:06:39,110 --> 00:06:45,140
+Esse projeto está dentro da pasta da Micro serviço então vou vir aqui e filme vou criar um novo projeto.
+
+76
+00:06:45,230 --> 00:06:46,930
+Na verdade vou para todo mundo.
+
+77
+00:06:46,960 --> 00:06:52,850
+Vou parar aqui direitinho para todo mundo para a gente poder criar esse micro serviço.
+
+78
+00:06:52,940 --> 00:06:54,550
+Então vou apertar F1.
+
+79
+00:06:54,630 --> 00:06:56,030
+Ele abriu palheta aqui.
+
+80
+00:06:56,030 --> 00:06:58,100
+Vou criar um projeto mas nem vou clicar aqui.
+
+81
+00:06:58,100 --> 00:07:06,520
+O Spring Michalis Project vai criar um projeto mas eu vou escolher a última versão mesmo Java.
+
+82
+00:07:06,530 --> 00:07:09,940
+Quero dentro do grupo Media exemplo mesmo.
+
+83
+00:07:10,010 --> 00:07:18,770
+E eu vou chamar esse cara aqui de configure serve para chamar esse cara que consegue servir sob o nome
+
+84
+00:07:18,770 --> 00:07:25,760
+do serviço eu quero que ele gere um já pôs a versão do Java 11 que eu sempre uso e aqui eu vou instalar
+
+85
+00:07:25,910 --> 00:07:30,230
+duas dependências duas dependências essas dependências importantes.
+
+86
+00:07:30,230 --> 00:07:37,980
+A primeira é o Spring web para poder ser uma peixe sem isso que não vai funcionar ele tem que ser uma
+
+87
+00:07:38,480 --> 00:07:41,350
+full e o segundo é isso daqui a.
+
+88
+00:07:43,820 --> 00:07:52,370
+Como fique Server do Spring Cloud confie que esse cara aqui vai até o escritório central de gerenciamento
+
+89
+00:07:52,370 --> 00:07:59,340
+de configurações via Gateway SDN Rich Corp Vault e várias outras coisas.
+
+90
+00:07:59,360 --> 00:08:06,890
+Então nós vamos instalar esse cara aqui Server confirma que a beleza está aqui.
+
+91
+00:08:08,060 --> 00:08:12,460
+Show de bola então eu tenho o Spring web e o Conficker serve.
+
+92
+00:08:13,720 --> 00:08:18,850
+Vou mandar aligeirar aqui dentro da pasta de micros serviços gerar aqui dentro mesmo.
+
+93
+00:08:20,440 --> 00:08:22,930
+E VOU MANDAR ELE adicionar outro país.
+
+94
+00:08:26,830 --> 00:08:30,350
+Show de bola criou mais um projeto na nossa arquitetura.
+
+95
+00:08:30,370 --> 00:08:35,790
+Como é que nossa arquitetura agora está ficando grandona já tem várias faixas para a gente se preocupar.
+
+96
+00:08:35,810 --> 00:08:39,890
+A arquitetura mais profissional desde então já está começando.
+
+97
+00:08:39,890 --> 00:08:45,580
+A arquitetura bem grande então eu tenho um confit Sérvia esse com Figo e Sérvia.
+
+98
+00:08:45,680 --> 00:08:48,150
+Mas vamos fazer algumas configurações dele.
+
+99
+00:08:48,150 --> 00:08:56,130
+A primeira coisa que a gente tem que fazer para dizer que ele é um configurado é vir aqui no SRC em
+
+100
+00:08:56,770 --> 00:08:59,320
+Java e na classe principal.
+
+101
+00:08:59,320 --> 00:09:02,920
+A classe que inicia onde fica o Spring Push Application.
+
+102
+00:09:02,920 --> 00:09:10,710
+Nós vamos habilitar uma anotação chamada n n.
+
+103
+00:09:11,170 --> 00:09:22,190
+Opa N N é boa e nem bom confia e serve em nível confio saber do experiente framework ponto Cloud ponto
+
+104
+00:09:22,240 --> 00:09:23,790
+contigo ponto serve.
+
+105
+00:09:24,850 --> 00:09:33,730
+Essa anotação aqui ela é muito importante é ela que vai indicar os Spring que este serviço será o nosso
+
+106
+00:09:33,730 --> 00:09:35,280
+serviço de configuração.
+
+107
+00:09:35,410 --> 00:09:37,100
+Então é ela que vai falar assim Spring.
+
+108
+00:09:37,120 --> 00:09:41,470
+Esse cara que tem um serviço de configuração sem ela não vai funcionar.
+
+109
+00:09:41,470 --> 00:09:46,620
+Tem que colocar ela tá beleza depois de fazer isso daqui.
+
+110
+00:09:46,630 --> 00:09:50,200
+Basicamente já está quase pronto o que nós vamos fazer agora.
+
+111
+00:09:50,200 --> 00:09:56,420
+Agora nós vamos lá no Application Property para fazer as nossas primeiras configurações.
+
+112
+00:09:56,860 --> 00:10:01,270
+E aí eu vou mostrar para vocês quais as seis configurações que nós vamos fazer.
+
+113
+00:10:01,540 --> 00:10:04,120
+A primeira configuração que nós temos que fazer é.
+
+114
+00:10:06,220 --> 00:10:17,020
+Selecionar a porta que esse cara vai rodar então qual é a porta que esse cara vai rodar.
+
+115
+00:10:17,020 --> 00:10:18,820
+Bom eu tenho.
+
+116
+00:10:18,910 --> 00:10:25,130
+Eu vou seguir a mesma lógica o que tem aqui por exemplo Eureka serve está rodando na 80 10.
+
+117
+00:10:25,180 --> 00:10:28,190
+Uso não 80 11.
+
+118
+00:10:28,300 --> 00:10:32,290
+Os demais serviços são criados automaticamente então esta que pode ser sei lá 80 12.
+
+119
+00:10:32,350 --> 00:10:35,330
+Talvez vamos lá voltar aqui só para ficar fácil.
+
+120
+00:10:35,670 --> 00:10:43,730
+O Bope recebe %12 aposta que vai comunicar.
+
+121
+00:10:43,900 --> 00:10:49,690
+Beleza então vai ser a porta disponível desse serviço ou seja os demais serviços vão ter que conhecer
+
+122
+00:10:49,690 --> 00:10:51,070
+essa porta aqui.
+
+123
+00:10:51,180 --> 00:11:00,230
+A segunda coisa que nós vamos colocar é o que é o nome do serviço que a gente já aprendeu né.
+
+124
+00:11:00,370 --> 00:11:10,530
+Então a gente vai colocar Spring ponto Application ponto Nehme e nós vamos votar o quê.
+
+125
+00:11:10,810 --> 00:11:20,100
+Vou botar aqui configura traço serve vai ser o nome do nosso serviço UPA não é Abrinq e Spring.
+
+126
+00:11:20,110 --> 00:11:21,710
+Já funcionou.
+
+127
+00:11:21,820 --> 00:11:23,420
+Show de bola.
+
+128
+00:11:23,830 --> 00:11:29,830
+Nós estávamos também usando uma outra nomenclatura cadeia deixou pegar a nomenclatura que eu não lembro
+
+129
+00:11:30,280 --> 00:11:38,800
+de cabeça o que era esse daqui e HORECA Estância Nova onde a gente nem vai precisar de aqui porque esse
+
+130
+00:11:38,800 --> 00:11:47,620
+cara aqui não vai ser registrado no nome Horeca esse cara que o Eureka que vai se comunicar com ele
+
+131
+00:11:47,630 --> 00:11:49,480
+então ele não vai ficar registrado.
+
+132
+00:11:49,480 --> 00:11:53,230
+Ele vai ser um serviço que não vai ficar registrado em um serviço à parte.
+
+133
+00:11:53,230 --> 00:11:54,130
+Beleza.
+
+134
+00:11:54,250 --> 00:12:03,760
+Após adicionar aqui o Spring Application que nós vamos fazer aqui e adicionar um parâmetro chamado Spring
+
+135
+00:12:05,350 --> 00:12:11,290
+ponto Profiles ponto Active bom.
+
+136
+00:12:12,690 --> 00:12:21,690
+O que esse cara que esse cara aqui é qual é a forma que nós vamos obter os dados de configuração.
+
+137
+00:12:21,720 --> 00:12:21,960
+Tá
+
+138
+00:12:25,980 --> 00:12:28,750
+aqui informo.
+
+139
+00:12:29,160 --> 00:12:35,600
+Informo a forma como vamos obter as configurações
+
+140
+00:12:37,620 --> 00:12:40,170
+beleza e como é que funciona isso.
+
+141
+00:12:40,170 --> 00:12:49,260
+Bom se fosse usar um kit da vida por exemplo passaríamos aqui o valor de TI e simplesmente faz assim.
+
+142
+00:12:49,470 --> 00:12:58,560
+Basicamente é passar Gheit e aí aqui embaixo a gente teria uma outra propriedade pra dizer onde é que
+
+143
+00:12:58,560 --> 00:13:03,480
+está esse cara que exprime ponto Claude
+
+144
+00:13:05,880 --> 00:13:14,260
+ponto com FIG com FIG pontos server.
+
+145
+00:13:14,470 --> 00:13:30,180
+Bom Tu nem te vê e eu escrevi errado não é claro dia Claude serve um ponto Native pontos soft location.
+
+146
+00:13:30,300 --> 00:13:46,070
+Esse cara que esse aqui eu passo o caminho aqui informo outro caminho de onde estou pegando a configuração.
+
+147
+00:13:46,080 --> 00:13:53,070
+Tá então aqui eu informa a forma é que eu passo o caminho que seria o RL da onde está o meu repositório
+
+148
+00:13:53,070 --> 00:13:53,920
+e tudo mais.
+
+149
+00:13:54,030 --> 00:13:55,360
+E ele pegaria de lá.
+
+150
+00:13:55,440 --> 00:13:56,140
+Show.
+
+151
+00:13:56,160 --> 00:14:04,560
+Bom como eu vou trabalhar na minha máquina eu vou trabalhar na minha máquina local eu vou montar o caminho
+
+152
+00:14:04,560 --> 00:14:11,430
+físico da minha máquina da beleza e aí você pode botar físico da máquina mas aí depois que vocês quiserem
+
+153
+00:14:11,430 --> 00:14:16,510
+botar uma DIU de tirar o que vocês podem colocar pra colocar físico a gente não vai usar o kit.
+
+154
+00:14:16,650 --> 00:14:23,470
+A gente vai usar o parâmetro Native para colocar o físico.
+
+155
+00:14:23,490 --> 00:14:32,310
+Beleza então agora eu vou adicionar definir o caminho do disco rígido que serão armazenados os arquivos
+
+156
+00:14:32,310 --> 00:14:37,620
+de configuração que eu vou passar o caminho da pasta onde vai estar esses arquivos de configuração.
+
+157
+00:14:37,680 --> 00:14:47,970
+Então o que eu vou fazer aqui dentro eu vou criar uma pasta nova eu vou criar uma pasta nova aqui dentro
+
+158
+00:14:49,230 --> 00:14:52,340
+eu vou criar uma pasta aqui não há pasta.
+
+159
+00:14:52,470 --> 00:14:57,540
+Não é que aqui vai adicionar uma nota mil Folder.
+
+160
+00:14:57,750 --> 00:15:05,820
+Vou criar uma pasta aqui chamada não é que não vou eu já vou mandar adicionar a DD folder curto espaço.
+
+161
+00:15:06,930 --> 00:15:15,030
+Eu vou criar uma pasta aqui que eu vou chamar de fique com o configure dentro dessa pasta configure
+
+162
+00:15:15,210 --> 00:15:22,890
+ou configurações dessa pasta com figos eu vou adicionar todos os consigo todas ou todos os arquivos
+
+163
+00:15:22,890 --> 00:15:24,060
+de configuração.
+
+164
+00:15:24,180 --> 00:15:30,660
+Então vou vir aqui vou clicar em Adicionar beleza não tem nada dentro dela e aqui dentro que nós vamos
+
+165
+00:15:30,660 --> 00:15:34,750
+criar os nossos arquivos de configuração da beleza.
+
+166
+00:15:34,830 --> 00:15:40,190
+E aí o que eu vou fazer eu vou pegar e vou passar esse caminho aqui.
+
+167
+00:15:40,320 --> 00:15:47,910
+Vou copiar o PS copie a PF e aí é aqui que vai ser a história da brincadeira.
+
+168
+00:15:47,910 --> 00:15:53,970
+Olha só eu vou fazer o seguinte eu vou colocar esse caminho aqui antes de colocar o caminhão eu vou
+
+169
+00:15:53,970 --> 00:15:59,060
+criar um arquivo de confira aqui dentro que eu vou chamar de application.
+
+170
+00:15:59,340 --> 00:16:02,370
+Ponto Properties.
+
+171
+00:16:04,560 --> 00:16:06,500
+Vou botar nada aqui dentro ainda.
+
+172
+00:16:06,600 --> 00:16:09,620
+Só um carinha só pra gente ver.
+
+173
+00:16:09,670 --> 00:16:13,670
+E aqui eu vou botar o caminho da onde está esse.
+
+174
+00:16:13,710 --> 00:16:19,900
+Essa pasta com figos eu vou vir aqui eu vou copiar o caminho completo mesmo não vou nem copiar relativo
+
+175
+00:16:19,920 --> 00:16:22,230
+está completo só pra gente poder ver.
+
+176
+00:16:22,380 --> 00:16:29,250
+E aí que tem um porém se você tiver trabalhando no Mac ou no Linux você simplesmente cola o caminho
+
+177
+00:16:29,250 --> 00:16:32,900
+aqui e substitui cada barra dessa daqui.
+
+178
+00:16:32,910 --> 00:16:42,240
+O que há contra a barra por uma barra normal para ele saber que há um caminho que é um local simplesmente
+
+179
+00:16:42,240 --> 00:16:49,500
+é isso se você tiver no Linux ou no Mac por causa do Windows eu tenho que fazer isso do que o fail 2
+
+180
+00:16:49,500 --> 00:16:56,450
+pontos Barra a Barra Barra Barra Três Barras aqui tá.
+
+181
+00:16:58,590 --> 00:16:59,780
+Por quê.
+
+182
+00:16:59,790 --> 00:17:03,620
+Olha só quando a gente está trabalhando no Windows.
+
+183
+00:17:03,630 --> 00:17:09,770
+Essas três barras são normais porque elas são um padrão chamado Unix.
+
+184
+00:17:09,780 --> 00:17:10,920
+Vou até comentar aqui o.
+
+185
+00:17:12,080 --> 00:17:24,170
+Botar as barras entre as pastas são normais.
+
+186
+00:17:24,450 --> 00:17:33,680
+Vírgula é um padrão chamado Unix e essa é a raiz.
+
+187
+00:17:33,860 --> 00:17:35,100
+Essas barras aqui.
+
+188
+00:17:35,780 --> 00:17:39,050
+Isso é comum.
+
+189
+00:17:39,050 --> 00:17:40,480
+é comum no Windows.
+
+190
+00:17:40,490 --> 00:17:51,520
+Esse padrão é comum no Windows Unix e ele é comum no Windows.
+
+191
+00:17:53,240 --> 00:17:58,090
+Deixa eu pensar esse valor aqui de constante Galera isso aqui é uma constante.
+
+192
+00:17:58,130 --> 00:17:59,600
+Esse valor é constante.
+
+193
+00:17:59,600 --> 00:18:06,830
+Ele tem que ser passado certinho se não passar os meus serviços todos os serviços não vão funcionar
+
+194
+00:18:06,830 --> 00:18:14,870
+corretamente caso ele não consiga encontrar os arquivos cara vai dar erro ele não vai conseguir levantar
+
+195
+00:18:14,870 --> 00:18:18,640
+ninguém tá beleza.
+
+196
+00:18:19,250 --> 00:18:27,980
+Show de bola aí por exemplo se fosse um Linux a gente não vai usar as três mas a gente faria tipo assim
+
+197
+00:18:30,200 --> 00:18:31,160
+vai eu
+
+198
+00:18:34,050 --> 00:18:40,460
+faço barra e o caminho vai ao Barra e o caminho da onde tá beleza.
+
+199
+00:18:40,520 --> 00:18:42,760
+Hoje no Windows a gente bota Três Barras aqui.
+
+200
+00:18:42,770 --> 00:18:44,120
+Show de Bola.
+
+201
+00:18:45,200 --> 00:18:47,000
+A principio é isso.
+
+202
+00:18:47,030 --> 00:18:54,620
+Bom se esse caminho estiver certo se eu pegar isso daqui e botar aqui no meu navegador acolá ele tem
+
+203
+00:18:54,620 --> 00:18:56,660
+que me mostrar o que tem vindo a caminho.
+
+204
+00:18:57,420 --> 00:19:01,070
+Funcionou não mostrou acho o arquivo lá dentro.
+
+205
+00:19:01,070 --> 00:19:05,810
+Então o caminho tá certo é uma forma de saber se o caminho está certo ou não funcionou.
+
+206
+00:19:05,820 --> 00:19:09,640
+Então beleza então esse cara está certo.
+
+207
+00:19:09,650 --> 00:19:12,510
+Show de bola uma vez que ele está certo.
+
+208
+00:19:12,620 --> 00:19:16,960
+Nós vamos criar agora dentro dele alguns arquivos de configuração.
+
+209
+00:19:17,070 --> 00:19:24,850
+Bom nós vamos criar um arquivo de configuração aqui global que vai ser o nosso Application Properties.
+
+210
+00:19:24,920 --> 00:19:35,850
+Nós vamos criar um para o Zune um para o Eureka um para o pessoas e um para o por animais.
+
+211
+00:19:35,960 --> 00:19:49,780
+Então vamos bem devagar vamos pensar da seguinte forma esse Application própria aqui ele vai ser.
+
+212
+00:19:50,000 --> 00:19:52,910
+Deixa eu pensar como é que eu vou explicar isso.
+
+213
+00:19:54,170 --> 00:20:01,580
+Esse Application Properties que ele vai ser algo comum para todos os serviços.
+
+214
+00:20:02,330 --> 00:20:11,120
+Esse cara aqui e ele vai ser como é que eu vou dizer ele vai ser algo que todo mundo vai acessar então
+
+215
+00:20:11,120 --> 00:20:13,340
+por exemplo dentro desse.
+
+216
+00:20:16,030 --> 00:20:17,690
+Não é isso aqui.
+
+217
+00:20:19,290 --> 00:20:25,350
+Daquilo que está querendo a pasta com esse cara aqui vai ter configurações que todo mundo vai acessar
+
+218
+00:20:25,830 --> 00:20:27,540
+todos.
+
+219
+00:20:27,540 --> 00:20:36,530
+Agora quando eu quiser que aqui dentro tenho configurações específicas para determinados serviços.
+
+220
+00:20:36,600 --> 00:20:42,210
+O nome do arquivo que eu colocar aqui tem que ter o mesmo nome que eu botei lá no serviço Now Experience
+
+221
+00:20:42,210 --> 00:20:50,460
+Application conta o nome por exemplo vou pegar um exemplo aqui vou criar um Conficker e Eureka.
+
+222
+00:20:50,730 --> 00:20:51,630
+Então vou vir aqui.
+
+223
+00:20:51,630 --> 00:20:54,780
+Qual é o nome que eu botei aqui no Application Protect.
+
+224
+00:20:54,810 --> 00:20:59,450
+Você só vai fazer isso uma vez está o nome e HORECA server.
+
+225
+00:20:59,520 --> 00:21:05,550
+Então se eu botei o nome Eureka serve aqui dentro tem que ter um arquivo chamado Eureka Server ponto
+
+226
+00:21:06,060 --> 00:21:19,930
+para o Berti Properties Eureka Server ponto Properties Properties faltou um link para o aprendiz.
+
+227
+00:21:20,070 --> 00:21:28,320
+Beleza então pelo nome do arquivo e o nome que eu botei lá no Application Nehme se for igual ele já
+
+228
+00:21:28,320 --> 00:21:32,190
+sabe que esse cara é desse cara que olha que legal.
+
+229
+00:21:32,190 --> 00:21:40,200
+Então toda vez que eu quiser criar uma configuração baseada no meu micro serviço por exemplo esse aqui
+
+230
+00:21:40,200 --> 00:21:44,380
+vai ser global vai ser para todo o mundo e esse daqui vai ser só pro Eureka.
+
+231
+00:21:44,880 --> 00:21:45,110
+Tá.
+
+232
+00:21:46,550 --> 00:21:54,650
+Então esse cara aqui tem que ter o mesmo nome de início que está aqui no nosso micro serviço senão não
+
+233
+00:21:54,740 --> 00:21:55,950
+funciona.
+
+234
+00:21:56,480 --> 00:22:03,890
+Ele não vai conseguir encontrar o servidor e vai daí beleza é um show de bola dado isso nós vamos fazer
+
+235
+00:22:03,890 --> 00:22:08,370
+o seguinte a primeira coisa que nós vamos fazer é configurar o Application global.
+
+236
+00:22:08,420 --> 00:22:10,910
+O que a gente pode colocar aqui dentro do global.
+
+237
+00:22:10,970 --> 00:22:18,260
+Bom dentro do Global a gente vai colocar apenas o que é comum para todos os micro serviços o que é comum
+
+238
+00:22:18,260 --> 00:22:19,840
+para todos os micro serviços.
+
+239
+00:22:19,840 --> 00:22:22,670
+Bom é o RL
+
+240
+00:22:25,280 --> 00:22:32,030
+para se conectar no Eureka server.
+
+241
+00:22:32,150 --> 00:22:41,340
+Todo mundo se conecta nele e o que é mais uma ideia da distância que a gente criou para todo mundo.
+
+242
+00:22:41,390 --> 00:22:43,150
+é comum para todo mundo né.
+
+243
+00:22:43,160 --> 00:22:45,220
+Então é isso que eu vou fazer.
+
+244
+00:22:45,220 --> 00:22:48,330
+Então o que eu vou fazer eu vou pegar qualquer um aqui porque é igual para todo mundo.
+
+245
+00:22:48,350 --> 00:22:50,690
+Vou pegar aqui desse cara aqui.
+
+246
+00:22:51,650 --> 00:22:58,310
+Isso daqui é o único que não tem isso aqui na verdade e o que não tem uma ideia da distância é o Eureka
+
+247
+00:22:58,310 --> 00:23:02,870
+Server mesmo mas não tem problema não vou vir aqui.
+
+248
+00:23:03,140 --> 00:23:11,780
+Essa o RL aqui é a mesma que todo mundo acessa é a mesma que todo mundo acessa então todo mundo usa
+
+249
+00:23:11,780 --> 00:23:13,220
+essa configuração aqui.
+
+250
+00:23:13,310 --> 00:23:20,180
+Se você vier aqui que eu vou pegar o serviço de pessoas o serviço de pessoas.
+
+251
+00:23:20,180 --> 00:23:28,280
+Se eu vier aqui dentro do Application Properties ela se conecta essas duas aqui que são as comuns só
+
+252
+00:23:29,210 --> 00:23:40,510
+por Geraldão contra X por tirar daqui Control x vou vir aqui nesse cara e vou colar colar aqui.
+
+253
+00:23:40,550 --> 00:23:41,030
+Beleza.
+
+254
+00:23:44,740 --> 00:23:45,490
+SHOW DE BOLA.
+
+255
+00:23:45,490 --> 00:23:47,410
+Então esses dois é que é comum.
+
+256
+00:23:47,800 --> 00:23:55,690
+Isso daqui vai ter tanto no meu micro serviço de pessoas que eu tirei daqui agora que não vai ser mais
+
+257
+00:23:55,690 --> 00:24:03,970
+necessário quanto no de animais quanto nos rua se vier no sul também vai ter a seu ver no zoa.
+
+258
+00:24:04,180 --> 00:24:12,180
+Também tem show então vou arrancar do Zoo também não precisa mais adesão cheiroso.
+
+259
+00:24:12,280 --> 00:24:15,720
+Tirei do controle de pessoas desde então.
+
+260
+00:24:15,820 --> 00:24:17,070
+Show de bola.
+
+261
+00:24:17,270 --> 00:24:19,480
+Então esse aqui é o global.
+
+262
+00:24:19,480 --> 00:24:25,120
+Então o global só vai ser o que vai ser igual para todo mundo que vai ser igual para todo mundo é só
+
+263
+00:24:25,120 --> 00:24:26,420
+isso.
+
+264
+00:24:26,420 --> 00:24:29,560
+Vou fechar aí achei esse cara aqui.
+
+265
+00:24:29,680 --> 00:24:30,520
+Beleza.
+
+266
+00:24:30,700 --> 00:24:38,860
+Então vamos lá após fazer isso nós vamos criar alguns micro serviços específicos por exemplo o específico
+
+267
+00:24:38,860 --> 00:24:43,250
+do Horeca que aqui o que ele vai ter dentro dele.
+
+268
+00:24:43,300 --> 00:24:45,240
+Bom ele pode ter dentro dele o quê.
+
+269
+00:24:45,280 --> 00:24:48,040
+A porta do Eureka disse que eu vou fechar.
+
+270
+00:24:48,080 --> 00:24:53,530
+Então vamos lá vamos pegar aqui do Eureka cada um vai fazer primeiro tu e HORECA.
+
+271
+00:24:53,560 --> 00:25:00,070
+Eureka Sérvia Men Resource Property Ezequiel de Horeca.
+
+272
+00:25:01,810 --> 00:25:04,450
+Esse cara aqui que é específico do Eureka.
+
+273
+00:25:04,450 --> 00:25:08,710
+Bom isso é que não precisa mais porque já está no global
+
+274
+00:25:11,680 --> 00:25:13,900
+que é mais que a gente precisa.
+
+275
+00:25:14,110 --> 00:25:25,690
+A gente vai precisar do Deixa eu pensar deixou pensar deixa pensar da porta a porta é global e esses
+
+276
+00:25:25,690 --> 00:25:27,140
+dois caras aqui.
+
+277
+00:25:28,750 --> 00:25:35,560
+Esse eu posso trazer para cá a disse que eu posso trazer para cá trouxinhas.
+
+278
+00:25:38,740 --> 00:25:44,670
+Beleza esses dois na verdade você inverteu a ordem que eu gosto de botar a porta em primeiro lugar que
+
+279
+00:25:44,680 --> 00:25:45,900
+é mais fácil.
+
+280
+00:25:45,910 --> 00:25:51,700
+Beleza então esse aqui é um arquivo específico do El Greco marca própria estou criando.
+
+281
+00:25:51,700 --> 00:25:53,440
+Ah mas aqui tudo é show só o nome.
+
+282
+00:25:53,440 --> 00:26:01,190
+Eu vou deixar só o nome aqui para você saber que esse cara aqui é um micro serviço du do Eureka.
+
+283
+00:26:01,220 --> 00:26:03,000
+Aliás a gente ainda vai mexer nele.
+
+284
+00:26:03,020 --> 00:26:04,930
+SHOW SHOW DE BOLA.
+
+285
+00:26:04,950 --> 00:26:07,170
+Então vou mexer e HORECA.
+
+286
+00:26:07,300 --> 00:26:13,540
+Criei um e HORECA Properties específico para ele que tem a porta e esses dados aqui que é só de Horeca
+
+287
+00:26:14,020 --> 00:26:21,850
+e é assim e a padrão vai estar no nosso alcance e vai estar no nosso arquivo padrão da.
+
+288
+00:26:23,710 --> 00:26:28,450
+Beleza então aqui e HORECA está pronto que nós vamos fazer.
+
+289
+00:26:28,460 --> 00:26:35,280
+Nós vamos agora pegar todos vão pegar los o que vão fazer do zoom do Zoom vai ser aqui Men in que Source
+
+290
+00:26:35,290 --> 00:26:36,990
+Application Properties.
+
+291
+00:26:37,150 --> 00:26:40,910
+E aí o doSul eu vou fazer a mesma coisa só que eu doSul.
+
+292
+00:26:40,930 --> 00:26:41,750
+O que acontece.
+
+293
+00:26:41,760 --> 00:26:45,930
+O do Sul eu só vou mover a porta dele para um outro arquivo.
+
+294
+00:26:46,210 --> 00:26:50,700
+A primeira coisa que eu vou fazer é criar um arquivo chamado Zoom Properties.
+
+295
+00:26:50,800 --> 00:26:51,400
+Vamos lá.
+
+296
+00:26:52,060 --> 00:26:55,630
+Quer dizer aqui eu vou criar um arquivo chamado.
+
+297
+00:26:57,800 --> 00:27:03,170
+Zum zum Server ponto pró Berti Properties.
+
+298
+00:27:05,090 --> 00:27:09,700
+é aí aquilo que eu vou colocar aqui eu vou pegar o RL a porta do zum.
+
+299
+00:27:12,090 --> 00:27:16,760
+E vou simplesmente colocar aqui uma beleza.
+
+300
+00:27:16,950 --> 00:27:23,040
+Coloquei aqui a porta dos um show de bola agora que eu coloquei a porta do Sul.
+
+301
+00:27:23,850 --> 00:27:25,340
+Eu estou com o arquivo do uso.
+
+302
+00:27:25,340 --> 00:27:28,900
+Pronto eu posso deixar o nome dele aqui mesmo não tem problema.
+
+303
+00:27:29,250 --> 00:27:31,190
+Mas vamos entender o porquê.
+
+304
+00:27:31,230 --> 00:27:32,450
+Show de Bola.
+
+305
+00:27:32,610 --> 00:27:34,140
+O que nós vamos fazer.
+
+306
+00:27:34,230 --> 00:27:43,890
+Nós vamos agora colocar um arquivo específico para animais e um arquivo específico para para para para
+
+307
+00:27:43,890 --> 00:27:46,410
+para para pessoas.
+
+308
+00:27:46,440 --> 00:27:47,010
+Então vamos lá.
+
+309
+00:27:48,520 --> 00:27:53,450
+Vou fechar esses caras aqui então vou vir aqui cadê o controle de animais.
+
+310
+00:27:53,470 --> 00:27:54,760
+Vou fazer duas pessoas primeiro.
+
+311
+00:27:57,010 --> 00:27:59,350
+Três pessoas se queixam por parte.
+
+312
+00:28:00,670 --> 00:28:04,050
+Vou criar um arquivo chamado controle de pessoas com TMS.
+
+313
+00:28:04,060 --> 00:28:08,960
+Tem que criar com o mesmo nome se não dá ruim é o Fahel.
+
+314
+00:28:09,250 --> 00:28:10,240
+Ponto para o.
+
+315
+00:28:13,460 --> 00:28:18,380
+Dias Properties controles de pessoas.
+
+316
+00:28:18,380 --> 00:28:20,010
+MS Ponto Property.
+
+317
+00:28:20,120 --> 00:28:27,200
+é o que vai ter dentro desse cara que bom dentro desse cara aqui nós vamos fazer o seguinte O que nós
+
+318
+00:28:27,200 --> 00:28:30,660
+vamos ter nós vamos ter aqui o quê.
+
+319
+00:28:30,740 --> 00:28:33,020
+A conexão com o banco.
+
+320
+00:28:33,680 --> 00:28:37,040
+Os dados de conexão com o banco a porta.
+
+321
+00:28:37,160 --> 00:28:44,350
+A única coisa que eu vou deixar aqui dentro do normal do aplicativo é o nome dele o X vou tirar tudo
+
+322
+00:28:44,360 --> 00:28:53,060
+que tenho aqui dentro e vou virar antigo cadeia cadeia e cadeia cadeia aqui e acolá.
+
+323
+00:28:53,120 --> 00:28:55,470
+Beleza Show.
+
+324
+00:28:55,700 --> 00:29:04,490
+Os dados específicos do controle de pessoas Property por que que eu posso reaproveitar isso do que em
+
+325
+00:29:04,490 --> 00:29:06,020
+qualquer outro micro serviço.
+
+326
+00:29:08,550 --> 00:29:14,590
+Beleza então está aqui está funcionando aqui já já está bonito aqui.
+
+327
+00:29:14,790 --> 00:29:21,330
+Vou pegar vou fazer a mesma coisa com o animais não fechar aqui como é muita página.
+
+328
+00:29:21,720 --> 00:29:24,400
+A gente pode minimizando e fazendo devagar.
+
+329
+00:29:24,810 --> 00:29:30,630
+A primeira vez que a gente configura dá um trabalhinho mas depois fica perfeito porque aí depois a gente
+
+330
+00:29:30,630 --> 00:29:32,470
+pode pegar tudo isso.
+
+331
+00:29:32,540 --> 00:29:37,050
+O de animais eu posso arrancar isso daqui porque a gente não vai usar mais porque isso daqui já está
+
+332
+00:29:37,050 --> 00:29:45,170
+lá no global a porta que pode ser zero mesmo não tem problema.
+
+333
+00:29:45,180 --> 00:29:49,870
+O PDT é show de bola então vou pegar isso tudo aqui contra X.
+
+334
+00:29:49,980 --> 00:29:54,140
+Muito antes de eu fazer estudo vamos criar o controle de animais Ms.
+
+335
+00:29:54,210 --> 00:30:00,870
+Isso não vai dar ruim então vou vir aqui vou criou um arquivo chamado Controle de Animais ponto para
+
+336
+00:30:00,950 --> 00:30:08,850
+o pet Caxias criei o show de bola após criar que eu vou fazer.
+
+337
+00:30:08,850 --> 00:30:14,310
+Vou pegar todo essa configuração contra o X salvei por ver aqui dentro do colar.
+
+338
+00:30:14,910 --> 00:30:23,130
+Colei show de bola então praticamente o que eu fiz eu criei um arquivo de configuração para cada tipo
+
+339
+00:30:23,130 --> 00:30:24,810
+de micro serviço.
+
+340
+00:30:24,810 --> 00:30:31,770
+Então se amanhã eu precisar sei lá de dez micro serviços de pessoas todos os micro serviços de pessoas
+
+341
+00:30:31,770 --> 00:30:39,150
+vão ler desse outro arquivo aqui desse outro arquivo aqui o controle de pessoas Ms.
+
+342
+00:30:39,240 --> 00:30:46,010
+Todos vão ler daqui a e se eu tiver 50 de animais todos eles vão ler daqui.
+
+343
+00:30:46,170 --> 00:30:48,080
+Todos eles vão pegar as propriedades daqui.
+
+344
+00:30:48,090 --> 00:30:53,280
+Qual o banco que eles vão conectar com o usuário com ou sem se atualizar com a porta.
+
+345
+00:30:53,400 --> 00:30:56,370
+Vai fazer isso tudo dinamicamente.
