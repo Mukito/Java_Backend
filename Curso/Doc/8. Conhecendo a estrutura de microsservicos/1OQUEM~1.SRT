@@ -1,0 +1,803 @@
+1
+00:00:02,160 --> 00:00:03,790
+E aí galera tudo bem.
+
+2
+00:00:03,810 --> 00:00:05,500
+Boa noite.
+
+3
+00:00:05,640 --> 00:00:14,790
+Vamos dar continuidade no nosso curso até agora mas aprendemos a trabalhar com arquitetura de país reste
+
+4
+00:00:14,790 --> 00:00:15,610
+fumo.
+
+5
+00:00:16,080 --> 00:00:23,010
+Nós aprendemos a criar uma PEC completa de ponta a ponta conseguimos adicionar uma qualidade profissional
+
+6
+00:00:23,010 --> 00:00:30,050
+incrível na nossa Bahia trabalhamos com Detox um modelo de camadas trabalhamos com o modelo MVC evoluímos
+
+7
+00:00:30,060 --> 00:00:37,470
+a nossa PI de uma forma incrível e agora chegou a hora de a gente conhecer um pouco a estrutura da arquitetura
+
+8
+00:00:37,470 --> 00:00:45,060
+de micro serviços então a gente vai conversar um pouquinho a gente já conversou há algum tempo atrás
+
+9
+00:00:45,060 --> 00:00:49,320
+sobre arquitetura quando a gente conheceu arquitetura de Japeri mas a gente vai falar um pouco mais
+
+10
+00:00:49,320 --> 00:00:51,420
+de arquitetura guarda e pintura.
+
+11
+00:00:52,390 --> 00:00:54,460
+De micro serviços.
+
+12
+00:00:57,530 --> 00:01:01,640
+Beleza o que vai ser essa arquitetura de micro serviços.
+
+13
+00:01:03,830 --> 00:01:04,400
+Com S.
+
+14
+00:01:05,680 --> 00:01:17,520
+Beleza o que acontece e nós vamos tentar entender como que essa arquitetura funciona como ela.
+
+15
+00:01:17,920 --> 00:01:26,000
+Como que ela trabalha e como que nós podemos fazer para que ela possa funcionar perfeitamente.
+
+16
+00:01:26,320 --> 00:01:28,450
+Então vamos lá numa peixe.
+
+17
+00:01:28,480 --> 00:01:36,580
+Eu tinha um cliente que se conectava a um um aplicativo um dispositivo e esse dispositivo ele evoluía
+
+18
+00:01:37,270 --> 00:01:46,230
+para a criação de uma API que se conectava numa Pair que essa PI por sua vez tinha uma camada lá dentro
+
+19
+00:01:46,240 --> 00:01:52,210
+chegava as requisições do controle se era disparado para o serviço serviço por sua vez se comunicava
+
+20
+00:01:52,210 --> 00:01:56,160
+com o repositório e assim por diante.
+
+21
+00:01:56,170 --> 00:01:58,840
+Então como é que funciona a camada de micro serviço.
+
+22
+00:01:58,840 --> 00:02:01,710
+Existe somente um padrão se existe uma forma de fazer.
+
+23
+00:02:01,750 --> 00:02:07,420
+Não existe várias formas de fazer arquitetura de micro serviços basicamente tem a ideia de você ter
+
+24
+00:02:07,720 --> 00:02:14,380
+o seu software o seu produto dividido em pequenos fragmentos ou em pequenas partes de forma com que
+
+25
+00:02:14,380 --> 00:02:21,760
+essas partes possam funcionar independentes ou funcionar em camadas interagindo entre si de forma síncrona
+
+26
+00:02:22,030 --> 00:02:28,180
+de forma assíncrona síncrona e quando elas se comunicam em tempo real uma depende da outra para poder
+
+27
+00:02:28,180 --> 00:02:32,630
+deu uma resposta e assíncrona e quando uma manda alguma coisa para outra.
+
+28
+00:02:32,740 --> 00:02:36,690
+Independente da resposta imediata ou não.
+
+29
+00:02:36,730 --> 00:02:41,050
+Então nós vamos começar a entender um pouco essa arquitetura eu vou montar uma arquitetura com vocês
+
+30
+00:02:41,410 --> 00:02:43,120
+só pra gente poder entender.
+
+31
+00:02:43,230 --> 00:02:46,830
+Eu não vou criar um cara aqui que eu vou chamar de cliente.
+
+32
+00:02:46,960 --> 00:02:52,520
+A gente sempre vai ter um cliente que vai se conectar na nossa arquitetura.
+
+33
+00:02:52,810 --> 00:02:54,830
+Então vamos lá criar um cliente aqui.
+
+34
+00:02:54,940 --> 00:03:02,020
+Então esse é o nosso cliente o nosso cliente por sua vez ele vai se conectar sempre em algum aplicativo
+
+35
+00:03:04,030 --> 00:03:04,330
+ou
+
+36
+00:03:06,580 --> 00:03:07,990
+dispositivo.
+
+37
+00:03:10,700 --> 00:03:19,180
+Um aplicativo ou um dispositivo daqui para esse esquema.
+
+38
+00:03:19,400 --> 00:03:23,800
+Beleza então o meu cliente ele vai sempre se comunicar.
+
+39
+00:03:23,890 --> 00:03:26,500
+Algum aplicativo ou dispositivo.
+
+40
+00:03:26,690 --> 00:03:33,980
+Quando o cliente se conecta a um aplicativo no dispositivo esse aplicativo ou dispositivo na arquitetura
+
+41
+00:03:33,980 --> 00:03:40,700
+que a gente estava trabalhando de resto ele se comunica com uma API num micro serviço.
+
+42
+00:03:40,700 --> 00:03:42,790
+Isso pode acontecer de várias formas.
+
+43
+00:03:42,800 --> 00:03:53,180
+Esse cara pode se comunicar a um micro serviço mas ele também pode se comunicar a um outro micro serviço.
+
+44
+00:03:53,180 --> 00:04:02,240
+Eu deixo de ter uma única API centralizadora para ativar os micro serviços trabalhando.
+
+45
+00:04:02,240 --> 00:04:04,040
+Isso daqui poderia ser gigantesco.
+
+46
+00:04:04,050 --> 00:04:17,240
+Eu poderia ter um outro micro serviço chamado GMS 3 que eu vou chamar de MS um aqui de MS 2 e MS 3 então
+
+47
+00:04:17,240 --> 00:04:22,070
+eu poderia ter o meu aplicativo se comunicando a vários micro serviços.
+
+48
+00:04:22,070 --> 00:04:25,200
+Isso é muito comum em uma arquitetura micro o serviço.
+
+49
+00:04:25,490 --> 00:04:31,250
+Só que imagine o seguinte eu estou trabalhando numa arquitetura micro um serviço onde eu vou ter vários
+
+50
+00:04:31,250 --> 00:04:37,340
+micros serviços e a quantidade desses micros serviços pode ser absurda pode ser gigantesca mas eu tenho
+
+51
+00:04:37,340 --> 00:04:41,540
+que conhecer todos os micro serviços que eu posso me comunicar.
+
+52
+00:04:41,940 --> 00:04:47,620
+O serviço com esse serviço de hoje com seus serviços 3 ficaria meio inviável.
+
+53
+00:04:47,840 --> 00:04:54,410
+Esse meu dispositivo que ele teria que ter uma inteligência absurda então uma abordagem legal não é
+
+54
+00:04:54,680 --> 00:05:00,050
+esse meu aplicativo quis se conectar com vários micro serviços o que ele faz.
+
+55
+00:05:00,050 --> 00:05:05,940
+Ele vai deixar de se comunicar com vários aplicativos para se comunicar com uma única fonte de verdade.
+
+56
+00:05:06,110 --> 00:05:09,600
+Essa fonte de verdade nós chamamos ela de Get.
+
+57
+00:05:11,240 --> 00:05:19,540
+Em algumas arquiteturas ela é chamada de orquestrador ou a gente chama de gateway ou de orquestrador
+
+58
+00:05:19,550 --> 00:05:22,650
+depende muito da arquitetura que a gente está trabalhando.
+
+59
+00:05:22,970 --> 00:05:26,690
+Mas eles têm o mesmo papel o nosso Gateway.
+
+60
+00:05:26,960 --> 00:05:35,690
+Ele é o nosso serviço de entrada ou seja o nosso aplicativo ou o dispositivo não vai conhecer todos
+
+61
+00:05:35,690 --> 00:05:43,400
+os micro serviços ele só vai conhecer o RM do nosso guia e o nosso orquestrador e tudo o que ele precisa.
+
+62
+00:05:43,400 --> 00:05:51,260
+Ele vai mandar para cá vai pedir pra cá e esse Gateway orquestrador ele vai estar amarrado.
+
+63
+00:05:51,260 --> 00:06:02,750
+Ou seja ele vai estar pendurado ou conectado num cara chamado Discovery Server ou Discover Service melhor
+
+64
+00:06:03,230 --> 00:06:10,970
+Discovery Service o que é um Discovery Service o Discovery Service vai ser um outro micro serviço a
+
+65
+00:06:11,300 --> 00:06:18,830
+isso o nosso Gateway vai ser já um micro serviço então com o nosso aplicativo o dispositivo vai se conectar
+
+66
+00:06:19,220 --> 00:06:23,230
+nesse micro serviço que vai fazer um papel como se fosse de uma API.
+
+67
+00:06:23,720 --> 00:06:29,930
+Então o nosso dispositivo o aplicativo vai se conectar e ele é esse cara que por sua vez ele vai estar
+
+68
+00:06:30,410 --> 00:06:38,620
+registrado ou ele vai estar conectado pendurado num cara chamado discovery Service.
+
+69
+00:06:38,720 --> 00:06:41,180
+Quem é esse cara esse cara aqui.
+
+70
+00:06:41,240 --> 00:06:48,530
+Ele tem o papel de descobrir séries de registrar todos os micro serviços que vão fazer parte da nossa
+
+71
+00:06:48,530 --> 00:06:50,350
+arquitetura.
+
+72
+00:06:50,390 --> 00:06:58,000
+Então eu posso pendurar nele n micro Serviços n Micro Series ou diminuiu um pouco.
+
+73
+00:06:58,310 --> 00:07:01,580
+Eu posso pendurar dele n micro serviços.
+
+74
+00:07:01,580 --> 00:07:12,470
+Então agora vamos fingir que eu tivesse um micro serviço aqui chamado MS por ms de micro serviço MS
+
+75
+00:07:13,370 --> 00:07:15,180
+MS 1.
+
+76
+00:07:15,330 --> 00:07:23,030
+Então eu tenho um micro serviço que pode estar pendurado nele mas eu posso ter também um outro micro
+
+77
+00:07:23,030 --> 00:07:28,310
+serviço aqui MS 2 pendurado nele.
+
+78
+00:07:28,310 --> 00:07:31,100
+Vamos criar alguns micro serviços aqui.
+
+79
+00:07:31,250 --> 00:07:44,890
+Vou criar isso aqui vou deixar isso aqui vou deixar esse aqui vou criar um terceiro MS M S3 um outro
+
+80
+00:07:45,120 --> 00:07:51,290
+o serviço pra cá beleza e que eu vou criar um ms 4.
+
+81
+00:07:54,520 --> 00:08:01,060
+Um outro micro serviço só para gente poder ter a ideia de que cada um de sua equipe pode ser um micro
+
+82
+00:08:01,060 --> 00:08:02,640
+serviço diferente.
+
+83
+00:08:02,650 --> 00:08:07,630
+Então esses carinhas aqui eu vou botar coisinha diferente.
+
+84
+00:08:08,170 --> 00:08:12,860
+O meu Zune eu vou botar botando numa cozinha que é o nosso gueto e o nosso Gate.
+
+85
+00:08:12,940 --> 00:08:20,960
+Ele vai ser azul Zinho o nosso Discover eu vou botar ele verdinho e os todos os meus serviços.
+
+86
+00:08:21,010 --> 00:08:22,880
+Vou deixar eles em cinza mesmo.
+
+87
+00:08:22,900 --> 00:08:25,530
+Então como é que funciona.
+
+88
+00:08:25,690 --> 00:08:33,910
+Nós vamos montar uma arquitetura onde nós vamos ter um cara principal que é o nosso gueto que vai receber
+
+89
+00:08:33,910 --> 00:08:39,480
+toda e qualquer requisição de um dispositivo ou aplicativo.
+
+90
+00:08:39,520 --> 00:08:49,380
+Esse gueto e por sua vez vai estar pendurado num serviço de Discover de micros serviços no caso nossos
+
+91
+00:08:49,390 --> 00:08:56,590
+como serviço que ele é como se fosse um local para armazenar os micro serviços registrar.
+
+92
+00:08:56,590 --> 00:08:59,740
+A gente pode chamar esse cara aqui de registrador.
+
+93
+00:09:00,040 --> 00:09:09,280
+Então todo micro serviço que eu levantar vai estar pendurado nesse registrador que quando a gente pedir
+
+94
+00:09:09,290 --> 00:09:17,110
+alguma coisa ou mandar alguma requisição o nosso gato e por sua vez vai no registrador e vai direcionar
+
+95
+00:09:17,320 --> 00:09:20,150
+para o micro serviço necessário.
+
+96
+00:09:20,440 --> 00:09:25,270
+Então cada micro serviço desse aqui fez besteira.
+
+97
+00:09:25,270 --> 00:09:28,090
+Cada micro serviço desse aqui pode ter.
+
+98
+00:09:32,010 --> 00:09:35,130
+Pode ter até um banco de dados separado.
+
+99
+00:09:35,130 --> 00:09:42,090
+Olha que legal então eu poderia ter aqui um banco de dados separado para esse micro serviço ou o micro
+
+100
+00:09:42,090 --> 00:09:44,000
+serviço 4 ter um banco de dados.
+
+101
+00:09:44,070 --> 00:09:51,630
+Então vou dizer que esse banco que vocês são sei lá um Mongo Mongo dB é um banco de dados no SQL mas
+
+102
+00:09:51,630 --> 00:10:03,900
+poderia ser que esse meu serviço aqui tenha um poncho SQL ou pode consertar aqui post SQL que vai ser
+
+103
+00:10:03,900 --> 00:10:08,060
+um outro banco de dados.
+
+104
+00:10:08,280 --> 00:10:17,130
+Então cada micro serviço pode ter um banco de dados totalmente separado independente para ele mas esse
+
+105
+00:10:17,130 --> 00:10:24,680
+micro serviço ele também pode compartilhar esse banco com outro micro serviço.
+
+106
+00:10:24,760 --> 00:10:25,200
+Ele é só.
+
+107
+00:10:27,510 --> 00:10:37,680
+Então eu posso ter um micro serviço que estejam compartilhando um banco de dados com outro banco de
+
+108
+00:10:37,680 --> 00:10:39,060
+dados.
+
+109
+00:10:39,240 --> 00:10:47,620
+Então eu posso ter aqui o serviço três compartilhou no banco post sobre com o serviço dois e aí tudo
+
+110
+00:10:47,620 --> 00:10:55,080
+o que o serviço 2 Armazenar NESSE BANCO O serviço também consegue enxergar e mais eu ainda posso fazer
+
+111
+00:10:55,080 --> 00:11:02,990
+mas eu posso fazer com que um micro ou serviço se comunique com outro micro serviço.
+
+112
+00:11:03,030 --> 00:11:12,060
+Olha que interessante numa arquitetura de micro serviços eu posso ter muita coisa eu posso ter vários
+
+113
+00:11:12,060 --> 00:11:20,880
+micro serviços aqui eu criei só quatro mas eu poderia ter uma infinidade 100 200 300 500 mil e esses
+
+114
+00:11:20,880 --> 00:11:29,070
+serviços esses micro serviços eles podem funcionar independente podem funcionar dependendo de outros
+
+115
+00:11:29,070 --> 00:11:38,130
+micro serviços ou podem funcionar independente mas conectados a bancos de dados distribuídos que funciona
+
+116
+00:11:38,130 --> 00:11:44,810
+com outros bancos de dados com bancos de dados de outros sistemas de onde os micro serviços.
+
+117
+00:11:45,150 --> 00:11:53,010
+E aqui a gente tem uma estrutura muito comum por que se une se a minha aplicação se meu dispositivo
+
+118
+00:11:53,010 --> 00:12:00,570
+tivesse conhecido todos esses meus serviços aqui ficaria inviável seria inviável ele conhecer tudo isso.
+
+119
+00:12:00,570 --> 00:12:02,640
+Então o que acontece.
+
+120
+00:12:02,640 --> 00:12:09,120
+Nós criamos uma estrutura aonde nós vamos ter um cara um serviço que vai ser o nosso disco vai ser o
+
+121
+00:12:09,120 --> 00:12:16,320
+nosso Discovery ele que vai ser o nosso registrador ele vai levantar de todos os micro serviços vão
+
+122
+00:12:16,320 --> 00:12:24,060
+se pendurar nele todo o micro serviço vai se pendurar nele todo o micro serviço vai quando iniciar vai
+
+123
+00:12:24,060 --> 00:12:34,560
+se registrar nele e vai dizer que quer ficar disponível e aí todo o micro serviço que se registrar nesse
+
+124
+00:12:35,100 --> 00:12:42,450
+nesse carinha aqui vou mudar a cor dele aqui todo o micro serviço que se registrar aqui vai ficar disponível
+
+125
+00:12:42,690 --> 00:12:48,930
+para esse outro micro serviço que é o nosso Gateway que é o nosso orquestrador e o cara que está na
+
+126
+00:12:48,930 --> 00:12:56,130
+ponta é o cara que conhece e onde está cada micro serviço e consegue direcionar as requisições e aí
+
+127
+00:12:56,670 --> 00:12:59,130
+a nossa aplicação só vai conhecer esse cara.
+
+128
+00:12:59,130 --> 00:13:02,380
+A nossa aplicação por exemplo quero fazer login.
+
+129
+00:13:02,400 --> 00:13:06,300
+O dispositivo vai mandar um recado pra cá pra fazer login.
+
+130
+00:13:06,300 --> 00:13:10,770
+Esse Get é Vai ver qual é o micro serviço que está registrado que sabe fazer o login.
+
+131
+00:13:10,770 --> 00:13:15,720
+Porque eu posso ter mais de um micro serviço que faz a mesma coisa por exemplo.
+
+132
+00:13:15,840 --> 00:13:23,370
+Imagina sei lá a Netflix imagina tem várias pessoas assistindo o filme de mesmo tempo imagina se um
+
+133
+00:13:23,370 --> 00:13:28,920
+dos servidores cai e aí ninguém mais assiste para o mundo todo.
+
+134
+00:13:28,920 --> 00:13:31,270
+Ninguém mais assiste Netflix não.
+
+135
+00:13:31,350 --> 00:13:35,990
+O que acontece é que tem vários micros serviços dela rodando que faz a mesma coisa.
+
+136
+00:13:36,090 --> 00:13:42,510
+Se um deles cair ou engasgar la ou tiver algum problema automaticamente as próximas requisições vai
+
+137
+00:13:42,510 --> 00:13:51,600
+ir para os próximos micros serviços tem mais de um mas de uma quantidade do mesmo micro serviço do ar.
+
+138
+00:13:51,720 --> 00:13:53,710
+Isso é muito comum.
+
+139
+00:13:53,850 --> 00:13:58,380
+Então por exemplo vão fingir que esse aplicativo quer fazer o login.
+
+140
+00:13:58,440 --> 00:14:04,020
+Ele vai enviar a requisição para o gato e o gato vai verificar qual é o serviço que está registrado
+
+141
+00:14:04,020 --> 00:14:07,740
+aqui dentro de login e vai mandar para cá faz o login.
+
+142
+00:14:07,740 --> 00:14:15,180
+Esse serviço efetua o login devolve para o Discover que devolve para o gateway e o gateway devolve para
+
+143
+00:14:15,180 --> 00:14:16,250
+o aplicativo.
+
+144
+00:14:16,260 --> 00:14:22,710
+Então para quem está usando um aplicativo ou o dispositivo que está consumindo os micro serviços através
+
+145
+00:14:22,710 --> 00:14:31,620
+do gateway essa arquitetura que ela é invisível ela é invisível mas para quem está na arquitetura isso
+
+146
+00:14:31,620 --> 00:14:33,710
+é que pode ser algo gigantesco.
+
+147
+00:14:33,720 --> 00:14:40,230
+Aqui a gente fez algo pequeno com quatro micro serviços mas sei que pode ficar algo gigante muito grande
+
+148
+00:14:40,230 --> 00:14:41,110
+mesmo.
+
+149
+00:14:41,160 --> 00:14:50,130
+Então toda requisição vai chegar ao nosso Gateway o nosso gato vai ir no nosso serviço de Discover e
+
+150
+00:14:50,130 --> 00:14:56,820
+esse serviço Discover vai mostrar vai vai devolver o micro serviço vai devolver ou vai passar essa requisição
+
+151
+00:14:56,820 --> 00:14:59,430
+pra frente para que possa acontecer.
+
+152
+00:14:59,490 --> 00:15:02,310
+Beleza então nós vamos criar essa estrutura aqui.
+
+153
+00:15:03,090 --> 00:15:09,660
+Há só existe essa estrutura não dá para criar várias outras estruturas aqui eu só criei algo simples
+
+154
+00:15:09,660 --> 00:15:15,000
+para vocês entenderem como é que funciona mas eu poderia ter muitos serviços por exemplo que empresas
+
+155
+00:15:15,000 --> 00:15:23,960
+que usam arquitetura de micro serviços pares por exemplo Spotify Netflix a iFood.
+
+156
+00:15:24,210 --> 00:15:25,650
+Imagina se você tivesse.
+
+157
+00:15:26,150 --> 00:15:29,040
+Eu simplesmente sou um servidor para o iPhone.
+
+158
+00:15:29,090 --> 00:15:30,140
+Ai caiu ferrou.
+
+159
+00:15:30,140 --> 00:15:36,560
+Ninguém mais faz pedido ninguém mais faiz ninguém mais compra comida ninguém mais compra lanchinho né
+
+160
+00:15:37,010 --> 00:15:37,610
+não.
+
+161
+00:15:37,610 --> 00:15:40,560
+Você tem vários micros serviços disponíveis.
+
+162
+00:15:40,610 --> 00:15:48,290
+Se um desses cair vai ter outro para se colocar no lugar é uma coisa muito legal que esse cara aqui
+
+163
+00:15:48,290 --> 00:15:54,760
+faz uma coisa chamada Low balance o que chamou de bala se é basicamente balanceamento de carga.
+
+164
+00:15:54,830 --> 00:15:59,760
+Imagina que esse serviço aqui por algum motivo caiu ficou fora.
+
+165
+00:16:00,110 --> 00:16:05,040
+Se ele ficou fora e esse daqui era o serviço principal.
+
+166
+00:16:05,210 --> 00:16:16,160
+O próximo pedido de de algum aplicativo imagina que você está assistindo seu filme favorito lá na Netflix.
+
+167
+00:16:16,160 --> 00:16:20,280
+E aí quando o seu filme a estreia do teu filme está aqui está.
+
+168
+00:16:20,390 --> 00:16:25,330
+Esse micro serviço que é o micro serviço responsável por te devolver a estrela do filme.
+
+169
+00:16:25,430 --> 00:16:30,040
+E aí você está assistindo seu filme e de repente caiu esse servidor.
+
+170
+00:16:30,110 --> 00:16:35,870
+A próxima requisição que seu aparelho seu dispositivo fizer para pegar o restante das estrelas do filme
+
+171
+00:16:36,200 --> 00:16:42,680
+ou para pegar uma ou outra informação como esse daqui caiu.
+
+172
+00:16:42,680 --> 00:16:49,340
+Essa arquitetura vai fazer um show de balas que vai fazer o seguinte ele vai pegar o próximo serviço
+
+173
+00:16:49,340 --> 00:16:51,950
+disponível o que faz a mesma função.
+
+174
+00:16:52,580 --> 00:16:56,380
+Para poder te devolver vamos fingir que esse daqui faz a mesma coisa.
+
+175
+00:16:56,390 --> 00:17:02,150
+Então como esse caiu a próxima requisição vai vir para o Serviço de hoje que vai te devolver o restante
+
+176
+00:17:02,150 --> 00:17:03,940
+dos dados.
+
+177
+00:17:04,010 --> 00:17:05,780
+Então isso funciona muito bem.
+
+178
+00:17:05,840 --> 00:17:11,780
+A arquitetura de micro serviços funciona muito bem ela é muito útil e nós vamos usar uma arquitetura
+
+179
+00:17:12,050 --> 00:17:13,370
+muito legal.
+
+180
+00:17:13,370 --> 00:17:20,390
+Por que nós vamos usar uma arquitetura real de mercado e vamos usar tecnologias que estão em produção
+
+181
+00:17:20,390 --> 00:17:25,280
+no mercado em grandes sistemas por exemplo.
+
+182
+00:17:25,280 --> 00:17:38,600
+Esse Discovery serve se aqui nós vamos usar um serviço específico que foi criado pela Netflix para poder
+
+183
+00:17:38,600 --> 00:17:45,170
+fazer esse passo que se chama Eureka Server.
+
+184
+00:17:45,170 --> 00:17:55,100
+O Eureka Server ele é uma tecnologia da Netflix que integra muito bem com o Spring de Bush e Spring
+
+185
+00:17:55,100 --> 00:18:07,850
+Cloud que nos permite nos permite a criar Discover service ou seja serviços de descoberta de outros
+
+186
+00:18:07,850 --> 00:18:14,300
+micro serviços e com esse cara aqui nós vamos registrar todos os outros micro serviços nós vamos usar
+
+187
+00:18:14,300 --> 00:18:18,170
+Horeca serviço que é uma tecnologia pela Netflix.
+
+188
+00:18:18,170 --> 00:18:25,460
+Esse Gateway aqui que eu também chamei de orquestrador esse cara aqui nós também vamos usar uma outra
+
+189
+00:18:25,460 --> 00:18:31,520
+tecnologia que também foi criada pela Netflix que também está no mesmo pacote de dados no Spring por
+
+190
+00:18:31,530 --> 00:18:34,760
+Claude que é o nosso Zune.
+
+191
+00:18:36,590 --> 00:18:40,280
+Os serviços usou o serviço.
+
+192
+00:18:40,430 --> 00:18:52,650
+Ele é um pacote que nos permite integrar muito bem muito bem com o Spring que Bush está muito bem.
+
+193
+00:18:52,650 --> 00:18:59,120
+Então nós vamos para essa estrutura que nós vamos fazer o seguinte nós vamos criar um micro serviço
+
+194
+00:18:59,360 --> 00:19:05,990
+chamado Eureka server que é o nosso Discovery Service que vai registrar todos os micros serviços.
+
+195
+00:19:05,990 --> 00:19:13,790
+E nós vamos criar um gateway e aí depois nós fomos criar algumas APIs bem simples e nós vamos fazer
+
+196
+00:19:13,790 --> 00:19:16,490
+essa estrutura aqui funcionar.
+
+197
+00:19:16,490 --> 00:19:24,010
+Ou seja eu pelo meu dispositivo eu quero pedir alguma coisa para o meu Gateway e automaticamente ele
+
+198
+00:19:24,050 --> 00:19:31,580
+no meu Discover ver qual o meu serviço mais próximo registrado que toda aquela ação e em seguida ele
+
+199
+00:19:31,580 --> 00:19:37,730
+vai devolver a informação para quem está pedindo para quem está consumindo.
+
+200
+00:19:37,850 --> 00:19:41,960
+Beleza galera então essa vai ser a arquitetura que nós vamos trabalhar.
+
+201
+00:19:43,400 --> 00:19:44,030
+Show de bola.
