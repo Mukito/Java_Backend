@@ -1,0 +1,1295 @@
+1
+00:00:01,730 --> 00:00:04,040
+E aí galera tudo bem.
+
+2
+00:00:04,220 --> 00:00:09,980
+Bom hoje nós vamos começar a aprender um assunto novo nós vamos começar a falar de um assunto novo para
+
+3
+00:00:10,040 --> 00:00:12,410
+a gente começar a falar desse assunto novo.
+
+4
+00:00:12,410 --> 00:00:20,480
+Só relembrando vocês que nós aprendemos nessa disciplina até agora vamos lá nós aprendemos a trabalhar
+
+5
+00:00:20,600 --> 00:00:21,890
+com o conceito de.
+
+6
+00:00:23,030 --> 00:00:24,800
+Momento aqui é para todo mundo podem enxergar.
+
+7
+00:00:26,450 --> 00:00:27,620
+Bem mais.
+
+8
+00:00:29,360 --> 00:00:35,700
+Nós aprendemos o que é e entendemos aqui o conceito como é que ela funciona.
+
+9
+00:00:36,020 --> 00:00:46,550
+E nós também aprendemos o conceito e como trabalhar com micro serviços em cima de Abbey Road como nós
+
+10
+00:00:46,550 --> 00:00:47,440
+entendemos.
+
+11
+00:00:47,450 --> 00:00:49,640
+Nós aprendemos o que era Kate Bush.
+
+12
+00:00:49,640 --> 00:00:56,330
+Bush demite tendemos como é que a gente montou um crude dentro de nós aprendemos a trabalhar com controle
+
+13
+00:00:56,340 --> 00:01:03,990
+e ou seja com serviços como repositor com modelos como charutos com fios com detetores a conexão com
+
+14
+00:01:03,990 --> 00:01:05,240
+o banco de dados.
+
+15
+00:01:05,240 --> 00:01:12,200
+Então a gente aprendeu muita coisa tanto com a PepsiCo quanto com o micro serviços então nós conseguimos
+
+16
+00:01:12,200 --> 00:01:15,510
+evoluir bastante no nosso conhecimento.
+
+17
+00:01:15,560 --> 00:01:17,890
+Só que o que acontece.
+
+18
+00:01:17,930 --> 00:01:22,640
+Imagine o seguinte Você foi contratado para trabalhar para uma empresa e aí você está desenvolvendo
+
+19
+00:01:22,640 --> 00:01:25,250
+sua B.I. sua arquitetura do serviço e tudo mais.
+
+20
+00:01:26,810 --> 00:01:32,720
+Bom antes de você liberar o produto para empresa você precisa garantir que aquele produto está funcionando
+
+21
+00:01:32,870 --> 00:01:35,920
+e que tudo o que você fez realmente está ok.
+
+22
+00:01:35,970 --> 00:01:38,170
+Que não tem nenhum famoso bug.
+
+23
+00:01:38,220 --> 00:01:46,220
+Nenhuma falha e com isso a gente precisa tomar algumas ações para poder testar esse software de forma
+
+24
+00:01:46,220 --> 00:01:47,240
+a gerar uma API.
+
+25
+00:01:47,270 --> 00:01:53,140
+A gente estava testando pelo só a gente fazer aquisições no Insomniac e vi vice estava funcionando.
+
+26
+00:01:53,250 --> 00:01:59,400
+Estava a verificar se estava tudo que testava os micro serviços se as conexões deles estavam funcionando
+
+27
+00:01:59,400 --> 00:02:03,350
+se eles se comunicavam entre si e se ia no banco de dados.
+
+28
+00:02:03,350 --> 00:02:10,160
+Então tudo o que a gente fez a gente meio que testou só que de forma manual é o que acontece quando
+
+29
+00:02:10,160 --> 00:02:12,610
+você vai criar uma aplicação em produção.
+
+30
+00:02:12,800 --> 00:02:19,790
+é importante que você tenha conhecimento de uma coisa chamado Teste de Software criar um cara novo que.
+
+31
+00:02:24,430 --> 00:02:29,260
+Testes de software quando o tema da cozinha dele aqui.
+
+32
+00:02:29,360 --> 00:02:30,070
+Esse vai ser.
+
+33
+00:02:31,890 --> 00:02:39,720
+Esse gostinho esse que eu vou botar pretinho na cabeça não tem função primeira parte que a gente aprendeu
+
+34
+00:02:40,020 --> 00:02:42,600
+e a partir de testes de software.
+
+35
+00:02:42,600 --> 00:02:50,220
+O que é teste de software teste de software são formas que nós temos de testar um produto testar um
+
+36
+00:02:50,220 --> 00:02:58,020
+software testar uma aplicação de forma com que ela vai se comportar para ver como ela vai se comportar
+
+37
+00:02:58,020 --> 00:03:06,330
+e garantir que aquele produto está saindo com a maior qualidade possível saber várias informações sobre
+
+38
+00:03:06,330 --> 00:03:11,120
+aquele produto se eles são recursos que a gente fez realmente está funcionando.
+
+39
+00:03:11,190 --> 00:03:16,350
+Se ele é seguro se tudo aquilo que a gente já tinha feito antes ainda continua funcionando se ele está
+
+40
+00:03:16,350 --> 00:03:17,710
+fácil de utilizar.
+
+41
+00:03:17,730 --> 00:03:23,280
+Quantos usuários ele aceita quantas requisições simultâneas então dá para a gente saber muita coisa
+
+42
+00:03:23,280 --> 00:03:24,270
+testando o software.
+
+43
+00:03:25,280 --> 00:03:31,100
+E hoje nós vamos começar a entender um pouquinho como é que isso funciona para a gente poder aplicar
+
+44
+00:03:31,220 --> 00:03:36,270
+uma técnica chamada DDD que é o que nós vamos começar a aprender.
+
+45
+00:03:36,710 --> 00:03:41,140
+Mas antes da gente entrar em detalhes entender e tudo mais.
+
+46
+00:03:41,150 --> 00:03:46,490
+Eu quero falar com você sobre alguns casos de teste e eu vou criar eles aqui do lado e vou explicar
+
+47
+00:03:46,490 --> 00:03:47,630
+como ele funciona.
+
+48
+00:03:47,630 --> 00:03:56,540
+Vou vou vou criar aqui vou vir aqui e vou criar o primeiro caso de teste que nós vamos entender é o
+
+49
+00:03:56,540 --> 00:03:59,420
+teste de unidade.
+
+50
+00:03:59,420 --> 00:04:07,090
+Alguns desses testes nós vamos fazer outros só vou explicar o teste de unidade é o primeiro.
+
+51
+00:04:07,430 --> 00:04:16,850
+Um outro caso de teste que nós vamos fazer aqui vai ser o teste de integrar teste de integração as usem
+
+52
+00:04:16,850 --> 00:04:27,140
+também esses dois casos em que nós vamos fazer beleza que é mais nós também vamos ver um outro tipo
+
+53
+00:04:27,140 --> 00:04:36,440
+de casos de teste que é o teste de regressão são testes de regressão está escuro jogado para baixo.
+
+54
+00:04:38,180 --> 00:04:40,700
+Amarelinho Laranjinha ficou legal.
+
+55
+00:04:46,500 --> 00:04:49,140
+Beleza vou criar o teste.
+
+56
+00:04:51,680 --> 00:05:00,890
+Funcional que é um outro tipo de teste que nós também vamos conhecer também vc Laranjinha vamos criar
+
+57
+00:05:00,890 --> 00:05:02,480
+mais um caso de teste aqui.
+
+58
+00:05:02,570 --> 00:05:11,040
+Vou criar o teste de desempenho que também pode ser chamado de teste de performance.
+
+59
+00:05:11,060 --> 00:05:13,490
+Então ele tem um homenzinho diferente.
+
+60
+00:05:16,400 --> 00:05:17,960
+Vejo uma mas pela beleza.
+
+61
+00:05:18,920 --> 00:05:25,830
+Testes de desempenho mas vamos também ter um teste que se chama teste de carga.
+
+62
+00:05:25,850 --> 00:05:28,920
+Eu não vou falar de todos os testes que existem.
+
+63
+00:05:29,030 --> 00:05:30,890
+Vou falar dos principais.
+
+64
+00:05:30,920 --> 00:05:38,150
+Se fosse conversar falar de tudo quanto é tipo de teste daria várias aulas em caso de teste daria um
+
+65
+00:05:38,150 --> 00:05:40,360
+curso inteiro só de testar.
+
+66
+00:05:40,500 --> 00:05:43,530
+Mas aqui é só para gente ter uma ideia dos principais testes.
+
+67
+00:05:43,670 --> 00:05:44,880
+Como eles funcionam.
+
+68
+00:05:44,990 --> 00:05:46,550
+Teste de estresse.
+
+69
+00:05:53,250 --> 00:05:58,970
+Teste de estresse se acha que robô está na moda com luzinhas a matá la.
+
+70
+00:06:00,500 --> 00:06:01,010
+Permitem.
+
+71
+00:06:08,810 --> 00:06:11,270
+Tem também o teste de segurança.
+
+72
+00:06:12,850 --> 00:06:16,930
+Taxa de segurança gota ele Rosina.
+
+73
+00:06:26,840 --> 00:06:30,640
+Eu vou botar só mais um caso de teste aqui que vai ser o teste.
+
+74
+00:06:31,330 --> 00:06:34,060
+Nem cabe mais acho de interface.
+
+75
+00:06:36,390 --> 00:06:37,380
+A aceitação.
+
+76
+00:06:39,410 --> 00:06:42,640
+Beleza esse eu vou até deixar aqui em cima.
+
+77
+00:06:42,740 --> 00:06:46,050
+Vou deixar ele com outra coisinha chega amarelinho.
+
+78
+00:06:46,070 --> 00:06:46,950
+Beleza.
+
+79
+00:06:47,120 --> 00:06:50,170
+Esse teste aqui nós vamos falar dele depois.
+
+80
+00:06:50,420 --> 00:06:54,660
+Então vamos começar aqui duas Unzinho pra baixo.
+
+81
+00:06:54,660 --> 00:07:01,970
+Então quando a gente vai testar um produto garantir que o que a gente fez tanto a nossa PI quanto o
+
+82
+00:07:01,970 --> 00:07:07,970
+nosso micro serviço garante que eles estão funcionando aqui e que não tem bug que não tem falha.
+
+83
+00:07:09,250 --> 00:07:12,130
+Nós precisamos usar testes de software.
+
+84
+00:07:12,130 --> 00:07:15,870
+Nós temos que testar nossa obrigação é para testar uma aplicação.
+
+85
+00:07:15,940 --> 00:07:19,630
+Existe uma infinidade de tipos diferentes de teste.
+
+86
+00:07:19,810 --> 00:07:23,500
+Cada tipo de teste tem uma finalidade específica.
+
+87
+00:07:23,500 --> 00:07:27,660
+Por exemplo o primeiro caso de teste é o teste de unidade.
+
+88
+00:07:27,680 --> 00:07:31,060
+Esse teste de unidade que geralmente quem faz é o programador.
+
+89
+00:07:31,120 --> 00:07:41,590
+No caso vocês quem está desenvolvendo a aplicação já tem o teste de unidade tem o teste de integração
+
+90
+00:07:42,250 --> 00:07:47,700
+mas só para tentar entender aqui antes de falar de teste de unidade vamos lá.
+
+91
+00:07:47,800 --> 00:07:49,950
+O teste de software em si.
+
+92
+00:07:50,050 --> 00:07:52,040
+O objetivo dele.
+
+93
+00:07:52,060 --> 00:08:00,870
+O objetivo dele é garantir garantir que o sistema está com menos falhas.
+
+94
+00:08:00,910 --> 00:08:06,940
+Ele é um ele é um dos processos de desenvolvimento mais importante que tem o objetivo dele é garantir
+
+95
+00:08:06,940 --> 00:08:09,130
+que o sistema tem menos falhas.
+
+96
+00:08:09,130 --> 00:08:12,820
+Ou seja o sistema está robusto está mais confiável.
+
+97
+00:08:12,820 --> 00:08:22,390
+O teste soft tem como objetivo principal revelar de forma bem antecipada qualquer falha ou Bug que possa
+
+98
+00:08:22,390 --> 00:08:23,540
+ter na aplicação.
+
+99
+00:08:23,540 --> 00:08:30,530
+Então por exemplo se criar um produto com um teste de software eu não preciso ir lá e testar um produto.
+
+100
+00:08:30,550 --> 00:08:34,910
+Vim pelo em sombra e mandar o produto para verificar se realmente está funcionando ou não.
+
+101
+00:08:34,990 --> 00:08:40,390
+Pelo próprio teste eu consigo garantir que aquele recurso está funcionando antes mesmo de eu liberar
+
+102
+00:08:40,390 --> 00:08:44,980
+a aplicação para que um usuário final possa testar para que ele possa utilizar.
+
+103
+00:08:45,050 --> 00:08:51,640
+Então o principal objetivo de um teste de software é antecipar qualquer falha o bug que possa ocorrer
+
+104
+00:08:52,030 --> 00:09:00,680
+durante ou depois que o projeto está sendo entregue ao usuário final.
+
+105
+00:09:01,090 --> 00:09:02,980
+Aonde que seguinte.
+
+106
+00:09:03,370 --> 00:09:11,140
+O custo de corrigir talvez um erro um bug na maioria das vezes é muito muito muito maior do que o custo
+
+107
+00:09:11,140 --> 00:09:16,630
+de você criar um teste para garantir que aquele produto não vai sair com o erro.
+
+108
+00:09:16,770 --> 00:09:24,820
+é uma coisa muito muito legal galera entender o seguinte nenhum usuário gosta de pegar bug no sistema
+
+109
+00:09:25,090 --> 00:09:27,810
+o que eu não gosto é que vocês também não.
+
+110
+00:09:27,820 --> 00:09:33,310
+Então o que acontece quando um usuário pega um sistema que encontra bugs no sistema ele começa a ficar
+
+111
+00:09:33,310 --> 00:09:37,520
+desconfiado do sistema e ele começa a desacreditar no sistema.
+
+112
+00:09:37,580 --> 00:09:40,780
+Ele pára de confiar no sistema e isso é ruim para o produto.
+
+113
+00:09:40,780 --> 00:09:44,080
+Isso pode fazer até um produto morrer deixar de existir.
+
+114
+00:09:44,080 --> 00:09:52,300
+Então existe várias etapas várias fases de teste que a maioria das empresas fazem da empresa que passam
+
+115
+00:09:52,300 --> 00:09:59,350
+por todas as etapas de teste a empresa que aplica algumas dessas etapas com o intuito de fazer com que
+
+116
+00:09:59,350 --> 00:10:04,390
+aquele produto saia o mais confiável e robusto possível com menos falhas possíveis.
+
+117
+00:10:04,450 --> 00:10:12,430
+Beleza visto que teste de software é garantir que o produto tenha menos falhas e o objetivo de tentar
+
+118
+00:10:12,430 --> 00:10:16,570
+encontrar algum bandido com uma falha antes mesmo do software ser liberado para o usuário final.
+
+119
+00:10:16,580 --> 00:10:18,850
+Nós temos alguns casos de testes aqui.
+
+120
+00:10:18,940 --> 00:10:23,040
+O primeiro deles é o teste de unidade para que um teste de unidade.
+
+121
+00:10:23,050 --> 00:10:26,050
+Este é um teste que geralmente era feito pelo programador.
+
+122
+00:10:26,560 --> 00:10:28,150
+E este teste ele.
+
+123
+00:10:28,200 --> 00:10:33,240
+O objetivo dele é testar as funções do sistema de forma bem simples.
+
+124
+00:10:33,490 --> 00:10:37,640
+Geralmente ele testa uma classe ou um método ou um componente.
+
+125
+00:10:37,690 --> 00:10:39,730
+Na verdade uma classe é um componente.
+
+126
+00:10:39,730 --> 00:10:44,830
+O objetivo dele é testar a menor parte testada de um sistema no novo código.
+
+127
+00:10:44,830 --> 00:10:45,460
+Como assim.
+
+128
+00:10:46,540 --> 00:10:51,670
+Imagina que eu tenho um produto uma classe Produto dentro do meu sistema que tem um método calcular
+
+129
+00:10:51,680 --> 00:10:58,330
+valor total e o objetivo deste método é pegar a quantidade um valor desconto e acréscimo fazer o cálculo
+
+130
+00:10:58,330 --> 00:10:59,860
+e devolver para o usuário.
+
+131
+00:10:59,860 --> 00:11:05,710
+Então o teste de unidade tem como objetivo testar essa classe e testar esse cálculo para ver se realmente
+
+132
+00:11:06,070 --> 00:11:11,440
+esse cálculo está funcionando garantir que aquilo ali realmente está certo.
+
+133
+00:11:11,440 --> 00:11:17,560
+Por exemplo se eu tivesse uma classe de comissão e aí o lado direito tivesse um método calcular de acordo
+
+134
+00:11:17,560 --> 00:11:22,870
+com o valor da venda essa classe soubesse calcular a correção para mim por exemplo uma venda menor que
+
+135
+00:11:22,870 --> 00:11:27,540
+1.000 reais ela adiciona 10 por cento de comissão uma venda superior a mil.
+
+136
+00:11:27,550 --> 00:11:28,820
+Ela adiciona 15.
+
+137
+00:11:28,900 --> 00:11:32,110
+Então é uma classe que tem um método que sabe fazer isso.
+
+138
+00:11:32,140 --> 00:11:37,660
+Então quando eu quero testar essa classe quando eu quero testar esse componente eu posso testar ele
+
+139
+00:11:37,660 --> 00:11:39,810
+de maneira unitária.
+
+140
+00:11:39,880 --> 00:11:43,840
+Então o teste de unidade o objetivo dele é testar a menor parte do sistema.
+
+141
+00:11:43,840 --> 00:11:46,240
+Esse teste é que nós vamos fazer ele.
+
+142
+00:11:46,540 --> 00:11:48,330
+Esse daqui nós fomos fazer.
+
+143
+00:11:48,400 --> 00:11:55,920
+Então será que nós vamos fazer o segundo ponto é o teste de integração o que é um teste de integração.
+
+144
+00:11:55,990 --> 00:12:02,800
+O teste de integração ele garante que todas as unidades ou componentes de um sistema estão funcionando
+
+145
+00:12:02,800 --> 00:12:05,910
+bem em conjunto quando elas forem combinadas.
+
+146
+00:12:06,850 --> 00:12:08,620
+E como isso funciona por exemplo.
+
+147
+00:12:09,170 --> 00:12:12,940
+São um exemplo de teste de integração seria testar o meu controle.
+
+148
+00:12:12,980 --> 00:12:13,800
+Por quê.
+
+149
+00:12:13,820 --> 00:12:16,380
+O meu controle é o meu controle.
+
+150
+00:12:16,400 --> 00:12:22,520
+Ele tem como objetivo receber aquisição e ele integra.
+
+151
+00:12:22,610 --> 00:12:28,250
+Ele faz integração com quem encaminha camada de serviço que é a minha camada de serviço faz conexão
+
+152
+00:12:28,250 --> 00:12:33,220
+com a camada de repositor que faz conexão com o banco que trabalha em cima de um modelo.
+
+153
+00:12:33,230 --> 00:12:38,570
+Então quando eu estou testando um repositório eu estou testando a integração ou seja eu estou testando
+
+154
+00:12:38,570 --> 00:12:45,740
+desde um repositório até a ida ao banco de dados todos os micro serviços ou todas as partes ou componentes
+
+155
+00:12:46,130 --> 00:12:47,530
+que estão se relacionando.
+
+156
+00:12:47,540 --> 00:12:48,850
+Eu vou testar.
+
+157
+00:12:49,070 --> 00:12:54,370
+Esse é um outro tipo de teste que nós vamos fazer e vamos entender como é que funciona.
+
+158
+00:12:54,410 --> 00:12:55,460
+Show de bola.
+
+159
+00:12:55,580 --> 00:13:02,930
+E aí o que seria teste de regressão teste regressão é um teste que tem como objetivo garantir que as
+
+160
+00:13:02,930 --> 00:13:09,710
+funcionalidades que já tinham sido validadas que já estão funcionando continuam funcionando.
+
+161
+00:13:09,710 --> 00:13:16,460
+Depois que eu implementem uma nova um novo recurso ele geralmente é muito usado quando a gente vai liberar
+
+162
+00:13:16,460 --> 00:13:18,530
+alguma versão por exemplo.
+
+163
+00:13:18,530 --> 00:13:24,590
+Criei a API aqui imagina que eu tenho um recurso aqui de cadastrar produto um crude de produtos beleza
+
+164
+00:13:24,620 --> 00:13:25,820
+liberei e está funcionando.
+
+165
+00:13:25,820 --> 00:13:31,490
+Já tem três clientes usando aí agora eles foram e me pediram um novo recurso que quando adicionar um
+
+166
+00:13:31,490 --> 00:13:33,140
+produto com um valor.
+
+167
+00:13:34,810 --> 00:13:42,760
+Sei lá um recurso adicional sei lá produtos em massa ou seja em vez de eu passar um único produto eu
+
+168
+00:13:42,760 --> 00:13:48,770
+faço uma lista de produtos e automaticamente a pensar em cadastrar todos esses produtos.
+
+169
+00:13:48,790 --> 00:13:54,750
+Bom ter esse recurso eu vou fazer o teste de unidade dele e o teste de integração.
+
+170
+00:13:54,940 --> 00:14:02,380
+E aí o que eu posso fazer é rodar um teste de regressão o que é isso e garantir que todo o crude que
+
+171
+00:14:02,380 --> 00:14:09,000
+já existia no sistema que já estava funcionando antes do liberais ser russo ainda continua funcionando.
+
+172
+00:14:09,070 --> 00:14:14,640
+Então teste de regressão tem como objetivo fazer com que o que já funcionava continue funcionando.
+
+173
+00:14:14,650 --> 00:14:20,310
+é como se eu chegasse no para você falar assim o Instagram liberou uma nova versão.
+
+174
+00:14:20,410 --> 00:14:24,380
+Aí você vai lá tentar usar qualquer coisa que você usava no Instagram e não está funcionando.
+
+175
+00:14:24,430 --> 00:14:29,350
+Você está fazendo um teste de regressão você está verificando se aquilo que funcionava antes da liberação
+
+176
+00:14:29,350 --> 00:14:30,810
+ainda continua funcionando.
+
+177
+00:14:31,290 --> 00:14:33,330
+Isso é um teste muito importante.
+
+178
+00:14:33,370 --> 00:14:34,180
+Por quê.
+
+179
+00:14:34,180 --> 00:14:41,140
+Porque se você não fizer vai que o novo recurso que foi criado impactou na funcionalidade anterior.
+
+180
+00:14:41,290 --> 00:14:46,180
+Ou seja talvez o novo recurso tenha sido feito mais do que já funcionava deixou de funcionar.
+
+181
+00:14:46,190 --> 00:14:47,710
+Isso é muito ruim.
+
+182
+00:14:48,190 --> 00:14:52,600
+Isso é um bug muito feio então fechei peixinho agressão ele tem como objetivo garantir que o que estava
+
+183
+00:14:52,600 --> 00:14:54,540
+funcionando continue funcionando.
+
+184
+00:14:54,560 --> 00:14:55,690
+Isso é muito importante.
+
+185
+00:14:57,310 --> 00:14:59,860
+Beleza e teste funcional.
+
+186
+00:14:59,980 --> 00:15:06,200
+Teste Funcional é um tipo de teste que o objetivo dele é testar a funcionalidade em si.
+
+187
+00:15:06,280 --> 00:15:14,590
+O requisito a regra de negócio a qual foi feita validando exatamente os compor os componentes e os comportamentos
+
+188
+00:15:15,040 --> 00:15:18,880
+exigidos na figura é desenvolvida na tarefa desenvolvida.
+
+189
+00:15:18,880 --> 00:15:19,740
+Como assim.
+
+190
+00:15:19,750 --> 00:15:24,680
+Imagine o seguinte esse exemplo que eu dei aqui de cadastrar produtos em massa.
+
+191
+00:15:24,700 --> 00:15:26,230
+Qual é a regra de negócio.
+
+192
+00:15:26,230 --> 00:15:30,280
+Qual é o objetivo conseguir cadastrar vários produtos em massa.
+
+193
+00:15:30,310 --> 00:15:36,730
+Se o objetivo é cadastrar vários produtos em massa então a funcionalidade qual cadastrar produtos em
+
+194
+00:15:36,730 --> 00:15:42,190
+massa ou seja com esse teste eu vou garantir que aquilo que a tarefa que eu tinha que fazer aquilo que
+
+195
+00:15:42,190 --> 00:15:46,040
+eu me projeto a fazer realmente está funcionando.
+
+196
+00:15:46,040 --> 00:15:53,020
+Teste Funcional eu vou testar a funcionalidade específica a qual foi desenvolvida eu vou testar aquele
+
+197
+00:15:53,020 --> 00:15:58,680
+ponto por exemplo a aplicação pode ser gigante por exemplo include um grude de produto pode ter Get
+
+198
+00:15:58,810 --> 00:16:05,380
+output de elite pode ter vários e aí eu não estou testando isso tudo vou testar exatamente só o recurso
+
+199
+00:16:05,380 --> 00:16:08,370
+em massa só a parte funcional.
+
+200
+00:16:08,650 --> 00:16:13,360
+Então significa que quando eu faço funcional eu não faço de regressão não.
+
+201
+00:16:14,600 --> 00:16:17,510
+Quando você está desenvolvendo você vai testar o software.
+
+202
+00:16:17,540 --> 00:16:22,010
+Você tem que fazer o teste funcional daquilo que você está desenvolvendo.
+
+203
+00:16:22,010 --> 00:16:27,620
+Mas nada impede de você também fazer teste de regressão ou seja todos esses testes aqui.
+
+204
+00:16:27,620 --> 00:16:29,690
+Um não exclui o outro.
+
+205
+00:16:29,690 --> 00:16:33,930
+Eles podem ser feitos junto em conjunto ou em paralelo.
+
+206
+00:16:34,130 --> 00:16:38,090
+Você pode ter vários casos de testes para o mesmo projeto.
+
+207
+00:16:38,090 --> 00:16:42,540
+Agora eu quero testar funcional testei funcional beleza funcionalidade está OK.
+
+208
+00:16:42,560 --> 00:16:48,050
+Agora eu vou testar regressão vou ver se o que estava funcionando ainda continua funcionando.
+
+209
+00:16:48,290 --> 00:16:56,840
+Então você se consegue misturar aqui e fazer vários tipos de teste na mesma aplicação.
+
+210
+00:16:56,960 --> 00:16:59,300
+Show de bola então esse é o teste funcional.
+
+211
+00:16:59,300 --> 00:17:02,440
+Ele testa o funcionamento do sistema.
+
+212
+00:17:02,560 --> 00:17:05,630
+Tá show de bola é o que atesta o desempenho.
+
+213
+00:17:05,630 --> 00:17:09,130
+Teste de desempenho também pode ser chamado de teste de performance.
+
+214
+00:17:09,140 --> 00:17:16,250
+O objetivo dele é bem simples e verificar o tempo de resposta da aplicação que está de acordo com o
+
+215
+00:17:16,250 --> 00:17:18,650
+aceitável para aquele recurso.
+
+216
+00:17:19,040 --> 00:17:25,040
+Isso a gente vai considerar volume de dados e infraestrutura do ambiente ao qual aquela aplicação está
+
+217
+00:17:25,040 --> 00:17:25,790
+rodando.
+
+218
+00:17:25,790 --> 00:17:30,890
+Imagine o seguinte voltando aqui para o nosso exemplo de cadastro de produtos em massa.
+
+219
+00:17:30,890 --> 00:17:34,010
+Será que quando o cadastro é um produto ele demora muito.
+
+220
+00:17:34,010 --> 00:17:39,740
+Por exemplo mandei cadastrar um produto que demorou três segundos três segundos é aceitável ou não está
+
+221
+00:17:39,740 --> 00:17:41,000
+lento ou não.
+
+222
+00:17:41,000 --> 00:17:48,380
+Considerando que ele está rodando localmente numa máquina sei lá com 8GB de memória RAM 1 e 5.
+
+223
+00:17:48,760 --> 00:17:50,960
+Então o teste de desempenho.
+
+224
+00:17:50,960 --> 00:17:56,900
+O objetivo dele é verificar se o tempo que o sistema demora para tomar uma ação com base na onde ele
+
+225
+00:17:56,900 --> 00:18:01,010
+está rodando no volume de dados que eu estou pedindo é aceitável ou não.
+
+226
+00:18:01,010 --> 00:18:05,960
+Por exemplo um teste para adicionar um produto poderia demorar dois segundos para o teste posicionar
+
+227
+00:18:06,230 --> 00:18:10,610
+20 produtos poderia demorar sei lá 30 segundos né.
+
+228
+00:18:10,880 --> 00:18:16,430
+Aí você pode checar por 30 segundos e muita beleza mas olha a quantidade de produtos que você está inserindo
+
+229
+00:18:17,120 --> 00:18:19,100
+30 segundos é aceitável ou não.
+
+230
+00:18:19,100 --> 00:18:25,070
+Pode ser que tenha casos que sim pode ser que tenha gastos que não vai depender muito da tua infraestrutura
+
+231
+00:18:25,430 --> 00:18:31,670
+do teu código de quanto você quer chegar com esse produto e um teste de desempenho e testar a performance
+
+232
+00:18:32,540 --> 00:18:34,830
+verificar o tempo de resposta.
+
+233
+00:18:35,180 --> 00:18:41,050
+A outra coisa que é bem legal muita gente confunde com o teste de performance e o teste de carga.
+
+234
+00:18:41,060 --> 00:18:46,160
+O teste de carga ele é diferente do de performance por que o teste de carga.
+
+235
+00:18:46,160 --> 00:18:50,030
+O objetivo dele é verificar o funcionamento da sua aplicação.
+
+236
+00:18:50,240 --> 00:18:57,320
+Baseado numa grande quantidade de usuários simultâneos naquele momento por exemplo minha parte produto
+
+237
+00:18:57,890 --> 00:19:04,490
+estou mandando um cadastrar 100 produtos mas em paralelo a isso tem mais 100 usuários usando em 100
+
+238
+00:19:04,490 --> 00:19:10,880
+aplicações um está cadastrado no outro está editando ou metano outro está consultando tem várias pessoas
+
+239
+00:19:10,880 --> 00:19:12,200
+fazendo coisas diferente.
+
+240
+00:19:12,290 --> 00:19:14,970
+Ou seja vários usuários simultâneos.
+
+241
+00:19:15,050 --> 00:19:21,290
+Então a gente pode fazer um teste de carga para verificar quantos usuários simultâneos cada aplicação
+
+242
+00:19:21,290 --> 00:19:27,920
+pode suportar por exemplo pode ser que uma aplicação só aguente sei lá até mil usuários simultâneos
+
+243
+00:19:27,950 --> 00:19:29,210
+fazendo requisição.
+
+244
+00:19:29,210 --> 00:19:36,020
+Mais do que isso ela fique em de trave então um teste de carga o objetivo dele é verificar o máximo
+
+245
+00:19:36,020 --> 00:19:42,320
+de quantidade de usuários simultâneos que a gente pode tentar executar algum recurso dentro do sistema.
+
+246
+00:19:42,330 --> 00:19:49,880
+A inserção de dados deleção a atualização obtenção de dados geralmente a gente usa muito isso para relatórios.
+
+247
+00:19:50,420 --> 00:19:56,370
+Quantos usuários simultâneos conseguem gerar relatórios complexos pesados simultaneamente.
+
+248
+00:19:56,420 --> 00:19:58,080
+Esse é o teste de carga.
+
+249
+00:19:58,100 --> 00:20:03,400
+Um outro teste bem legal é o teste de estresse o teste de stress.
+
+250
+00:20:03,500 --> 00:20:08,560
+Ele é bem legal porque o objetivo dele é como o nome já diz a estressar o sistema.
+
+251
+00:20:08,930 --> 00:20:12,340
+Ele tenta o tempo para testar o sistema.
+
+252
+00:20:12,350 --> 00:20:18,410
+O teste é testar o sistema em situações bem assim inesperadas sabe.
+
+253
+00:20:19,040 --> 00:20:26,450
+Vamos pensar que situações por exemplo extremas vamos lá queda de luz sei lá estou usando o sistema
+
+254
+00:20:26,450 --> 00:20:33,070
+acabou a luz e é o que se chama fazer estava mandando cadastrar mil pessoas dentro do sistema.
+
+255
+00:20:33,110 --> 00:20:41,930
+Quando chegou a 900 a luz acabou e aí o que ele vai fazer vai gravar só 900 e o restante vai descartar.
+
+256
+00:20:41,960 --> 00:20:45,760
+Ele vai desfazer tudo o que ele fez o que ele tem que fazer.
+
+257
+00:20:45,830 --> 00:20:51,530
+Então teste de estresse é testar algumas coisas desse tipo sei lá indisponibilidade de rede.
+
+258
+00:20:51,530 --> 00:20:57,150
+Estou mandando cadastrar e de repente a minha rede internet caiu e aí o que aconteceu.
+
+259
+00:20:57,290 --> 00:21:03,950
+Testar sei lá com alto consumo de CPU memória baixa dá para você fazer vários tipos de stress e colocar
+
+260
+00:21:03,950 --> 00:21:07,860
+o sistema em situações inesperadas mesmo como o nome diz.
+
+261
+00:21:07,880 --> 00:21:13,130
+Situações extremas e aí ver como esse software vai se comportar.
+
+262
+00:21:14,070 --> 00:21:18,360
+Por exemplo tem empresas que usam muito esse tipo de teste para garantir que o software vai funcionar
+
+263
+00:21:18,360 --> 00:21:22,260
+em situações muito críticas por exemplo de Spotify e Netflix.
+
+264
+00:21:22,260 --> 00:21:29,110
+São empresas que possivelmente usam todos esses teste ou grande parte deles porque por exemplo imagina
+
+265
+00:21:29,130 --> 00:21:33,690
+você está acessando sua sua série favorita lá e a internet caiu.
+
+266
+00:21:33,700 --> 00:21:36,060
+é aí que a aplicação tem que fazer.
+
+267
+00:21:37,380 --> 00:21:43,560
+Ela vai ter erro vai desligar vai buscar e tudo não vai mais conseguir vai deletar o usuário que ela
+
+268
+00:21:43,560 --> 00:21:44,550
+vai fazer.
+
+269
+00:21:44,760 --> 00:21:51,900
+Todos esses detalhes a gente tem que pensar numa aplicação e a gente pode testar fazendo testes de estresse.
+
+270
+00:21:52,170 --> 00:21:54,670
+E por fim aqui dos testes.
+
+271
+00:21:54,960 --> 00:21:56,770
+Por fim não tem mais o que em cima.
+
+272
+00:21:56,820 --> 00:22:03,150
+Nós temos o teste de segurança o que é teste de segurança cara teste de segurança.
+
+273
+00:22:03,150 --> 00:22:07,140
+Basicamente é você testar a segurança do seu sistema.
+
+274
+00:22:07,140 --> 00:22:16,260
+Geralmente a gente testa perfis permissões de usuário acessibilidade permissões de navegação.
+
+275
+00:22:16,410 --> 00:22:17,340
+Vou dar um exemplo.
+
+276
+00:22:17,370 --> 00:22:24,390
+Criei uma API que somente usuários com permissão podem acessar usuários com login e senha podem acessar.
+
+277
+00:22:24,390 --> 00:22:29,490
+Então eu poderei ter um teste para eu verificar se eu como usuário e senha que não tem permissão consigo
+
+278
+00:22:29,490 --> 00:22:33,450
+acessar alguma coisa do sistema o famoso tentar hackear.
+
+279
+00:22:34,410 --> 00:22:38,600
+E aí a gente poderia tentar acessar o sistema mesmo sem ter permissão.
+
+280
+00:22:38,670 --> 00:22:44,900
+Um outro tipo de teste bem legal seria o seguinte eu já tenho permissão para acessar o sistema.
+
+281
+00:22:44,970 --> 00:22:47,090
+Já tenho o login e senha correto.
+
+282
+00:22:47,100 --> 00:22:52,650
+Só que eu tenho um perfil que é um perfil sei lá vendedor eu não tenho acesso a ver o histórico financeiro
+
+283
+00:22:52,650 --> 00:22:54,800
+das vendas da empresa.
+
+284
+00:22:54,900 --> 00:22:58,870
+Só quem tem acesso a ver esse histórico financeiro é o gerente.
+
+285
+00:22:58,980 --> 00:23:04,110
+Um dos testes seria legal e eu de alguma forma tentar fazer com que o meu usuário que não tem um perfil
+
+286
+00:23:04,110 --> 00:23:08,060
+diferente consiga ver coisas que somente um gerente conseguiria ver.
+
+287
+00:23:08,080 --> 00:23:14,100
+Então esse seria um teste de legal e de Segurança deve verificar se o sistema de seguro e também existe
+
+288
+00:23:14,110 --> 00:23:19,890
+outros testes e verificar se ele está aceitando algum algum script de terceiros.
+
+289
+00:23:19,890 --> 00:23:24,030
+Seria fácil de ser quebrado se alguém consegue manipular ele por fora.
+
+290
+00:23:24,030 --> 00:23:27,290
+Então dá para fazer vários tipos de dar segurança interessante.
+
+291
+00:23:27,300 --> 00:23:29,330
+Cada tipo cada caixinha dessa daqui.
+
+292
+00:23:30,850 --> 00:23:37,150
+Dá para a gente explorar o mundo gigante da galera tem muito teste em cada caixinha dessa daqui cada
+
+293
+00:23:37,150 --> 00:23:43,780
+opção que por fim tem o teste de interface e a aceitação.
+
+294
+00:23:45,000 --> 00:23:48,850
+Teste de interface a aceitação a gente não vai fazer aqui.
+
+295
+00:23:48,930 --> 00:23:54,960
+Na verdade a gente não vai vai simular tanto daqui porque ele geralmente é feito quando há uma aplicação
+
+296
+00:23:54,960 --> 00:23:57,650
+Foster que ou uma aplicação que é front end.
+
+297
+00:23:57,720 --> 00:23:58,350
+Por quê.
+
+298
+00:23:58,440 --> 00:24:00,900
+é a parte visual e o que o usuário está vendo.
+
+299
+00:24:00,960 --> 00:24:06,200
+Como o nome já diz o teste de interface é onde a gente verifica.
+
+300
+00:24:06,240 --> 00:24:12,440
+Talvez a navegabilidade do sistema as páginas ao clicar no link ele foi para ali.
+
+301
+00:24:12,450 --> 00:24:16,260
+é como se eu estivesse aqui fosse testar essa ferramenta ou clicar aqui.
+
+302
+00:24:16,260 --> 00:24:18,780
+Será que ele mostra isso clicar aqui.
+
+303
+00:24:18,780 --> 00:24:20,640
+Será que ele fecha seu clicar aqui.
+
+304
+00:24:20,640 --> 00:24:23,640
+Será que ele abre para exportação mandar pintar.
+
+305
+00:24:23,640 --> 00:24:28,630
+Será que ele abre para eu dar um print o que acontece.
+
+306
+00:24:28,830 --> 00:24:35,610
+Se eu for fazendo o teste de interface eu testar para ver se os elementos funcionam corretamente.
+
+307
+00:24:35,640 --> 00:24:36,500
+Não só isso.
+
+308
+00:24:36,780 --> 00:24:41,970
+Testar se eles estão bem posicionados para o usuário está fácil entendimento.
+
+309
+00:24:41,970 --> 00:24:48,960
+Se a disposição dos botões dos campos estão realmente intuitivos na tela o usuário não vai ter nenhuma
+
+310
+00:24:48,960 --> 00:24:50,900
+dificuldade para localizar.
+
+311
+00:24:50,920 --> 00:24:51,610
+Tá bom.
+
+312
+00:24:52,440 --> 00:24:59,100
+Tudo isso é feito com a parte de teste de interface e aceitação.
+
+313
+00:24:59,430 --> 00:25:04,740
+Esse é o teste mais simples que tem de se fazer e geralmente esse teste é feito por uma pessoa chamada
+
+314
+00:25:04,740 --> 00:25:09,120
+o que a inspetor de qualidade essa pessoa ela geralmente faz.
+
+315
+00:25:09,120 --> 00:25:15,870
+Se essa parte de teste mas a gente pode fazer também programática mente beleza então esses daqui são
+
+316
+00:25:15,870 --> 00:25:21,130
+os principais tipos de teste que eu separei pra gente poder dar uma olhada.
+
+317
+00:25:21,420 --> 00:25:28,620
+Tão assim diante disso tudo o cara tem inúmeros tipos de teste e todos eles são necessários para para
+
+318
+00:25:28,620 --> 00:25:31,620
+garantir a confiabilidade e a qualidade de uma aplicação.
+
+319
+00:25:32,100 --> 00:25:37,550
+Então a gente pode fazer testes de tudo de tudo de tudo de tudo.
+
+320
+00:25:37,980 --> 00:25:43,830
+Tem muitos casos de teste para a gente poder evoluir mas nós vamos focar nesses dois aqui o teste de
+
+321
+00:25:43,830 --> 00:25:49,710
+integração e teste unidade porque com esses dois casos de teste daqui a gente vai conseguir abordar
+
+322
+00:25:49,710 --> 00:25:51,690
+muitos cenários.
+
+323
+00:25:51,700 --> 00:25:58,920
+Importante a gente já vai reduzir grandemente a quantidade de bugs e falhas que a nossa aplicação pode
+
+324
+00:25:58,920 --> 00:25:59,960
+ter certeza.

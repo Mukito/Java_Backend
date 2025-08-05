@@ -1,0 +1,659 @@
+1
+00:00:02,210 --> 00:00:11,030
+Beleza galera agora que nós criamos aqui essa lógica aqui pra gente entender o que deixa a gente sabe
+
+2
+00:00:11,540 --> 00:00:15,590
+nós vamos agora aprender o conceito final aqui em cima disso tudo beleza.
+
+3
+00:00:15,770 --> 00:00:20,990
+Entendemos o que é teste mas aí como implementar por onde eu começo.
+
+4
+00:00:21,170 --> 00:00:26,620
+Então o que acontece por ter inúmeras possibilidades de teste.
+
+5
+00:00:26,810 --> 00:00:34,520
+Nós vamos entender um conceito muito legal que vou botar aqui que se chama o.
+
+6
+00:00:39,360 --> 00:00:41,420
+Para isso comenta que está muito pequeno.
+
+7
+00:00:48,330 --> 00:00:49,680
+Se chama DDD.
+
+8
+00:00:50,770 --> 00:00:55,240
+DDD não entende agora como funciona isso só aumenta aqui.
+
+9
+00:00:57,150 --> 00:00:57,690
+DDD.
+
+10
+00:01:01,730 --> 00:01:17,240
+Show de Bola da TV o DVD no inglês ele significa T-shirt Driven Development e Lab Bar que traduzindo
+
+11
+00:01:17,240 --> 00:01:25,970
+para um português ao pé da letra seria Test dirigido ao desenvolvimento mas trazendo traduzindo de uma
+
+12
+00:01:25,970 --> 00:01:35,900
+maneira mais elegante seria desenvolvida desenvolvo memento mori sentado atrás de uma melhor tradução
+
+13
+00:01:35,900 --> 00:01:43,320
+aqui porque o que ele realmente faz o que é DDD que é o desenvolvimento orientado a testes.
+
+14
+00:01:43,430 --> 00:01:45,050
+Como é que ele funciona.
+
+15
+00:01:45,050 --> 00:01:50,860
+Ele é um conceito muito legal que foi criado em 2003 com um cara chamado Kent Beck.
+
+16
+00:01:50,990 --> 00:01:56,450
+Esse cara ele é o criador de um livro muito conhecido chamado Extreme.
+
+17
+00:01:57,620 --> 00:02:05,600
+é esse cara ele é um dos idealizadores desse Manifesto ágil aí então o objetivo.
+
+18
+00:02:05,600 --> 00:02:11,930
+Esse cara criou esse conceito porque ele viu que isso era muito maneiro será muito legal.
+
+19
+00:02:12,080 --> 00:02:16,670
+E esse e isso fez com que esse conceito evoluísse muito.
+
+20
+00:02:17,120 --> 00:02:19,920
+E qual o objetivo desse conceito do PND.
+
+21
+00:02:20,060 --> 00:02:28,640
+De forma bem resumida o conceito do DVD é basicamente você fazer o seu teste antes mesmo de fazer o
+
+22
+00:02:28,640 --> 00:02:34,910
+seu código para você criar um caso de teste antes mesmo de criar o seu código seja antes de criar o
+
+23
+00:02:34,910 --> 00:02:36,300
+sistema.
+
+24
+00:02:36,350 --> 00:02:45,050
+E aí você ir evoluindo os dois tanto o código quanto o teste paralelamente ou seja a partir do momento
+
+25
+00:02:45,050 --> 00:02:50,270
+que eu criei um recurso ele já vai sair totalmente testado garantindo que ele vai estar funcionando
+
+26
+00:02:50,280 --> 00:02:54,920
+não importa se ele é um teste de unidade ou se ele é um teste de integração.
+
+27
+00:02:55,190 --> 00:02:57,440
+Então nós vamos entender como é que funciona.
+
+28
+00:02:57,530 --> 00:02:59,330
+E aí vocês podem pensar comigo assim.
+
+29
+00:02:59,330 --> 00:03:06,560
+Caraca como é que a gente vai criar um teste antes mesmo da aplicação.
+
+30
+00:03:06,560 --> 00:03:11,830
+Como é que isso funciona geralmente cria um teste para algo que já existe aqui uma abordagem um pouquinho
+
+31
+00:03:11,840 --> 00:03:16,350
+diferente a gente cria teste pensando em algo que ainda não foi implementado.
+
+32
+00:03:17,120 --> 00:03:21,220
+E aí a gente vai usar uma técnica para fazer isso.
+
+33
+00:03:21,230 --> 00:03:27,950
+Bom para fazer essa técnica nós vamos precisar fazer o seguinte eu vou.
+
+34
+00:03:28,430 --> 00:03:32,790
+Nós vamos eu vou Eu vou chamar isso aqui de bolinha ela seguida.
+
+35
+00:03:33,720 --> 00:03:37,180
+Vou bater uma bolinha aqui que eu vou chamar de DDD vou chamar de teste.
+
+36
+00:03:39,550 --> 00:03:46,960
+Tais testes então a primeira coisa que vai acontecer até este ponto aliás primeira coisa que a gente
+
+37
+00:03:46,960 --> 00:03:49,210
+tem que fazer é fazer esse teste.
+
+38
+00:03:50,750 --> 00:03:57,380
+Olha a primeira coisa que a gente vai fazer vai criar o teste e ele vai ter que falhar.
+
+39
+00:03:57,830 --> 00:03:58,610
+Inventar aqui.
+
+40
+00:04:00,350 --> 00:04:02,560
+E a fonte.
+
+41
+00:04:03,880 --> 00:04:06,970
+Nós vamos fazer na prática isso vai ficar bem legal.
+
+42
+00:04:07,310 --> 00:04:14,230
+Então a primeira coisa que a gente vai fazer é fazer o teste falhar o show de bola o teste falhando
+
+43
+00:04:14,320 --> 00:04:17,620
+o que a gente vai fazer depois que o teste falhar.
+
+44
+00:04:17,620 --> 00:04:22,390
+Nós vamos trabalhar nesse teste para ele fazer o quê passar.
+
+45
+00:04:24,310 --> 00:04:34,920
+Verdinho e em seguida nós vamos trabalhar nesse teste real faturando e faturar o chama de repasse da.
+
+46
+00:04:50,030 --> 00:04:53,300
+Olha só eu fator acho que vou botar aqui um laranja.
+
+47
+00:04:53,300 --> 00:04:57,290
+Então o objetivo vai ser criar o teste ele vai falhar.
+
+48
+00:04:57,290 --> 00:04:58,520
+Depois ele vai passar.
+
+49
+00:04:58,520 --> 00:05:05,130
+Depois a gente vai repassar toda ele para que ele fale de novo e por fim ele passe e termine o ciclo.
+
+50
+00:05:05,130 --> 00:05:06,320
+Isso que vai ser um circo.
+
+51
+00:05:07,720 --> 00:05:11,920
+Creio que ele vai vir.
+
+52
+00:05:12,170 --> 00:05:15,580
+Eu vou até fazer isso e deletar esse e deletar isso.
+
+53
+00:05:17,620 --> 00:05:19,190
+O teste tem que falhar.
+
+54
+00:05:19,270 --> 00:05:23,770
+Depois ele tem que passar depois o teste.
+
+55
+00:05:24,100 --> 00:05:29,560
+Vai ter que depois nós vamos ter que aturar esse teste ou para fazer.
+
+56
+00:05:32,090 --> 00:05:33,980
+A gente vai faturar esse cara aqui.
+
+57
+00:05:35,660 --> 00:05:37,100
+E depois o que nós vamos fazer.
+
+58
+00:05:38,540 --> 00:05:43,630
+Depois de refletores a gente vai fazer falhar de novo para garantir que o que a gente faturou tá certo.
+
+59
+00:05:43,680 --> 00:05:47,670
+Depois a gente faz ele passar para garantir que está tudo funcionando.
+
+60
+00:05:47,730 --> 00:05:53,060
+Então primeira coisa que a gente vai fazer é criar o nosso caso de teste criou no nosso caso de teste
+
+61
+00:05:53,420 --> 00:05:59,690
+que vai fazer e falhar para garantir que realmente ele está falhando com base porque a gente ainda não
+
+62
+00:05:59,690 --> 00:06:02,100
+tem código nenhum como é que ele vai passar.
+
+63
+00:06:02,120 --> 00:06:09,170
+Aí a gente vai criar o mínimo necessário do teste pra ele poder passar e aí depois a gente vai ver fatoração
+
+64
+00:06:09,590 --> 00:06:13,250
+ou seja realmente implementar a lógica de negócio.
+
+65
+00:06:13,250 --> 00:06:19,580
+Depois que implementou eu vou voltar no meu teste vou fazer falhar de novo pensando na regra de negócio
+
+66
+00:06:19,970 --> 00:06:23,920
+e aí eu vou ajustar o meu teste para passar pra poder atender.
+
+67
+00:06:23,930 --> 00:06:30,320
+Pode parecer confuso mas isso vai ficar fácil na prática agora com a gente fazendo.
+
+68
+00:06:30,350 --> 00:06:37,030
+Então beleza agora que a gente entendeu qual vai ser a regra que nós vamos fazer.
+
+69
+00:06:37,030 --> 00:06:39,650
+Nós vamos fazer o seguinte faça tinha para cá.
+
+70
+00:06:41,080 --> 00:06:41,440
+Para.
+
+71
+00:06:48,100 --> 00:06:50,750
+Ela tem a mais gracinha aqui.
+
+72
+00:06:50,960 --> 00:06:53,150
+Vou botar uma cor diferente nela.
+
+73
+00:06:53,180 --> 00:06:53,510
+Vermelho.
+
+74
+00:06:54,420 --> 00:06:56,920
+Então olha só que nós vamos fazer aqui.
+
+75
+00:06:58,630 --> 00:07:02,770
+Mas vamos fazer o seguinte Aqui nós vamos fazer o teste.
+
+76
+00:07:08,850 --> 00:07:10,200
+Com DDD.
+
+77
+00:07:13,220 --> 00:07:18,950
+Com o DVD e aí nós vamos usar um conceito de A que eu já vou explicar o que quer.
+
+78
+00:07:24,180 --> 00:07:30,950
+Vou estar aqui esse cara que me botar é da cozinha e sei lá escurinho o que é isso.
+
+79
+00:07:31,140 --> 00:07:38,180
+O teste nós vamos fazer ele pensando no TNT ou desenvolvimento orientado a testes.
+
+80
+00:07:38,310 --> 00:07:47,040
+Nós vamos usar o conceito de ah o ar significa além de mudar a coisa em que botar a Sala Laranja.
+
+81
+00:07:51,730 --> 00:08:01,920
+Depois nós vamos fazer o CT e por fim nós vamos fazer o 7 vamos lá o que significa isso.
+
+82
+00:08:01,960 --> 00:08:10,120
+Todo teste ele vai ter que passar nessas três etapas aqui abrange a CT e as sete onde seria a etapa
+
+83
+00:08:10,120 --> 00:08:14,580
+de preparação.
+
+84
+00:08:14,650 --> 00:08:23,140
+é essa etapa que nós vamos realmente preparar o nosso código tudo o que precisa para o meu teste funcionar.
+
+85
+00:08:23,170 --> 00:08:25,480
+Eu vou botar nessa etapa aqui.
+
+86
+00:08:26,650 --> 00:08:34,540
+Por exemplo eu quisesse cadastrar um cliente ou fingir que eu estou deixando um cliente na app.
+
+87
+00:08:34,610 --> 00:08:39,130
+Então é nessa parte que eu crio uma instância de um cliente.
+
+88
+00:08:39,130 --> 00:08:41,550
+Só vou ter que criar um cliente.
+
+89
+00:08:41,680 --> 00:08:46,510
+é aqui que eu preciso de tudo para poder cadastrar o cliente então aqui eu criaria a Estância do cliente
+
+90
+00:08:47,740 --> 00:08:52,890
+aceder a parte da ação o que realmente acontece.
+
+91
+00:08:52,990 --> 00:08:58,960
+Então se por exemplo aqui pensando num cenário de um carro de um cliente no arranque que a preparação
+
+92
+00:08:59,110 --> 00:09:05,230
+eu teria estância aqui e onde eu realmente mando o meu serviço adicional no banco.
+
+93
+00:09:05,310 --> 00:09:15,070
+Pegue a mão dele adicionar esse usuário no cliente no banco e o acerte e a parte de confirmação.
+
+94
+00:09:15,520 --> 00:09:22,690
+é onde a gente confirma se o que nós fizemos realmente está certo e esse aqui seria onde eu confirmaria
+
+95
+00:09:22,690 --> 00:09:25,120
+se o cliente realmente foi cadastrado.
+
+96
+00:09:25,120 --> 00:09:26,550
+Ah como é que eu vou fazer isso.
+
+97
+00:09:26,550 --> 00:09:28,810
+Tudo isso nós vamos aprender.
+
+98
+00:09:29,080 --> 00:09:36,850
+Então todo teste ele vai passar nessas três etapas preparação ação e confirmação.
+
+99
+00:09:36,940 --> 00:09:42,370
+Eu tenho que ter a parte que vai preparar os dados necessário para o teste rodar a parte de ação que
+
+100
+00:09:42,370 --> 00:09:48,550
+eu vou executar e a parte de confirmação que a partir de onde eu vou validar se aquilo que eu mandei
+
+101
+00:09:48,550 --> 00:09:52,000
+fazer no teste realmente funcionou corretamente.
+
+102
+00:09:52,000 --> 00:09:58,690
+Então essas três etapas aqui são muito importantes são as etapas que nós vamos usar no teste.
+
+103
+00:09:58,690 --> 00:09:59,710
+Então vamos lá.
+
+104
+00:09:59,770 --> 00:10:09,610
+Toda vez que eu for trabalhar com o CDB que é teste e desenvolvimento orientado a testes ou desenvolvimento
+
+105
+00:10:09,610 --> 00:10:17,890
+dirigido a teste que eu vou fazer eu vou criar um teste seguindo esse padrão aqui a onde eu vou preparar
+
+106
+00:10:17,890 --> 00:10:24,580
+as informações vou executar a ação e vou confirmar se aquilo que eu fiz realmente está acontecendo.
+
+107
+00:10:25,060 --> 00:10:31,250
+E aí com base nisso o teste vai ter que falhar show falhou.
+
+108
+00:10:31,270 --> 00:10:39,790
+Eu vou mudar o meu teste para que ele passe depois o fator B o código para que ele realmente faça o
+
+109
+00:10:39,790 --> 00:10:43,060
+que ele tem que fazer quando ele estiver fazendo o que tem que fazer.
+
+110
+00:10:43,060 --> 00:10:44,690
+O teste tem que falar de novo.
+
+111
+00:10:44,770 --> 00:10:48,140
+Eu acho justo agora o meu teste para poder passar.
+
+112
+00:10:48,140 --> 00:10:57,130
+E aí ele vai vir aqui e vai realmente realmente passar com tudo funcionando certinho se eu montei toda
+
+113
+00:10:57,140 --> 00:10:58,200
+estratégia.
+
+114
+00:10:58,210 --> 00:11:02,870
+Isso vai ficar fácil vai ficar intuitivo à medida que nós fomos fazendo.
+
+115
+00:11:03,010 --> 00:11:06,990
+Eu vou anotar o que cada coisa faz.
+
+116
+00:11:07,030 --> 00:11:10,900
+Por exemplo se fosse no caso de cliente que seria a parte onde eu.
+
+117
+00:11:12,220 --> 00:11:14,050
+Creio a distância.
+
+118
+00:11:15,850 --> 00:11:16,510
+O cliente.
+
+119
+00:11:19,110 --> 00:11:21,640
+Aqui seria onde eu crio a distância do cliente.
+
+120
+00:11:21,780 --> 00:11:27,540
+A parte de preparação se fosse no caso de um cenário de um cadastro de cliente aqui seria.
+
+121
+00:11:29,490 --> 00:11:30,690
+Eu chamando.
+
+122
+00:11:32,740 --> 00:11:42,460
+O serviço que sabe cadastrar ou até fazer uma brincadeira aqui como se fosse um caso de deixar sei lá.
+
+123
+00:11:43,580 --> 00:11:49,670
+Tipo vou fazer uma brincadeira o cliente recebe o cliente do meu cliente.
+
+124
+00:11:49,670 --> 00:11:56,090
+Um exemplo seria mais ou menos isso cria uma instância do cliente no caso se eu estivesse criando um
+
+125
+00:11:56,090 --> 00:11:59,750
+cadastro de cliente aqui chama o serviço que vai saber cadastrar.
+
+126
+00:11:59,750 --> 00:12:01,870
+Um exemplo seria fazer isso aqui.
+
+127
+00:12:02,390 --> 00:12:08,060
+Serve ser cliente ponto adicionar.
+
+128
+00:12:08,060 --> 00:12:11,530
+E aí eu passaria aqui o meu cliente.
+
+129
+00:12:11,570 --> 00:12:20,920
+Esse cara vai saber adicionar e aqui embaixo seria a parte do acerte a onde eu ficaria.
+
+130
+00:12:22,610 --> 00:12:32,710
+Aqui confirmar se realmente se realmente foi cadastrado.
+
+131
+00:12:32,960 --> 00:12:35,150
+Exemplo eu poderia fazer.
+
+132
+00:12:35,180 --> 00:12:37,050
+Vou dar um exemplo de qualquer que está.
+
+133
+00:12:37,070 --> 00:12:39,440
+A gente vai fazer de várias formas sei lá.
+
+134
+00:12:39,530 --> 00:12:41,030
+A certo ponto.
+
+135
+00:12:41,970 --> 00:12:53,730
+TRU testar se é verdade que acerte testar se é verdade se o que seu cliente ponto a pedir não é nulo
+
+136
+00:12:54,660 --> 00:13:05,220
+se tiver a id vai dizer sei lá diferente de zero porque a id geralmente é um inteiro.
+
+137
+00:13:05,220 --> 00:13:10,270
+Então se for diferente de zero significa que ele conseguiu cadastrar porque quando eu crio uma instância
+
+138
+00:13:10,380 --> 00:13:17,250
+de um cliente o ID do cliente no caso é zero e se ele conseguiu significa que ele conseguiu cadastrar
+
+139
+00:13:17,730 --> 00:13:25,290
+se isso daqui da verdade significa que Trusted passwords daqui da mentira vai dar falso e aqui vai estourar
+
+140
+00:13:25,320 --> 00:13:27,070
+uma excepcional exceção.
+
+141
+00:13:27,090 --> 00:13:28,880
+Mas vamos ver tudo isso na prática.
+
+142
+00:13:28,900 --> 00:13:31,020
+Então Só recapitulando.
+
+143
+00:13:33,800 --> 00:13:40,340
+Para a gente poder testar uma aplicação existe várias partes de teste várias opções e formas de teste
+
+144
+00:13:41,300 --> 00:13:44,490
+e para a gente aplicar isso de forma programática.
+
+145
+00:13:44,570 --> 00:13:51,320
+Existe um conceito bem legal chamado TDT que significa desenvolvimento orientado a testes que é um conceito
+
+146
+00:13:51,920 --> 00:13:58,430
+que é muito útil que a maior parte das empresas e a maioria das empresas utilizam que é criar o teste
+
+147
+00:13:58,430 --> 00:14:01,200
+antes mesmo do nosso código de produção.
+
+148
+00:14:01,340 --> 00:14:06,470
+E aí de acordo com o que a gente for evoluir no nosso teste o nosso código eles vão evoluindo em paralelo
+
+149
+00:14:06,470 --> 00:14:08,780
+está evoluindo nosso sistema.
+
+150
+00:14:08,780 --> 00:14:11,480
+O código é o 10 mais evoluído juntos.
+
+151
+00:14:11,600 --> 00:14:18,020
+Para isso eu vou criar um teste usando o conceito de aprende que é a preparação a CT que a ação acerte
+
+152
+00:14:18,080 --> 00:14:21,370
+é a confirmação e aí eu vou fazer esse teste falhar.
+
+153
+00:14:21,500 --> 00:14:26,870
+Depois que ele falhar eu vou alterar alguma coisa para que ele passe.
+
+154
+00:14:26,880 --> 00:14:30,770
+A gente vai ver na prática como é que esse fluxo aqui funciona.
+
+155
+00:14:30,950 --> 00:14:36,410
+E aí depois que ele passar eu vou rir fatorial meu código fonte e depois que eu fator meu pai de uma
+
+156
+00:14:36,410 --> 00:14:38,400
+noite com meu teste vai falhar.
+
+157
+00:14:38,600 --> 00:14:43,670
+E depois que ele falhar eu vou fazer e passar de novo ajustando o meu teste.
+
+158
+00:14:43,670 --> 00:14:50,450
+Aí quando ele chegar a passar de novo significa que ele terminou todo ciclo e ele vai começar que vai
+
+159
+00:14:50,450 --> 00:14:51,460
+falhar.
+
+160
+00:14:51,560 --> 00:14:57,590
+Quer dizer vai começar o teste vai falhar passou e faturou falhou passou de novo.
+
+161
+00:14:57,590 --> 00:15:00,380
+Quando chegar aqui não passar pela segunda vez.
+
+162
+00:15:00,440 --> 00:15:06,540
+Significa que está tudo certo está tudo ok significa a gente pode partir para o próximo caso de teste
+
+163
+00:15:06,560 --> 00:15:09,280
+e isso daqui a gente já conseguiu executar.
+
+164
+00:15:09,320 --> 00:15:11,840
+Já está funcionando certinho.
+
+165
+00:15:11,850 --> 00:15:16,790
+Beleza então essa vai ser a rotina que nós vamos fazer.
