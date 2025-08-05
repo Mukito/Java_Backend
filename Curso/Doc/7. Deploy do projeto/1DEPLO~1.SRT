@@ -1,0 +1,1339 @@
+1
+00:00:02,510 --> 00:00:03,660
+E aí galera.
+
+2
+00:00:03,710 --> 00:00:12,430
+Bom dia tudo bem bom vamos dar continuidade no nosso projeto nós queremos um projeto bem legal.
+
+3
+00:00:12,680 --> 00:00:21,590
+Seguindo alguns padrões aqui usamos o padrão MVC e trabalhamos com controle criamos serviços criamos
+
+4
+00:00:21,590 --> 00:00:29,300
+aqui e depois aprendemos trabalhar com Model aprendemos trabalhar com banco relacional no Jota Piave
+
+5
+00:00:29,300 --> 00:00:31,660
+junto com.
+
+6
+00:00:31,730 --> 00:00:38,230
+Então nossa bem está bem legal também profissional uma API documentada com Java doc.
+
+7
+00:00:38,270 --> 00:00:45,710
+Os métodos bem claro que eles fazem estão todos separados por responsabilidades todos eles devolvendo
+
+8
+00:00:45,710 --> 00:00:52,070
+o status com o de certinho com algumas validações tratamento de erro e está bem legal a nossa PI.
+
+9
+00:00:52,130 --> 00:00:57,590
+Ela pode ser melhorada assim como qualquer aplicação pode ser melhorada mas ela está bem legal então
+
+10
+00:00:57,590 --> 00:01:04,460
+dá pra gente já evoluir e se a gente precisasse colocá lo em produção como é que a gente poderia fazer
+
+11
+00:01:05,000 --> 00:01:09,360
+botar a vera pra utilizar porque por enquanto ela só está em ambiente local.
+
+12
+00:01:09,510 --> 00:01:15,560
+Na nossa máquina mas se eu quisesse publicar ela para eu poder acessar a externa de algum lugar bom
+
+13
+00:01:16,100 --> 00:01:23,840
+eu poderia ter uma máquina na nuvem em algum lugar talvez no Google Cloud no Egito e na WS em algum
+
+14
+00:01:23,840 --> 00:01:32,000
+lugar desse tipo digital o oceano em algum lugar do tipo que criaria lá um drop Lattes irregular e assumiria
+
+15
+00:01:32,000 --> 00:01:32,930
+a aplicação lá.
+
+16
+00:01:32,930 --> 00:01:39,380
+Beleza mas e se eu não quiser ter uma máquina dessa COMPRAR UMA MA alugar uma máquina só para subir
+
+17
+00:01:39,380 --> 00:01:43,640
+minha aplicação o que eu posso fazer para publicar ela.
+
+18
+00:01:43,640 --> 00:01:50,300
+Bom uma forma de publicar em ambiente de teste de forma bem simples até pra apresentação e coisas do
+
+19
+00:01:50,300 --> 00:02:00,970
+tipo você pode usar um carinha muito legal vou abrir uma nova aba aqui porque esse cara que o Scirocco
+
+20
+00:02:02,590 --> 00:02:05,720
+o gerou com Galera é uma plataforma cloud.
+
+21
+00:02:07,670 --> 00:02:11,720
+Está para você subir aplicações o gerou.
+
+22
+00:02:11,740 --> 00:02:18,430
+Galera ele ele basicamente ele é pago.
+
+23
+00:02:18,670 --> 00:02:23,050
+Mas ele tem uma versão free e limitada mais para o que a gente quer fazer.
+
+24
+00:02:23,050 --> 00:02:29,170
+Ele vai funcionar ele permite a gente subir e criar aplicações lá dentro em servidores nos Estados Unidos
+
+25
+00:02:29,170 --> 00:02:36,040
+ou na Europa e acessá los remotamente sem problema algum ele já tem toda a estrutura todo invariavelmente
+
+26
+00:02:36,040 --> 00:02:37,540
+criado para isso.
+
+27
+00:02:37,870 --> 00:02:40,200
+Então nós vamos fazer exatamente isso.
+
+28
+00:02:40,210 --> 00:02:45,370
+Bom eu vou simular aqui como se estivesse criando uma conta para ficar igualzinho você está aí então
+
+29
+00:02:45,370 --> 00:02:52,300
+vou criar uma conta do zero com vocês então vou clicar em Saint Up e vou criar uma conta que vou criar
+
+30
+00:02:52,390 --> 00:03:00,670
+Quioto Ederson Rodrigues Vou escolher um e-mail meu aqui.
+
+31
+00:03:13,230 --> 00:03:21,870
+Vou botar aqui companhia que aqui no blog de tecnologia tecnologia.
+
+32
+00:03:22,530 --> 00:03:26,320
+Vou inventar uma companhia aqui sei lá vai ser W.
+
+33
+00:03:26,440 --> 00:03:36,850
+W R WRC software WRC Software vai semear na empresa.
+
+34
+00:03:36,870 --> 00:03:44,490
+Aí ele pergunta que tipo de administrador você aqui dentro do site se você é um estudante se você está
+
+35
+00:03:44,490 --> 00:03:45,750
+por hobby.
+
+36
+00:03:45,750 --> 00:03:51,600
+Se você é um profissional um desenvolvedor profissional eu vou montar aqui que eu sou um estudante e
+
+37
+00:03:51,600 --> 00:03:57,790
+estou aprendendo conhecendo e de onde você é bom o sul do Brasil.
+
+38
+00:03:57,840 --> 00:04:01,010
+Qual a principal linguagem que você vai usar aqui.
+
+39
+00:04:01,020 --> 00:04:07,440
+Aí galera aqui você pode escolher qual a principal linguagem que tem Rob PHP Python Now de Java quais
+
+40
+00:04:07,440 --> 00:04:15,520
+escala Go eu vou montar Java por que a gente está trabalhando com Java e Java mas sei que depois que
+
+41
+00:04:15,540 --> 00:04:18,440
+você pode mudar quando você estiver criando a sua.
+
+42
+00:04:18,480 --> 00:04:24,620
+Quando você quiser trocar a sua principal linguagem vou dizer que eu não sou um robô.
+
+43
+00:04:24,810 --> 00:04:31,770
+Beleza eu vou mandar criar uma conta ele mandou um e-mail para mim eu vou acessar o meu e-mail aqui
+
+44
+00:04:31,880 --> 00:04:41,070
+numa outra aba aqui para poder validar o que acontece ele manda um e-mail para você e aí você tem que
+
+45
+00:04:41,250 --> 00:04:45,060
+validar na sua caixa de e-mail estou abrindo uma outra aba.
+
+46
+00:04:52,600 --> 00:04:54,190
+Abriu o e-mail de confirmação.
+
+47
+00:04:58,870 --> 00:05:01,730
+Chegou aqui e meios de confirmação.
+
+48
+00:05:01,900 --> 00:05:02,770
+Vou clicar aqui.
+
+49
+00:05:04,780 --> 00:05:05,810
+Beleza.
+
+50
+00:05:05,980 --> 00:05:10,120
+Ele vai pedir para criar uma senha ou criar uma senha que.
+
+51
+00:05:15,230 --> 00:05:19,070
+Essa senha tem que atender esses requisitos aqui.
+
+52
+00:05:19,070 --> 00:05:19,640
+Então vamos lá.
+
+53
+00:05:31,850 --> 00:05:33,230
+Deixou criar para ele.
+
+54
+00:05:47,090 --> 00:05:53,050
+Beleza criou uma senha que vamos ver se vai funcionar.
+
+55
+00:05:53,060 --> 00:05:55,030
+Clique aqui para continuar o processo.
+
+56
+00:05:55,040 --> 00:05:55,840
+Beleza.
+
+57
+00:05:55,850 --> 00:05:58,520
+Vou jogar meu minha caixa de e-mail para outro lado.
+
+58
+00:05:58,520 --> 00:05:59,430
+Beleza.
+
+59
+00:05:59,590 --> 00:06:00,470
+Larguei aqui.
+
+60
+00:06:03,440 --> 00:06:06,730
+Assim que eu faço o acesso à minha conta só clicar aqui.
+
+61
+00:06:06,770 --> 00:06:09,710
+Beleza posso mexer no meu perfil e tudo mais.
+
+62
+00:06:09,710 --> 00:06:17,960
+Ele te joga para seu braço a tela que bom aqui ele vai te fazer algumas perguntas aqui é só você aceitar
+
+63
+00:06:18,930 --> 00:06:22,790
+na mesa para você aceitar a beleza.
+
+64
+00:06:25,520 --> 00:06:28,330
+Aceitou e aí ele te joga pra cá.
+
+65
+00:06:28,340 --> 00:06:30,760
+Bem vindo ao Rio Uruguai.
+
+66
+00:06:30,830 --> 00:06:36,340
+Então aqui você pode criar um time para várias pessoas trabalharem juntos dentro do mesmo projeto.
+
+67
+00:06:36,470 --> 00:06:44,750
+Ou você ou você pode clicar aqui o cliente Nil e eu vou clicar aqui para criar um up então vou criar
+
+68
+00:06:44,750 --> 00:06:45,860
+um novo app.
+
+69
+00:06:46,340 --> 00:06:50,150
+Esse app que eu vou criar vai se chamar teste.
+
+70
+00:06:53,040 --> 00:06:55,780
+Padaria é o nome do nosso projeto.
+
+71
+00:06:55,800 --> 00:07:01,390
+Observação esse nome aqui tem que ser o único válida na hora para você tá beleza.
+
+72
+00:07:01,680 --> 00:07:08,020
+é esse e esse é essa aplicação você quer criar um lanche nos Estados Unidos ou na Europa.
+
+73
+00:07:08,110 --> 00:07:10,650
+Vou deixar os Estados Unidos para o que aqui.
+
+74
+00:07:10,650 --> 00:07:13,920
+O critério para criar um novo EP.
+
+75
+00:07:15,180 --> 00:07:15,860
+Beleza.
+
+76
+00:07:15,870 --> 00:07:16,590
+Bem vindo.
+
+77
+00:07:16,590 --> 00:07:19,260
+Ele criou aqui o meu projeto.
+
+78
+00:07:19,410 --> 00:07:25,830
+Então aqui eu tenho algumas algumas abas aqui eu tenho uma aba de um perfil para entender o que já aconteceu
+
+79
+00:07:25,830 --> 00:07:27,320
+com esse projeto.
+
+80
+00:07:27,390 --> 00:07:33,690
+Bom eu estou na versão gratuita então tem algumas coisas que são limitadas e ainda não tem atividade
+
+81
+00:07:33,690 --> 00:07:34,520
+nenhuma.
+
+82
+00:07:35,730 --> 00:07:38,730
+Não tem o código nenhum.
+
+83
+00:07:38,730 --> 00:07:45,960
+Depois que eu ainda não fiz nenhum depois nós vamos fazer métricas atividades.
+
+84
+00:07:46,950 --> 00:07:56,130
+As atividades minha foi criar conta criar uma nova release que o novo projeto assessoria pessoal desse
+
+85
+00:07:56,130 --> 00:08:00,000
+projeto aqui algumas configurações sobre o meu projeto.
+
+86
+00:08:01,050 --> 00:08:02,220
+Ele gerou para mim.
+
+87
+00:08:02,220 --> 00:08:10,590
+Olha só o Arouca é legal que esse projeto aqui ele gera para você um um repositório lá no que te Ramp
+
+88
+00:08:10,590 --> 00:08:11,530
+do Rio.
+
+89
+00:08:11,640 --> 00:08:13,650
+Olha só que legal.
+
+90
+00:08:13,650 --> 00:08:16,770
+Então se você quiser clonar você consegue clonar.
+
+91
+00:08:16,770 --> 00:08:18,390
+Isso é bem legal.
+
+92
+00:08:18,810 --> 00:08:24,020
+Então nós vão vir aqui depois e vamos entender como é que nós vamos fazer esse depois.
+
+93
+00:08:24,020 --> 00:08:28,230
+Bom nós vamos seguir o passo a passo que está aqui.
+
+94
+00:08:28,240 --> 00:08:32,370
+A gente vai precisar do Gui e do RIR OU SE lá é para poder
+
+95
+00:08:35,220 --> 00:08:36,290
+trabalhar.
+
+96
+00:08:36,300 --> 00:08:37,350
+Ele é bom.
+
+97
+00:08:37,380 --> 00:08:44,200
+A primeira coisa que nós temos que fazer é o seguinte já vou fazer com vocês aqui dentro do projeto.
+
+98
+00:08:44,220 --> 00:08:50,790
+Eu tenho aqui dentro da mente sorte um Application Property que está todas as minhas propriedades certo.
+
+99
+00:08:51,880 --> 00:08:53,130
+Show de bola.
+
+100
+00:08:53,440 --> 00:08:58,600
+Só que esse meu projeto aqui ele está preparado para trabalhar com Jabá 11.
+
+101
+00:09:00,980 --> 00:09:08,630
+Se eu vier aqui ou já vá ose que eu escolhi o Rio louco ele não sabe que isso que tem que trabalhar
+
+102
+00:09:08,630 --> 00:09:09,400
+com Java.
+
+103
+00:09:09,500 --> 00:09:15,410
+Então eu tenho que dizer pra ele que tem que trabalhar com Java então aqui na raiz do meu projeto aonde
+
+104
+00:09:15,410 --> 00:09:22,310
+tiver o pão eu vou criar um novo arquivo que eu vou chamar de application ponto pró aperte.
+
+105
+00:09:26,720 --> 00:09:32,270
+Application Property é aí na verdade eu não vou nem chamar de application.
+
+106
+00:09:32,270 --> 00:09:38,940
+Eu vou chamar de System porque vai ser do Sistema System ponto Property.
+
+107
+00:09:39,110 --> 00:09:47,840
+Vou criar o System ponto Properties que eu vou fazer aqui dentro vai ser propriedades do sistema eu
+
+108
+00:09:47,840 --> 00:09:56,180
+quero que o pároco leia esse arquivo que quando ele for Bill dá lá e que dentro vou botar uma configuração
+
+109
+00:09:56,180 --> 00:09:57,860
+assim Java.
+
+110
+00:09:57,890 --> 00:10:01,840
+Ponto a Ponto.
+
+111
+00:10:01,940 --> 00:10:05,810
+Versão igual a 11.
+
+112
+00:10:08,740 --> 00:10:09,520
+Acho que estou fazendo.
+
+113
+00:10:12,700 --> 00:10:24,380
+A configuração para o Shirokov conseguir fazer o fazer depois
+
+114
+00:10:27,380 --> 00:10:42,900
+na versão 11 do Java JD na versão 11 na versão do a versão J DK 11 que é a que a gente está trabalhando.
+
+115
+00:10:43,040 --> 00:10:49,460
+Beleza então essa configuração aqui nós vamos colocar para que o jogo consiga fazer isso.
+
+116
+00:10:49,460 --> 00:10:54,740
+Bom eu gosto de deixar assim juntinho eu não gosto de deixar separado não beleza.
+
+117
+00:10:54,740 --> 00:10:57,550
+Criei isso aqui e agora nada de novo.
+
+118
+00:10:57,600 --> 00:10:59,080
+Está tudo bonito.
+
+119
+00:10:59,960 --> 00:11:05,390
+Só isso por enquanto vou minimizar vou voltar para cá e aqui ele vai explicar o que você tem que fazer.
+
+120
+00:11:05,390 --> 00:11:07,800
+Olha só para você fazer um plano heróico.
+
+121
+00:11:07,820 --> 00:11:14,450
+A primeira coisa você tem que baixar esse cara que virou se ali o que eu gerou se virou oxi a LAI é
+
+122
+00:11:14,450 --> 00:11:21,710
+uma ferramenta de linha de comando para você poder da perdição do RIR ou trabalhar na sua máquina junto
+
+123
+00:11:21,710 --> 00:11:29,010
+com o glitch é ele que vai fazer a magia de mandar o teu código lá por pouco.
+
+124
+00:11:29,120 --> 00:11:34,100
+Então você tem que estar lá esse cara você pode estar lá ele de várias formas.
+
+125
+00:11:34,220 --> 00:11:40,760
+Uma das formas se você estiver usando o Windows é só você fazer baixar o instalador e avançar avançar
+
+126
+00:11:40,760 --> 00:11:42,680
+avançar avançar não tem nada demais.
+
+127
+00:11:42,680 --> 00:11:45,010
+Eu já tinha ele instalado aqui tá.
+
+128
+00:11:45,080 --> 00:11:46,910
+Então é só você baixar aqui.
+
+129
+00:11:47,270 --> 00:11:51,430
+Avançar avançar avançar beleza nada demais.
+
+130
+00:11:54,240 --> 00:12:00,150
+Aliança se você tiver um álbum você pode usar esse cara se você estiver no Mac você pode usar o breu
+
+131
+00:12:01,080 --> 00:12:08,630
+então tem várias formas aqui tem várias formas de você baixar o correr ou se alimentar esse cara aqui.
+
+132
+00:12:08,700 --> 00:12:10,790
+A gente precisa dele.
+
+133
+00:12:10,800 --> 00:12:15,180
+Beleza outra coisa que você precisa ter é ter o Git instalado na sua máquina.
+
+134
+00:12:15,270 --> 00:12:19,460
+Se não tiver o Git o Gui instalado na sua máquina não vai funcionar.
+
+135
+00:12:19,500 --> 00:12:22,860
+Beleza após após você
+
+136
+00:12:25,740 --> 00:12:30,600
+após você está lá o selim faz o seguinte.
+
+137
+00:12:30,600 --> 00:12:35,640
+Depois de instalar o Zelaya aonde que é o início do nosso projeto.
+
+138
+00:12:35,640 --> 00:12:39,750
+E aqui na pasta exemplo certo é que exemplo.
+
+139
+00:12:40,110 --> 00:12:47,190
+Aí ele pede pra você rodar esse comando aqui virou bloguinho ele entra no prompt de comando ele diz
+
+140
+00:12:47,190 --> 00:12:52,440
+que aquele que não está dizendo que não precisa nem ser dentro do teu projeto já não faz ideia do projeto
+
+141
+00:12:52,770 --> 00:12:53,990
+para ficar fácil.
+
+142
+00:12:54,000 --> 00:12:59,470
+Então eu vou ver aqui no terminal e vou rodar vou colocar esse comando que virou o plug in.
+
+143
+00:13:00,120 --> 00:13:04,150
+Eu só consigo fazer o login por conta do celular.
+
+144
+00:13:04,160 --> 00:13:07,110
+Ainda está perguntando você quer fazer o login via browser.
+
+145
+00:13:07,140 --> 00:13:13,600
+Por que ele está me perguntando isso porque ele já entendeu o que eu estou com uma sessão ativa no browser.
+
+146
+00:13:13,710 --> 00:13:22,520
+Se eu apertar qualquer tecla aqui qualquer uma tecla Olha só ele abre uma tela aqui no meu browser e
+
+147
+00:13:22,530 --> 00:13:24,930
+aí eu posso clicar aqui o login.
+
+148
+00:13:24,930 --> 00:13:30,720
+Quando eu clico aqui no browser ele entendeu que eu já estou autenticado aqui em outras abas ele já
+
+149
+00:13:30,720 --> 00:13:34,230
+viu que eu estou autenticado e me autêntico.
+
+150
+00:13:35,130 --> 00:13:37,140
+E aí se eu vier aqui.
+
+151
+00:13:37,140 --> 00:13:40,170
+Olha que legal logado com o Héber.
+
+152
+00:13:40,380 --> 00:13:43,170
+Já pegou a minha seção a minha chave.
+
+153
+00:13:43,230 --> 00:13:44,340
+Olha que maneiro.
+
+154
+00:13:44,340 --> 00:13:48,060
+Já pegou uma sessão e já me deixou logado aqui logado com M.
+
+155
+00:13:48,540 --> 00:13:49,560
+Beleza.
+
+156
+00:13:49,560 --> 00:13:53,180
+Bom estou logado aqui tudo certinho.
+
+157
+00:13:53,310 --> 00:13:56,660
+E aí o que eu vou fazer o que eu vou fazer.
+
+158
+00:13:56,700 --> 00:13:58,470
+Eu vou vir aqui.
+
+159
+00:13:58,500 --> 00:13:59,530
+Cadê o carioca.
+
+160
+00:13:59,970 --> 00:14:02,120
+Cadê o depois da placa.
+
+161
+00:14:02,130 --> 00:14:09,860
+Depois ele pede pra você ir dentro da pasta do teu projeto dá um CD Pra Dentro da página do projeto
+
+162
+00:14:09,870 --> 00:14:12,510
+como eu já estou dentro da página do meu projeto.
+
+163
+00:14:12,910 --> 00:14:19,440
+Eu não preciso dar um CD para lá tá cd pra eu poder ir pra dentro do meu projeto eu vou rodar sob o
+
+164
+00:14:19,440 --> 00:14:27,070
+comando get nicht pra ele poder inicializar o repositório o que para mim de TI NIT ele vai transformar
+
+165
+00:14:27,090 --> 00:14:33,200
+se num projeto Git vai iniciar um repositório que para mim beleza roda o que te NIT.
+
+166
+00:14:33,330 --> 00:14:38,370
+Ele já transformou se em um repositório para mim alguém te já reconheceu aqui.
+
+167
+00:14:38,400 --> 00:14:39,210
+SHOW DE BOLA.
+
+168
+00:14:39,210 --> 00:14:42,060
+Vamos lá continuar a ver o que ele pede para fazer.
+
+169
+00:14:42,060 --> 00:14:46,640
+Bom depois de Dalglish niente ele pede pra você rodar esse comando aqui.
+
+170
+00:14:46,650 --> 00:14:53,340
+O que ele está falou virou Colgate ponto limite dois pontos remonte menos até padaria que ele está querendo
+
+171
+00:14:53,340 --> 00:15:06,000
+dizer ele querendo dizer o seguinte monta pra mim nesse diretório que eu acabei de criar o o meu é o
+
+172
+00:15:06,000 --> 00:15:13,750
+meu projeto de padaria que tá lá no Rio Louco então eu vou vir aqui e vou colar quando eu faço isso
+
+173
+00:15:13,750 --> 00:15:16,150
+daqui o que ele faz.
+
+174
+00:15:16,260 --> 00:15:25,560
+Ele pegou e vinculou todo esse meu código aqui no meu repositório lá no guichê ao lado virou padaria
+
+175
+00:15:26,280 --> 00:15:28,530
+beleza e aqui nada de novo.
+
+176
+00:15:28,650 --> 00:15:34,380
+Aí ele fala o seguinte Agora é só comando o Hobbit para você fazer depois do primeiro voo da United
+
+177
+00:15:35,340 --> 00:15:43,590
+espaço ponto para você adicionar todos os arquivos no seu repositório quite comando Git então vou colocar
+
+178
+00:15:43,590 --> 00:15:44,560
+aqui.
+
+179
+00:15:44,660 --> 00:15:49,520
+Vou dar um vou escrever na mão Kit a DD espaço.
+
+180
+00:15:49,530 --> 00:15:50,490
+Ponto.
+
+181
+00:15:50,490 --> 00:15:57,500
+Ponto significa que ele vai pegar todos os itens por exemplo só deu um kit de status olha só de status.
+
+182
+00:15:57,510 --> 00:16:01,410
+Eu tenho vários arquivos aqui que ainda não foram acionados.
+
+183
+00:16:01,410 --> 00:16:09,270
+Beleza agora eu vou dar um kit espaço a DD e espaço ponto que eu estou fazendo com esse comando eu estou
+
+184
+00:16:09,270 --> 00:16:14,810
+mandando ele adicionar dentro do repositório todos os arquivos o adicionou.
+
+185
+00:16:14,850 --> 00:16:18,000
+Se eu der agora um byte de status de novo.
+
+186
+00:16:18,000 --> 00:16:19,140
+Tá tudo verdinho.
+
+187
+00:16:19,260 --> 00:16:23,140
+Todos os arquivos que ele adicionou tudo verde beleza.
+
+188
+00:16:23,310 --> 00:16:24,170
+Show de bola.
+
+189
+00:16:24,180 --> 00:16:26,840
+Agora o que eu vou fazer agora.
+
+190
+00:16:26,940 --> 00:16:29,800
+Eu vou pegar e vou seguir lá o tutorial dele.
+
+191
+00:16:29,880 --> 00:16:34,770
+Vamos ver que o que ele pede para fazer depois de dar um guincho a ele pede pra você dar um guia comite
+
+192
+00:16:35,220 --> 00:16:42,300
+menos a.m. com um texto qualquer até deixou aqui um exemplo a pedir um texto.
+
+193
+00:16:42,420 --> 00:16:49,920
+Então vamos copiar mover aqui vou colar vou mudar esse texto aqui vou botar aqui o comite é para eu
+
+194
+00:16:49,920 --> 00:16:52,680
+poder como ele vai estar beatle no local.
+
+195
+00:16:53,590 --> 00:17:13,420
+Esses dados então subindo a primeira versão do da nossa atenção e vou dar um ter o Come to come to come
+
+196
+00:17:13,420 --> 00:17:14,580
+to todo mundo.
+
+197
+00:17:14,680 --> 00:17:16,660
+Show de Bola come to local.
+
+198
+00:17:16,720 --> 00:17:22,240
+E agora porque eu preciso fazer agora é preciso mandar tudo o que eu comi tem local para onde lá para
+
+199
+00:17:22,240 --> 00:17:25,870
+o servidor do Rio Louco então eu vou rodar esse comando aqui.
+
+200
+00:17:26,860 --> 00:17:33,400
+Gente post virou com Máster quando rodar esse comando aqui ele vai pegar isso aqui vai mandar lá pro
+
+201
+00:17:33,400 --> 00:17:37,840
+servidor do RIR ou então vou vir aqui e vou colar.
+
+202
+00:17:42,050 --> 00:17:50,620
+Ela está mandando para lá e olha só que legal ele já manda e já vai fazer Bild pra gente tá.
+
+203
+00:17:50,780 --> 00:17:57,140
+Então ele vai enviar pra lá vai fazer Bild ou seja ele vai enviar para o servidor do Rio louco quando
+
+204
+00:17:57,140 --> 00:18:02,670
+chegar lá ele vai entender que há um projeto Java porque é um projeto de Bush.
+
+205
+00:18:02,750 --> 00:18:09,290
+Ele vai Bill o projeto para a gente vai gerar um Jar e vai botar em produção pra gente.
+
+206
+00:18:09,290 --> 00:18:13,170
+Ué mas eu não tenho aquele banco de dados e tudo mais.
+
+207
+00:18:13,170 --> 00:18:15,980
+Bom ele vai tentar criar tudo isso pra você lá.
+
+208
+00:18:18,000 --> 00:18:26,530
+E vai depois o judô com sucesso está fazendo depois do virou beleza.
+
+209
+00:18:26,700 --> 00:18:28,970
+Fez tudo certinho.
+
+210
+00:18:29,010 --> 00:18:40,440
+Ele subiu o meu projeto todo lá e disponibilizou para mim essa peguei nessa porta AQUI https: 2 pontos
+
+211
+00:18:40,450 --> 00:18:43,980
+Ibarra Barra até padaria ponto virou febre pontocom.
+
+212
+00:18:44,490 --> 00:18:49,230
+Ou seja se eu copiar isso daqui é o RL que ele disponibilizou.
+
+213
+00:18:49,560 --> 00:18:55,380
+Aonde que está onde foi feito depois da minha aplicação lá no Rio louco se eu copiar isso daqui é na
+
+214
+00:18:55,380 --> 00:19:01,140
+teoria tentar conectar aqui deve funcionar.
+
+215
+00:19:01,140 --> 00:19:01,800
+Vamos ver.
+
+216
+00:19:06,730 --> 00:19:12,950
+Estou abrindo aqui um Sommer consultar todos os produtos aqui.
+
+217
+00:19:13,000 --> 00:19:18,370
+Vou apagar tudo o que está antes do Barra e vou colar esse caminho que ele me deu.
+
+218
+00:19:19,010 --> 00:19:28,170
+Https: dois pontos Barrabás ateste padaria ponto Rio Uruguai e ponto com que a UE é base.
+
+219
+00:19:28,180 --> 00:19:32,110
+E aí eu quero um dentro da RL base para Barra e Barra produtos.
+
+220
+00:19:32,110 --> 00:19:36,100
+Vou dar um sentido me retornou a Rui vazio.
+
+221
+00:19:36,160 --> 00:19:37,850
+Não tem produtos nenhum lá.
+
+222
+00:19:37,990 --> 00:19:39,110
+Beleza.
+
+223
+00:19:39,430 --> 00:19:40,020
+Tá vendo.
+
+224
+00:19:40,090 --> 00:19:45,960
+Ele criou um banco de dados lá no Rio pra gente olha que maneiro o cara como é que ele criou.
+
+225
+00:19:45,970 --> 00:19:54,090
+Por que o virou o cara inteligente ele viu que seu projeto era Ribeira e dependia e dependia.
+
+226
+00:19:54,100 --> 00:19:58,060
+Olha só deixou esse cara aqui.
+
+227
+00:19:58,240 --> 00:20:07,900
+Ele era um projeto cibernético e dependia de um banco de dados pos rodando nessa porta que com esse
+
+228
+00:20:07,900 --> 00:20:08,260
+nome.
+
+229
+00:20:08,380 --> 00:20:12,870
+O que ele fez ele foi lá e criou lá dentro do Scirocco essa estrutura.
+
+230
+00:20:12,940 --> 00:20:14,250
+Olha que legal.
+
+231
+00:20:14,260 --> 00:20:17,200
+E aí ele já vai deixar tudo pronto para você poder acessar.
+
+232
+00:20:17,200 --> 00:20:19,070
+Olha que maneiro.
+
+233
+00:20:19,120 --> 00:20:27,580
+Então tá que tá aqui o meu não tem produto nenhum vamos achar um produto lá dando Scirocco vou mandar
+
+234
+00:20:27,580 --> 00:20:28,990
+adicionais pão de queijo aqui.
+
+235
+00:20:33,230 --> 00:20:35,950
+A tem que mudar o RL.
+
+236
+00:20:36,050 --> 00:20:43,810
+Vamos mudar e copiar o RL adicionar o coloquei colei.
+
+237
+00:20:43,910 --> 00:20:45,460
+Estou mandando ir lá por giroscópios.
+
+238
+00:20:47,970 --> 00:20:50,180
+Ela cadastrou um pão de queijo lá no Rio Rocco.
+
+239
+00:20:50,190 --> 00:20:53,870
+Olha que legal.
+
+240
+00:20:53,910 --> 00:20:59,180
+Olha que maneiro tem um rei com um produto lá dentro do Rio Louco.
+
+241
+00:20:59,190 --> 00:21:04,680
+Olha que maneiro e eu sou pegar o RL que eu posso mandar pra qualquer um qualquer um de vocês podem
+
+242
+00:21:04,680 --> 00:21:11,100
+acessá la e cadastrar o produto pegar produtos usá ela como exemplo até mesmo por front em desenho de
+
+243
+00:21:11,100 --> 00:21:12,390
+vocês.
+
+244
+00:21:12,390 --> 00:21:18,810
+Beleza então aqui já tem uma API funcionando para que vocês possam brincar à vontade.
+
+245
+00:21:18,960 --> 00:21:20,830
+Ou seja uma bem profissional sozinha.
+
+246
+00:21:20,850 --> 00:21:23,530
+Ah eu preciso mostrar esse projeto pra alguém.
+
+247
+00:21:23,550 --> 00:21:26,190
+Preciso validar a ideia com o cliente.
+
+248
+00:21:26,190 --> 00:21:30,690
+Você pode criar aqui sobe numa pepino Scirocco e você consegue
+
+249
+00:21:33,360 --> 00:21:38,310
+mostrar isso aqui ou deixar que qualquer um consiga acessar isso aqui de qualquer lugar.
+
+250
+00:21:38,310 --> 00:21:41,680
+Beleza o cadastrar e consultar todos já está funcionando.
+
+251
+00:21:41,730 --> 00:21:46,700
+Vamos testar todos vão cadastrar mais um produto aqui para a gente poder testar sei lá.
+
+252
+00:21:46,770 --> 00:21:51,530
+Sonho de chocolate.
+
+253
+00:21:51,530 --> 00:21:52,860
+O sonho de chocolate.
+
+254
+00:21:54,660 --> 00:22:01,710
+Cadastrou somente chocolates ou vier buscar todos ou só está funcionando no aeroporto ou copiar o RL
+
+255
+00:22:01,710 --> 00:22:03,030
+base.
+
+256
+00:22:03,030 --> 00:22:06,550
+Vou botar no não consultar por aí dia.
+
+257
+00:22:07,650 --> 00:22:14,030
+Vou mandar buscar o produto 8 tem que me devolver um 404 Not Found a produto deu 8 não encontrado mas
+
+258
+00:22:14,040 --> 00:22:17,280
+vou botar o produto de uma transação o pão de queijo.
+
+259
+00:22:17,490 --> 00:22:21,560
+Se eu botar o produto D2 tem que trazer o sonho de chocolate.
+
+260
+00:22:21,780 --> 00:22:25,450
+Trouxe perfeitamente o show de bola.
+
+261
+00:22:25,530 --> 00:22:29,060
+Agora a gente já testou esse texto esse.
+
+262
+00:22:29,070 --> 00:22:31,410
+Vamos testar atualizar ou atualizar.
+
+263
+00:22:31,410 --> 00:22:39,920
+A gente pega cola aqui ao RL vamos pegar quem vamos atualizar o pão de queijo atualizar o pão de queijo
+
+264
+00:22:40,560 --> 00:22:42,710
+atualizar ou botar aqui.
+
+265
+00:22:42,730 --> 00:22:52,140
+Ele deu um aqui em cima daqui é que eu vou botar o seguinte eu vou dizer que eu quero um.
+
+266
+00:22:55,320 --> 00:23:00,850
+Até uma vírgula que eu quero um pão de queijo pão de queijo de minas.
+
+267
+00:23:00,860 --> 00:23:04,310
+Olha só vou mudar só só o nome aqui.
+
+268
+00:23:04,440 --> 00:23:06,830
+O objetivo é só a gente testar o.
+
+269
+00:23:08,440 --> 00:23:10,030
+Lá funcionou.
+
+270
+00:23:10,030 --> 00:23:14,040
+Se eu vir aqui no CONSULTAR TODOS TEM QUE TRAZER pão de queijo de minas.
+
+271
+00:23:14,110 --> 00:23:16,180
+Perfeito tudo certinho.
+
+272
+00:23:16,180 --> 00:23:22,470
+Então quem está por aí de consultar todos atualizar e cadastrar está funcionando.
+
+273
+00:23:22,480 --> 00:23:23,980
+E AGORA VAMOS TESTAR QUEM.
+
+274
+00:23:24,010 --> 00:23:29,300
+Vamos testar o deletar vou cadastrar de novo sonho de chocolate aqui duplicado.
+
+275
+00:23:29,350 --> 00:23:31,890
+Que agora eu vou ter duplicado.
+
+276
+00:23:31,990 --> 00:23:39,690
+Beleza eu quero deletar o ID 3o calções chocolate duplicado de 3 Vou deletar.
+
+277
+00:23:39,730 --> 00:23:46,840
+Então eu vou vir aqui com a peça O RL vou vir aqui no deletado substituir o que estava ao RL local Nossa
+
+278
+00:23:48,100 --> 00:23:55,180
+vou mandar deletar o ID 8 não tem nada que dê 8 para deletar vamos deletar o D3 e o que eu quero.
+
+279
+00:23:57,150 --> 00:23:57,320
+Ela.
+
+280
+00:23:59,290 --> 00:23:59,950
+Perfeito.
+
+281
+00:24:01,010 --> 00:24:10,520
+204 no contest deletou se eu vier aqui consultar todos não pode ter mais de três só aí D1 e D2.
+
+282
+00:24:10,700 --> 00:24:16,720
+E assim a gente publicou uma versão lá no Rio Uruguai seguindo esse passo a passo aqui.
+
+283
+00:24:16,790 --> 00:24:23,180
+Bem fácil bem tranquilo se eu vier aqui em atividades olha só agora eu consigo ver exatamente tudo o
+
+284
+00:24:23,180 --> 00:24:24,200
+que aconteceu.
+
+285
+00:24:24,220 --> 00:24:26,970
+Tá vendo Bild com sucesso.
+
+286
+00:24:26,990 --> 00:24:35,900
+Olha aqui abaixando criou uma base de dados o italiano fez uma referência à data base de dados o RL
+
+287
+00:24:35,900 --> 00:24:40,670
+a porque a gente criou uma base de dados lá não virou porque o nosso projeto precisava de uma base de
+
+288
+00:24:40,670 --> 00:24:42,020
+dados.
+
+289
+00:24:42,080 --> 00:24:45,980
+Se eu vier aqui em métrica métrica não chover.
+
+290
+00:24:55,650 --> 00:25:00,110
+Não é aqui mesmo o velho aqui no over viu.
+
+291
+00:25:00,120 --> 00:25:05,310
+Olha só que legal esse aqui em over View ele mostra exatamente o que ele fez aqui.
+
+292
+00:25:05,760 --> 00:25:11,540
+Uma aplicação rodando tudo certinho as atividades.
+
+293
+00:25:11,580 --> 00:25:13,440
+Dá para você criar pai Pilar.
+
+294
+00:25:13,470 --> 00:25:17,950
+Dá para você fazer várias coisas que sorte para você gerar aqui ao.
+
+295
+00:25:19,830 --> 00:25:22,800
+Levantar a aplicação de uma outra porta.
+
+296
+00:25:23,010 --> 00:25:30,060
+Tem muita coisa pronta que beleza e assim a gente subiu uma pessoa que não virou se agora você vir aqui
+
+297
+00:25:30,930 --> 00:25:32,210
+embaixo Board.
+
+298
+00:25:32,340 --> 00:25:39,420
+Agora você na sua página principal você tem um projeto Java rodando aqui nos Estados Unidos você pode
+
+299
+00:25:39,420 --> 00:25:43,590
+deixar ele como favorito aqui está e aí você consegue ver.
+
+300
+00:25:43,590 --> 00:25:44,500
+Você pode ter.
+
+301
+00:25:44,520 --> 00:25:49,110
+Acho que na versão gratuita até cinco projetos se eu não me engano por conta.
+
+302
+00:25:49,180 --> 00:25:54,620
+Então como é só pra teste você pode criar uma conta pode subir até cinco projetos.
+
+303
+00:25:54,990 --> 00:26:05,160
+A beleza precisa criar mais um mas eu não quero pagar uma conta Beleza aí você vai lá e é e cria uma
+
+304
+00:26:05,160 --> 00:26:11,770
+nova conta para você para você e para você utilizar o show de bola.
+
+305
+00:26:11,790 --> 00:26:12,510
+Vou fechar aqui.
+
+306
+00:26:14,650 --> 00:26:15,730
+E é isso galera.
+
+307
+00:26:15,730 --> 00:26:19,490
+Vou sair aqui da minha conta sair da minha conta.
+
+308
+00:26:19,540 --> 00:26:23,790
+Estou aqui no Rio Louco paga com login.
+
+309
+00:26:23,920 --> 00:26:28,520
+Beleza estou aqui na tela de login tudo certinho tudo bonito.
+
+310
+00:26:28,520 --> 00:26:34,230
+Então o Scirocco é uma alternativa para vocês fazerem depois da aplicação de vocês.
+
+311
+00:26:34,340 --> 00:26:43,290
+Então aqui a gente finaliza a nossa disciplina que nós no que nós aprendemos nessa disciplina nós aprendemos
+
+312
+00:26:43,300 --> 00:26:50,920
+o que é um conceito de HTTP que é reconhecer Response entendemos qual a estrutura de um back end entendemos
+
+313
+00:26:50,920 --> 00:26:56,350
+o que é um back end como Open o que é um bem como serviço aprendemos a criar uma API entendemos que
+
+314
+00:26:56,350 --> 00:27:05,830
+é o conceito de reis aprendemos alguns verbos HTTP aprendemos criar um grude criamos uma API rege toda
+
+315
+00:27:06,250 --> 00:27:14,590
+toda certinha toda toda bem componente usada toda certinha se comunicando conectando uma lista em memória
+
+316
+00:27:14,590 --> 00:27:18,820
+para a gente aprender a trabalhar com lista isso poderia se encaixe alguma coisa do tipo.
+
+317
+00:27:18,850 --> 00:27:24,400
+Depois pegamos essa PI e comunicamos ela com o banco de dados por não entendemos como é que funciona
+
+318
+00:27:24,400 --> 00:27:30,580
+o banco de dados por isso comunicamos com ele depois que nós se comunicamos com ele que estava tudo
+
+319
+00:27:30,580 --> 00:27:36,880
+funcionando nós melhoramos um pouco nossa B.I. começamos a trabalhar com detetor que são objetos de
+
+320
+00:27:36,880 --> 00:27:44,010
+transferência de dados e aí além de deter nós começamos a trabalhar também com o o MEP.
+
+321
+00:27:44,030 --> 00:27:52,480
+Nós começamos a usar uma biblioteca para fazer parte dos nossos objetos e aí a gente criou um apelido
+
+322
+00:27:52,480 --> 00:27:57,200
+bem completo tinha e subimos ela fizemos depois lá no servidor.
+
+323
+00:27:57,200 --> 00:28:00,860
+Bom é só isso que existe na programação não aqui.
+
+324
+00:28:00,880 --> 00:28:04,750
+A gente conseguiu aprender muita coisa muita coisa mesmo.
+
+325
+00:28:04,750 --> 00:28:09,610
+Então minha dica para vocês é que vocês continuem estudando vocês continuem evoluindo.
+
+326
+00:28:09,610 --> 00:28:16,840
+Algumas coisas que nós não falamos aqui como se sueca é que é para trabalhar com documentação de API.
+
+327
+00:28:16,870 --> 00:28:21,890
+Nós não falamos sobre autenticação autorização e autenticação.
+
+328
+00:28:21,970 --> 00:28:26,110
+Então dá para a gente trabalhar com autorização e autenticação principalmente que Java a gente pode
+
+329
+00:28:26,110 --> 00:28:31,750
+usar o JWT então tem bastante coisa interessante trabalhar com o micro serviços.
+
+330
+00:28:31,820 --> 00:28:34,840
+Daria pra gente usar o Eureka serve o zoom.
+
+331
+00:28:35,650 --> 00:28:41,770
+Então tem muita coisa ainda para vocês estudarem mais aqui já é mais do que um grande começo aqui uma
+
+332
+00:28:41,770 --> 00:28:48,030
+API de ponta a ponta profissional criada para que vocês tenham de exemplos Veneza GALERA.
+
+333
+00:28:48,070 --> 00:28:53,110
+Muito obrigada pela atenção de vocês até esse exato momento.
+
+334
+00:28:53,200 --> 00:28:54,720
+E a gente se vê na próxima.
+
+335
+00:28:54,730 --> 00:28:55,330
+Um abraço.
