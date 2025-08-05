@@ -1,0 +1,659 @@
+1
+00:00:02,910 --> 00:00:10,500
+Galera agora é que nós criamos aqui o nosso repositório ali tá todo certinho nós temos a seguinte estrutura
+
+2
+00:00:12,450 --> 00:00:19,890
+nós temos aqui dentro da nossa parte nós temos as faixas Controller Mode o repositório Service e nós
+
+3
+00:00:19,890 --> 00:00:27,600
+temos um modelo de produto que está aqui criado certinho bonitinho e nós já temos o nosso repositório
+
+4
+00:00:27,600 --> 00:00:30,660
+com todas as opções para fazer um crude.
+
+5
+00:00:31,230 --> 00:00:40,530
+Tudo bonitinho beleza após criado isso vamos por nosso planejamento que eu preciso fazer o repositório
+
+6
+00:00:40,710 --> 00:00:42,430
+quem é que vai usar o repositório.
+
+7
+00:00:42,450 --> 00:00:45,030
+Quem vai usar o repositório o serviço.
+
+8
+00:00:45,090 --> 00:00:49,170
+Então eu vou criar um serviço de produto.
+
+9
+00:00:51,690 --> 00:00:55,150
+Vamos lá o que esses serviços de produto precisa ter cara.
+
+10
+00:00:55,260 --> 00:00:58,960
+Ele precisa ter as mesmas coisas que o repositório.
+
+11
+00:00:59,010 --> 00:00:59,700
+Por quê.
+
+12
+00:00:59,790 --> 00:01:01,390
+O meu serviço de produto.
+
+13
+00:01:01,470 --> 00:01:08,580
+Ele vai fazer exatamente o que pedi para o repositório resolver essas questões pra gente então ele também
+
+14
+00:01:08,580 --> 00:01:15,350
+tem que ter essas mesmas opções tanto obter todos obter por aí dia adicionar atualizar e deletar.
+
+15
+00:01:15,360 --> 00:01:20,520
+A diferença é que ele pode ter regra de negócio ou não tá.
+
+16
+00:01:20,520 --> 00:01:28,620
+Então vamos criar o nosso serviço então aqui dentro de serviços nós vamos criar um novo arquivo chamado
+
+17
+00:01:29,490 --> 00:01:35,100
+produto CRC Ponte Java.
+
+18
+00:01:35,490 --> 00:01:44,010
+Criei aqui da mesma forma que nós fizemos no repositório anotando aqui botamos uma anotação para a gente
+
+19
+00:01:44,010 --> 00:01:50,160
+trabalhar com injeção de dependência em versão de controle junto com o Spring no serviço vamos fazer
+
+20
+00:01:50,160 --> 00:01:54,630
+a mesma coisa vamos adicionar que a arroba serve.
+
+21
+00:01:55,020 --> 00:02:01,050
+Quando a gente coloca a acesso a gente está dizendo para o Spring que isso aqui é uma classe de serviço
+
+22
+00:02:01,380 --> 00:02:07,140
+e aqui a gente está injetando essa dependência para dentro dos Pringles que por sua vez quando eu precisar
+
+23
+00:02:07,440 --> 00:02:13,000
+o Spring vai me devolver isso através de um controle através da inversão de controle.
+
+24
+00:02:13,020 --> 00:02:15,570
+Ele vai me dar o acesso a esse serviço.
+
+25
+00:02:15,630 --> 00:02:18,590
+Isso vai ficar muito claro a partir de agora.
+
+26
+00:02:18,660 --> 00:02:21,250
+Por que o meu produto serve.
+
+27
+00:02:21,300 --> 00:02:25,710
+Ele depende de quem ele depende de um repositório.
+
+28
+00:02:25,710 --> 00:02:36,360
+Se a gente vier vier aqui se não vier nós aqui nós criamos o repositório e nós precisamos que agora
+
+29
+00:02:36,360 --> 00:02:43,040
+nós vamos criar o serviço e aí o meu serviço depende desse cara aqui.
+
+30
+00:02:43,080 --> 00:02:44,880
+Então como é que nós vamos fazer.
+
+31
+00:02:44,910 --> 00:02:52,860
+Nós vamos vir aqui e vamos dizer que o meu produto serviço vai depender do repositório séries e a gente
+
+32
+00:02:52,860 --> 00:02:54,640
+vai pedir isso pra dentro do shopping.
+
+33
+00:02:54,660 --> 00:03:01,670
+Então vou criar uma propriedade privada aqui Private que eu vou chamar de produto.
+
+34
+00:03:01,740 --> 00:03:08,220
+Vai ser um produto repositório desculpa o produto repositório que eu vou chamar de repositório
+
+35
+00:03:10,530 --> 00:03:12,220
+repositório.
+
+36
+00:03:12,390 --> 00:03:14,250
+Não vou chamar de produto repositório.
+
+37
+00:03:15,850 --> 00:03:16,840
+O produto.
+
+38
+00:03:18,610 --> 00:03:29,600
+Repositor de produto ou repositor é isso que eu dou criando uma propriedade e um atributo privado.
+
+39
+00:03:29,830 --> 00:03:35,710
+Só que esse cara aqui eu vou precisar aqui dentro teria que distanciar e gerar uma instância desse cara
+
+40
+00:03:36,100 --> 00:03:44,710
+mas como nós já temos essa responsabilidade para o Spring a gente só vai pedir para os Pringles e assistência
+
+41
+00:03:44,710 --> 00:03:52,060
+pronta e nos Spring Bush é muito fácil fazer isso é só possível fazer a arroba e botar essa anotação
+
+42
+00:03:52,060 --> 00:03:52,460
+aqui.
+
+43
+00:03:54,130 --> 00:04:00,780
+Alto o ar ante o alto o ar de significa que você está invertendo o controle.
+
+44
+00:04:00,800 --> 00:04:08,800
+Aqui você injetou a dependência você falou assim e Spring toma conta pra mim desse repositório toma
+
+45
+00:04:08,800 --> 00:04:14,090
+conta pra mim desse repositório e aqui você está falando assim é Spring.
+
+46
+00:04:14,180 --> 00:04:22,780
+Deixe que agora eu tomo conta automaticamente quando chegar nessa linha que o Spring vai te devolver
+
+47
+00:04:22,780 --> 00:04:28,510
+uma estância pronta do produto repositório para você usar sem você precisar instancia.
+
+48
+00:04:28,510 --> 00:04:29,980
+Olha que legal.
+
+49
+00:04:29,980 --> 00:04:35,020
+Isso é muito legal eu Unger tem a dependência aqui para dentro do Spring.
+
+50
+00:04:35,020 --> 00:04:39,910
+E agora eu posso usá lo aqui pedindo pra ele me devolver o controle dela tá.
+
+51
+00:04:39,910 --> 00:04:47,920
+Então essa anotação aqui é muito útil e aqui dentro Galera nós vamos ter os mesmos métodos que nós tínhamos
+
+52
+00:04:47,920 --> 00:04:51,070
+ao menos no nosso repositório.
+
+53
+00:04:51,070 --> 00:04:58,690
+Vamos criar primeiro obter todos então vamos lá publicar vai devolver um Liste.
+
+54
+00:05:00,840 --> 00:05:12,600
+De produto que eu vou chamar de obter todos vou dar um contra ponto aqui para importar Halliche contra
+
+55
+00:05:12,600 --> 00:05:15,210
+o ponto para importar o produto.
+
+56
+00:05:15,210 --> 00:05:17,090
+Tá tudo importado aqui em cima.
+
+57
+00:05:17,100 --> 00:05:23,850
+Tudo bonitinho beleza e aí agora eu preciso retornar uma lista de produtos e responsabilidade do serviço
+
+58
+00:05:23,850 --> 00:05:24,450
+fazer isso.
+
+59
+00:05:24,480 --> 00:05:28,640
+Não ele vai pedir para quem é de direito quem é que sabe fazer isso.
+
+60
+00:05:28,680 --> 00:05:37,020
+O repositório então eu vou fazer assim retorna pra mim produto repositório busca para mim.
+
+61
+00:05:37,110 --> 00:05:38,790
+A lista de produtos.
+
+62
+00:05:38,790 --> 00:05:40,100
+Simples assim.
+
+63
+00:05:40,170 --> 00:05:46,440
+O serviço vai pedir para o repositório devolver a lista de produtos e aí do jeito que ele me devolver
+
+64
+00:05:46,770 --> 00:05:50,160
+eu devolvo para quem tiver chamando o obter todos.
+
+65
+00:05:50,340 --> 00:05:52,710
+Está pronto.
+
+66
+00:05:52,740 --> 00:05:57,640
+Aí se eu quiser comentar esse cara que também usou no jabá.
+
+67
+00:05:57,660 --> 00:06:02,700
+Eu também posso método para aí.
+
+68
+00:06:02,740 --> 00:06:07,450
+Assim esse esse comentário aqui é praticamente igual a esse daqui.
+
+69
+00:06:07,470 --> 00:06:13,700
+Então se você quiser pegar daqui copiar e colocar aqui você também pode fazer.
+
+70
+00:06:13,770 --> 00:06:17,140
+Por que eles vão fazer a mesma coisa.
+
+71
+00:06:17,550 --> 00:06:27,240
+é muito legal meu obter todos está pronto o meu serviço que tem um método obter todos vai pedir para
+
+72
+00:06:27,240 --> 00:06:29,130
+o repositório obter todo mundo.
+
+73
+00:06:29,220 --> 00:06:30,950
+Ele vai obter e eu vou retornar.
+
+74
+00:06:30,960 --> 00:06:31,870
+Simples assim.
+
+75
+00:06:31,890 --> 00:06:32,970
+Olha como é que ficou fácil.
+
+76
+00:06:32,970 --> 00:06:33,840
+Por quê.
+
+77
+00:06:33,840 --> 00:06:36,970
+Porque para obter todo mundo não tem nenhuma regra de negócio.
+
+78
+00:06:37,000 --> 00:06:40,380
+Ah não mas se eu tivesse uma regra aí eu colocaria a regra aqui.
+
+79
+00:06:45,270 --> 00:06:52,080
+Colocar a regra que caso tenha beleza então a gente poderia fazer algo desse tipo nesse sentido mas
+
+80
+00:06:52,080 --> 00:06:56,760
+obter todos não tem regra de uma tia não está trabalhando com autenticação com nada então vai ficar
+
+81
+00:06:56,760 --> 00:06:57,970
+dessa forma.
+
+82
+00:06:58,050 --> 00:07:00,420
+Vamos agora criar o obter por dia.
+
+83
+00:07:00,570 --> 00:07:07,900
+Bom eu posso eu posso até fazer o seguinte obter por aí dia eu posso até copiar esse método aqui.
+
+84
+00:07:07,920 --> 00:07:14,400
+Olha só galera eu posso ter copiado do repositório colar aqui.
+
+85
+00:07:16,310 --> 00:07:21,890
+E aqui dentro eu ronco esse retorno porque é aqui que vai ter a diferença o nome do método vai ser igual.
+
+86
+00:07:21,920 --> 00:07:23,420
+O parâmetro vai ser igual.
+
+87
+00:07:23,450 --> 00:07:26,850
+O retorno vai ser igual só que dentro que vai mudar.
+
+88
+00:07:26,870 --> 00:07:32,480
+Então vou dar um contra o ponto que vou importar óptimo.
+
+89
+00:07:33,020 --> 00:07:34,620
+E aqui dentro vai mudar por quê.
+
+90
+00:07:34,620 --> 00:07:40,970
+Porque aqui dentro eu vou pedir para o repositório retorne produto repositório ponto obter por onde
+
+91
+00:07:41,370 --> 00:07:49,340
+o passando passando que o ADI que eu acabei de receber é automaticamente o que é que ele vai fazer vai
+
+92
+00:07:49,340 --> 00:07:49,790
+filtrar
+
+93
+00:07:54,350 --> 00:07:56,440
+tudo bonitinho aqui.
+
+94
+00:07:56,630 --> 00:08:06,110
+Eu poderia aqui eu poderia testar esse site realmente existe ou não para a que eu poderia fazer um iF
+
+95
+00:08:06,110 --> 00:08:10,940
+aqui e verificar se se a ID for vazio ou Nuno qualquer coisa do tipo.
+
+96
+00:08:11,150 --> 00:08:17,260
+Aí eu lançaria uma exceção mas eu não vou fazer nada disso agora por enquanto.
+
+97
+00:08:17,260 --> 00:08:24,900
+Então vou precisar de um método que adicionar eu vou copiar esse método ao dicionário inteiro.
+
+98
+00:08:24,920 --> 00:08:29,600
+Por que o nome do método dos parâmetros é tudo igual.
+
+99
+00:08:29,600 --> 00:08:32,720
+O que eu vou precisar no serviço que vai mudar só a implementação.
+
+100
+00:08:32,720 --> 00:08:36,020
+O que tem dentro o copinho para ganhar tempo.
+
+101
+00:08:36,530 --> 00:08:38,140
+Coloque a.
+
+102
+00:08:40,010 --> 00:08:43,760
+E vem aqui dentro e vou mudar a implementação.
+
+103
+00:08:43,760 --> 00:08:54,800
+O adicionar galera cara é simplesmente fazer a turnê produto repositório ponto adicionar passando o
+
+104
+00:08:54,800 --> 00:08:58,700
+produto simplesmente ele vai saber adicionar e já vai me devolver.
+
+105
+00:08:58,970 --> 00:09:05,050
+Perceba que eu devolvo um produto que vou adicionar também devolva o produto por que é o mesmo método.
+
+106
+00:09:05,120 --> 00:09:16,130
+Só tem implementação diferente e aquilo a adicionar poderia ter alguma regra de negócio aqui.
+
+107
+00:09:16,130 --> 00:09:22,720
+Para validar o produto tipo assim aqui eu poderia ter alguma coisa para fazer.
+
+108
+00:09:23,300 --> 00:09:29,690
+Só pode cadastrar o produto com quantidade positiva não posso deixar produto Quantidade negativa só
+
+109
+00:09:29,690 --> 00:09:33,680
+posso cadastrar produto que tem um valor acima de zero.
+
+110
+00:09:33,770 --> 00:09:36,260
+Não posso cadastrar produto com valor negativo.
+
+111
+00:09:36,360 --> 00:09:39,890
+Estar aqui obrigatório passar o nome do produto.
+
+112
+00:09:39,890 --> 00:09:44,570
+Então aqui eu poderia botar várias regras vou deixar esse comentário aqui para a gente colocar depois
+
+113
+00:09:44,570 --> 00:09:47,150
+algumas regras aqui.
+
+114
+00:09:48,080 --> 00:09:51,440
+Mas o meu método adicionar está pronto.
+
+115
+00:09:51,440 --> 00:09:52,520
+Beleza.
+
+116
+00:09:52,670 --> 00:09:53,900
+Show de bola.
+
+117
+00:09:54,050 --> 00:10:01,070
+Então vamos agora criar o que o deletar copia o mesmo método porque vai ser praticamente igual venho
+
+118
+00:10:01,070 --> 00:10:06,680
+no meu serviço e coloque a coleira.
+
+119
+00:10:07,310 --> 00:10:09,910
+Colei aqui o meu método.
+
+120
+00:10:11,720 --> 00:10:16,100
+O que vai mudar é que o deletar.
+
+121
+00:10:16,100 --> 00:10:18,080
+Galera ele não retorna nada.
+
+122
+00:10:18,080 --> 00:10:20,480
+Ele pode então o que eu vou fazer.
+
+123
+00:10:20,510 --> 00:10:26,600
+Produto repositório deleta para mim quem tem tem esse aí e diz que só isso.
+
+124
+00:10:26,660 --> 00:10:32,990
+Olha lá que legal o meu deletar no meu serviço está pronto.
+
+125
+00:10:32,990 --> 00:10:34,180
+Olha que legal.
+
+126
+00:10:34,210 --> 00:10:46,550
+Ah eu poderia ter alguma lógica aqui aqui poderia ter alguma alguma lógica de validação que eu poderia
+
+127
+00:10:46,550 --> 00:10:49,390
+ter alguma lógica de validação antes de deletar.
+
+128
+00:10:49,490 --> 00:10:54,320
+Verificar se o usuário tem permissão para deletar verificar outras coisas.
+
+129
+00:10:55,190 --> 00:11:00,230
+Mas como o nosso exemplo é bem simples bem prático somente didático a gente não vai fazer validação
+
+130
+00:11:00,230 --> 00:11:04,090
+nenhuma e por fim o atualizar.
+
+131
+00:11:04,280 --> 00:11:07,560
+Então vou copiar o método atualizar inteiro aqui.
+
+132
+00:11:08,840 --> 00:11:10,780
+Copiei.
+
+133
+00:11:10,850 --> 00:11:13,450
+Vou vir aqui no produto serviço.
+
+134
+00:11:13,760 --> 00:11:15,060
+Vou colar.
+
+135
+00:11:15,230 --> 00:11:18,670
+Vou arrancar a implementação inteira.
+
+136
+00:11:19,640 --> 00:11:20,800
+E aqui galera.
+
+137
+00:11:20,840 --> 00:11:29,900
+Nós vamos fazer o seguinte Aqui vai ser diferente aqui o atualizar vocês ele não vai receber só o produto
+
+138
+00:11:30,320 --> 00:11:35,620
+ele vai receber o produto e vai receber o Inter que vai ser o id.
+
+139
+00:11:35,690 --> 00:11:43,160
+Eu vou explicar o porquê ele vai receber o ID de separado do produto e aí aqui dentro eu vou fazer o
+
+140
+00:11:43,160 --> 00:11:45,050
+seguinte eu vou chegar.
+
+141
+00:11:45,500 --> 00:11:50,030
+Vou botar produto ponto 7.
+
+142
+00:11:50,100 --> 00:11:57,900
+Ai de receber Said aí aqui que eu vou passar o ID pra dentro do produto e aqui eu poderia ter alguma
+
+143
+00:11:57,900 --> 00:11:58,550
+avaliação.
+
+144
+00:12:03,590 --> 00:12:06,500
+Tem alguma variação no ar e de beleza.
+
+145
+00:12:06,860 --> 00:12:10,760
+Eu passo a ir para dentro do produto e aí sim.
+
+146
+00:12:10,760 --> 00:12:22,250
+Agora eu venho aqui e faço que retorne produto repositório ponto a atualizar passando o produto que
+
+147
+00:12:22,250 --> 00:12:26,740
+está vendo como parâmetro o que eu estou fazendo.
+
+148
+00:12:26,810 --> 00:12:30,900
+Eu estou indo lá no meu repositório estou mandando ATUALIZAR ISSO AQUI.
+
+149
+00:12:30,920 --> 00:12:39,230
+Eu botei separado porque na requisição de um método para atualizar o id não vem no corpo do produto.
+
+150
+00:12:39,320 --> 00:12:44,840
+Ele bem separado então o controle vai passar para dentro do serviço separado mas vamos entender como
+
+151
+00:12:44,840 --> 00:12:46,460
+é que funciona a.
+
+152
+00:12:49,060 --> 00:12:52,730
+Salvei então meu método atualizar também está pronto.
+
+153
+00:12:52,750 --> 00:13:03,730
+Então eu tenho o atualizar o deletar ou adicionar ou obter por aí e obter todos pois o professor sempre
+
+154
+00:13:03,730 --> 00:13:05,790
+vai ter só esses métodos.
+
+155
+00:13:05,800 --> 00:13:12,250
+Não eu posso ter quantos métodos eu quiser e quais métodos eu poderia ter n métodos esses métodos que
+
+156
+00:13:12,250 --> 00:13:18,220
+eu estou criando com vocês são os mais comuns são métodos de crude que praticamente toda a entidade
+
+157
+00:13:18,220 --> 00:13:26,950
+tem praticamente toda a entidade Eu Posso cadastrar n que é o adicionar posso atualizar posso deletar
+
+158
+00:13:27,400 --> 00:13:31,930
+posso obter ela sozinha e posso obter uma lista dela.
+
+159
+00:13:32,320 --> 00:13:38,670
+Então esses métodos aqui são os métodos mais comuns os que mais vocês vão utilizar no dia a dia.
+
+160
+00:13:39,010 --> 00:13:42,750
+Então eu posso obter todo mundo possa obter por aí.
+
+161
+00:13:43,240 --> 00:13:50,500
+Posso adicionar posso deletar posso atualizar e assim sucessivamente.
+
+162
+00:13:50,530 --> 00:13:59,130
+Beleza então o meu produto serviço está pronto então posso vir aqui botar um pezinho nele aqui.
+
+163
+00:13:59,170 --> 00:14:00,490
+SHOW DE BOLA.
+
+164
+00:14:00,670 --> 00:14:04,460
+Criei agora o nosso produto serviço.
+
+165
+00:14:04,480 --> 00:14:09,120
+Agora nós vamos precisar criar o nosso controle.

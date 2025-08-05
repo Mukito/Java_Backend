@@ -1,0 +1,935 @@
+1
+00:00:01,980 --> 00:00:04,910
+E aí galera beleza.
+
+2
+00:00:05,100 --> 00:00:13,920
+Bom nós criamos aqui a nossa a nossa API e assim a gente precisa fazer algumas melhorias nela para deixá
+
+3
+00:00:13,920 --> 00:00:17,170
+la um pouco mais profissional.
+
+4
+00:00:17,400 --> 00:00:22,980
+é uma das coisas que nós vamos aprender hoje a fazer tratamento digno que imagino o seguinte imagina
+
+5
+00:00:23,160 --> 00:00:27,510
+acontece um erro dentro da nossa PI e a gente não trata isso.
+
+6
+00:00:27,570 --> 00:00:35,870
+Isso deveria ser algo muito ruim a gente tentar ver vamos ver aonde que poderia dar um erro que segundo
+
+7
+00:00:35,880 --> 00:00:41,170
+nosso repositório seria quando eu fosse tentar talvez.
+
+8
+00:00:43,750 --> 00:00:49,140
+Atualizar um produto com ideia que não existe aqui ele vai lançar uma exceção ou tentar simular isso
+
+9
+00:00:49,150 --> 00:00:50,340
+daquilo.
+
+10
+00:00:50,420 --> 00:00:52,740
+A API está rodando.
+
+11
+00:00:53,230 --> 00:00:56,900
+Vamos ver aqui como não postar todos.
+
+12
+00:00:57,400 --> 00:00:58,430
+Não tem nada.
+
+13
+00:00:58,450 --> 00:01:01,330
+Aí eu vou fingir que eu quero atualizar um produto.
+
+14
+00:01:01,390 --> 00:01:02,980
+Sonho doce de leite.
+
+15
+00:01:03,040 --> 00:01:05,320
+Estou mandando atualizar assim e dê um.
+
+16
+00:01:07,020 --> 00:01:08,900
+O gestor um erro.
+
+17
+00:01:09,240 --> 00:01:09,660
+Tá vendo.
+
+18
+00:01:10,920 --> 00:01:17,020
+Quinhentos interna serve um erro aqui gritante aqui pra gente.
+
+19
+00:01:17,620 --> 00:01:21,330
+E aí ele mostrou aqui um time com status.
+
+20
+00:01:22,490 --> 00:01:23,870
+Tipo de erro.
+
+21
+00:01:23,870 --> 00:01:24,890
+3.
+
+22
+00:01:26,540 --> 00:01:29,530
+é erro gigante lá embaixo tem a mensagem.
+
+23
+00:01:29,660 --> 00:01:31,900
+Produto não encontrado.
+
+24
+00:01:32,120 --> 00:01:39,450
+Esse aqui é um padrão de erro comum dos Spring quando acontece qualquer erro dentro da tua aplicação.
+
+25
+00:01:40,220 --> 00:01:43,630
+Só que muita das vezes a gente quer personalizar esses erros.
+
+26
+00:01:43,820 --> 00:01:49,580
+A gente quer poder personalizar para que vem uma mensagem mais bonitinha não vem essa de que tudo também
+
+27
+00:01:49,620 --> 00:01:55,610
+não traz aqui um monte de informação que pra pra gente não é importante.
+
+28
+00:01:55,610 --> 00:02:04,280
+Talvez eu queria trazer somente o status e a mensagem pode ser que seja algo interessante que pra gente
+
+29
+00:02:04,940 --> 00:02:07,550
+o PF de onde aconteceu não sei.
+
+30
+00:02:07,550 --> 00:02:15,320
+Então vou tentar criar uma mensagem personalizada para travar esses erros para quando eu fizer algo
+
+31
+00:02:15,320 --> 00:02:21,520
+assim ele não retornar 1 500 assim feioso de retorno algo um pouco mais inteligente.
+
+32
+00:02:21,620 --> 00:02:27,100
+Então beleza primeira coisa que nós vamos fazer é dentro do nosso código.
+
+33
+00:02:27,170 --> 00:02:35,330
+Nós vamos agora brincar um pouquinho nós vamos mudar algumas coisas dentro de motel nós vamos criar
+
+34
+00:02:36,170 --> 00:02:45,970
+uma super pasta que nós vamos criar uma pasta chamada vamos pensar chamada Perception.
+
+35
+00:02:46,310 --> 00:02:47,620
+Isso sem.
+
+36
+00:02:48,870 --> 00:02:54,080
+21 e aqui dentro nós vamos guardar os Decepticons que a gente quiser.
+
+37
+00:02:54,120 --> 00:02:55,590
+Os modelos recebem.
+
+38
+00:02:55,750 --> 00:03:03,540
+Então eu vou criar aqui dentro do SP1 para trabalhar quando alguma coisa não for encontrada.
+
+39
+00:03:03,540 --> 00:03:05,630
+Quando algum código não for encontrado.
+
+40
+00:03:05,630 --> 00:03:08,570
+Então eu vou criar um novo arquivo que.
+
+41
+00:03:09,000 --> 00:03:11,880
+Um padrão que geralmente a gente usa e sei que o Resource.
+
+42
+00:03:14,140 --> 00:03:14,880
+Opa.
+
+43
+00:03:14,890 --> 00:03:15,750
+Besteira.
+
+44
+00:03:15,790 --> 00:03:16,630
+Chego a pagar aqui.
+
+45
+00:03:18,180 --> 00:03:19,260
+Vai criar de novo.
+
+46
+00:03:20,410 --> 00:03:23,480
+Interesse em querer pessoas se.
+
+47
+00:03:25,210 --> 00:03:28,500
+Not Found é céptico.
+
+48
+00:03:31,420 --> 00:03:39,310
+Ponto Java significa dia código não encontrado na cena que vai servir para qualquer coisa que não foi
+
+49
+00:03:39,310 --> 00:03:39,850
+encontrado.
+
+50
+00:03:39,850 --> 00:03:44,170
+Vou lançar um Resource Mode Fault e 7.1.
+
+51
+00:03:44,230 --> 00:03:51,370
+Esse cara aqui nós vamos anotar ele com uma nova anotação chamada Response.
+
+52
+00:03:54,580 --> 00:04:04,460
+E status e eu quero que isso aqui aconteça quando acontecer um código do tipo HTTP e status.
+
+53
+00:04:04,830 --> 00:04:07,870
+Ponto note fraude.
+
+54
+00:04:07,920 --> 00:04:09,690
+Ou seja o código.
+
+55
+00:04:10,820 --> 00:04:17,860
+Dessa que é o Note found ou seja não encontrado tá bom.
+
+56
+00:04:17,930 --> 00:04:25,590
+Beleza e aqui dentro eu vou criar o nosso método dessa classe o método que vai executar essas 7.
+
+57
+00:04:25,610 --> 00:04:30,140
+Então vou criar um público que soasse.
+
+58
+00:04:31,400 --> 00:04:39,440
+Note Fault é certo que por parâmetro vai receber uma string que vai ser a mensagem.
+
+59
+00:04:41,810 --> 00:04:43,430
+E aqui dentro vai ter um super.
+
+60
+00:04:45,950 --> 00:04:49,140
+Que vai passar a sua mensagem por que o Super.
+
+61
+00:04:49,790 --> 00:05:01,550
+Por que nós vamos dizer que esse cara vai herdar vai fazer um estandes de quem tinha um grande time
+
+62
+00:05:02,750 --> 00:05:03,630
+e sete.
+
+63
+00:05:06,380 --> 00:05:16,270
+Na verdade esse cara aqui se ele vai herdar de um grande time séptico e por ele está era dono de um
+
+64
+00:05:16,610 --> 00:05:18,190
+time excepcional.
+
+65
+00:05:18,350 --> 00:05:18,860
+A gente.
+
+66
+00:05:20,130 --> 00:05:26,370
+Vai receber uma mensagem que o usuário vai passar e a gente vai mandar para o Super Pro para arrumar
+
+67
+00:05:26,370 --> 00:05:28,760
+o time lá do construtor do pai.
+
+68
+00:05:28,770 --> 00:05:36,090
+Beleza criamos aqui um Perception global aqui pra gente poder usar pra qualquer coisa que não for encontrado.
+
+69
+00:05:37,090 --> 00:05:45,850
+Beleza criamos e agora vamos criar um modelo de mensagem de erro personalizado e de um modo eu vou criar
+
+70
+00:05:45,850 --> 00:05:47,680
+uma nova pasta aqui que eu vou chamar de.
+
+71
+00:05:48,670 --> 00:05:48,950
+Erro.
+
+72
+00:05:50,210 --> 00:05:52,140
+Error.
+
+73
+00:05:52,550 --> 00:06:02,360
+E dentro dessa pasta que eu vou criar uma nova classe que eu vou chamar de error message ou mensagem
+
+74
+00:06:02,360 --> 00:06:10,280
+de erro ou object Message Object erro qualquer coisa do tipo vou chamar de romances já.
+
+75
+00:06:11,350 --> 00:06:17,950
+Vai ser uma classe que a responsabilidade dela é ter atributos que vai retornar.
+
+76
+00:06:18,980 --> 00:06:26,240
+Aqui quando algum erro for lançado vou fazer algumas coisas aqui dentro dessa classe.
+
+77
+00:06:26,240 --> 00:06:33,830
+Bom um atributo que vai ser tudo privado é um atributo que pode ter aqui é uma string que ao título.
+
+78
+00:06:35,310 --> 00:06:39,060
+Do erro pode acontecer histriônico pode criar.
+
+79
+00:06:40,100 --> 00:06:43,960
+O título do erro uma outra coisa que poderia ter aqui também.
+
+80
+00:06:44,000 --> 00:06:51,110
+Isso aqui Galera é o que você quer fazer está aqui e o que você quiser fazer o que você quiser colocar
+
+81
+00:06:51,110 --> 00:06:53,700
+aqui tá.
+
+82
+00:06:54,200 --> 00:06:59,110
+Você coloca cada projeto um projeto existe alguns padrões no mercado.
+
+83
+00:07:00,170 --> 00:07:04,970
+Mas você é livre para você montar você pode personalizar uma mensagem de erro específica na sua aplicação.
+
+84
+00:07:04,970 --> 00:07:06,440
+Não tem problema.
+
+85
+00:07:06,950 --> 00:07:15,050
+Vou botar o rei algumas coisas que eu acho interessante ter um inteiro que vai ser o status do erro
+
+86
+00:07:15,050 --> 00:07:17,570
+tipo C 404 quinhentos.
+
+87
+00:07:17,570 --> 00:07:25,220
+O título do erro o status e eu vou botar aqui um presente e string.
+
+88
+00:07:26,470 --> 00:07:34,060
+Mensagem não poderia voltar a detalhes poderia botar data e hora de quando aconteceu aquilo poderia
+
+89
+00:07:34,060 --> 00:07:39,190
+fazer qualquer coisa mas eu só vou botar em sua mensagem Quero só essas três coisas.
+
+90
+00:07:40,110 --> 00:07:46,800
+Vou separar aqui popular e vou dar aqui um botão direito.
+
+91
+00:07:46,920 --> 00:07:48,630
+Só Section dieta.
+
+92
+00:07:49,590 --> 00:07:54,540
+Sete anos para tirar os diretores e gerentes diretores e.
+
+93
+00:07:55,410 --> 00:07:56,660
+Para essa mensagem.
+
+94
+00:07:56,700 --> 00:08:03,780
+Só que esse cara que eu quero ter um construtor personalizado então vou criar um construtor para esse
+
+95
+00:08:03,780 --> 00:08:04,320
+cara.
+
+96
+00:08:04,350 --> 00:08:05,840
+Eu poderia vir aqui.
+
+97
+00:08:06,150 --> 00:08:11,310
+Vou querer um consultor usando o Source Action lá então direito só se.
+
+98
+00:08:12,600 --> 00:08:20,100
+Generation construtor você quer gerar um construtor com quais atributos eu quero com todos.
+
+99
+00:08:20,110 --> 00:08:24,270
+Selecione todos eles gera para a gente um erro ou uma mensagem.
+
+100
+00:08:26,940 --> 00:08:35,270
+E recebe todos os construtores os dados aqui o título status mensagem Quero que devolva esses três esses
+
+101
+00:08:35,280 --> 00:08:40,410
+três campos para o usuário para quem estiver consumindo a aplicação.
+
+102
+00:08:42,660 --> 00:08:49,870
+Seu três que a gente vai enviar quando o usuário fizer qualquer coisa que dê um erro na tua beleza.
+
+103
+00:08:50,090 --> 00:08:58,760
+Fiz aqui e nós vamos fazer o seguinte agora que nós fizemos aqui nós vamos fazer o seguinte nós vamos
+
+104
+00:08:58,760 --> 00:09:01,400
+criar um Reinaldo um Reinaldo.
+
+105
+00:09:01,940 --> 00:09:09,320
+O que eu rendo a gente vai criar um manipulador de exceção esse manipulador você pode botar quantas
+
+106
+00:09:09,320 --> 00:09:12,560
+exceções você quiser eu vou criar esse Reinaldão.
+
+107
+00:09:12,890 --> 00:09:21,560
+Eu vou criar esse Reinaldo eu posso criar uma pasta fora que poderia ser uma pasta solta aqui dentro
+
+108
+00:09:21,560 --> 00:09:21,830
+do.
+
+109
+00:09:24,300 --> 00:09:33,450
+Dentro do projeto da há uma nova pasta de Reynolds ou eu poderia botar dentro de um móvel aqui junto
+
+110
+00:09:33,450 --> 00:09:34,830
+com Perception e tudo mais.
+
+111
+00:09:34,830 --> 00:09:38,630
+Eu vou deixar aqui dentro de motel porque vai ser um modelo.
+
+112
+00:09:38,820 --> 00:09:44,700
+Na verdade não vou deixar separado ou deixar separado porque eu não vai ser um modelo ou criar aqui.
+
+113
+00:09:44,700 --> 00:09:48,210
+O primeiro exemplo vou criar uma nova pasta chamado.
+
+114
+00:09:50,310 --> 00:09:50,760
+Reinaldo.
+
+115
+00:09:52,830 --> 00:09:53,180
+Desde.
+
+116
+00:09:54,440 --> 00:10:01,370
+Para manipuladores e aqui dentro eu vou criar um manipulador para gente que são os manipuladores são
+
+117
+00:10:01,760 --> 00:10:04,980
+classes que conseguem manipular coisas específicas.
+
+118
+00:10:04,980 --> 00:10:12,800
+Nós vamos criar uma renda que vai ficar ouvindo todo erro da aplicação e vai tomar uma ação quando acontecer
+
+119
+00:10:12,800 --> 00:10:24,130
+um erro convocaram o Reinaldo aqui chamado de de reis reste um Reinaldo para requisição reste excepto.
+
+120
+00:10:25,700 --> 00:10:27,260
+Deception.
+
+121
+00:10:28,630 --> 00:10:28,760
+A.
+
+122
+00:10:31,640 --> 00:10:40,660
+Um pontos já lá vai ser rechaçado tinham Reinaldo ou seja um manipulador de exceções reste qualquer
+
+123
+00:10:40,660 --> 00:10:48,610
+exceção que acontecer dentro de uma requisição que vai cair nesse cara pra ele saber que ele é um manipulador
+
+124
+00:10:48,610 --> 00:10:52,790
+de eventos a gente vai passar o controle para ele.
+
+125
+00:10:52,810 --> 00:11:00,710
+Então como é que a gente faz a gente chega e coloca essa mutação do Spring que arromba controle de vaias
+
+126
+00:11:01,060 --> 00:11:03,700
+quando a gente coloca o rouba controle era demais.
+
+127
+00:11:03,820 --> 00:11:11,980
+A gente está dizendo que esse cara vai ser um controlador dentro da nossa aplicação e que nós vamos
+
+128
+00:11:12,160 --> 00:11:13,610
+botar umas coisas aqui.
+
+129
+00:11:13,610 --> 00:11:22,750
+A primeira coisa que eu vou criar aqui eu vou criar um método publique que vai me retornar um Response.
+
+130
+00:11:24,950 --> 00:11:26,350
+é intuitivo.
+
+131
+00:11:26,420 --> 00:11:30,810
+Ele vai me tornar mais consciente de qualquer coisa.
+
+132
+00:11:30,870 --> 00:11:35,690
+Quando eu faço o que eu tô dizendo que é qualquer coisa que poderia tornar qualquer objeto aqui qualquer
+
+133
+00:11:35,690 --> 00:11:36,110
+coisa.
+
+134
+00:11:39,380 --> 00:11:43,370
+E eu vou dar o nome dele de renda e de renda.
+
+135
+00:11:45,740 --> 00:11:52,760
+Renda as Source renda ou Source.
+
+136
+00:11:54,590 --> 00:11:55,250
+Note.
+
+137
+00:11:56,580 --> 00:12:03,540
+Falo de ativar o receptor e Resource Not Found Accept um.
+
+138
+00:12:06,730 --> 00:12:15,700
+O que eu estou dizendo é que eu estou dizendo que não REINALDO E O REINALDO PRA TRABALHAR COM ESSE Resource.
+
+139
+00:12:19,420 --> 00:12:22,400
+E ele vai receber aqui pessoas.
+
+140
+00:12:24,160 --> 00:12:26,630
+A sua só se.
+
+141
+00:12:28,500 --> 00:12:29,540
+Chegou se.
+
+142
+00:12:31,110 --> 00:12:36,420
+Pessoas note falam de assédio que foi o que a gente criou.
+
+143
+00:12:36,440 --> 00:12:41,760
+Beleza vai receber que eu vou dar um contra o Uber para diminuir isso é que vou chamar isso de Kit é
+
+144
+00:12:41,760 --> 00:12:43,320
+X que é céptico.
+
+145
+00:12:44,300 --> 00:12:45,510
+Beleza.
+
+146
+00:12:45,650 --> 00:12:46,400
+Show de bola.
+
+147
+00:12:47,340 --> 00:12:51,960
+Bom vou botar uma mutação aqui chamada Section.
+
+148
+00:12:54,470 --> 00:13:00,980
+E essa excepcional renda significa o seguinte eu estou dizendo o seguinte esse método aqui vai ficar
+
+149
+00:13:00,980 --> 00:13:04,170
+ouvindo as receptivos dentro de uma bem.
+
+150
+00:13:04,520 --> 00:13:14,030
+E quando acontecer uma exceto um lá dentro do tipo Resource note Fault Perception quando acontecer alguma
+
+151
+00:13:14,030 --> 00:13:18,080
+coisa desse tipo aqui eu quero que ele chama esse método aqui.
+
+152
+00:13:18,920 --> 00:13:24,740
+Então quando aconteceu qualquer certame do tipo Resource Not Found é certo eu quero que execute esse
+
+153
+00:13:24,740 --> 00:13:30,700
+método aqui e passe a ser como parâmetro para eu poder tê lo aqui dentro.
+
+154
+00:13:30,710 --> 00:13:32,020
+Simples assim.
+
+155
+00:13:32,060 --> 00:13:35,510
+E aqui eu vou fazer uma brincadeira aqui eu vou fazer assim.
+
+156
+00:13:35,700 --> 00:13:36,800
+Eu vou criar um error.
+
+157
+00:13:41,100 --> 00:13:44,190
+Mensagem Erro Message.
+
+158
+00:13:46,410 --> 00:13:48,630
+Que é um erro pensar que eu vou chamar de error.
+
+159
+00:13:50,510 --> 00:13:53,210
+Que recebe um nihil eu vou.
+
+160
+00:13:54,540 --> 00:13:59,480
+A mensagem é que eu vou passar os três atributos que eu espero receber.
+
+161
+00:13:59,510 --> 00:14:00,500
+Beleza.
+
+162
+00:14:00,560 --> 00:14:05,240
+Bom o primeiro que eu espero ele receber é o título do erro.
+
+163
+00:14:05,390 --> 00:14:08,660
+Esse título é o que a galera falou de.
+
+164
+00:14:10,310 --> 00:14:10,880
+Note.
+
+165
+00:14:12,350 --> 00:14:13,940
+Fraude.
+
+166
+00:14:14,400 --> 00:14:20,060
+Isso de fraude a gente está pegando pra não encontrado Beleza.
+
+167
+00:14:20,060 --> 00:14:22,960
+Qual o status que eu vou passar.
+
+168
+00:14:22,970 --> 00:14:30,760
+Bom é o status de default que poderia ser 404 da sua votação 404.
+
+169
+00:14:30,870 --> 00:14:34,300
+Ah mas eu queria que isso pegasse já de alguma coisa dinâmica.
+
+170
+00:14:34,310 --> 00:14:36,620
+Bom pode pegar aqui http:.
+
+171
+00:14:37,680 --> 00:14:39,750
+Estados ponto.
+
+172
+00:14:41,300 --> 00:14:49,740
+Note falta de Ponto Belo a gente devolve o valor do código falam.
+
+173
+00:14:49,760 --> 00:14:54,550
+Se você não soubesse qual é o código não te falo de cabeça então você pode pegar daqui.
+
+174
+00:14:54,650 --> 00:14:56,420
+E qual a mensagem.
+
+175
+00:14:56,420 --> 00:14:59,540
+Bom a mensagem galera é simples.
+
+176
+00:14:59,900 --> 00:15:02,180
+A gente pode vir aqui fazer assim o.
+
+177
+00:15:03,600 --> 00:15:04,460
+é X.
+
+178
+00:15:04,470 --> 00:15:06,500
+Dia 7 um ponto.
+
+179
+00:15:06,690 --> 00:15:08,890
+Get Message.
+
+180
+00:15:09,000 --> 00:15:15,320
+Quando a gente pega o Get Message ele pega a mensagem que está dentro da seção.
+
+181
+00:15:15,340 --> 00:15:19,080
+Então criei que o meu erro mensagem not found.
+
+182
+00:15:21,480 --> 00:15:23,920
+Pegou status e pegou a mensagem.
+
+183
+00:15:24,030 --> 00:15:29,620
+E aí é que agora eu vou devolver isso daqui eu vou devolver isso mil.
+
+184
+00:15:29,640 --> 00:15:31,680
+Mas sei que é um risco consciente ou também não.
+
+185
+00:15:31,720 --> 00:15:34,440
+Eu vou devolver o Nihil Response.
+
+186
+00:15:36,570 --> 00:15:38,040
+Etc.
+
+187
+00:15:38,340 --> 00:15:45,580
+Aonde que eu vou devolver o objeto de erro e vou devolver o quê com o status HTTP.
+
+188
+00:15:46,260 --> 00:15:49,560
+Ponto note falte.
+
+189
+00:15:52,520 --> 00:15:54,440
+Beleza o que eu fiz aqui.
+
+190
+00:15:54,590 --> 00:16:01,620
+Eu criei uma classe chamado reste excepto Reinaldo que é uma classe para ser um controlador de qualquer
+
+191
+00:16:01,640 --> 00:16:06,620
+erro dentro de uma bem rege tudo o que acontecer dentro de uma bem vai cair aqui dentro.
+
+192
+00:16:06,770 --> 00:16:14,090
+E eu disse o seguinte se o erro for do tipo e sorte note fraude se for desse tipo aqui eu quero que
+
+193
+00:16:14,090 --> 00:16:22,070
+chame esse método aqui que esse método faz receber certo e vai devolver um consciente de qualquer coisa
+
+194
+00:16:22,370 --> 00:16:23,270
+que eu fiz.
+
+195
+00:16:23,390 --> 00:16:25,580
+Peguei certinho o que aconteceu.
+
+196
+00:16:25,610 --> 00:16:31,820
+Criei uma mensagem personalizada e vou devolvê la com status 404.
+
+197
+00:16:31,820 --> 00:16:32,840
+Olha que legal.
+
+198
+00:16:32,840 --> 00:16:33,410
+SALVEM.
+
+199
+00:16:35,250 --> 00:16:44,070
+Beleza só vem aqui no repositório em vez de usar o input me mate eu vou usar isso daqui vamos a esse
+
+200
+00:16:44,070 --> 00:16:45,870
+cara aqui que só se.
+
+201
+00:16:48,350 --> 00:16:52,140
+Note fala de Sérgio vou usar esse tipo.
+
+202
+00:16:52,250 --> 00:16:55,420
+Ou seja o cara não foi encontrado.
+
+203
+00:16:55,820 --> 00:17:00,530
+Código não encontrado tributo num contrato qualquer coisa desse tipo.
+
+204
+00:17:00,740 --> 00:17:02,790
+Ou usar esse tipo de exceção.
+
+205
+00:17:02,840 --> 00:17:03,260
+Por quê.
+
+206
+00:17:03,260 --> 00:17:04,430
+Porque eu estou escutando.
+
+207
+00:17:04,430 --> 00:17:06,650
+Então quando acontecer essa excepcional.
+
+208
+00:17:07,610 --> 00:17:10,980
+Quando acontecer essa excepcional é porque estou criando aqui.
+
+209
+00:17:11,120 --> 00:17:19,280
+Eu só consigo usar ela aqui assim porque eu criei ela aqui recebendo uma mensagem passando a.
+
+210
+00:17:22,250 --> 00:17:28,370
+Quando aconteceu a recessão vai cair dentro desse método vou preparar uma mensagem e vou devolver.
+
+211
+00:17:30,560 --> 00:17:38,690
+Salvei por vir aqui agora vou dar um Sande Olha lá olha como é que a mensagem agora vem bonitinha 404.
+
+212
+00:17:39,180 --> 00:17:40,320
+Not Fault.
+
+213
+00:17:40,320 --> 00:17:48,110
+E ele veio o título norte fala de Estado 404 e qual a mensagem produto não encontrado.
+
+214
+00:17:48,150 --> 00:17:56,030
+Olha que legal a mensagem que mostra aqui é exatamente a mensagem que você colocar aqui.
+
+215
+00:17:56,100 --> 00:17:59,700
+A mensagem que você colocar aqui passa a mensagem que vai para lá por exemplo.
+
+216
+00:18:01,840 --> 00:18:12,260
+O produto não pode ser atualizado pois não existe um exemplo se eu sou mudasse.
+
+217
+00:18:12,280 --> 00:18:14,510
+Eu salvei.
+
+218
+00:18:15,840 --> 00:18:18,320
+Ele atualizou a aplicação ou não sente.
+
+219
+00:18:18,360 --> 00:18:22,050
+Olha lá produto não pode ser atualizado pois não existe.
+
+220
+00:18:22,170 --> 00:18:30,170
+Criamos um padrão de mensagem personalizada para devolver bonitinho em vez daquele erro gigantesco ou
+
+221
+00:18:30,180 --> 00:18:32,730
+tinha anteriormente por quê.
+
+222
+00:18:32,730 --> 00:18:42,690
+Porque nós criamos aqui a nossa Perception personalizada um objeto de erro personalizado para poder
+
+223
+00:18:42,690 --> 00:18:45,380
+devolver um ouvinte.
+
+224
+00:18:45,420 --> 00:18:52,440
+Aqui eu criei para ressoar mas sei que eu poderia criar vários métodos e métodos para Bad requer este
+
+225
+00:18:52,830 --> 00:19:00,410
+método para sei lá para Internal Server erro poderia criar método aqui para o que eu quisesse.
+
+226
+00:19:00,490 --> 00:19:09,350
+Mas nesse momento eu criei para Resource Not Found para que a gente consiga ter aqui uma mensagem personalizada
+
+227
+00:19:09,360 --> 00:19:15,480
+quando acontecer algum erro dando a nossa B.I. porém ele só vai capturar o erro se for desse tipo que
+
+228
+00:19:16,080 --> 00:19:19,020
+eu criei um outro tipo de excepcional beleza.
+
+229
+00:19:19,020 --> 00:19:25,260
+Aí você tem que vir aqui e criar um remendo ou para tu excepto um para ele poder saber tratar quando
+
+230
+00:19:25,260 --> 00:19:27,180
+aconteceu um erro naquela sua estética.
+
+231
+00:19:29,990 --> 00:19:35,420
+E assim a gente consegue fazer um tratamento de erro mais elegante para o usuário final dentro da nossa
+
+232
+00:19:35,420 --> 00:19:40,520
+perfil com um pouco mais profissional 404.
+
+233
+00:19:40,520 --> 00:19:44,660
+Tudo certinho o Note fala de não contrato com a mensagem política para o usuário.
+
+234
+00:19:46,490 --> 00:19:47,090
+Perfeito.

@@ -1,0 +1,1455 @@
+1
+00:00:01,560 --> 00:00:03,970
+E aí galera beleza.
+
+2
+00:00:04,020 --> 00:00:09,900
+Bom na última aula nós criamos aqui o nosso repositório de produto que foi uma classe que nós criamos
+
+3
+00:00:09,900 --> 00:00:12,270
+dentro da parte da repositório.
+
+4
+00:00:12,750 --> 00:00:16,980
+Criamos aqui mas nós precisamos fazer o quê.
+
+5
+00:00:17,100 --> 00:00:18,620
+Criar esses métodos aqui.
+
+6
+00:00:19,380 --> 00:00:24,860
+Obter todos obter por aí de adicionar atualizar e deletar.
+
+7
+00:00:24,910 --> 00:00:30,650
+Então a primeira coisa que nós vamos fazer é montar a estrutura desse repositório esse repositório galera.
+
+8
+00:00:30,750 --> 00:00:37,170
+Ele poderia estar conectando com o banco de dados mas como ele não vai estar conectando com o banco
+
+9
+00:00:37,170 --> 00:00:42,750
+de dados nós vamos simular que aqui dentro é um banco de dados.
+
+10
+00:00:42,750 --> 00:00:43,290
+Então vamos lá.
+
+11
+00:00:43,590 --> 00:00:48,500
+A primeira coisa que nós temos que fazer quando crie um repositório é botar essa anotação em cima arroba
+
+12
+00:00:49,230 --> 00:00:54,180
+repositor e com essa como essa anotação.
+
+13
+00:00:54,180 --> 00:01:01,210
+Aqui ele faz isso importe que ele faz um importe do Spring e ele faz o seguinte quando a gente coloca
+
+14
+00:01:01,210 --> 00:01:08,520
+essa notação A gente está dizendo para o Spring que isso aqui é um repositório e o brinde vai ter controle
+
+15
+00:01:08,520 --> 00:01:17,130
+sobre esse repositório e com isso a gente vai poder usar uma coisa muito legal chamada injeção de dependência
+
+16
+00:01:17,130 --> 00:01:19,150
+e inversão de controle.
+
+17
+00:01:19,230 --> 00:01:26,280
+Nesse exato momento quando a gente está colocando assim a arroba repositor a gente está dando a possibilidade
+
+18
+00:01:26,280 --> 00:01:32,640
+do Spring ter essa dependência então a gente está injetando essa dependência dentro do Spring.
+
+19
+00:01:33,150 --> 00:01:39,340
+E quando a gente precisar do repositório a gente vai pedir um controle para os brinde.
+
+20
+00:01:39,360 --> 00:01:44,590
+A gente vai falar sem ninguém me devolve o controle desse repositório ou seja ele vai te devolver uma
+
+21
+00:01:44,590 --> 00:01:47,270
+instância pronta de um repositório.
+
+22
+00:01:47,280 --> 00:01:49,170
+Isso é muito legal.
+
+23
+00:01:49,560 --> 00:01:52,010
+Então vamos começar a brincar.
+
+24
+00:01:52,150 --> 00:01:57,210
+Bom pra simular um banco de dados aqui dentro vou precisar de no mínimo dois atributos.
+
+25
+00:01:57,210 --> 00:02:01,600
+Eu vou precisar de um Private ou de uma lista de produto.
+
+26
+00:02:01,650 --> 00:02:03,090
+Então eu vou criar aqui um.
+
+27
+00:02:06,850 --> 00:02:10,210
+Eu vou criar aqui uma religião mesmo um rei.
+
+28
+00:02:12,240 --> 00:02:14,070
+Liste de.
+
+29
+00:02:15,420 --> 00:02:16,010
+Produto.
+
+30
+00:02:17,690 --> 00:02:27,530
+O que eu vou chamar de produtos a que eu vou chamar os produtos e eu já vou distanciar se cara aqui
+
+31
+00:02:27,710 --> 00:02:30,080
+eu já quero que seja distanciado.
+
+32
+00:02:30,140 --> 00:02:31,270
+Essa lista aqui.
+
+33
+00:02:31,340 --> 00:02:34,460
+Então vamos lá meu Rei.
+
+34
+00:02:37,460 --> 00:02:38,000
+Lixe.
+
+35
+00:02:39,530 --> 00:02:50,000
+De produto já vou distanciar tá dando erro porque ele não faz a menor ideia quem é produto ou a religião
+
+36
+00:02:50,010 --> 00:02:53,350
+o verso como já importou para mim automaticamente.
+
+37
+00:02:53,480 --> 00:02:58,040
+Mas se ele não tivesse importado eu clicar com o botão direito assim por exemplo fingir que ele não
+
+38
+00:02:58,040 --> 00:03:00,070
+importou.
+
+39
+00:03:00,440 --> 00:03:05,450
+Eu posso parar o mouse mas ele mostra lâmpadas em amarelo eu clico ele me dá as opções que eu posso
+
+40
+00:03:05,450 --> 00:03:16,310
+fazer uma em portal clicar aqui não importa ou eu posso parar o mouse em cima e apertar contra um ponto.
+
+41
+00:03:16,310 --> 00:03:23,810
+Ele me mostre as opções ou importou contra o ponto e mostra opção para importar o produto que está dentro
+
+42
+00:03:24,140 --> 00:03:26,170
+do pacote de molho.
+
+43
+00:03:26,240 --> 00:03:36,170
+Lá importou aquela beleza então aqui importou e aqui dentro do meu vou juntar isso aqui e deixar juntinho
+
+44
+00:03:36,180 --> 00:03:38,150
+só para ficar melhor para gente visualizar.
+
+45
+00:03:38,180 --> 00:03:45,530
+Então aqui eu tenho um atributo privado que é uma rede de produtos que hoje até estão beleza.
+
+46
+00:03:45,650 --> 00:03:50,720
+Uma outra coisa que eu vou fazer é fazer isso do que o Private a rei.
+
+47
+00:03:52,210 --> 00:04:05,540
+Liste roupa Prevent entender entender e eu vou chamar isso aqui de último ai de que vai ser simulando
+
+48
+00:04:05,540 --> 00:04:08,680
+uma idéia incremental do banco de dados da galera.
+
+49
+00:04:08,680 --> 00:04:10,620
+E ele vai começar em zero.
+
+50
+00:04:10,630 --> 00:04:17,650
+A ultima ID vai começar em zero ou seja toda vez que começar a aplicação com a idéia atual é zero porque
+
+51
+00:04:17,650 --> 00:04:21,410
+eu não tenho nada além da aplicação beleza.
+
+52
+00:04:21,850 --> 00:04:26,340
+E aí vamos começar a brincar que eu preciso fazer agora e criar alguns métodos né.
+
+53
+00:04:26,380 --> 00:04:31,840
+Então preciso criar um método que obter todos beleza esse eu acho que o método mais fácil que eu poderia
+
+54
+00:04:31,840 --> 00:04:37,530
+criar um método obter todos publique que vai retornar.
+
+55
+00:04:37,540 --> 00:04:45,180
+Eu poderia dizer que ele vai retornar um liste de produto e vai retornar uma lista de produto.
+
+56
+00:04:45,280 --> 00:04:51,840
+Vou chamar de obter todos e o método.
+
+57
+00:04:51,850 --> 00:04:59,890
+Vou importar se a interface que existe é uma interface do Java útil que sabe trabalhar com qualquer
+
+58
+00:04:59,890 --> 00:05:06,110
+tipo de Array se mudar para um link de lixo mudar para qualquer coisa que saiba trabalhar com lista.
+
+59
+00:05:06,380 --> 00:05:12,850
+Esse cara que vai funcionar então eu vou retornar um lixo de produto que eu vou fazer o seguinte a que
+
+60
+00:05:12,850 --> 00:05:14,770
+eu posso mudar para lixo também.
+
+61
+00:05:15,270 --> 00:05:20,900
+Vai ficar interessante com um desses produtos aqui.
+
+62
+00:05:21,280 --> 00:05:28,870
+Então vamos lá eu vou vir aqui e agora quando alguém chama esse método que obter todos aquilo o que
+
+63
+00:05:28,870 --> 00:05:37,060
+eu quero fazer eu quero simplesmente fazer isso que o retorno é que produtos é simplesmente o que eu
+
+64
+00:05:37,060 --> 00:05:43,660
+quero fazer quando alguém pedir obter todos eu quero retornar todos os meus produtos que vão estar dentro
+
+65
+00:05:43,660 --> 00:05:46,200
+dessa lista.
+
+66
+00:05:46,210 --> 00:05:50,490
+Então o método obter todo está pronto.
+
+67
+00:05:50,510 --> 00:05:55,900
+Ah eu queria documentar o que ele faz uma forma de documentar bem legal e usou um cara chamado Java
+
+68
+00:05:55,900 --> 00:06:07,750
+doc o Java doc e o seguinte do Bota asterisco e Barra Asterix tipo asterix Tico ou tanto o Barra asterisco
+
+69
+00:06:08,470 --> 00:06:14,440
+asterisco Barra ele já sabe que é um Java doc ou um comentário Java.
+
+70
+00:06:14,440 --> 00:06:20,680
+E aí aqui ele já até colocou uma arroba retorne pra gente aqui eu digo que esse método vai retornar
+
+71
+00:06:21,040 --> 00:06:24,790
+retorna com uma lista de produtos.
+
+72
+00:06:32,260 --> 00:06:43,460
+Lista de produtos beleza que eu poderia matar o método para retornar a ficar bonitinho.
+
+73
+00:06:43,460 --> 00:06:49,650
+O método para retornar uma lista de produtos é que eu posso botar o retorno em uma lista de produtos.
+
+74
+00:06:49,660 --> 00:06:53,390
+Sei que um comentário e um comentário do tipo Java doc.
+
+75
+00:06:53,410 --> 00:06:57,100
+Isso é muito legal porque aonde eu precisava obter produtos.
+
+76
+00:06:57,100 --> 00:07:02,650
+Se eu começar a digitar ou eu parar o mouse em cima ele vai me mostrar esse comentário aqui.
+
+77
+00:07:02,650 --> 00:07:10,330
+Olha só que legal para o mouse olha aí que maneiro na tela método para retornar uma lista de produtos
+
+78
+00:07:10,690 --> 00:07:13,060
+o que ele te retorna uma lista de produtos.
+
+79
+00:07:18,280 --> 00:07:23,300
+Bem legal então o que você escreve aqui é o que ele vai mostrar na tela quando o usuário passar o mouse
+
+80
+00:07:23,300 --> 00:07:27,870
+em cima ou começar a digitar.
+
+81
+00:07:27,870 --> 00:07:31,470
+Então o primeiro método obter todo está aqui.
+
+82
+00:07:31,480 --> 00:07:36,520
+Vamos criar um outro método que publique popular nas linhas publique.
+
+83
+00:07:36,580 --> 00:07:38,800
+Eu quero retornar um único produto.
+
+84
+00:07:40,660 --> 00:07:43,730
+E eu vou chamar de obter por aí.
+
+85
+00:07:43,780 --> 00:07:45,140
+Waldir é o único né.
+
+86
+00:07:45,530 --> 00:07:47,360
+Ninguém pode ter um IDH igual.
+
+87
+00:07:47,360 --> 00:07:54,290
+Então se eu passar o IDH correto ele vai me devolver um único produto e vou botar o PT por aí que vai
+
+88
+00:07:54,290 --> 00:07:58,030
+receber por parâmetro um empresa que vai ser mantida.
+
+89
+00:07:58,310 --> 00:08:02,810
+E aí é que o que tem que fazer eu tenho que filtrar dentro da minha lista de produtos.
+
+90
+00:08:02,810 --> 00:08:05,200
+Quem é o produto que tem aquele dia.
+
+91
+00:08:05,210 --> 00:08:11,960
+Então posso fazer o que eu quero retornar de dentro de produtos.
+
+92
+00:08:11,960 --> 00:08:13,160
+Ponto.
+
+93
+00:08:13,160 --> 00:08:14,540
+Olha só.
+
+94
+00:08:14,540 --> 00:08:15,560
+E aí.
+
+95
+00:08:15,740 --> 00:08:20,560
+Olha que legal eu posso fazer várias coisas aqui.
+
+96
+00:08:20,690 --> 00:08:25,440
+Eu tenho vários métodos dentro de uma lista há vários métodos.
+
+97
+00:08:25,520 --> 00:08:28,640
+Posso pegar por isso posso pegar por qualquer coisa.
+
+98
+00:08:28,640 --> 00:08:32,210
+Mas eu vou usar um cara muito legal aqui que é um estranho ponto extremo.
+
+99
+00:08:34,450 --> 00:08:35,770
+Ponto.
+
+100
+00:08:35,770 --> 00:08:39,970
+Ai ai olha o que eu vou fazer.
+
+101
+00:08:39,970 --> 00:08:44,170
+Eu quero fazer isso daqui a índia.
+
+102
+00:08:45,510 --> 00:08:55,440
+Fort Fair Force ou seja encontro o primeiro produto com base em alguma coisa eu quero que para cada
+
+103
+00:08:55,440 --> 00:09:00,360
+produto que você encontrar ali dentro como chamamos de B ou um chamado de produto meu.
+
+104
+00:09:00,420 --> 00:09:09,270
+Cada produto que você encontrar eu vou fazer uma expressão lambda aqui e vou fazer assim o produto ponto
+
+105
+00:09:09,480 --> 00:09:11,670
+a esse ponto.
+
+106
+00:09:14,170 --> 00:09:18,400
+Para cada produto que você encontrar ali dentro eu aqui.
+
+107
+00:09:24,400 --> 00:09:28,460
+Para isso vou mudar ou mudar essa lógica.
+
+108
+00:09:28,590 --> 00:09:29,190
+Vou melhorar.
+
+109
+00:09:30,240 --> 00:09:31,860
+Vou fazer um ponto.
+
+110
+00:09:34,580 --> 00:09:44,750
+String vou tirar o Firefox vou fazer o ponto Filter eu vou filtrar primeiro então para cada produto
+
+111
+00:09:45,740 --> 00:09:52,970
+que eu encontrar ali dentro para cada produto dentro desse a rede de produtos para cada produto que
+
+112
+00:09:52,970 --> 00:10:04,610
+encontrar ali dentro quero verificar se o produto ponto Get a India é igual ou igual a quem o indica
+
+113
+00:10:04,610 --> 00:10:05,030
+eu passei.
+
+114
+00:10:06,480 --> 00:10:12,900
+Se sim vou quebrar isso daqui como é um estranho eu posso quebrar a linha de baixo.
+
+115
+00:10:15,920 --> 00:10:19,700
+Eu quero que retornar do produto transformei o estranho quero.
+
+116
+00:10:20,770 --> 00:10:27,310
+Verificasse se cada produto aqui dentro tem o IDH igual o Haiti que estou passando aqui.
+
+117
+00:10:27,490 --> 00:10:27,970
+Beleza.
+
+118
+00:10:29,580 --> 00:10:31,730
+Se sim eu quero pegar.
+
+119
+00:10:32,040 --> 00:10:32,790
+Agora sim o.
+
+120
+00:10:34,120 --> 00:10:36,940
+O First Primeiro tá.
+
+121
+00:10:37,150 --> 00:10:43,490
+Só que aqui ele espera devolver um produto e o funk ele devolve um opt não de produto.
+
+122
+00:10:43,510 --> 00:10:47,270
+Qual a diferença de um produto com opt out de produto óptimo.
+
+123
+00:10:47,650 --> 00:10:53,410
+é uma classe que foi criada a partir do Java 8 para facilitar a nossa vida e não dá erro.
+
+124
+00:10:53,410 --> 00:11:00,130
+Exemplo Vamos fingir que eu ser um ideal é válido se ele não encontrar alguém poderia dar um erro ou
+
+125
+00:11:00,130 --> 00:11:05,920
+qualquer coisa do tipo o opt out garante que não vai dar um erro ele vai te devolver o que ele encontrar
+
+126
+00:11:05,950 --> 00:11:08,770
+ou no ou vazio.
+
+127
+00:11:08,980 --> 00:11:14,590
+Então eu vou fazer isso eu vou botar aqui um opte novo um opte não.
+
+128
+00:11:17,140 --> 00:11:24,390
+De produto com isso daqui tem que dar um contra ponto aqui para poder importar o ópio chamado Java útil.
+
+129
+00:11:24,400 --> 00:11:29,320
+Com isso daqui eu estou garantindo o seguinte seria não encontrar nenhum produto aqui dentro.
+
+130
+00:11:29,320 --> 00:11:36,960
+Ele vai me devolver ele vai me devolver aqui algo nulo algo que não dê erro.
+
+131
+00:11:36,970 --> 00:11:42,110
+Ele não gostou estourar uma exceção de novo não com interest alguma coisa do tipo.
+
+132
+00:11:42,970 --> 00:11:46,130
+Então o código ficou mais ou menos isso.
+
+133
+00:11:46,270 --> 00:11:54,160
+Eu recebo o IDH por parâmetro vem aqui no meu a rede produtos faço um extremo para poder filtrar.
+
+134
+00:11:54,220 --> 00:12:01,540
+Eu quero pegar de dentro desse rei somente o produto que tiver o HAITI igual esse dia.
+
+135
+00:12:02,380 --> 00:12:08,860
+Quando eu encontrar eu vou pegar o primeiro e vou devolver sempre vai ter só um porque o Haiti é o único
+
+136
+00:12:09,400 --> 00:12:11,150
+não.
+
+137
+00:12:11,320 --> 00:12:15,620
+Eu vou retornar e aí eu vou devolver como obter um produto.
+
+138
+00:12:15,640 --> 00:12:18,710
+Então ouvir aqui Vamos documentar isso aqui.
+
+139
+00:12:19,050 --> 00:12:25,990
+O método que retorna o produto encontrado
+
+140
+00:12:28,270 --> 00:12:30,160
+pelo seu Haiti.
+
+141
+00:12:33,900 --> 00:12:37,050
+Aí eu boto a ideia de.
+
+142
+00:12:39,190 --> 00:12:42,610
+A ideia do produto.
+
+143
+00:12:44,850 --> 00:12:47,310
+Que será localizado.
+
+144
+00:12:50,910 --> 00:12:55,660
+Retorna um não.
+
+145
+00:12:57,560 --> 00:13:08,720
+Retornam um retorno a um produto caso tenha encontrado um exemplo.
+
+146
+00:13:08,900 --> 00:13:11,850
+Vamos ver como é que ficaria esse comentário aqui.
+
+147
+00:13:12,500 --> 00:13:18,020
+Ficaria mais ou menos assim a meta do que retorna o produto encontrado pelo seu dia e dia do produto
+
+148
+00:13:18,020 --> 00:13:25,520
+que será localizado retorna ao produto caso tenha se caso tenha sido encontrado no e caso seja encontrado
+
+149
+00:13:25,880 --> 00:13:29,270
+seja encontrado alguma coisa desse tipo.
+
+150
+00:13:30,140 --> 00:13:34,940
+Não estou documentando os meus métodos deixando tudo bonitinho.
+
+151
+00:13:34,940 --> 00:13:36,590
+Se é uma boa prática da galera.
+
+152
+00:13:36,590 --> 00:13:42,850
+Você documentar o que os teus métodos fazem então para quem for usar esse teu método aqui ele vai olhar
+
+153
+00:13:42,860 --> 00:13:49,130
+esse método faz tal coisa e até mesmo para você imagina daqui um ano você botando a mão no seu código
+
+154
+00:13:49,130 --> 00:13:54,440
+e você tentando lembrar o que faz em cada parte aqui é um método muito simples você vai bater o olho
+
+155
+00:13:54,560 --> 00:14:01,720
+você vai saber agora imagine um método que calcule sei lá o imposto de renda um método que ela calcula
+
+156
+00:14:01,740 --> 00:14:07,770
+e aí a pressão atmosférica sei lá estou viajando aqui.
+
+157
+00:14:07,850 --> 00:14:08,620
+Tá bom.
+
+158
+00:14:08,630 --> 00:14:15,080
+Aí você poderia ter métodos um pouco mais complexos que teria cálculo de comissão não sei tá.
+
+159
+00:14:17,530 --> 00:14:21,690
+Então obter todas e obter por aí.
+
+160
+00:14:21,790 --> 00:14:24,190
+Eu fiz o jogo.
+
+161
+00:14:24,550 --> 00:14:26,000
+Agora vamos criar o adicionar.
+
+162
+00:14:26,020 --> 00:14:27,850
+Como é que seria o método adicionar.
+
+163
+00:14:27,850 --> 00:14:34,690
+Vamos lá o dicionário seria mais ou menos assim publique o adicionar.
+
+164
+00:14:34,690 --> 00:14:40,600
+Eu quero que ele me devolva tão bem o adicionar.
+
+165
+00:14:40,600 --> 00:14:42,970
+Na verdade ele não vai me devolver quando devolver.
+
+166
+00:14:44,180 --> 00:14:48,020
+Deixa eu pensar e vou dizer que não vou me devolver um produto.
+
+167
+00:14:48,380 --> 00:14:51,310
+Produto adicionava me devolver um produto também.
+
+168
+00:14:51,320 --> 00:14:53,930
+Então vou chamar de adicionar.
+
+169
+00:14:53,960 --> 00:14:59,120
+Eu vou receber por parâmetro que um produto do tipo produto.
+
+170
+00:15:01,980 --> 00:15:05,940
+Esse método vai receber um produto do tipo produto.
+
+171
+00:15:06,870 --> 00:15:08,520
+E aí ele vai fazer o quê.
+
+172
+00:15:08,520 --> 00:15:19,980
+Ele simplesmente vai vir aqui e vai fazer o seguinte ele vai pegar o produto antes de eu botar ele eu
+
+173
+00:15:20,020 --> 00:15:21,680
+terei que botar dentro da lista.
+
+174
+00:15:21,720 --> 00:15:26,850
+Então vamos lá o produto isso tem que é como se fosse meu banco de dados certo.
+
+175
+00:15:27,090 --> 00:15:29,940
+Então eu teria que vir aqui fazer produtos.
+
+176
+00:15:31,300 --> 00:15:31,750
+Ponto.
+
+177
+00:15:33,280 --> 00:15:35,500
+A beber e passar o produto.
+
+178
+00:15:36,970 --> 00:15:39,550
+Assim que eu estaria adicionando no meu banco de dados.
+
+179
+00:15:41,240 --> 00:15:47,920
+Só que eu preciso dizer qual é o Haiti para esse produto podre poder gravá la.
+
+180
+00:15:47,930 --> 00:15:49,460
+Então o que eu vou fazer.
+
+181
+00:15:49,460 --> 00:15:50,630
+Eu vou pegar assim.
+
+182
+00:15:50,810 --> 00:15:53,840
+Eu vou dizer que o último Haiti.
+
+183
+00:15:55,730 --> 00:15:58,970
+Recebe ele mesmo mais um tipo assim.
+
+184
+00:15:58,970 --> 00:16:03,100
+Se o Haiti que está gravado lá é 10 eu quero que ele recebera e mesmo mais um.
+
+185
+00:16:03,110 --> 00:16:08,760
+Então vai ser 11 se for 11 e depois vai ser 12 13 e assim vai ficar incremental.
+
+186
+00:16:08,760 --> 00:16:12,790
+Então vou botar ele recebe ele mesmo mais um né.
+
+187
+00:16:12,800 --> 00:16:15,650
+Então eu posso fazer isso de várias formas né.
+
+188
+00:16:15,740 --> 00:16:16,400
+Poderia botar.
+
+189
+00:16:18,520 --> 00:16:20,950
+Mais igual a um.
+
+190
+00:16:21,430 --> 00:16:23,110
+Isso aqui também funcionaria.
+
+191
+00:16:23,620 --> 00:16:33,250
+Mas eu quero fazer assim mais mais quando a bota assim o último pedir mais mas eu já estou dizendo que
+
+192
+00:16:33,250 --> 00:16:37,200
+esse atributo aqui vai ser incrementado de um em um.
+
+193
+00:16:37,210 --> 00:16:42,950
+Toda vez que passar aqui não importa qual seja o valor que tiver que vai receber mais um.
+
+194
+00:16:42,970 --> 00:16:52,150
+Então se a primeira vez é zero então vai ser a segunda vez e vai ser 2 a terceira 3 4 5 6 sucessivamente.
+
+195
+00:16:52,150 --> 00:16:59,350
+Então eu estou fazendo aqui adicionar e isso eu estou aumentando o dia e aí agora eu tenho que pegar
+
+196
+00:16:59,500 --> 00:17:10,630
+esse dia aqui e passar o produto então vou botar o produto ponto 7 ai de recebe o último dia ou seja
+
+197
+00:17:11,080 --> 00:17:16,380
+eu incremento o Haiti gravo no produto e adicionou ele no balcão.
+
+198
+00:17:16,600 --> 00:17:23,320
+E por fim eu vou devolver esse produto para o usuário dizendo que foi cadastrado com sucesso então vou
+
+199
+00:17:23,320 --> 00:17:27,290
+devolver aquilo o que parou tudo pra.
+
+200
+00:17:29,000 --> 00:17:30,810
+Que haverá aqui para vocês verem.
+
+201
+00:17:31,650 --> 00:17:39,860
+Então esse é o método de adicionar um incremento aí de pego esse aí de passo para o produto adiciona
+
+202
+00:17:39,860 --> 00:17:46,570
+o produto nome e lista simulando um banco de dados e devolver como fazer uma brincadeira.
+
+203
+00:17:46,580 --> 00:17:53,840
+Java doc é um método para adicionar produto.
+
+204
+00:17:56,100 --> 00:18:00,870
+Um tu tu na lista.
+
+205
+00:18:03,330 --> 00:18:12,380
+O produto a ser de ao produto que será adicionado.
+
+206
+00:18:16,040 --> 00:18:20,930
+Retorna o produto que foi adicionado
+
+207
+00:18:23,960 --> 00:18:26,430
+na lista.
+
+208
+00:18:26,570 --> 00:18:31,820
+Beleza só para o mal disse uma vez como é que está ficando um metro para adicionar o produto da lista
+
+209
+00:18:31,820 --> 00:18:36,000
+produto será adicionado já todo o produto que foi adicionado no nicho perfeito.
+
+210
+00:18:36,140 --> 00:18:39,230
+Método criado e comentado.
+
+211
+00:18:39,230 --> 00:18:44,400
+Mas será que só funciona não sei depois a gente vai ver se isso daqui está realmente funcionando.
+
+212
+00:18:44,660 --> 00:18:48,680
+Por enquanto só isso não nos atende.
+
+213
+00:18:48,680 --> 00:18:50,150
+Por enquanto só isso que nos atende.
+
+214
+00:18:51,550 --> 00:18:53,790
+Então vamos lá.
+
+215
+00:18:53,900 --> 00:19:03,170
+Criei já um método para obter todos para obter por aí e para adicionar beleza quais que faltam volto
+
+216
+00:19:03,170 --> 00:19:04,700
+a atualizar e deletar.
+
+217
+00:19:04,700 --> 00:19:11,120
+Então vamos fazer o atualizar o atualizar galera nr.
+
+218
+00:19:11,630 --> 00:19:13,370
+Ele é um método bem legal.
+
+219
+00:19:13,490 --> 00:19:16,360
+Como é que a gente vai fazer o atualizar.
+
+220
+00:19:16,970 --> 00:19:20,820
+Antes de fazer a atualização eu vou fazer um deletar que é mais fácil.
+
+221
+00:19:20,840 --> 00:19:23,030
+E aí depois a gente faz uma atualização.
+
+222
+00:19:23,150 --> 00:19:24,150
+Vou fazer o deletar.
+
+223
+00:19:24,170 --> 00:19:24,890
+Então vamos lá.
+
+224
+00:19:24,920 --> 00:19:25,640
+PUBLIQUE.
+
+225
+00:19:27,500 --> 00:19:30,140
+O deleite não precisa devolver nada.
+
+226
+00:19:30,140 --> 00:19:36,360
+Ele só vai deletar e aí gente vai fazer assim deletar.
+
+227
+00:19:36,440 --> 00:19:42,080
+E como o mundo deletar não é preciso receber o produto todo é preciso receber alguma coisa que é única
+
+228
+00:19:42,080 --> 00:19:46,910
+nesse produto no caso o dia a dia.
+
+229
+00:19:47,120 --> 00:19:52,070
+Então eu vou receber uma ideia do produto e vou mandar meu banco de dados deletar.
+
+230
+00:19:52,070 --> 00:19:53,700
+Então olha o que eu vou fazer.
+
+231
+00:19:53,840 --> 00:19:54,820
+Eu posso fazer assim.
+
+232
+00:19:55,610 --> 00:19:57,340
+Produtos.
+
+233
+00:19:57,380 --> 00:19:58,730
+Ponto.
+
+234
+00:19:58,730 --> 00:20:03,660
+Eu tenho um cara aqui chamado remove e.
+
+235
+00:20:03,980 --> 00:20:05,170
+O removível.
+
+236
+00:20:05,270 --> 00:20:10,910
+Ele é um método muito legal que ele sabe remover de dentro de uma lista.
+
+237
+00:20:10,940 --> 00:20:18,890
+De acordo com um filtro que você passar então ele é um método que sobe dentro de uma lista e remover
+
+238
+00:20:18,890 --> 00:20:22,050
+de dentro essa lista de acordo com filtro que você passa para ela.
+
+239
+00:20:22,070 --> 00:20:28,100
+Então aqui eu quero fazer o seguinte Para cada produto que eu encontrar aqui dentro eu quero verificar
+
+240
+00:20:28,100 --> 00:20:29,300
+se esse produto.
+
+241
+00:20:32,370 --> 00:20:33,050
+Ponto.
+
+242
+00:20:33,090 --> 00:20:39,650
+Get It é igual a quem de.
+
+243
+00:20:46,190 --> 00:20:47,060
+é isso que eu quero fazer.
+
+244
+00:20:50,450 --> 00:20:58,250
+OK então vou dentro da minha lista de produtos é o seguinte remova para mim se o produto que você.
+
+245
+00:21:00,390 --> 00:21:05,790
+Se cataloga o céu o ideal que você tá passando é igual o n de algum dos produtos que tem a ideia do
+
+246
+00:21:05,790 --> 00:21:07,620
+que não poderia ter 100 produtos.
+
+247
+00:21:07,740 --> 00:21:14,730
+Se tivesse 100 produtos ele iria ficar num clube num forno um laço de repetição e cada produto que ele
+
+248
+00:21:14,730 --> 00:21:18,870
+encontrou lá dentro ele iria testar uma ideia do produto é igual ao dia não.
+
+249
+00:21:18,870 --> 00:21:23,650
+Então vai pro próximo o o produto pegou o dia não vai pro próximo e dentro do guarde.
+
+250
+00:21:23,650 --> 00:21:25,560
+E aí ele vai deleta.
+
+251
+00:21:25,560 --> 00:21:31,920
+Só que ele não sai fora ele continua verificando se tem mais alguma idéia é igual beleza vai deletar
+
+252
+00:21:31,920 --> 00:21:35,140
+todos que tem um IDH igual ao de que estou passando.
+
+253
+00:21:35,250 --> 00:21:41,350
+Só que eu só tem um único produto com aquele ar de então ele só vai deletar uma única vez.
+
+254
+00:21:41,380 --> 00:21:42,530
+Então vamos lá a.
+
+255
+00:21:45,970 --> 00:21:52,780
+Método para deletar o produto por aí.
+
+256
+00:21:55,890 --> 00:22:01,190
+Dever do produto a ser deletado.
+
+257
+00:22:01,710 --> 00:22:07,320
+Como esse método não retorna nada eu não tenho o retorno igual a ontem aqui.
+
+258
+00:22:07,350 --> 00:22:15,570
+Ele é Void método Void e é um retorno vazio é algo que não retorna nada beleza para o mouse em cima
+
+259
+00:22:15,570 --> 00:22:21,900
+do método para ver como é que faz a apresentação como método para testar o produto por ID e d do produto
+
+260
+00:22:21,900 --> 00:22:23,460
+a ser deletado.
+
+261
+00:22:23,520 --> 00:22:26,330
+Beleza então eu já fiz praticamente todo.
+
+262
+00:22:26,340 --> 00:22:30,430
+Só falta o atualizar lá.
+
+263
+00:22:30,870 --> 00:22:31,980
+Como é que o nosso.
+
+264
+00:22:31,980 --> 00:22:37,200
+Nossa classe nosso código está ficando grande e está ficando bonito tudo certinho.
+
+265
+00:22:38,010 --> 00:22:42,430
+Agora vamos fazer ou atualizar ou atualizar eu creio que é o mais difícil.
+
+266
+00:22:42,480 --> 00:22:46,380
+Vamos criar aqui o atualizar ele também vai devolver um óptimo produto.
+
+267
+00:22:50,020 --> 00:22:55,050
+Ou vou botar pra ele devolver um produto mesmo depois de se formar um show a gente muda não.
+
+268
+00:22:55,180 --> 00:22:58,530
+Então vamos lá eu vou chamar de atualizar.
+
+269
+00:22:58,690 --> 00:23:00,600
+Eu quero devolver o produto atualizado.
+
+270
+00:23:00,650 --> 00:23:02,830
+Então vou botar que ele vai receber um produto.
+
+271
+00:23:05,760 --> 00:23:08,370
+Um produto do tipo o produto futebol.
+
+272
+00:23:10,430 --> 00:23:19,830
+E aí aqui o que eu tenho que fazer aqui dentro galera eu tenho que eu tenho que primeiro eu tenho que
+
+273
+00:23:20,520 --> 00:23:25,200
+remover o produto antigo da lista.
+
+274
+00:23:28,090 --> 00:23:28,860
+Depois
+
+275
+00:23:31,180 --> 00:23:34,560
+adicionar um novo produto.
+
+276
+00:23:34,660 --> 00:23:36,100
+Não é assim que o atualizou.
+
+277
+00:23:36,100 --> 00:23:38,270
+Eu mudo um pelo outro.
+
+278
+00:23:38,680 --> 00:23:42,770
+é assim que a gente pode autorizar é uma das formas que a gente tem de atualizar.
+
+279
+00:23:42,790 --> 00:23:46,320
+Eu tiro o antigo e bota o novo lá dentro.
+
+280
+00:23:46,460 --> 00:23:53,380
+Beleza então eu vou atualizar dessa forma vou remover o produto antigo e vou adicionar um novo então
+
+281
+00:23:53,440 --> 00:23:55,870
+olha o que vou fazer.
+
+282
+00:23:56,350 --> 00:23:59,020
+Eu vou fazer o seguinte eu vou chamar o método.
+
+283
+00:23:59,020 --> 00:24:05,410
+Eu vou aproveitar os métodos que eu já teria aqui em cima deletar e obter por aí diz.
+
+284
+00:24:05,980 --> 00:24:12,060
+Para encontrar esse produto então vamos lá a primeira coisa tem que encontrar o produto antes de remover.
+
+285
+00:24:12,070 --> 00:24:18,910
+Então antes de remover eu tenho que encontrar o produto na lista.
+
+286
+00:24:18,910 --> 00:24:19,870
+Então vamos lá.
+
+287
+00:24:19,960 --> 00:24:26,110
+Como é que eu encontro eu posso chamar o obter por aí de passando o produto.
+
+288
+00:24:26,180 --> 00:24:27,750
+Ponto.
+
+289
+00:24:28,090 --> 00:24:31,780
+Esse método que nos espera obter quando passa um dia A.
+
+290
+00:24:34,170 --> 00:24:38,980
+é esse cara que vai fazer isso aqui Ovar produto encontrado.
+
+291
+00:24:41,110 --> 00:24:49,180
+O que é que eu poderia até fazer o seguinte isso aqui é um objeto de produto vou botar um opt no produto
+
+292
+00:24:49,180 --> 00:24:51,510
+pra vocês verem que está funcionando.
+
+293
+00:24:52,180 --> 00:24:54,040
+Esse cara vai devolver um óptimo produto.
+
+294
+00:24:57,450 --> 00:25:04,480
+Jimenez sei que um pouquinho Olha só aqui eu estou fazendo o seguinte eu estou indo dentro da minha
+
+295
+00:25:04,720 --> 00:25:14,530
+usando o meu método que eu já queria aqui em cima reaproveitando o código legal para passar o ideal
+
+296
+00:25:14,530 --> 00:25:20,340
+desse produto aqui para dentro dele que ele espera receber um do tipo entende.
+
+297
+00:25:20,410 --> 00:25:27,230
+E aí ele vai tentar encontrar e vai me devolver se ele encontrar qualquer coisa ele vai botar aqui dentro.
+
+298
+00:25:27,280 --> 00:25:31,190
+é aí que eu posso fazer uma brincadeira posso e assim.
+
+299
+00:25:32,200 --> 00:25:41,320
+Se o produto encontrado ponto is empty ou se for vazio significa o quê.
+
+300
+00:25:41,350 --> 00:25:43,250
+Que ele não encontrou nada.
+
+301
+00:25:44,170 --> 00:25:50,410
+Se cair aqui dentro se o produto encontrado ponto isento significa que isso aqui é vazia nulo ele não
+
+302
+00:25:50,410 --> 00:25:55,180
+encontrou nenhum produto lá dentro da minha lista com o ID do produto que eu passei.
+
+303
+00:25:55,180 --> 00:25:58,090
+Se for vazia é que eu poderia lançar tão mais céptico.
+
+304
+00:25:58,540 --> 00:26:02,740
+Uma exceção poderia falar centrou meu
+
+305
+00:26:05,200 --> 00:26:13,440
+Deception então vou botar aqui vou vou lançar uma eu vou lançar uma que não plano input.
+
+306
+00:26:13,480 --> 00:26:16,390
+Me Mate 7 1 Vou lançar desse tipo Q.
+
+307
+00:26:20,920 --> 00:26:32,280
+Produto não encontrado produto não encontrado beleza lançaria secessão Show.
+
+308
+00:26:32,440 --> 00:26:36,440
+Se não encontrou o produto lançou uma exceção um produto não encontrado.
+
+309
+00:26:36,490 --> 00:26:40,370
+Caso não entra aqui é óbvio que não encontrei o produto.
+
+310
+00:26:40,420 --> 00:26:44,890
+Se eu encontrar o produto que eu preciso fazer remover o produto antigo na lista então como é que eu
+
+311
+00:26:44,890 --> 00:26:45,680
+faço.
+
+312
+00:26:45,680 --> 00:26:54,000
+Então vou fazer isso que eu posso chamar o deletar que eu já fiz deletar e passar o quê.
+
+313
+00:26:54,220 --> 00:27:02,650
+Produto Ponto gateway de O deletar não precisa pra deletar ele precisa de um inteiro do tipo um dia
+
+314
+00:27:03,400 --> 00:27:08,430
+eu passo a ID do produto se ele já encontrou eu posso usar o produto o que ele vai fazer aqui.
+
+315
+00:27:08,530 --> 00:27:15,940
+Aquilo vai deletar o produto lá na lista deletou o produto na lista se deletou o produto antigo na lista
+
+316
+00:27:15,940 --> 00:27:23,460
+o produto antigo vai ter o mesmo e do produto novo está lá ele vai ter o mesmo e o produto novo.
+
+317
+00:27:23,500 --> 00:27:27,700
+Ele vai deletar depois que ele deletar o que eu tenho que fazer e adicionar.
+
+318
+00:27:27,700 --> 00:27:36,010
+Então poderia chamar um método que adicionar que eu já criei aqui em cima usando os mesmos métodos no
+
+319
+00:27:36,010 --> 00:27:38,260
+atualizar eu estou reaproveitando o código.
+
+320
+00:27:38,590 --> 00:27:44,130
+Aproveitem o código do obter por aí de aproveitar o código do deletar e agora eu vou aproveitar o código
+
+321
+00:27:44,140 --> 00:27:48,610
+do adicional para adicionar o que o novo produto.
+
+322
+00:27:48,610 --> 00:27:49,330
+Depois.
+
+323
+00:27:50,880 --> 00:27:56,710
+Dia a dia adicionar esse produto lá dentro.
+
+324
+00:27:56,710 --> 00:27:58,000
+Aí que está.
+
+325
+00:27:58,150 --> 00:28:06,970
+Se eu chamar o adicionar nós temos um porém que o dicionário vai incrementar o Waldir e vai mudar que
+
+326
+00:28:07,150 --> 00:28:08,810
+a gente não pode fazer isso.
+
+327
+00:28:08,860 --> 00:28:11,300
+Então a gente não vai poder usar o adicionar.
+
+328
+00:28:11,410 --> 00:28:14,680
+A gente vai ter que fazer esse adicionar aqui na mão.
+
+329
+00:28:14,680 --> 00:28:18,400
+Como a gente vai fazer para adicionar na mão esse mesmo código aqui.
+
+330
+00:28:21,720 --> 00:28:26,340
+Eu vou dentro da minha lista de produtos e vou adicionar o meu novo produto.
+
+331
+00:28:26,400 --> 00:28:27,540
+Simples assim.
+
+332
+00:28:27,540 --> 00:28:32,440
+Eu não posso usar o método adicionar porque senão ele vai incrementar e vai mudar o id.
+
+333
+00:28:32,440 --> 00:28:38,280
+Eu não quero mudar o ID eu quero só substituir só atualizar o produto não quero adicionar um novo.
+
+334
+00:28:38,340 --> 00:28:51,810
+Então eu vou adicionar um novo produto adicionar o produto atualizado na lista ele adicionou na lista
+
+335
+00:28:52,290 --> 00:28:56,130
+e aqui eu vou devolver o produto depois de adicionar na lista.
+
+336
+00:28:56,130 --> 00:29:02,290
+Então posso vir aqui dar um recado turnê ou duto.
+
+337
+00:29:02,520 --> 00:29:08,610
+Quando eu dou um retorno em produtos significa que eu estou retornando o mesmo produto que eu passei
+
+338
+00:29:08,610 --> 00:29:09,700
+para adicionar.
+
+339
+00:29:09,750 --> 00:29:16,920
+Eu peguei o produto vim no meu obter por aí e mandei tentar encontrar dentro da minha lista algum produto
+
+340
+00:29:16,920 --> 00:29:19,740
+que tem o mesmo ideia do produto que eu estou mandando atualizar.
+
+341
+00:29:19,740 --> 00:29:23,180
+Se ele não encontrar o lance uma exceção o código morre aqui.
+
+342
+00:29:23,280 --> 00:29:28,080
+Ele não executa mais nada para baixo se não entrou aqui dentro porque ele encontrou e realmente existe
+
+343
+00:29:28,080 --> 00:29:30,160
+um produto lá dentro com aquele dia.
+
+344
+00:29:30,180 --> 00:29:35,850
+Então o que eu faço eu chamo deletar e mando deletar da lista ainda agora é aquele produto não vai existir
+
+345
+00:29:35,850 --> 00:29:41,160
+mas lá dentro e depois eu pego esse produto adiciona ele de novo como tem o mesmo antigo só que agora
+
+346
+00:29:41,160 --> 00:29:46,860
+atualizado e agora atualizado e no final eu retorno ele para o usuário.
+
+347
+00:29:49,720 --> 00:29:53,220
+Mesmo assim nós temos o atualizar.
+
+348
+00:29:53,230 --> 00:30:09,250
+Então vamos comentar estar aqui o método para atualizar atualizar o produto novo na lista do produto
+
+349
+00:30:09,730 --> 00:30:12,430
+que será atualizado.
+
+350
+00:30:12,500 --> 00:30:21,970
+Isabel retorna o produto após atualizar a lista.
+
+351
+00:30:24,950 --> 00:30:27,650
+Comentei o que esse método faz.
+
+352
+00:30:27,680 --> 00:30:31,940
+Salvei para o mal de cima só pra gente ver mais ou menos como é que ficou.
+
+353
+00:30:31,970 --> 00:30:35,210
+Tá legal tá legal.
+
+354
+00:30:35,270 --> 00:30:37,250
+Deu pra gente entender o que esse cara faz.
+
+355
+00:30:37,370 --> 00:30:38,460
+Beleza.
+
+356
+00:30:38,480 --> 00:30:46,700
+Show de Bola documentário certinho e criamos aqui um repositório com todas as opções.
+
+357
+00:30:46,780 --> 00:30:52,060
+Então vamos fazer uma brincadeira aqui o repositório modelo.
+
+358
+00:30:52,070 --> 00:31:00,340
+A gente criou criou o repositório de produtos Criamos sim.
+
+359
+00:31:00,390 --> 00:31:05,330
+Ok ok mas queremos a gente ainda não testou a gente só está criando.
+
+360
+00:31:05,330 --> 00:31:10,870
+A gente ainda não testou essa brincadeira mas criamos todos os métodos.
+
+361
+00:31:11,690 --> 00:31:20,250
+Nós criamos obter todos obter por aí e adicionar deletar e atualizar.
+
+362
+00:31:20,270 --> 00:31:28,760
+Que foi exatamente o que nós dizemos aqui que iríamos fazer isso daqui são métodos foram crude aonde
+
+363
+00:31:28,760 --> 00:31:35,810
+eu posso ler onde eu posso criar onde eu posso atualizar e aonde eu posso deletar.
+
+364
+00:31:35,810 --> 00:31:39,920
+Beleza então nosso repositório está pronto.
